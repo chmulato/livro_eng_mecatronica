@@ -3,7 +3,7 @@ import re
 
 WORKSPACE_DIR = r"D:\onedrive\outros\workspace_book"
 CAPITULOS_DIR = os.path.join(WORKSPACE_DIR, "capitulos")
-OUTPUT_HTML = os.path.join(WORKSPACE_DIR, "romance_instrutivo.html")
+OUTPUT_HTML = os.path.join(WORKSPACE_DIR, "docs", "index.html")
 
 def format_markdown_to_html(content):
     # Formata negrito e itálico básico

@@ -13,7 +13,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 WORKSPACE_DIR = r"D:\onedrive\outros\workspace_book"
 CAPITULOS_DIR = os.path.join(WORKSPACE_DIR, "capitulos")
 IMAGENS_DIR = os.path.join(WORKSPACE_DIR, "imagens")
-OUTPUT_PDF = os.path.join(WORKSPACE_DIR, "romance_instrutivo.pdf")
+OUTPUT_PDF = os.path.join(WORKSPACE_DIR, "docs", "romance_instrutivo.pdf")
 COVER_IMAGE = os.path.join(WORKSPACE_DIR, "capa.png")
 
 os.makedirs(IMAGENS_DIR, exist_ok=True)
