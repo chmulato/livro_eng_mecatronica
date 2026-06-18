@@ -8,6 +8,8 @@ O título, escrito em letras garrafais, alertava:
 *"Interrupções (IRQ): O botão de pânico do hardware e a ilusão do multitarefa"*.
 Seus olhos se fixaram na explicação sobre o fluxo de processamento de baixo nível.
 
+Para desvendar como a CPU equilibrava tantas tarefas físicas em tempo real, Alex leu a analogia clássica.
+
 > “O computador é um trabalhador de foco obsessivo,” explicava o diário.
 > “Ele lê uma instrução na memória, executa e passa para a próxima de forma linear.
 > Mas se dependesse só disso, o chip seria incapaz de interagir com o mundo em tempo real.”
@@ -44,7 +46,7 @@ Lá reside o código sagrado da BIOS, que inicia o autoteste (POST) e recarrega 
 
 ### Do DOS Monotarefa ao Multitarefa do ROS 2: A Ilusão do Tempo Real
 
-A poeira vermelha de 1986 se dissolveu no ar, substituída pelo feixe verde do LiDAR em 2026.
+O estalo seco do teclado IBM mecânico de 2001 esvaeceu na neblina, sendo substituído pelo zumbido característico do sinal de telemetria sem fio emitido pela frota de 2026.
 
 Alex moderno observou o robô AMR 08 patrulhar a doca 12 do galpão.
 O robô parecia executar simultaneamente seu mapeamento, Wi-Fi e controle de motores.

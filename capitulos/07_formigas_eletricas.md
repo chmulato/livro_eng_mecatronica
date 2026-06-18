@@ -40,6 +40,8 @@ Ele desviou da fila e pegou um corredor alternativo estreito no Setor C.
 Contornou o bloqueio de forma suave e silenciosa, seguindo a entrega.
 Alex observava a cena do alto do mezanino e deu um sorriso de canto.
 
+Para compreender os fundamentos matemáticos que permitiam ao AMR tomar aquela decisão por conta própria, Alex decidiu ler as anotações sobre navegação do diário.
+
 ---
 
 ### [Conceito Chave] O Mapeamento Dinâmico contra a Rigidez Trilho
@@ -57,7 +59,7 @@ O algoritmo recalcula a rota em milissegundos, desviando por conta própria.
 Um formigueiro opera sem uma formiga chefe comandando no rádio.
 Cada inseto segue regras locais simples de desvio e transporte.
 Somando milhares dessas ações locais, surge o comportamento de enxame.
-Os AMRs funcionam assim: biologia convertida em código de controle físico.
+Os AMRs funcionan assim: biologia convertida em código de controle físico.
 
 ---
 

@@ -1,7 +1,7 @@
 # Capítulo 1: O Menino e a Caixa Preta
 
 O zumbido dos robôs móveis autônomos era cirúrgico.
-A dezoito mil euros a unidade, cada AMR (Autonomous Mobile Robot) patrulhava o piso nivelado do Centro de Distribuição em Curitiba.
+A dezoito mil euros a unidade, cada AMR (Autonomous Mobile Robot) patrulhava o piso nivelado do CD em Curitiba.
 Eles operavam com a precisão fria de um algoritmo bem ajustado.
 
 Não reclamavam do frio das três da manhã.
@@ -43,7 +43,9 @@ Limpou o plástico com o polegar. A gravação revelou: *Z80A*.
 
 Abaixo do chip, estava um caderno de capa preta dura e bordas gastas.
 Ao pegá-lo, uma folha avulsa caiu com uma anotação em caneta azul desbotada.
-A caligrafia era firme, angulosa e carregava o eco de outra época.
+Para Alex, ver aquela letra em meio ao silêncio do galpão foi como encontrar um farol no escuro.
+
+Ele aproximou a lanterna e leu o relato que unia o barro do Paraná à tecnologia que ele operava.
 
 > "Cascavel, Outubro de 1986. Estrada de chão sem asfalto, o cheiro de chuva subindo da terra vermelha e quarenta quilômetros sacudindo com uma caixinha preta que carrega o futuro sob o braço..."
 
@@ -127,19 +129,15 @@ Os alunos romperam em aplausos barulhentos na pequena sala de tijolos expostos.
 Alex Senior finalmente soltou o ar que prendia nos pulmões com um orgulho imenso.
 A engenharia se revelava ali não como tortura, mas como poder de dar ordem ao caos da lama.
 
-A poeira vermelha de 1986 se dissolveu no ar, substituída pelo feixe verde do LiDAR em 2026.
+O chiado estridente da fita K7 na TV de tubo de 1986 de repente silenciou, transicionando para o ruído contínuo e grave dos climatizadores industriais do galpão de Curitiba em 2026.
 
-Alex moderno piscou os olhos no presente frio do galpão de Curitiba.
-O ruído da fita magnética deu lugar ao zumbido eletrônico do robô AMR que passava.
-Ele ainda estava de pé, com as botas sujas de poeira antiga, segurando o chip do Z80A.
+Alex moderno piscou os olhos, retornando abruptamente ao presente frio.
+O flash da TV Colorado foi substituído pelo anel azul e verde do robô AMR 12.
+Ele ainda estava de pé no Setor G, com o velho chip Z80A brilhando em suas mãos.
 
-Ele olhou para a centopeia de silício de quarenta pernas e depois para a frota moderna.
-Havia uma conexão direta e profunda entre aquelas duas eras separadas pelo asfalto.
-Os robôs autônomos de 2026 dependiam da mesma base lógica de controle nascida em 1986.
-
-A resposta para a mecatrônica avançada não estava nos relatórios de Bianchi.
-Estava guardada na simplicidade direta das anotações daquele caderno.
-"A máquina só obedece a quem respeita o bit," pensou, guardando o chip na mochila.
+A distância temporal de quarenta anos parecia encurtada por aquele pedaço de silício.
+A frota de robôs modernos que gerenciava a logística dependia exatamente daquela mesma essência lógica.
+Alex guardou o chip, percebendo que a resposta que procurava residia nas anotações do diário.
 
 ---
 

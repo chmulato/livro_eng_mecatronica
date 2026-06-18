@@ -178,7 +178,7 @@ def parse_markdown_to_story(file_path, cap_index, styles):
                         story.append(create_discovery_box(diary_lines, styles))
                         diary_lines = []
                     formatted_line = format_text(line_str)
-                    story.append(Paragraph(formatted_line, styles['NormalStyle']))
+                    story.append(Paragraph(formatted_line, styles['NarrativeStyle']))
                     story.append(Spacer(1, 6))
             
             if diary_lines:
@@ -258,6 +258,17 @@ def main():
         leading=14.5,        # Leading condensado e compacto para otimizar espaço de leitura
         textColor=colors.HexColor("#2a2b2d"),
         spaceAfter=4
+    ))
+
+    styles.add(ParagraphStyle(
+        name='NarrativeStyle',
+        parent=styles['Normal'],
+        fontName=FONT_NAME,
+        fontSize=12,
+        leading=15.5,        # Espaçamento ligeiramente maior para o ritmo narrativo
+        textColor=colors.HexColor("#1a1b1d"),
+        firstLineIndent=12,  # Indentação clássica de parágrafo literário
+        spaceAfter=5
     ))
 
     styles.add(ParagraphStyle(

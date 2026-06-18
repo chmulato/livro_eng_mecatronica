@@ -8,6 +8,8 @@ Alex moderno deu um gole no café morno de sua garrafa térmica.
 Acostumado a usar Python, onde uma única biblioteca oculta milhares de processos, ele sentiu curiosidade.
 Decidiu ler a explicação de seu mentor para entender as raízes do hardware de baixo nível.
 
+Para desmistificar a caixa de metal sob o teclado, as anotações do diário propunham um ponto de partida simples.
+
 > “Se você quer controlar uma máquina, não pode tratá-la como um computador de ficção. O Z80 não sabe o que é uma imagem, som ou palavra. Ele só entende energia elétrica: passa corrente (1) ou não passa (0). Esse é o bit.”
 
 > “Mas um bit sozinho é apenas um interruptor solitário na parede. Para fazer algo útil, nós os agrupamos de oito em oito. Oito bits formam um byte. Pense em uma palavra de oito letras onde cada letra só pode ser '0' ou '1'.”

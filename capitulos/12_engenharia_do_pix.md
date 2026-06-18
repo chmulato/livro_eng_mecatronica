@@ -12,6 +12,8 @@ Para a sua geração em 2026, pagar o almoço digitando uma chave parecia natura
 Mas anos atrás, bancos tradicionais cobravam pedágios caros de DOC e TED.
 Eram tarifas absurdas por operações eletrônicas lentas e limitadas ao horário comercial.
 
+Para transpor essa barreira monetária e entender os algoritmos que quebravam o pedágio, Alex mergulhou na matemática das chaves.
+
 O código de segurança escrito por desenvolvedores do Banco Central implodiu essa barreira.
 
 ---
@@ -52,7 +54,7 @@ Se o invasor alterar o valor no caminho da rede, a assinatura digital será inva
 
 ### A Geopolítica do Código: O Nexus e a Quebra do Swift
 
-A poeira vermelha de 1986 se dissolveu no ar, substituída pelo feixe verde do LiDAR em 2026.
+O som estridente das discussões telefônicas de 2001 sobre custos cambiais de importação dissolveu-se, dando lugar ao ronco sutil e elétrico dos motores de indução das carretas no CD em 2026.
 
 Alex moderno fechou o console de testes no tablet de manutenção e olhou as carretas.
 Ele relembrou as notas do diário sobre o cenário macroeconômico internacional.
@@ -60,7 +62,7 @@ O Swift sempre funcionou como o pedágio financeiro das superpotências ocidenta
 
 Para contornar esse controle de crédito global, novas tecnologias surgiram em 2026:
 - **O Projeto Nexus**: Integração de pagamentos instantâneos mundiais sem bancos intermediários.
-- **O BRICS Pay**: Plataforma descentralizada em blockchain para contornar oSwift ocidental.
+- **O BRICS Pay**: Plataforma descentralizada em blockchain para contornar o Swift ocidental.
 
 A engenharia financeira descentralizada estava quebrando o monopólio tradicional.
 Alex desligou o tablet de monitoramento de processos de rede e fechou a mochila.

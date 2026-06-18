@@ -12,8 +12,10 @@ A solução lógica do problema não estava no aço das prateleiras, mas no cód
 Ele precisava programar o terminal para otimizar cada centímetro livre no local.
 Era necessário converter os paletes físicos em representações lógicas na CPU.
 
+Para estruturar a movimentação tridimensional, o diário trazia a formulação das matrizes espaciais.
+
 > “O mundo físico parece contínuo e caótico,” registrava o diário técnico.
-> “Mas para controlá-lo de forma digital, precisamos mapeá-lo como um tabuleiro tridimensional.
+> “But para controlá-lo de forma digital, precisamos mapeá-lo como um tabuleiro tridimensional.
 > As imensas prateleiras de aço não passam de uma grande Matriz Tridimensional de dados.”
 
 > “Mapeamos cada nicho de armazenagem usando coordenadas espaciais ortogonais.
@@ -40,7 +42,7 @@ Volume geométrico bruto é diferente do volume utilizável pela cinemática da 
 
 ### O Quebra-Cabeças de Três Eixos: O Bin Packing Problem em 2026
 
-A poeira vermelha de 1986 se dissolveu no ar, substituída pelo feixe verde do LiDAR em 2026.
+O frio cortante do inverno italiano de 2001 e o barulho de seus transelevadores de carga se dissiparam sob a névoa úmida, abrindo espaço para a claridade cinza do amanhecer de Curitiba em 2026.
 
 Alex moderno abriu o terminal de testes em seu tablet de manutenção em Curitiba.
 Ele observou os robôs AMRs movendo cargas pesadas de forma autônoma pelas docas.

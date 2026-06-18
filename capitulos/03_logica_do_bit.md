@@ -12,6 +12,8 @@ Para ir além, ele precisava decifrar a linguagem nativa do chip Z80.
 Ele tinha que entender como converter números em pixels coloridos na tela.
 Precisava dominar a matemática invisível que governava os transistores.
 
+Para se comunicar com o hardware sem perder a razão, ele anotou uma regra fundamental.
+
 > “Para nós, humanos, contar de dez em dez é o natural,” escreveu Alex Senior.
 > “Em contrapartida, o Z80 só enxerga eletricidade e tensão elétrica nos pinos.
 > Ele só tem dois estados elétricos possíveis: ligado (1) ou desligado (0). É o sistema binário.”
@@ -44,7 +46,7 @@ Ele usaria o comando `POKE` do BASIC para gravar esses valores diretamente no ha
 
 ### A Luz que Pisca: Do Caderno Quadriculado aos Encoders Industriais
 
-A poeira vermelha de 1986 se dissolveu no ar, substituída pelo feixe verde do LiDAR em 2026.
+A imagem pixelada daquela nave espacial desenhada na TV Colorado pareceu pulsar, até congelar sob o feixe verde do laser do LiDAR moderno de Curitiba em 2026.
 
 Alex moderno levantou os olhos do diário no galpão silencioso de Curitiba.
 Ele observou o motor de tração de um dos robôs AMRs parado na estação.

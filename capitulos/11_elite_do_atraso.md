@@ -8,6 +8,8 @@ As páginas haviam sido preenchidas com tinta preta forte e traços rápidos.
 O título parecia um manifesto político desenhado em letras garrafais:
 *"O Muro dos Juros: Por que o Brasil prefere o passado ao futuro"*.
 
+Para refletir sobre os entraves da soberania nacional, Alex leu os desabafos sobre o mercado financeiro brasileiro.
+
 > “Voltar para o Brasil depois de Milão foi um choque de realidade,” desabafava o texto.
 > “Eu achava que, mostrando o ganho de produtividade de matrizes e sensores,
 > as indústrias brasileiras correriam para digitalizar suas operações físicas.”
@@ -36,17 +38,17 @@ Os juros altos agem como uma barreira invisível de aço que bloqueia o avanço 
 
 ### A Névoa de Curitiba e a Rebelião pelo Código
 
-A poeira vermelha de 1986 se dissolveu no ar, substituída pelo feixe verde do LiDAR em 2026.
+A ilusão de alta rentabilidade estática de 2001 e o desdém dos industriais nacionais se desvaneceram no ar frio, dando lugar ao vapor da respiração dos entregadores de moto sob a névoa úmida curitibana de 2026.
 
 Alex moderno caminhou até o parapeito de vidro do mezanino, olhando a expedição.
 Lá fora, sob a neblina fria da manhã, entregadores organizavam suas mochilas de carga.
-Do lado de dentro da muralha, robôs de dezoito mil euros flutuavam no piso perfeito.
+Do lado de dentro da moralha, robôs de dezoito mil euros flutuavam no piso perfeito.
 
 A elite que lucrava na bolsa mantinha taxas de juros que impediam o desenvolvimento real.
 A automação de ponta servia para extrair suor humano com precisão matemática pura.
 O monopólio do crédito estava concentrado em poucos sobrenomes que ditavam as regras de mercado.
 
-"Mas o sistema não é perfeito," murmurou Alex para si mesmo, pensativo.
+"But o sistema não é perfeito," murmurou Alex para si mesmo, pensativo.
 "A mesma matemática usada para controlar entregas pode ser usada para descentralizar o fluxo."
 Ele virou a página, buscando entender as tecnologias descentralizadas de transferência instantânea.
 

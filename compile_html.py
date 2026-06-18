@@ -78,7 +78,10 @@ def format_markdown_to_html(content):
             if line_str.startswith('<pre>') or line_str.endswith('</pre>'):
                 formatted_lines.append(line_str)
             else:
-                formatted_lines.append(f'<p>{line_str}</p>')
+                # Se for um parágrafo de texto normal, adicionamos uma classe para estilizá-lo
+                # com as diretrizes do modo narrativo (ritmo literário, legibilidade).
+                # Para diferenciar tecnicismo e prosa, aplicamos narrative-p por padrão.
+                formatted_lines.append(f'<p class="narrative-p">{line_str}</p>')
                 
     if in_diary:
         formatted_lines.append(f'<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>{"<br/>".join(diary_buffer)}</div>')
@@ -313,11 +316,20 @@ def main():
         }
 
         p {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.9rem;
             color: #cbd5e1;
             font-size: 0.95rem;
-            line-height: 1.55;
-            text-align: left; /* Melhor leitura em telas estreitas */
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        /* Estilização para o Modo Narrativo */
+        .narrative-p {
+            font-family: 'Verdana', sans-serif;
+            color: #e2e8f0;
+            line-height: 1.65;
+            letter-spacing: 0.2px;
+            margin-bottom: 1.1rem;
         }
 
         li {
@@ -330,35 +342,43 @@ def main():
 
         /* Caixas de Descoberta lúdicas (Diário) - Mobile-First */
         .discovery-box {
-            background-color: var(--card-bg);
+            background-color: rgba(30, 41, 59, 0.4);
             border-left: 4px solid var(--primary);
-            padding: 12px 14px;
-            border-radius: 0 12px 12px 0;
-            margin: 1.5rem 0;
+            border-right: 1px solid var(--border-color);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 14px 16px;
+            border-radius: 4px 12px 12px 4px;
+            margin: 1.8rem 0;
             font-style: italic;
-            color: #f1f5f9;
-            font-size: 0.9rem;
+            color: #f8fafc;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .box-tag {
             font-style: normal;
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
             color: var(--primary);
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             display: inline-block;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
+            border-bottom: 1px solid var(--primary-glow);
+            padding-bottom: 2px;
         }
 
         /* Blocos de Código Responsivos */
         pre {
             background-color: #090d16;
             border: 1px solid var(--border-color);
-            padding: 1rem;
+            padding: 1.1rem;
             border-radius: 8px;
             overflow-x: auto;
-            margin: 1.5rem 0;
+            margin: 1.8rem 0;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.6);
         }
 
         code {
@@ -372,7 +392,7 @@ def main():
             width: 100%;
             height: auto;
             border-radius: 8px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
             border: 1px solid var(--border-color);
         }
     </style>

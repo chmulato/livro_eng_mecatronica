@@ -8,6 +8,8 @@ O robô precisava decidir em quais nichos vazios colocaria cada volume.
 A decisão devia ser tomada em frações de segundo para otimizar o espaço livre.
 Para entender essa lógica de controle, Alex abriu o diário de seu mentor.
 
+Para acelerar a triagem e evitar o travamento dos microprocessadores, o diário apresentava o limite combinatório.
+
 > “Se você tentar calcular todas as combinações de empilhamento de caixas, a matemática explode.
 > O número de combinações possíveis cresce de forma fatorial com novos itens.
 > O computador mais potente do mundo levaria séculos processando o cálculo.

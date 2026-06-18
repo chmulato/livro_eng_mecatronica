@@ -40,7 +40,7 @@ Você tem exatamente dez minutos para corrigir essa falha ou está fora."
 
 A porta bateu e o silêncio tenso retornou acompanhado do bipe de erro do robô.
 O nervosismo tomou conta, mas Alex lembrou-se das regras fundamentais do diário técnico.
-"Calma," pensou. "A física do sensor e o hardware continuam sendo os mesmos."
+Para reverter a colisão, ele precisava traduzir os feixes do laser em dados matemáticos puros.
 
 ---
 

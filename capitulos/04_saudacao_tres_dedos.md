@@ -24,7 +24,7 @@ A tensão física tomou conta de toda a equipe de controle do local.
 > Mas eu já tinha visto aquela tela cinza travar nos tempos de Cascavel.
 > O computador central simplesmente engasgara com o excesso de dados em execução.”
 
-Alex Senior empurrou os manuais e encarei o teclado cinza da IBM.
+Alex Senior empurrou os manuais e encarou o teclado cinza da IBM.
 Ele posicionou a mão sobre o teclado, sob os olhares irritados de Moretti.
 Pressionou o **Ctrl**, o **Alt** e bateu firme no **Del**.
 
@@ -48,7 +48,7 @@ O gigante de aço acordou de seu transe e Moretti parou de gritar.
 
 ### O Fantasma da Memória Cheia: De 2001 a 2026
 
-A poeira vermelha de 1986 se dissolveu no ar, substituída pelo feixe verde do LiDAR em 2026.
+O eco mecânico dos transelevadores reiniciando em Milão dissolveu-se gradativamente na memória de Alex, fundindo-se com o sopro pressurizado das pinças pneumáticas do CD de Curitiba em 2026.
 
 Alex moderno olhou para a telemetria do robô autônomo AMR.
 No diário, a anotação técnica detalhava a causa física daquele travamento.

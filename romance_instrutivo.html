@@ -223,11 +223,20 @@
         }
 
         p {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.9rem;
             color: #cbd5e1;
             font-size: 0.95rem;
-            line-height: 1.55;
-            text-align: left; /* Melhor leitura em telas estreitas */
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        /* Estilização para o Modo Narrativo */
+        .narrative-p {
+            font-family: 'Verdana', sans-serif;
+            color: #e2e8f0;
+            line-height: 1.65;
+            letter-spacing: 0.2px;
+            margin-bottom: 1.1rem;
         }
 
         li {
@@ -240,35 +249,43 @@
 
         /* Caixas de Descoberta lúdicas (Diário) - Mobile-First */
         .discovery-box {
-            background-color: var(--card-bg);
+            background-color: rgba(30, 41, 59, 0.4);
             border-left: 4px solid var(--primary);
-            padding: 12px 14px;
-            border-radius: 0 12px 12px 0;
-            margin: 1.5rem 0;
+            border-right: 1px solid var(--border-color);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 14px 16px;
+            border-radius: 4px 12px 12px 4px;
+            margin: 1.8rem 0;
             font-style: italic;
-            color: #f1f5f9;
-            font-size: 0.9rem;
+            color: #f8fafc;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .box-tag {
             font-style: normal;
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
             color: var(--primary);
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             display: inline-block;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
+            border-bottom: 1px solid var(--primary-glow);
+            padding-bottom: 2px;
         }
 
         /* Blocos de Código Responsivos */
         pre {
             background-color: #090d16;
             border: 1px solid var(--border-color);
-            padding: 1rem;
+            padding: 1.1rem;
             border-radius: 8px;
             overflow-x: auto;
-            margin: 1.5rem 0;
+            margin: 1.8rem 0;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.6);
         }
 
         code {
@@ -282,7 +299,7 @@
             width: 100%;
             height: auto;
             border-radius: 8px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
             border: 1px solid var(--border-color);
         }
     </style>
@@ -334,852 +351,861 @@
         <div id="cap1" class="chapter-section">
             
             <h1 class="chapter-title">Capítulo 1: O Menino e a Caixa Preta</h1>
-<p>O zumbido dos robôs móveis autônomos era cirúrgico.</p>
-<p>A dezoito mil euros a unidade, cada AMR (Autonomous Mobile Robot) patrulhava o piso nivelado do Centro de Distribuição em Curitiba.</p>
-<p>Eles operavam com a precisão fria de um algoritmo bem ajustado.</p>
-<p>Não reclamavam do frio das três da manhã.</p>
-<p>Não paravam para tomar café.</p>
-<p>Não erravam a rota por mais de dois milímetros.</p>
-<p>Sob a luz difusa, as linhas invisíveis dos sensores LiDAR riscavam o ar em varreduras silenciosas de 360 graus.</p>
-<p>Alex esfregou os olhos.</p>
-<p>A luz azul do monitor duplo refletia em suas pupilas cansadas.</p>
-<p>Sobreviver à UTFPR exigia mais energia do que a bateria daqueles robôs.</p>
-<p>Na tela, o dashboard de telemetria exibia um fluxo contínuo de dados.</p>
-<p>Tudo ali alimentava as planilhas financeiras comandadas por Bianchi.</p>
-<p>Bianchi era o diretor regional obcecado pelas metas de produtividade da Faria Lima.</p>
-<p>Para os investidores, os robôs eram vetores de otimização pura.</p>
-<p>Para Alex, de 25 anos, graduando de Engenharia no plantão da madrugada, eram formigas de aço presas em cobranças.</p>
-<p>"O silêncio do robô é o suor do programador," murmurou ele, sentindo o peso.</p>
-<p>Um alerta amarelo de inconsistência de inventário piscou na tela.</p>
-<p>Setor G, prateleira 42.</p>
-<p>Um ponto cego físico, fora da malha de navegação ativa dos robôs autônomos.</p>
-<p>Por questões estruturais, aquela área mantinha vigas baixas e piso irregular de concreto áspero.</p>
-<p>Era um terreno hostil para os sensores e suspensões dos AMRs.</p>
-<p>Alex suspirou, pegou o tablet de manutenção e caminhou pelo corredor principal.</p>
-<p>Conforme se afastava da zona ativa, o silêncio mudava.</p>
-<p>O zumbido eletrônico dava lugar ao eco de seus próprios passos no concreto úmido.</p>
-<p>Na penumbra do Setor G, a poeira flutuava sob o feixe da lanterna.</p>
-<p>Atrás de paletes de madeira apodrecida, uma caixa de papelão desbotada chamou sua atenção.</p>
-<p>A fita adesiva que a lacrava havia secado e descolado com a umidade de décadas.</p>
-<p>Alex puxou-a com cuidado, subindo uma nuvem fina de poeira.</p>
-<p>Lá dentro, sob papéis de formulário contínuo, estava um chip preto e longo.</p>
-<p>Tinha quarenta pernas metálicas salientes como as de uma centopeia de silício.</p>
-<p>Limpou o plástico com o polegar. A gravação revelou: <em>Z80A</em>.</p>
-<p>Abaixo do chip, estava um caderno de capa preta dura e bordas gastas.</p>
-<p>Ao pegá-lo, uma folha avulsa caiu com uma anotação em caneta azul desbotada.</p>
-<p>A caligrafia era firme, angulosa e carregava o eco de outra época.</p>
+<p class="narrative-p">O zumbido dos robôs móveis autônomos era cirúrgico.</p>
+<p class="narrative-p">A dezoito mil euros a unidade, cada AMR (Autonomous Mobile Robot) patrulhava o piso nivelado do CD em Curitiba.</p>
+<p class="narrative-p">Eles operavam com a precisão fria de um algoritmo bem ajustado.</p>
+<p class="narrative-p">Não reclamavam do frio das três da manhã.</p>
+<p class="narrative-p">Não paravam para tomar café.</p>
+<p class="narrative-p">Não erravam a rota por mais de dois milímetros.</p>
+<p class="narrative-p">Sob a luz difusa, as linhas invisíveis dos sensores LiDAR riscavam o ar em varreduras silenciosas de 360 graus.</p>
+<p class="narrative-p">Alex esfregou os olhos.</p>
+<p class="narrative-p">A luz azul do monitor duplo refletia em suas pupilas cansadas.</p>
+<p class="narrative-p">Sobreviver à UTFPR exigia mais energia do que a bateria daqueles robôs.</p>
+<p class="narrative-p">Na tela, o dashboard de telemetria exibia um fluxo contínuo de dados.</p>
+<p class="narrative-p">Tudo ali alimentava as planilhas financeiras comandadas por Bianchi.</p>
+<p class="narrative-p">Bianchi era o diretor regional obcecado pelas metas de produtividade da Faria Lima.</p>
+<p class="narrative-p">Para os investidores, os robôs eram vetores de otimização pura.</p>
+<p class="narrative-p">Para Alex, de 25 anos, graduando de Engenharia no plantão da madrugada, eram formigas de aço presas em cobranças.</p>
+<p class="narrative-p">"O silêncio do robô é o suor do programador," murmurou ele, sentindo o peso.</p>
+<p class="narrative-p">Um alerta amarelo de inconsistência de inventário piscou na tela.</p>
+<p class="narrative-p">Setor G, prateleira 42.</p>
+<p class="narrative-p">Um ponto cego físico, fora da malha de navegação ativa dos robôs autônomos.</p>
+<p class="narrative-p">Por questões estruturais, aquela área mantinha vigas baixas e piso irregular de concreto áspero.</p>
+<p class="narrative-p">Era um terreno hostil para os sensores e suspensões dos AMRs.</p>
+<p class="narrative-p">Alex suspirou, pegou o tablet de manutenção e caminhou pelo corredor principal.</p>
+<p class="narrative-p">Conforme se afastava da zona ativa, o silêncio mudava.</p>
+<p class="narrative-p">O zumbido eletrônico dava lugar ao eco de seus próprios passos no concreto úmido.</p>
+<p class="narrative-p">Na penumbra do Setor G, a poeira flutuava sob o feixe da lanterna.</p>
+<p class="narrative-p">Atrás de paletes de madeira apodrecida, uma caixa de papelão desbotada chamou sua atenção.</p>
+<p class="narrative-p">A fita adesiva que a lacrava havia secado e descolado com a umidade de décadas.</p>
+<p class="narrative-p">Alex puxou-a com cuidado, subindo uma nuvem fina de poeira.</p>
+<p class="narrative-p">Lá dentro, sob papéis de formulário contínuo, estava um chip preto e longo.</p>
+<p class="narrative-p">Tinha quarenta pernas metálicas salientes como as de uma centopeia de silício.</p>
+<p class="narrative-p">Limpou o plástico com o polegar. A gravação revelou: <em>Z80A</em>.</p>
+<p class="narrative-p">Abaixo do chip, estava um caderno de capa preta dura e bordas gastas.</p>
+<p class="narrative-p">Ao pegá-lo, uma folha avulsa caiu com uma anotação em caneta azul desbotada.</p>
+<p class="narrative-p">Para Alex, ver aquela letra em meio ao silêncio do galpão foi como encontrar um farol no escuro.</p>
+<p class="narrative-p">Ele aproximou a lanterna e leu o relato que unia o barro do Paraná à tecnologia que ele operava.</p>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>"Cascavel, Outubro de 1986. Estrada de chão sem asfalto, o cheiro de chuva subindo da terra vermelha e quarenta quilômetros sacudindo com uma caixinha preta que carrega o futuro sob o braço..."</div>
-<p>Alex sentiu um arrepio na nuca. Era o diário de Alex Senior, seu mentor.</p>
-<p>A pressa de Curitiba e a pressão corporativa de Bianchi desapareceram.</p>
-<p>Seus dedos abriram a primeira página do manuscrito, e o passado se fez presente.</p>
-<p>---</p>
+<p class="narrative-p">Alex sentiu um arrepio na nuca. Era o diário de Alex Senior, seu mentor.</p>
+<p class="narrative-p">A pressa de Curitiba e a pressão corporativa de Bianchi desapareceram.</p>
+<p class="narrative-p">Seus dedos abriram a primeira página do manuscrito, e o passado se fez presente.</p>
+<p class="narrative-p">---</p>
 <h3>O Diário de 1986: A Estrada de Terra Vermelha</h3>
-<p>A poeira vermelha do Oeste do Paraná tinha uma propriedade quase mística.</p>
-<p>Grudava em tudo, da sola das botinas às engrenagens mais finas da mente de um piá de 15 anos.</p>
-<p>Naquela manhã de 1986, o céu sobre Cascavel ameaçava desabar em chuva.</p>
-<p>O cheiro de terra úmida subia do chão batido enquanto o ônibus sacudia violentamente.</p>
-<p>Alex Senior apertava a caixa de papelão contra o peito como se guardasse um tesouro nacional.</p>
-<p>Ali dentro estava o orgulho da Microdigital: um TK90X novinho.</p>
-<p>Era um clone brasileiro do ZX Spectrum britânico, com processador Z80A de 3,5 MHz.</p>
-<p>Para a escola pública daquela colônia agrícola, a máquina parecia um disco voador.</p>
-<p>O asfalto ali era uma promessa distante, e o barro era a realidade imediata.</p>
-<p>"Cuidado com isso aí, piá," avisou o motorista, desviando de uma vala profunda.</p>
-<p>"Se quebrar, a escola te faz pagar essa caixa até o ano 2000."</p>
-<p>Alex apenas sorriu, embora o estômago estivesse contraído de puro nervosismo.</p>
-<p>Ele era o técnico encarregado de fazer o computador funcionar.</p>
-<p>Teria que mostrar o poder do silício para cinquenta alunos que nunca tinham visto uma tela eletrônica.</p>
-<p>O medo de falhar e passar vergonha no barro pesava mais que a caixa física.</p>
-<p>Quando o ônibus finalmente parou, o barro cobria metade das rodas do veículo.</p>
-<p>A fachada da escola era simples: tijolos aparentes e telhado de fibrocimento.</p>
-<p>Sem asfalto na rua, Alex precisou dar um salto calculado para não atolar as botinas na lama vermelha.</p>
-<p>A sala de aula estava lotada, quente e abafada de expectativa.</p>
-<p>No centro da mesa, uma TV Colorado de quatorze polegadas com seletor mecânico aguardava.</p>
-<p>"É esse o tal cérebro eletrônico?" perguntou o diretor, cruzando os braços com ceticismo.</p>
-<p>"Sim, senhor," respondeu Alex, com a voz trêmula ao desembalar a máquina.</p>
-<p>O TK90X era compacto, pouco maior que um livro de capa dura.</p>
-<p>Seu teclado de borracha cinza parecia um conjunto de chicletes organizados e macios.</p>
-<p>Conectou o cabo RF na antena da TV Colorado e sintonizou cuidadosamente o canal 3.</p>
-<p>A tela de tubo chiou, exibindo névoa estática antes de abrir um fundo branco brilhante:</p>
-<p>`© 1985 Microdigital`. Um murmúrio de espanto correu pela sala.</p>
-<p>A parte difícil, no entanto, ainda estava por vir: carregar os programas da fita cassete.</p>
-<p>Alex posicionou o gravador portátil, conectou os cabos de áudio e inseriu a fita K7.</p>
-<p>Ele digitou o comando sagrado no teclado de borracha:</p>
-<p>`LOAD ""`</p>
-<p>Pressionou <em>Enter</em> e apertou o botão <em>Play</em> no gravador de áudio.</p>
-<p>O silêncio na sala foi quebrado por um ruído agudo, um chiado estridente e rítmico.</p>
-<p>Era o som do código binário sendo transmitido por pulsos sonoros no ar.</p>
-<p>Na tela da TV Colorado, barras horizontais coloridas começaram a piscar freneticamente.</p>
-<p>O Z80A estava decodificando os dados de áudio para impulsos elétricos internos.</p>
-<p>Alex Senior prendeu a respiração enquanto o chip fazia o seu trabalho silencioso.</p>
-<p>Se o cabeçote do gravador estivesse desalinhado por um milímetro, tudo falharia.</p>
-<p>Cinco minutos de chiado pareciam uma eternidade na mente do piá de 15 anos.</p>
-<p>De repente, o barulho cessou. A tela piscou em branco puro e exibiu o cursor ativo.</p>
-<p>Com os dedos suados de alívio, Alex Senior digitou o comando final:</p>
-<p>`RUN`</p>
-<p>---</p>
+<p class="narrative-p">A poeira vermelha do Oeste do Paraná tinha uma propriedade quase mística.</p>
+<p class="narrative-p">Grudava em tudo, da sola das botinas às engrenagens mais finas da mente de um piá de 15 anos.</p>
+<p class="narrative-p">Naquela manhã de 1986, o céu sobre Cascavel ameaçava desabar em chuva.</p>
+<p class="narrative-p">O cheiro de terra úmida subia do chão batido enquanto o ônibus sacudia violentamente.</p>
+<p class="narrative-p">Alex Senior apertava a caixa de papelão contra o peito como se guardasse um tesouro nacional.</p>
+<p class="narrative-p">Ali dentro estava o orgulho da Microdigital: um TK90X novinho.</p>
+<p class="narrative-p">Era um clone brasileiro do ZX Spectrum britânico, com processador Z80A de 3,5 MHz.</p>
+<p class="narrative-p">Para a escola pública daquela colônia agrícola, a máquina parecia um disco voador.</p>
+<p class="narrative-p">O asfalto ali era uma promessa distante, e o barro era a realidade imediata.</p>
+<p class="narrative-p">"Cuidado com isso aí, piá," avisou o motorista, desviando de uma vala profunda.</p>
+<p class="narrative-p">"Se quebrar, a escola te faz pagar essa caixa até o ano 2000."</p>
+<p class="narrative-p">Alex apenas sorriu, embora o estômago estivesse contraído de puro nervosismo.</p>
+<p class="narrative-p">Ele era o técnico encarregado de fazer o computador funcionar.</p>
+<p class="narrative-p">Teria que mostrar o poder do silício para cinquenta alunos que nunca tinham visto uma tela eletrônica.</p>
+<p class="narrative-p">O medo de falhar e passar vergonha no barro pesava mais que a caixa física.</p>
+<p class="narrative-p">Quando o ônibus finalmente parou, o barro cobria metade das rodas do veículo.</p>
+<p class="narrative-p">A fachada da escola era simples: tijolos aparentes e telhado de fibrocimento.</p>
+<p class="narrative-p">Sem asfalto na rua, Alex precisou dar um salto calculado para não atolar as botinas na lama vermelha.</p>
+<p class="narrative-p">A sala de aula estava lotada, quente e abafada de expectativa.</p>
+<p class="narrative-p">No centro da mesa, uma TV Colorado de quatorze polegadas com seletor mecânico aguardava.</p>
+<p class="narrative-p">"É esse o tal cérebro eletrônico?" perguntou o diretor, cruzando os braços com ceticismo.</p>
+<p class="narrative-p">"Sim, senhor," respondeu Alex, com a voz trêmula ao desembalar a máquina.</p>
+<p class="narrative-p">O TK90X era compacto, pouco maior que um livro de capa dura.</p>
+<p class="narrative-p">Seu teclado de borracha cinza parecia um conjunto de chicletes organizados e macios.</p>
+<p class="narrative-p">Conectou o cabo RF na antena da TV Colorado e sintonizou cuidadosamente o canal 3.</p>
+<p class="narrative-p">A tela de tubo chiou, exibindo névoa estática antes de abrir um fundo branco brilhante:</p>
+<p class="narrative-p">`© 1985 Microdigital`. Um murmúrio de espanto correu pela sala.</p>
+<p class="narrative-p">A parte difícil, no entanto, ainda estava por vir: carregar os programas da fita cassete.</p>
+<p class="narrative-p">Alex posicionou o gravador portátil, conectou os cabos de áudio e inseriu a fita K7.</p>
+<p class="narrative-p">Ele digitou o comando sagrado no teclado de borracha:</p>
+<p class="narrative-p">`LOAD ""`</p>
+<p class="narrative-p">Pressionou <em>Enter</em> e apertou o botão <em>Play</em> no gravador de áudio.</p>
+<p class="narrative-p">O silêncio na sala foi quebrado por um ruído agudo, um chiado estridente e rítmico.</p>
+<p class="narrative-p">Era o som do código binário sendo transmitido por pulsos sonoros no ar.</p>
+<p class="narrative-p">Na tela da TV Colorado, barras horizontais coloridas começaram a piscar freneticamente.</p>
+<p class="narrative-p">O Z80A estava decodificando os dados de áudio para impulsos elétricos internos.</p>
+<p class="narrative-p">Alex Senior prendeu a respiração enquanto o chip fazia o seu trabalho silencioso.</p>
+<p class="narrative-p">Se o cabeçote do gravador estivesse desalinhado por um milímetro, tudo falharia.</p>
+<p class="narrative-p">Cinco minutos de chiado pareciam uma eternidade na mente do piá de 15 anos.</p>
+<p class="narrative-p">De repente, o barulho cessou. A tela piscou em branco puro e exibiu o cursor ativo.</p>
+<p class="narrative-p">Com os dedos suados de alívio, Alex Senior digitou o comando final:</p>
+<p class="narrative-p">`RUN`</p>
+<p class="narrative-p">---</p>
 <h3>O Clímax e o Retorno a 2026</h3>
-<p>Ao pressionar a tecla <em>Enter</em>, a estática da tela deu lugar a uma cor preta profunda.</p>
-<p>O processador Z80A começou a traçar o gráfico, instrução por instrução, no seu próprio ritmo.</p>
-<p>Não havia renderização instantânea; a TV desenhava a imagem linha por linha.</p>
-<p>Uma linha azul subia no eixo vertical, curvava-se e cruzava com uma linha vermelha.</p>
-<p>Lentamente, o programa em BASIC tomou a forma de uma espiral geométrica complexa.</p>
-<p>"Meu Deus," murmurou o diretor, ajustando os óculos. "Ele fez a TV desenhar sozinha."</p>
-<p>Os alunos romperam em aplausos barulhentos na pequena sala de tijolos expostos.</p>
-<p>Alex Senior finalmente soltou o ar que prendia nos pulmões com um orgulho imenso.</p>
-<p>A engenharia se revelava ali não como tortura, mas como poder de dar ordem ao caos da lama.</p>
-<p>A poeira vermelha de 1986 se dissolveu no ar, substituída pelo feixe verde do LiDAR em 2026.</p>
-<p>Alex moderno piscou os olhos no presente frio do galpão de Curitiba.</p>
-<p>O ruído da fita magnética deu lugar ao zumbido eletrônico do robô AMR que passava.</p>
-<p>Ele ainda estava de pé, com as botas sujas de poeira antiga, segurando o chip do Z80A.</p>
-<p>Ele olhou para a centopeia de silício de quarenta pernas e depois para a frota moderna.</p>
-<p>Havia uma conexão direta e profunda entre aquelas duas eras separadas pelo asfalto.</p>
-<p>Os robôs autônomos de 2026 dependiam da mesma base lógica de controle nascida em 1986.</p>
-<p>A resposta para a mecatrônica avançada não estava nos relatórios de Bianchi.</p>
-<p>Estava guardada na simplicidade direta das anotações daquele caderno.</p>
-<p>"A máquina só obedece a quem respeita o bit," pensou, guardando o chip na mochila.</p>
-<p>---</p>
+<p class="narrative-p">Ao pressionar a tecla <em>Enter</em>, a estática da tela deu lugar a uma cor preta profunda.</p>
+<p class="narrative-p">O processador Z80A começou a traçar o gráfico, instrução por instrução, no seu próprio ritmo.</p>
+<p class="narrative-p">Não havia renderização instantânea; a TV desenhava a imagem linha por linha.</p>
+<p class="narrative-p">Uma linha azul subia no eixo vertical, curvava-se e cruzava com uma linha vermelha.</p>
+<p class="narrative-p">Lentamente, o programa em BASIC tomou a forma de uma espiral geométrica complexa.</p>
+<p class="narrative-p">"Meu Deus," murmurou o diretor, ajustando os óculos. "Ele fez a TV desenhar sozinha."</p>
+<p class="narrative-p">Os alunos romperam em aplausos barulhentos na pequena sala de tijolos expostos.</p>
+<p class="narrative-p">Alex Senior finalmente soltou o ar que prendia nos pulmões com um orgulho imenso.</p>
+<p class="narrative-p">A engenharia se revelava ali não como tortura, mas como poder de dar ordem ao caos da lama.</p>
+<p class="narrative-p">O chiado estridente da fita K7 na TV de tubo de 1986 de repente silenciou, transicionando para o ruído contínuo e grave dos climatizadores industriais do galpão de Curitiba em 2026.</p>
+<p class="narrative-p">Alex moderno piscou os olhos, retornando abruptamente ao presente frio.</p>
+<p class="narrative-p">O flash da TV Colorado foi substituído pelo anel azul e verde do robô AMR 12.</p>
+<p class="narrative-p">Ele ainda estava de pé no Setor G, com o velho chip Z80A brilhando em suas mãos.</p>
+<p class="narrative-p">A distância temporal de quarenta anos parecia encurtada por aquele pedaço de silício.</p>
+<p class="narrative-p">A frota de robôs modernos que gerenciava a logística dependia exatamente daquela mesma essência lógica.</p>
+<p class="narrative-p">Alex guardou o chip, percebendo que a resposta que procurava residia nas anotações do diário.</p>
+<p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>A base é a mesma</strong>: Os sistemas de automação de 2026 compartilham os princípios de controle lógico digital desenvolvidos nos computadores de 8 bits de 1986.</li>
 <li><strong>Resiliência e Precisão</strong>: A programação raiz lidava com mídias instáveis (como fitas K7) onde pequenas variações físicas invalidavam todo o processo.</li>
 <h3>🎮 Desafio prático</h3>
-<p><strong>O Desafio do Código Primitivo</strong></p>
-<p>Acesse o emulador online e teste o funcionamento lógico de um loop contínuo digitando a instrução clássica de exibição.</p>
+<p class="narrative-p"><strong>O Desafio do Código Primitivo</strong></p>
+<p class="narrative-p">Acesse o emulador online e teste o funcionamento lógico de um loop contínuo digitando a instrução clássica de exibição.</p>
 <li>[Simulador Online do ZX Spectrum](https://jsspeccy.zxdemo.org/)</li>
 <pre><code>basic
-<p>10 PRINT "Ola Mundo!"</p>
+<p class="narrative-p">10 PRINT "Ola Mundo!"</p>
 20 GOTO 10</code></pre>
 <h3>✨ Conexão com o próximo capítulo</h3>
-<p>Agora que Alex resgatou o diário físico, ele precisa compreender as engrenagens ocultas sob o plástico do Z80A. No próximo capítulo, desvendaremos a anatomia interna do processador e aprenderemos a lidar com as pequenas gavetas de dados conhecidas como registradores.</p>
+<p class="narrative-p">Agora que Alex resgatou o diário físico, ele precisa compreender as engrenagens ocultas sob o plástico do Z80A. No próximo capítulo, desvendaremos a anatomia interna do processador e aprenderemos a lidar com as pequenas gavetas de dados conhecidas como registradores.</p>
         </div>
         
 
         <div id="cap2" class="chapter-section">
             
             <h1 class="chapter-title">Capítulo 2: A Anatomia do Z80</h1>
-<p>Sentado em um banco de madeira no posto de monitoramento, Alex abriu o diário técnico.</p>
-<p>A caligrafia de Alex Senior começava abaixo de um título sublinhado duas vezes:</p>
-<p><em>"Como o Z80 pensa: O mistério dos 8 bits e das gavetas secretas"</em>.</p>
-<p>Alex moderno deu um gole no café morno de sua garrafa térmica.</p>
-<p>Acostumado a usar Python, onde uma única biblioteca oculta milhares de processos, ele sentiu curiosidade.</p>
-<p>Decidiu ler a explicação de seu mentor para entender as raízes do hardware de baixo nível.</p>
+<p class="narrative-p">Sentado em um banco de madeira no posto de monitoramento, Alex abriu o diário técnico.</p>
+<p class="narrative-p">A caligrafia de Alex Senior começava abaixo de um título sublinhado duas vezes:</p>
+<p class="narrative-p"><em>"Como o Z80 pensa: O mistério dos 8 bits e das gavetas secretas"</em>.</p>
+<p class="narrative-p">Alex moderno deu um gole no café morno de sua garrafa térmica.</p>
+<p class="narrative-p">Acostumado a usar Python, onde uma única biblioteca oculta milhares de processos, ele sentiu curiosidade.</p>
+<p class="narrative-p">Decidiu ler a explicação de seu mentor para entender as raízes do hardware de baixo nível.</p>
+<p class="narrative-p">Para desmistificar a caixa de metal sob o teclado, as anotações do diário propunham um ponto de partida simples.</p>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Se você quer controlar uma máquina, não pode tratá-la como um computador de ficção. O Z80 não sabe o que é uma imagem, som ou palavra. Ele só entende energia elétrica: passa corrente (1) ou não passa (0). Esse é o bit.”</div>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Mas um bit sozinho é apenas um interruptor solitário na parede. Para fazer algo útil, nós os agrupamos de oito em oito. Oito bits formam um byte. Pense em uma palavra de oito letras onde cada letra só pode ser '0' ou '1'.”</div>
-<p>Para explicar a manipulação desses bytes no processador, o diário trazia uma analogia visual simples.</p>
+<p class="narrative-p">Para explicar a manipulação desses bytes no processador, o diário trazia uma analogia visual simples.</p>
 <h3>[Conceito Chave] A analogia das gavetas de dados</h3>
-<p>Imagine que o processador é um escriturário muito rápido, mas com séria perda de memória recente.</p>
-<p>Ele só consegue trabalhar com o que está vendo exatamente neste instante em sua mesa.</p>
-<p>Para ajudá-lo, o chip possui gavetas de armazenamento ultrarrápidas chamadas registradores.</p>
-<p>No Z80, essas gavetas guardam apenas números de 8 bits.</p>
-<p>O maior valor que cabe em cada gaveta é o correspondente a oito bits ligados em nível alto (11111111).</p>
-<p>No nosso sistema decimal comum, esse valor limite é o número 255.</p>
-<p>O diagrama feito à mão por Alex Senior mostrava a disposição interna dos registradores:</p>
+<p class="narrative-p">Imagine que o processador é um escriturário muito rápido, mas com séria perda de memória recente.</p>
+<p class="narrative-p">Ele só consegue trabalhar com o que está vendo exatamente neste instante em sua mesa.</p>
+<p class="narrative-p">Para ajudá-lo, o chip possui gavetas de armazenamento ultrarrápidas chamadas registradores.</p>
+<p class="narrative-p">No Z80, essas gavetas guardam apenas números de 8 bits.</p>
+<p class="narrative-p">O maior valor que cabe em cada gaveta é o correspondente a oito bits ligados em nível alto (11111111).</p>
+<p class="narrative-p">No nosso sistema decimal comum, esse valor limite é o número 255.</p>
+<p class="narrative-p">O diagrama feito à mão por Alex Senior mostrava a disposição interna dos registradores:</p>
 <pre><code>+-----------------------------------+
-<p>|      GAVETAS DO PROCESSADOR (REG) |</p>
-<p>|  +---------+   +---------+        |</p>
-<p>|  |  Reg A  |   |  Reg B  |        |</p>
-<p>|  | (Acumul)|   | (Auxil) |        |</p>
-<p>|  +---------+   +---------+        |</p>
-<p>|  |  Reg C  |   |  Reg D  |        |</p>
-<p>|  +---------+   +---------+        |</p>
+<p class="narrative-p">|      GAVETAS DO PROCESSADOR (REG) |</p>
+<p class="narrative-p">|  +---------+   +---------+        |</p>
+<p class="narrative-p">|  |  Reg A  |   |  Reg B  |        |</p>
+<p class="narrative-p">|  | (Acumul)|   | (Auxil) |        |</p>
+<p class="narrative-p">|  +---------+   +---------+        |</p>
+<p class="narrative-p">|  |  Reg C  |   |  Reg D  |        |</p>
+<p class="narrative-p">|  +---------+   +---------+        |</p>
 +-----------------------------------+</code></pre>
-<p>A gaveta <strong>A</strong> é a mais importante e chama-se <strong>Acumulador</strong>.</p>
-<p>Se você quer somar dois números, deve colocar o primeiro em A e o segundo em B.</p>
-<p>Ao comandar a soma, o resultado final substitui o valor anterior que estava na gaveta A.</p>
-<p>Alex moderno sorriu, comparando aquela lógica física com seu código cotidiano em Python:</p>
+<p class="narrative-p">A gaveta <strong>A</strong> é a mais importante e chama-se <strong>Acumulador</strong>.</p>
+<p class="narrative-p">Se você quer somar dois números, deve colocar o primeiro em A e o segundo em B.</p>
+<p class="narrative-p">Ao comandar a soma, o resultado final substitui o valor anterior que estava na gaveta A.</p>
+<p class="narrative-p">Alex moderno sorriu, comparando aquela lógica física com seu código cotidiano em Python:</p>
 <pre><code>acumulador = 10
-<p>auxiliar = 5</p>
+<p class="narrative-p">auxiliar = 5</p>
 acumulador = acumulador + auxiliar</code></pre>
-<p>Por trás do código abstrato, a CPU moderna repete o mesmo ciclo elétrico elementar.</p>
-<p>Ela move dados entre registradores físicos de hardware e acumula o resultado final no registrador principal.</p>
-<p>A linguagem Assembly do Z80 simplesmente eliminava essas máscaras de software.</p>
-<p>No diário, a instrução <strong>LD</strong> (Load/Carregar) era apresentada como a chave de tudo:</p>
-<p>`LD A, 10` coloca o número 10 na gaveta A.</p>
-<p>`LD B, A` copia o valor contido em A diretamente para a gaveta B.</p>
-<p>---</p>
+<p class="narrative-p">Por trás do código abstrato, a CPU moderna repete o mesmo ciclo elétrico elementar.</p>
+<p class="narrative-p">Ela move dados entre registradores físicos de hardware e acumula o resultado final no registrador principal.</p>
+<p class="narrative-p">A linguagem Assembly do Z80 simplesmente eliminava essas máscaras de software.</p>
+<p class="narrative-p">No diário, a instrução <strong>LD</strong> (Load/Carregar) era apresentada como a chave de tudo:</p>
+<p class="narrative-p">`LD A, 10` coloca o número 10 na gaveta A.</p>
+<p class="narrative-p">`LD B, A` copia o valor contido em A diretamente para a gaveta B.</p>
+<p class="narrative-p">---</p>
 <h3>Os Portais para o Mundo Exterior: IN e OUT</h3>
-<p>O diário técnico avançava mostrando como o chip se conecta aos dispositivos externos.</p>
-<p>Havia setas desenhadas da CPU até caixas escritas "Gravador", "Teclado" e "Alto-falante".</p>
-<p>Alex Senior explicava como transpor a barreira do silício para interagir com o mundo físico.</p>
+<p class="narrative-p">O diário técnico avançava mostrando como o chip se conecta aos dispositivos externos.</p>
+<p class="narrative-p">Havia setas desenhadas da CPU até caixas escritas "Gravador", "Teclado" e "Alto-falante".</p>
+<p class="narrative-p">Alex Senior explicava como transpor a barreira do silício para interagir com o mundo físico.</p>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“O processador precisa agir sobre o exterior. No Z80, essa ponte física é feita por duas instruções mágicas: IN (Entrar) e OUT (Sair). Elas abrem portas físicas de comunicação elétrica.”</div>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Se você quer emitir um som, usa OUT (254), A. Isso descarrega o byte do acumulador na porta física 254 conectada ao falante. Para ler o teclado, IN A, (254) traz o nível elétrico dos botões direto para o acumulador.”</div>
-<p>Alex moderno olhou para o monitor, vendo a telemetria do robô autônomo AMR operando no corredor.</p>
-<p>O script complexo calculava as distâncias usando o tempo de retorno da luz do laser do LiDAR.</p>
-<p>No final da linha de processamento do robô moderno de 2026, a ação elétrica era idêntica à de 1986.</p>
-<p>Para frear o robô diante de uma viga irregular, a placa executava uma operação de baixo nível.</p>
-<p>Enviava bits na porta lógica correspondente ao driver dos motores, cortando a corrente de acionamento.</p>
-<p>Toda a complexidade de ROS 2 e robótica repousava em cascata sobre instruções fundamentais de entrada e saída.</p>
-<p>Para demonstrar a lógica, o diário apresentava este bloco curto em Assembly do Z80:</p>
+<p class="narrative-p">Alex moderno olhou para o monitor, vendo a telemetria do robô autônomo AMR operando no corredor.</p>
+<p class="narrative-p">O script complexo calculava as distâncias usando o tempo de retorno da luz do laser do LiDAR.</p>
+<p class="narrative-p">No final da linha de processamento do robô moderno de 2026, a ação elétrica era idêntica à de 1986.</p>
+<p class="narrative-p">Para frear o robô diante de uma viga irregular, a placa executava uma operação de baixo nível.</p>
+<p class="narrative-p">Enviava bits na porta lógica correspondente ao driver dos motores, cortando a corrente de acionamento.</p>
+<p class="narrative-p">Toda a complexidade de ROS 2 e robótica repousava em cascata sobre instruções fundamentais de entrada e saída.</p>
+<p class="narrative-p">Para demonstrar a lógica, o diário apresentava este bloco curto em Assembly do Z80:</p>
 <pre><code>; Loop simples para ler o teclado e alterar o som
-<p>LEITURA:</p>
-<p>IN A, (254)    ; Lê a porta de I/O 254 (teclado)</p>
-<p>LD B, A        ; Salva o estado lido na gaveta B</p>
-<p>OUT (254), A   ; Envia o mesmo valor para a porta de som</p>
+<p class="narrative-p">LEITURA:</p>
+<p class="narrative-p">IN A, (254)    ; Lê a porta de I/O 254 (teclado)</p>
+<p class="narrative-p">LD B, A        ; Salva o estado lido na gaveta B</p>
+<p class="narrative-p">OUT (254), A   ; Envia o mesmo valor para a porta de som</p>
 JP LEITURA     ; Pula de volta para o início (Loop)</code></pre>
-<p>A poeira vermelha da estrada de Cascavel e os robôs de última geração dividiam os mesmos princípios básicos.</p>
-<p>A leitura do caderno fornecia a base que faltava à engenharia puramente abstrata da faculdade.</p>
-<p>Alex se ajeitou no posto de monitoramento, pronto para avançar para a lógica numérica dos bits.</p>
-<p>---</p>
+<p class="narrative-p">A poeira vermelha da estrada de Cascavel e os robôs de última geração dividiam os mesmos princípios básicos.</p>
+<p class="narrative-p">A leitura do caderno fornecia a base que faltava à engenharia puramente abstrata da faculdade.</p>
+<p class="narrative-p">Alex se ajeitou no posto de monitoramento, pronto para avançar para a lógica numérica dos bits.</p>
+<p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>Registradores</strong>: São gavetas internas de memória ultrarrápida do processador. No Z80, operam com dados de 8 bits (números de 0 a 255).</li>
 <li><strong>Instruções de Controle</strong>: `LD` carrega e move informações, enquanto `IN` e `OUT` fazem a interface física direta com os periféricos externos.</li>
 <h3>🎮 Desafio prático</h3>
-<p><strong>O Desenho do Fluxo dos Bits</strong></p>
-<p>Desenhe a gaveta do Acumulador A e a gaveta auxiliar B. Indique graficamente para onde o dado flui ao executar sequencialmente as instruções `LD A, 5` e `LD B, A`.</p>
+<p class="narrative-p"><strong>O Desenho do Fluxo dos Bits</strong></p>
+<p class="narrative-p">Desenhe a gaveta do Acumulador A e a gaveta auxiliar B. Indique graficamente para onde o dado flui ao executar sequencialmente as instruções `LD A, 5` e `LD B, A`.</p>
 <h3>✨ Conexão com o próximo capítulo</h3>
-<p>Agora que conhecemos os compartimentos onde o Z80 manipula os bytes, precisamos desvendar como esses números se estruturam por dentro. No próximo capítulo, vamos decifrar a lógica binária e hexadecimal, aprendendo a ler e traduzir as combinações numéricas básicas que governam as decisões lógicas das máquinas.</p>
+<p class="narrative-p">Agora que conhecemos os compartimentos onde o Z80 manipula os bytes, precisamos desvendar como esses números se estruturam por dentro. No próximo capítulo, vamos decifrar a lógica binária e hexadecimal, aprendendo a ler e traduzir as combinações numéricas básicas que governam as decisões lógicas das máquinas.</p>
         </div>
         
 
         <div id="cap3" class="chapter-section">
             
             <h1 class="chapter-title">Capítulo 3: A Lógica do Bit</h1>
-<p>A chuva finalmente desabou sobre o telhado da escola técnica.</p>
-<p>O barulho isolava a sala de aula do resto do mundo em 1986.</p>
-<p>Alex Senior encarava o cursor piscante do TK90X na TV de tubo.</p>
-<p>Ele queria criar um jogo de ação espacial com uma nave desviando de asteroides.</p>
-<p>O problema era cruel: não existia internet ou tutoriais para consultar.</p>
-<p>O único manual do computador era um livreto fino e traduzido de forma confusa.</p>
-<p>Para ir além, ele precisava decifrar a linguagem nativa do chip Z80.</p>
-<p>Ele tinha que entender como converter números em pixels coloridos na tela.</p>
-<p>Precisava dominar a matemática invisível que governava os transistores.</p>
+<p class="narrative-p">A chuva finalmente desabou sobre o telhado da escola técnica.</p>
+<p class="narrative-p">O barulho isolava a sala de aula do resto do mundo em 1986.</p>
+<p class="narrative-p">Alex Senior encarava o cursor piscante do TK90X na TV de tubo.</p>
+<p class="narrative-p">Ele queria criar um jogo de ação espacial com uma nave desviando de asteroides.</p>
+<p class="narrative-p">O problema era cruel: não existia internet ou tutoriais para consultar.</p>
+<p class="narrative-p">O único manual do computador era um livreto fino e traduzido de forma confusa.</p>
+<p class="narrative-p">Para ir além, ele precisava decifrar a linguagem nativa do chip Z80.</p>
+<p class="narrative-p">Ele tinha que entender como converter números em pixels coloridos na tela.</p>
+<p class="narrative-p">Precisava dominar a matemática invisível que governava os transistores.</p>
+<p class="narrative-p">Para se comunicar com o hardware sem perder a razão, ele anotou uma regra fundamental.</p>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Para nós, humanos, contar de dez em dez é o natural,” escreveu Alex Senior.<br/>“Em contrapartida, o Z80 só enxerga eletricidade e tensão elétrica nos pinos.<br/>Ele só tem dois estados elétricos possíveis: ligado (1) ou desligado (0). É o sistema binário.”</div>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Para não enlouquecer escrevendo zeros e uns, usamos o sistema hexadecimal.<br/>Agrupamos os números de dezesseis em dezesseis, de 0 a 9 e de A a F para 10 a 15.<br/>O número 255 (máximo de um byte) vira 11111111 em binário, ou simplesmente FF em hexa.”</div>
-<p>A transição da teoria para a prática dependia apenas de um caderno quadriculado.</p>
+<p class="narrative-p">A transição da teoria para a prática dependia apenas de um caderno quadriculado.</p>
 <h3>[Desafio Prático] A Conversão do Sprite da Nave</h3>
-<p>Para criar o gráfico da nave espacial, Alex Senior abriu o caderno.</p>
-<p>Com uma caneta preta, desenhou uma matriz quadriculada de 8 colunas por 8 linhas.</p>
-<p>Pintou os quadradinhos centrais para dar forma física à fuselagem.</p>
-<p>Cada quadrado em branco representava o bit zero (`0`).</p>
-<p>Cada quadrado preenchido e pintado de preto representava o bit um (`1`).</p>
-<p>Linha por linha, os blocos de interruptores criavam uma sequência numérica.</p>
-<p>A primeira linha desenhada tinha o padrão binário `00011000`, equivalente ao decimal 24.</p>
-<p>A segunda linha exibia `00111100`, que correspondia ao número decimal 60.</p>
-<p>A terceira, com as asas da nave totalmente abertas, formava `11111111` (decimal 255).</p>
-<p>Alex Senior traduziu o desenho em uma lista de oito números decimais de controle.</p>
-<p>Aquele conjunto numérico era o código genético de sua nave na memória.</p>
-<p>Ele usaria o comando `POKE` do BASIC para gravar esses valores diretamente no hardware.</p>
-<p>---</p>
+<p class="narrative-p">Para criar o gráfico da nave espacial, Alex Senior abriu o caderno.</p>
+<p class="narrative-p">Com uma caneta preta, desenhou uma matriz quadriculada de 8 colunas por 8 linhas.</p>
+<p class="narrative-p">Pintou os quadradinhos centrais para dar forma física à fuselagem.</p>
+<p class="narrative-p">Cada quadrado em branco representava o bit zero (`0`).</p>
+<p class="narrative-p">Cada quadrado preenchido e pintado de preto representava o bit um (`1`).</p>
+<p class="narrative-p">Linha por linha, os blocos de interruptores criavam uma sequência numérica.</p>
+<p class="narrative-p">A primeira linha desenhada tinha o padrão binário `00011000`, equivalente ao decimal 24.</p>
+<p class="narrative-p">A segunda linha exibia `00111100`, que correspondia ao número decimal 60.</p>
+<p class="narrative-p">A terceira, com as asas da nave totalmente abertas, formava `11111111` (decimal 255).</p>
+<p class="narrative-p">Alex Senior traduziu o desenho em uma lista de oito números decimais de controle.</p>
+<p class="narrative-p">Aquele conjunto numérico era o código genético de sua nave na memória.</p>
+<p class="narrative-p">Ele usaria o comando `POKE` do BASIC para gravar esses valores diretamente no hardware.</p>
+<p class="narrative-p">---</p>
 <h3>A Luz que Pisca: Do Caderno Quadriculado aos Encoders Industriais</h3>
-<p>A poeira vermelha de 1986 se dissolveu no ar, substituída pelo feixe verde do LiDAR em 2026.</p>
-<p>Alex moderno levantou os olhos do diário no galpão silencioso de Curitiba.</p>
-<p>Ele observou o motor de tração de um dos robôs AMRs parado na estação.</p>
-<p>No eixo da roda traseira do robô, notou a carcaça de proteção do encoder óptico.</p>
-<p>O princípio do sensor moderno era o mesmo grid quadriculado desenhado por seu mentor.</p>
-<p>Dentro do encoder, um pequeno disco plástico transparente cheio de ranhuras pretas girava.</p>
-<p>Um feixe de luz infravermelha atravessava o disco durante a rotação física.</p>
-<p>A luz passando pela área transparente gerava corrente elétrica: bit um (`1`).</p>
-<p>Quando a ranhura escura bloqueava a luz, a corrente elétrica cessava: bit zero (`0`).</p>
-<p>O sensor gerava uma sequência de bits em alta velocidade para calcular a velocidade.</p>
-<p>"Tanto poder de processamento em 2026," murmurou Alex, vendo o robô piscar em azul.</p>
-<p>"E a segurança física de uma máquina cara ainda depende de a luz passar ou não pelo disco.</p>
-<p>No fim das contas, tudo na engenharia se resume a zeros e uns."</p>
-<p>Ele passou a mão sobre a folha amarelada do diário com respeito.</p>
-<p>A primeira parte de sua jornada de descoberta física com o mentor estava concluída.</p>
-<p>Ele agora precisava virar a página e viajar para as memórias industriais da Itália.</p>
-<p>---</p>
+<p class="narrative-p">A imagem pixelada daquela nave espacial desenhada na TV Colorado pareceu pulsar, até congelar sob o feixe verde do laser do LiDAR moderno de Curitiba em 2026.</p>
+<p class="narrative-p">Alex moderno levantou os olhos do diário no galpão silencioso de Curitiba.</p>
+<p class="narrative-p">Ele observou o motor de tração de um dos robôs AMRs parado na estação.</p>
+<p class="narrative-p">No eixo da roda traseira do robô, notou a carcaça de proteção do encoder óptico.</p>
+<p class="narrative-p">O princípio do sensor moderno era o mesmo grid quadriculado desenhado por seu mentor.</p>
+<p class="narrative-p">Dentro do encoder, um pequeno disco plástico transparente cheio de ranhuras pretas girava.</p>
+<p class="narrative-p">Um feixe de luz infravermelha atravessava o disco durante a rotação física.</p>
+<p class="narrative-p">A luz passando pela área transparente gerava corrente elétrica: bit um (`1`).</p>
+<p class="narrative-p">Quando a ranhura escura bloqueava a luz, a corrente elétrica cessava: bit zero (`0`).</p>
+<p class="narrative-p">O sensor gerava uma sequência de bits em alta velocidade para calcular a velocidade.</p>
+<p class="narrative-p">"Tanto poder de processamento em 2026," murmurou Alex, vendo o robô piscar em azul.</p>
+<p class="narrative-p">"E a segurança física de uma máquina cara ainda depende de a luz passar ou não pelo disco.</p>
+<p class="narrative-p">No fim das contas, tudo na engenharia se resume a zeros e uns."</p>
+<p class="narrative-p">Ele passou a mão sobre a folha amarelada do diário com respeito.</p>
+<p class="narrative-p">A primeira parte de sua jornada de descoberta física com o mentor estava concluída.</p>
+<p class="narrative-p">Ele agora precisava virar a página e viajar para as memórias industriais da Itália.</p>
+<p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>Bases Lógicas</strong>: O binário reflete estados elétricos (0 e 1), e o hexadecimal serve como abreviação.</li>
 <li><strong>Estruturação de Dados</strong>: Imagens bidimensionais em telas antigas eram mapeadas como matrizes de bits de memória.</li>
 <h3>🎮 Desafio prático</h3>
-<p><strong>O Desenho de Sprites Digitais</strong></p>
-<p>Desenhe uma grade de 8x8 em um papel quadriculado e crie o desenho de um invasor espacial. Escreva a sequência binária correspondente a cada linha e faça a conversão decimal equivalente.</p>
+<p class="narrative-p"><strong>O Desenho de Sprites Digitais</strong></p>
+<p class="narrative-p">Desenhe uma grade de 8x8 em um papel quadriculado e crie o desenho de um invasor espacial. Escreva a sequência binária correspondente a cada linha e faça a conversão decimal equivalente.</p>
 <h3>✨ Conexão com o próximo capítulo</h3>
-<p>Com a lógica dos bits compreendida, Alex precisa encarar como esses dados são manipulados em grande escala. No próximo capítulo, cruzaremos o tempo até o inverno de 2001 na Itália para desvendar a temida "saudação de três dedos" e ver o que acontece quando a memória de um sistema real atinge seus limites físicos.</p>
+<p class="narrative-p">Com a lógica dos bits compreendida, Alex precisa encarar como esses dados são manipulados em grande escala. No próximo capítulo, cruzaremos o tempo até o inverno de 2001 na Itália para desvendar a temida "saudação de três dedos" e ver o que acontece quando a memória de um sistema real atinge seus limites físicos.</p>
         </div>
         
 
         <div id="cap4" class="chapter-section">
             
             <h1 class="chapter-title">Capítulo 4: A Saudação de Três Dedos no Magazzino</h1>
-<p>Alex moderno ajeitou o casaco no posto de monitoramento.</p>
-<p>Ele virou a página do caderno técnico de seu mentor.</p>
-<p>A tinta azul parecia mais escura e havia marcas de café.</p>
-<p>No topo, o cabeçalho em itálico trazia a ambientação:</p>
-<p><em>"Milão, Itália – Inverno de 2001. O dia em que o gigante de aço congelou"</em>.</p>
-<p>O silêncio do CD de Curitiba parecia ecoar o galpão italiano de 25 anos atrás.</p>
+<p class="narrative-p">Alex moderno ajeitou o casaco no posto de monitoramento.</p>
+<p class="narrative-p">Ele virou a página do caderno técnico de seu mentor.</p>
+<p class="narrative-p">A tinta azul parecia mais escura e havia marcas de café.</p>
+<p class="narrative-p">No topo, o cabeçalho em itálico trazia a ambientação:</p>
+<p class="narrative-p"><em>"Milão, Itália – Inverno de 2001. O dia em que o gigante de aço congelou"</em>.</p>
+<p class="narrative-p">O silêncio do CD de Curitiba parecia ecoar o galpão italiano de 25 anos atrás.</p>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“O frio de Milão em janeiro cortava a pele,” dizia o diário.<br/>“Eu estava manobrando empilhadeiras elétricas rápidas no armazém automatizado.<br/>Havia motores trifásicos, correntes pesadas e o estalo de relés de potência constante.”</div>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“De repente, os transelevadores travaram no ar com toneladas de carga.<br/>As esteiras pararam de vibrar e o terminal de fósforo verde travou em uma tela cinza.<br/>O caos foi imediato e o supervisor italiano Moretti começou a gritar no rádio.”</div>
-<p>Moretti exigia acionar o suporte alemão ao custo de mil euros a hora de viagem.</p>
-<p>Se a fábrica parasse por falta de peças, metade da equipe seria demitida.</p>
-<p>A tensão física tomou conta de toda a equipe de controle do local.</p>
+<p class="narrative-p">Moretti exigia acionar o suporte alemão ao custo de mil euros a hora de viagem.</p>
+<p class="narrative-p">Se a fábrica parasse por falta de peças, metade da equipe seria demitida.</p>
+<p class="narrative-p">A tensão física tomou conta de toda a equipe de controle do local.</p>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Eles achavam que era uma pane elétrica grave de alta tensão.<br/>Mas eu já tinha visto aquela tela cinza travar nos tempos de Cascavel.<br/>O computador central simplesmente engasgara com o excesso de dados em execução.”</div>
-<p>Alex Senior empurrou os manuais e encarei o teclado cinza da IBM.</p>
-<p>Ele posicionou a mão sobre o teclado, sob os olhares irritados de Moretti.</p>
-<p>Pressionou o <strong>Ctrl</strong>, o <strong>Alt</strong> e bateu firme no <strong>Del</strong>.</p>
-<p>---</p>
+<p class="narrative-p">Alex Senior empurrou os manuais e encarou o teclado cinza da IBM.</p>
+<p class="narrative-p">Ele posicionou a mão sobre o teclado, sob os olhares irritados de Moretti.</p>
+<p class="narrative-p">Pressionou o <strong>Ctrl</strong>, o <strong>Alt</strong> e bateu firme no <strong>Del</strong>.</p>
+<p class="narrative-p">---</p>
 <h3>O Reboot Físico e a Interrupção de Hardware</h3>
-<p>Ao pressionar Ctrl, Alt e Del simultaneamente, a placa envia um sinal elétrico.</p>
-<p>Esse sinal é uma Interrupção Não-Mascarável (NMI) direto ao pino do chip.</p>
-<p>O Z80A é obrigado a parar imediatamente o que está fazendo, sem exceção.</p>
-<p>As gavetas de registradores congestionadas na memória RAM são totalmente limpas.</p>
-<p>Os ponteiros de instrução voltam para o endereço de início (zero) da ROM.</p>
-<p>O chip lê as primeiras instruções da BIOS, forçando o reboot completo do sistema.</p>
-<p>A tela do terminal piscou e exibiu o cursor ativo após o bipe de inicialização.</p>
-<p>O MS-DOS antigo recarregou o banco de dados e as esteiras começaram a roncar de novo.</p>
-<p>O gigante de aço acordou de seu transe e Moretti parou de gritar.</p>
-<p>---</p>
+<p class="narrative-p">Ao pressionar Ctrl, Alt e Del simultaneamente, a placa envia um sinal elétrico.</p>
+<p class="narrative-p">Esse sinal é uma Interrupção Não-Mascarável (NMI) direto ao pino do chip.</p>
+<p class="narrative-p">O Z80A é obrigado a parar imediatamente o que está fazendo, sem exceção.</p>
+<p class="narrative-p">As gavetas de registradores congestionadas na memória RAM são totalmente limpas.</p>
+<p class="narrative-p">Os ponteiros de instrução voltam para o endereço de início (zero) da ROM.</p>
+<p class="narrative-p">O chip lê as primeiras instruções da BIOS, forçando o reboot completo do sistema.</p>
+<p class="narrative-p">A tela do terminal piscou e exibiu o cursor ativo após o bipe de inicialização.</p>
+<p class="narrative-p">O MS-DOS antigo recarregou o banco de dados e as esteiras começaram a roncar de novo.</p>
+<p class="narrative-p">O gigante de aço acordou de seu transe e Moretti parou de gritar.</p>
+<p class="narrative-p">---</p>
 <h3>O Fantasma da Memória Cheia: De 2001 a 2026</h3>
-<p>A poeira vermelha de 1986 se dissolveu no ar, substituída pelo feixe verde do LiDAR em 2026.</p>
-<p>Alex moderno olhou para a telemetria do robô autônomo AMR.</p>
-<p>No diário, a anotação técnica detalhava a causa física daquele travamento.</p>
-<p>O sistema rodava sob o MS-DOS com apenas 640 KB de memória convencional útil.</p>
-<p>Cada caixa alocava dinamicamente ponteiros de dados durante a movimentação.</p>
-<p>Se o programador esquecesse de liberar esses endereços após a tarefa, a memória sumia.</p>
-<p>Era o vazamento de memória (<em>Memory Leak</em>), que após dias congelava a CPU.</p>
-<p>Hoje, em 2026, com gigabytes de memória RAM, Alex enfrentava exatamente o mesmo problema.</p>
-<p>Na semana anterior, um robô AMR andou em círculos erráticos no Setor C antes de congelar.</p>
-<p>A câmera estéreo gerava nuvens de pontos 3D que estouravam a pilha de memória.</p>
-<p>Ele usou ferramentas como o <em>Valgrind</em> para encontrar os bytes não limpos em C++.</p>
-<p>Mas a essência do problema era idêntica à que Alex Senior resolveu em 2001.</p>
-<p>Para manter a robustez, um engenheiro precisa controlar a alocação de cada byte.</p>
-<p>---</p>
+<p class="narrative-p">O eco mecânico dos transelevadores reiniciando em Milão dissolveu-se gradativamente na memória de Alex, fundindo-se com o sopro pressurizado das pinças pneumáticas do CD de Curitiba em 2026.</p>
+<p class="narrative-p">Alex moderno olhou para a telemetria do robô autônomo AMR.</p>
+<p class="narrative-p">No diário, a anotação técnica detalhava a causa física daquele travamento.</p>
+<p class="narrative-p">O sistema rodava sob o MS-DOS com apenas 640 KB de memória convencional útil.</p>
+<p class="narrative-p">Cada caixa alocava dinamicamente ponteiros de dados durante a movimentação.</p>
+<p class="narrative-p">Se o programador esquecesse de liberar esses endereços após a tarefa, a memória sumia.</p>
+<p class="narrative-p">Era o vazamento de memória (<em>Memory Leak</em>), que após dias congelava a CPU.</p>
+<p class="narrative-p">Hoje, em 2026, com gigabytes de memória RAM, Alex enfrentava exatamente o mesmo problema.</p>
+<p class="narrative-p">Na semana anterior, um robô AMR andou em círculos erráticos no Setor C antes de congelar.</p>
+<p class="narrative-p">A câmera estéreo gerava nuvens de pontos 3D que estouravam a pilha de memória.</p>
+<p class="narrative-p">Ele usou ferramentas como o <em>Valgrind</em> para encontrar os bytes não limpos em C++.</p>
+<p class="narrative-p">Mas a essência do problema era idêntica à que Alex Senior resolveu em 2001.</p>
+<p class="narrative-p">Para manter a robustez, um engenheiro precisa controlar a alocação de cada byte.</p>
+<p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>Interrupções (NMI)</strong>: Ctrl+Alt+Del aciona um pino físico do processador, forçando um reinício do hardware acima de qualquer instrução de software.</li>
 <li><strong>Memory Leak</strong>: Vazamento de memória ocorre quando dados são alocados no sistema mas não são limpos depois, esgotando a memória convencional útil.</li>
 <h3>🎮 Desafio prático</h3>
-<p><strong>O Monitoramento de Memória</strong></p>
-<p>Escreva um pequeno pseudo-código demonstrando o erro lógico clássico de alocar espaço na memória em um loop infinito sem liberar o ponteiro correspondente.</p>
+<p class="narrative-p"><strong>O Monitoramento de Memória</strong></p>
+<p class="narrative-p">Escreva um pequeno pseudo-código demonstrando o erro lógico clássico de alocar espaço na memória em um loop infinito sem liberar o ponteiro correspondente.</p>
 <h3>✨ Conexão com o próximo capítulo</h3>
-<p>Limpar a memória RAM é vital, mas o que acontece quando precisamos conversar diretamente com a máquina em arquivos de configuração? No próximo capítulo, mergulharemos nos conceitos do sistema operacional de disco MS-DOS e entenderemos como organizar diretórios e ler arquivos de hardware usando linhas de comando primitivas.</p>
+<p class="narrative-p">Limpar a memória RAM é vital, mas o que acontece quando precisamos conversar diretamente com a máquina em arquivos de configuração? No próximo capítulo, mergulharemos nos conceitos do sistema operacional de disco MS-DOS e entenderemos como organizar diretórios e ler arquivos de hardware usando linhas de comando primitivas.</p>
         </div>
         
 
         <div id="cap5" class="chapter-section">
             
             <h1 class="chapter-title">Capítulo 5: Sistemas Operacionais Raiz</h1>
-<p>A madrugada avançava sob o vento frio de Curitiba.</p>
-<p>Alex moderno virou a página do caderno técnico no monitoramento.</p>
-<p>O capítulo iniciava com um diagrama de circuito detalhado a bico de pena.</p>
-<p>O título, escrito em letras garrafais, alertava:</p>
-<p><em>"Interrupções (IRQ): O botão de pânico do hardware e a ilusão do multitarefa"</em>.</p>
-<p>Seus olhos se fixaram na explicação sobre o fluxo de processamento de baixo nível.</p>
+<p class="narrative-p">A madrugada avançava sob o vento frio de Curitiba.</p>
+<p class="narrative-p">Alex moderno virou a página do caderno técnico no monitoramento.</p>
+<p class="narrative-p">O capítulo iniciava com um diagrama de circuito detalhado a bico de pena.</p>
+<p class="narrative-p">O título, escrito em letras garrafais, alertava:</p>
+<p class="narrative-p"><em>"Interrupções (IRQ): O botão de pânico do hardware e a ilusão do multitarefa"</em>.</p>
+<p class="narrative-p">Seus olhos se fixaram na explicação sobre o fluxo de processamento de baixo nível.</p>
+<p class="narrative-p">Para desvendar como a CPU equilibrava tantas tarefas físicas em tempo real, Alex leu a analogia clássica.</p>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“O computador é um trabalhador de foco obsessivo,” explicava o diário.<br/>“Ele lê uma instrução na memória, executa e passa para a próxima de forma linear.<br/>Mas se dependesse só disso, o chip seria incapaz de interagir com o mundo em tempo real.”</div>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Para resolver isso, os projetistas de hardware criaram as Interrupções (IRQ).<br/>Pense em um engenheiro focado lendo um manual técnico denso na sua mesa.<br/>De repente, o telefone ao lado toca. Isso é uma interrupção física externa.”</div>
-<p>O engenheiro não ignora o barulho do telefone; ele precisa agir.</p>
-<p>Ele marca a linha e a página onde parou a leitura com um lápis.</p>
-<p>No processador, esse "lápis" é a ação de salvar o Program Counter (PC) no Stack.</p>
-<p>O engenheiro atende a chamada de emergência e resolve o problema do cliente.</p>
-<p>Essa ação é o equivalente à Rotina de Serviço de Interrupção (ISR) de software.</p>
-<p>Finalizado o atendimento, ele abre o manual na marcação e retoma a leitura de onde parou.</p>
-<p>No MS-DOS antigo, o gerenciamento de hardware ocorria através desse jogo elétrico rápido.</p>
-<p>O teclado, o mouse e as primeiras placas de rede conversavam pela linha física IRQ.</p>
-<p>Ao pressionar uma tecla, o sinal interrompia o fluxo da CPU para capturar o código digitado.</p>
-<p>---</p>
+<p class="narrative-p">O engenheiro não ignora o barulho do telefone; ele precisa agir.</p>
+<p class="narrative-p">Ele marca a linha e a página onde parou a leitura com um lápis.</p>
+<p class="narrative-p">No processador, esse "lápis" é a ação de salvar o Program Counter (PC) no Stack.</p>
+<p class="narrative-p">O engenheiro atende a chamada de emergência e resolve o problema do cliente.</p>
+<p class="narrative-p">Essa ação é o equivalente à Rotina de Serviço de Interrupção (ISR) de software.</p>
+<p class="narrative-p">Finalizado o atendimento, ele abre o manual na marcação e retoma a leitura de onde parou.</p>
+<p class="narrative-p">No MS-DOS antigo, o gerenciamento de hardware ocorria através desse jogo elétrico rápido.</p>
+<p class="narrative-p">O teclado, o mouse e as primeiras placas de rede conversavam pela linha física IRQ.</p>
+<p class="narrative-p">Ao pressionar uma tecla, o sinal interrompia o fluxo da CPU para capturar o código digitado.</p>
+<p class="narrative-p">---</p>
 <h3>O Vetor de Reset e a Inicialização Física</h3>
-<p>Quando o sistema operacional travava por completo, restava apenas o pino de RESET físico.</p>
-<p>O acionamento elétrico do RESET ou o atalho de teclado prioritário Ctrl+Alt+Del forçavam o processador.</p>
-<p>O ponteiro Program Counter (PC) era obrigado a pular para o endereço inicial de ROM.</p>
-<p>No processador Z80, esse endereço fixo era o hexadecimal `0000h`.</p>
-<p>Nas placas modernas baseadas na arquitetura x86, o ponteiro de execução aponta para `FFFF:0000h`.</p>
-<p>Lá reside o código sagrado da BIOS, que inicia o autoteste (POST) e recarrega o sistema.</p>
-<p>---</p>
+<p class="narrative-p">Quando o sistema operacional travava por completo, restava apenas o pino de RESET físico.</p>
+<p class="narrative-p">O acionamento elétrico do RESET ou o atalho de teclado prioritário Ctrl+Alt+Del forçavam o processador.</p>
+<p class="narrative-p">O ponteiro Program Counter (PC) era obrigado a pular para o endereço inicial de ROM.</p>
+<p class="narrative-p">No processador Z80, esse endereço fixo era o hexadecimal `0000h`.</p>
+<p class="narrative-p">Nas placas modernas baseadas na arquitetura x86, o ponteiro de execução aponta para `FFFF:0000h`.</p>
+<p class="narrative-p">Lá reside o código sagrado da BIOS, que inicia o autoteste (POST) e recarrega o sistema.</p>
+<p class="narrative-p">---</p>
 <h3>Do DOS Monotarefa ao Multitarefa do ROS 2: A Ilusão do Tempo Real</h3>
-<p>A poeira vermelha de 1986 se dissolveu no ar, substituída pelo feixe verde do LiDAR em 2026.</p>
-<p>Alex moderno observou o robô AMR 08 patrulhar a doca 12 do galpão.</p>
-<p>O robô parecia executar simultaneamente seu mapeamento, Wi-Fi e controle de motores.</p>
-<p>Mas, na física da CPU multinúcleo do robô, o princípio de interrupção governava tudo.</p>
-<p>O Linux embutido do AMR utilizava o escalonador do kernel para dividir o tempo de processamento.</p>
-<p>Um timer de hardware gerava uma interrupção periódica interna a cada milissegundo de operação.</p>
-<p>O processador pausava a tarefa de Wi-Fi, salvava o estado e lia as variáveis de navegação.</p>
-<p>Para quem olhava de fora, as tarefas pareciam paralelas e simultâneas.</p>
-<p>Na verdade do chip, a CPU saltava freneticamente entre rotinas em velocidades imperceptíveis.</p>
-<p>Compreender essas prioridades elétricas era o segredo para evitar colisões no armazém real.</p>
-<p>---</p>
+<p class="narrative-p">O estalo seco do teclado IBM mecânico de 2001 esvaeceu na neblina, sendo substituído pelo zumbido característico do sinal de telemetria sem fio emitido pela frota de 2026.</p>
+<p class="narrative-p">Alex moderno observou o robô AMR 08 patrulhar a doca 12 do galpão.</p>
+<p class="narrative-p">O robô parecia executar simultaneamente seu mapeamento, Wi-Fi e controle de motores.</p>
+<p class="narrative-p">Mas, na física da CPU multinúcleo do robô, o princípio de interrupção governava tudo.</p>
+<p class="narrative-p">O Linux embutido do AMR utilizava o escalonador do kernel para dividir o tempo de processamento.</p>
+<p class="narrative-p">Um timer de hardware gerava uma interrupção periódica interna a cada milissegundo de operação.</p>
+<p class="narrative-p">O processador pausava a tarefa de Wi-Fi, salvava o estado e lia as variáveis de navegação.</p>
+<p class="narrative-p">Para quem olhava de fora, as tarefas pareciam paralelas e simultâneas.</p>
+<p class="narrative-p">Na verdade do chip, a CPU saltava freneticamente entre rotinas em velocidades imperceptíveis.</p>
+<p class="narrative-p">Compreender essas prioridades elétricas era o segredo para evitar colisões no armazém real.</p>
+<p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>Interrupções (IRQ)</strong>: Sinais elétricos que suspendem a execução do fluxo principal da CPU para tratar eventos urgentes de hardware.</li>
 <li><strong>Pilha (Stack) e Ponteiros</strong>: O registrador de execução Program Counter (PC) é salvo no Stack antes do salto para a sub-rotina de interrupção (ISR).</li>
 <h3>🎮 Desafio prático</h3>
-<p><strong>O Algoritmo de Prioridade</strong></p>
-<p>Escreva um pequeno pseudo-código demonstrando o funcionamento de um loop principal que é interrompido por um sinal externo crítico de botão de emergência.</p>
+<p class="narrative-p"><strong>O Algoritmo de Prioridade</strong></p>
+<p class="narrative-p">Escreva um pequeno pseudo-código demonstrando o funcionamento de um loop principal que é interrompido por um sinal externo crítico de botão de emergência.</p>
 <h3>✨ Conexão com o próximo capítulo</h3>
-<p>Controlar as interrupções permite ao robô reagir ao mundo, mas como ele sabe para onde ir no plano tridimensional? No próximo capítulo, sairemos da lógica puramente binária e entraremos na matemática do espaço, desvendando as matrizes 3D que orientam os robôs e as empilhadeiras na logística moderna.</p>
+<p class="narrative-p">Controlar as interrupções permite ao robô reagir ao mundo, mas como ele sabe para onde ir no plano tridimensional? No próximo capítulo, sairemos da lógica puramente binária e entraremos na matemática do espaço, desvendando as matrizes 3D que orientam os robôs e as empilhadeiras na logística moderna.</p>
         </div>
         
 
         <div id="cap6" class="chapter-section">
             
             <h1 class="chapter-title">Capítulo 6: A Matemática do Espaço</h1>
-<p>O aquecedor barulhento da sala de controle tentava combater o frio em Milão.</p>
-<p>Ao lado do terminal antigo de fósforo verde, o café de Alex Senior esfriara.</p>
-<p>Seus olhos estavam fixos na planta baixa industrial impressa sobre a mesa de fórmica.</p>
-<p>O galpão de armazenamento estava saturado em 2001.</p>
-<p>Noventa por cento da capacidade nominal física do galpão já havia sido ocupada.</p>
-<p>A diretoria italiana exigia estocar mais dez por cento de carga sem ampliar o espaço físico.</p>
-<p>A solução lógica do problema não estava no aço das prateleiras, mas no código.</p>
-<p>Ele precisava programar o terminal para otimizar cada centímetro livre no local.</p>
-<p>Era necessário converter os paletes físicos em representações lógicas na CPU.</p>
-<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“O mundo físico parece contínuo e caótico,” registrava o diário técnico.<br/>“Mas para controlá-lo de forma digital, precisamos mapeá-lo como um tabuleiro tridimensional.<br/>As imensas prateleiras de aço não passam de uma grande Matriz Tridimensional de dados.”</div>
+<p class="narrative-p">O aquecedor barulhento da sala de controle tentava combater o frio em Milão.</p>
+<p class="narrative-p">Ao lado do terminal antigo de fósforo verde, o café de Alex Senior esfriara.</p>
+<p class="narrative-p">Seus olhos estavam fixos na planta baixa industrial impressa sobre a mesa de fórmica.</p>
+<p class="narrative-p">O galpão de armazenamento estava saturado em 2001.</p>
+<p class="narrative-p">Noventa por cento da capacidade nominal física do galpão já havia sido ocupada.</p>
+<p class="narrative-p">A diretoria italiana exigia estocar mais dez por cento de carga sem ampliar o espaço físico.</p>
+<p class="narrative-p">A solução lógica do problema não estava no aço das prateleiras, mas no código.</p>
+<p class="narrative-p">Ele precisava programar o terminal para otimizar cada centímetro livre no local.</p>
+<p class="narrative-p">Era necessário converter os paletes físicos em representações lógicas na CPU.</p>
+<p class="narrative-p">Para estruturar a movimentação tridimensional, o diário trazia a formulação das matrizes espaciais.</p>
+<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“O mundo físico parece contínuo e caótico,” registrava o diário técnico.<br/>“But para controlá-lo de forma digital, precisamos mapeá-lo como um tabuleiro tridimensional.<br/>As imensas prateleiras de aço não passam de uma grande Matriz Tridimensional de dados.”</div>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Mapeamos cada nicho de armazenagem usando coordenadas espaciais ortogonais.<br/>Definimos os eixos de coluna (X), profundidade (Y) e altura (Z).<br/>Qualquer posição física é expressa por um vetor de posição \vec{P} = [x, y, z].”</div>
-<p>Para mover o transelevador mecânico, a máquina precisava ler essa álgebra linear.</p>
+<p class="narrative-p">Para mover o transelevador mecânico, a máquina precisava ler essa álgebra linear.</p>
 <h3>[Conceito Chave] A Matriz Booleana de Ocupação</h3>
-<p>O sistema gerenciava a ocupação das prateleiras usando matrizes de bits.</p>
-<p>Se um bloco do espaço estivesse ocupado por carga, seu valor na matriz era um (`1`).</p>
-<p>Se o espaço estivesse livre e desocupado, o valor binário correspondente era zero (`0`).</p>
-<p>Para alocar um novo palete de dimensões L \times C \times A, o sistema validava o volume.</p>
-<p>Multiplicava-se logicamente a submatriz tridimensional das coordenadas desejadas.</p>
-<p>Se qualquer bit retornasse um (`1`), o movimento era abortado para evitar colisão física.</p>
-<p>O grande desafio de Alex Senior era resolver o aproveitamento de volumes fracionados.</p>
-<p>Empacotar caixas pequenas sem deixar vãos vazios exigia cálculos combinatórios complexos.</p>
-<p>Volume geométrico bruto é diferente do volume utilizável pela cinemática da máquina.</p>
-<p>---</p>
+<p class="narrative-p">O sistema gerenciava a ocupação das prateleiras usando matrizes de bits.</p>
+<p class="narrative-p">Se um bloco do espaço estivesse ocupado por carga, seu valor na matriz era um (`1`).</p>
+<p class="narrative-p">Se o espaço estivesse livre e desocupado, o valor binário correspondente era zero (`0`).</p>
+<p class="narrative-p">Para alocar um novo palete de dimensões L \times C \times A, o sistema validava o volume.</p>
+<p class="narrative-p">Multiplicava-se logicamente a submatriz tridimensional das coordenadas desejadas.</p>
+<p class="narrative-p">Se qualquer bit retornasse um (`1`), o movimento era abortado para evitar colisão física.</p>
+<p class="narrative-p">O grande desafio de Alex Senior era resolver o aproveitamento de volumes fracionados.</p>
+<p class="narrative-p">Empacotar caixas pequenas sem deixar vãos vazios exigia cálculos combinatórios complexos.</p>
+<p class="narrative-p">Volume geométrico bruto é diferente do volume utilizável pela cinemática da máquina.</p>
+<p class="narrative-p">---</p>
 <h3>O Quebra-Cabeças de Três Eixos: O Bin Packing Problem em 2026</h3>
-<p>A poeira vermelha de 1986 se dissolveu no ar, substituída pelo feixe verde do LiDAR em 2026.</p>
-<p>Alex moderno abriu o terminal de testes em seu tablet de manutenção em Curitiba.</p>
-<p>Ele observou os robôs AMRs movendo cargas pesadas de forma autônoma pelas docas.</p>
-<p>Os robôs dependiam de um serviço em nuvem para resolver o <em>3D Bin Packing</em>.</p>
-<p>Ele relembrou a equação fundamental que media a eficiência de alocação de itens:</p>
-<p>Efe = \left( \frac{\sum_{i=1}^{n} V_{item\_i}}{V_{total}} \right) \times 100\%</p>
-<p>Diferente da física escolar teórica, na mecatrônica as restrições geométricas são rígidas.</p>
-<p>As caixas reais não se comportam como líquidos maleáveis que preenchem vazios.</p>
-<p>Alex digitou uma função heurística em Python para demonstrar essa validação espacial:</p>
+<p class="narrative-p">O frio cortante do inverno italiano de 2001 e o barulho de seus transelevadores de carga se dissiparam sob a névoa úmida, abrindo espaço para a claridade cinza do amanhecer de Curitiba em 2026.</p>
+<p class="narrative-p">Alex moderno abriu o terminal de testes em seu tablet de manutenção em Curitiba.</p>
+<p class="narrative-p">Ele observou os robôs AMRs movendo cargas pesadas de forma autônoma pelas docas.</p>
+<p class="narrative-p">Os robôs dependiam de um serviço em nuvem para resolver o <em>3D Bin Packing</em>.</p>
+<p class="narrative-p">Ele relembrou a equação fundamental que media a eficiência de alocação de itens:</p>
+<p class="narrative-p">Efe = \left( \frac{\sum_{i=1}^{n} V_{item\_i}}{V_{total}} \right) \times 100\%</p>
+<p class="narrative-p">Diferente da física escolar teórica, na mecatrônica as restrições geométricas são rígidas.</p>
+<p class="narrative-p">As caixas reais não se comportam como líquidos maleáveis que preenchem vazios.</p>
+<p class="narrative-p">Alex digitou uma função heurística em Python para demonstrar essa validação espacial:</p>
 <pre><code># Validação de posicionamento tridimensional (First Fit Heuristic)
-<p>def verificar_colisao(pos_nova, dim_nova, pos_existentes, dim_existentes):</p>
-<p>x_new, y_new, z_new = pos_nova</p>
-<p>w_new, l_new, h_new = dim_nova</p>
-<p>for (x, y, z), (w, l, h) in zip(pos_existentes, dim_existentes):</p>
+<p class="narrative-p">def verificar_colisao(pos_nova, dim_nova, pos_existentes, dim_existentes):</p>
+<p class="narrative-p">x_new, y_new, z_new = pos_nova</p>
+<p class="narrative-p">w_new, l_new, h_new = dim_nova</p>
+<p class="narrative-p">for (x, y, z), (w, l, h) in zip(pos_existentes, dim_existentes):</p>
 <h1 class="chapter-title">Verifica sobreposição nos três eixos ortogonais simultaneamente</h1>
-<p>if (x_new &lt; x + w and x_new + w_new &gt; x and</p>
-<p>y_new &lt; y + l and y_new + l_new &gt; y and</p>
-<p>z_new &lt; z + h and z_new + h_new &gt; z):</p>
-<p>return True # Colisão detectada!</p>
+<p class="narrative-p">if (x_new &lt; x + w and x_new + w_new &gt; x and</p>
+<p class="narrative-p">y_new &lt; y + l and y_new + l_new &gt; y and</p>
+<p class="narrative-p">z_new &lt; z + h and z_new + h_new &gt; z):</p>
+<p class="narrative-p">return True # Colisão detectada!</p>
 return False # Espaço livre</code></pre>
-<p>A lógica mantinha os atuadores e sensores operando em perfeita harmonia mecânica.</p>
-<p>O plantão da madrugada terminava ali, sob as primeiras luzes da manhã.</p>
-<p>Ele recolheu o diário amarelado e guardou o chip Z80A de forma segura na mochila.</p>
-<p>---</p>
+<p class="narrative-p">A lógica mantinha os atuadores e sensores operando em perfeita harmonia mecânica.</p>
+<p class="narrative-p">O plantão da madrugada terminava ali, sob as primeiras luzes da manhã.</p>
+<p class="narrative-p">Ele recolheu o diário amarelado e guardou o chip Z80A de forma segura na mochila.</p>
+<p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>Vetores Espaciais</strong>: Posições físicas tridimensionais são descritas por coordenadas lineares de eixos ortogonais [x, y, z].</li>
 <li><strong>Algoritmo de Colisão</strong>: A verificação geométrica impede a alocação de volumes coincidentes no mesmo espaço de hardware.</li>
 <h3>🎮 Desafio prático</h3>
-<p><strong>A Otimização de Caixas</strong></p>
-<p>Implemente o cálculo manual da eficiência volumétrica (Efe) para um palete de volume 1m³ contendo exatamente 4 caixas retangulares de dimensões 40x50x30 cm.</p>
+<p class="narrative-p"><strong>A Otimização de Caixas</strong></p>
+<p class="narrative-p">Implemente o cálculo manual da eficiência volumétrica (Efe) para um palete de volume 1m³ contendo exatamente 4 caixas retangulares de dimensões 40x50x30 cm.</p>
 <h3>✨ Conexão com o próximo capítulo</h3>
-<p>Com a matemática do espaço consolidada na mente, Alex precisará lidar com robôs em movimento constante. No próximo capítulo, entraremos na Parte III do livro para compreender as "Formigas Elétricas": a dinâmica operacional do CD moderno de Curitiba em 2026 e o controle de robôs autônomos simultâneos.</p>
+<p class="narrative-p">Com a matemática do espaço consolidada na mente, Alex precisará lidar com robôs em movimento constante. No próximo capítulo, entraremos na Parte III do livro para compreender as "Formigas Elétricas": a dinâmica operacional do CD moderno de Curitiba em 2026 e o controle de robôs autônomos simultâneos.</p>
         </div>
         
 
         <div id="cap7" class="chapter-section">
             
             <h1 class="chapter-title">Capítulo 7: As Formigas Elétricas</h1>
-<p>O relógio de ponto marcou exatamente seis horas da manhã.</p>
-<p>O plantão de Alex moderno havia terminado oficialmente em Curitiba.</p>
-<p>Em vez de ir embora, ele subiu a escada até o mezanino de observação.</p>
-<p>Ele queria presenciar o que chamavam de "O Despertar do Enxame".</p>
-<p>As primeiras luzes do amanhecer começavam a cortar as janelas altas.</p>
-<p>Nas docas de carga, o silêncio foi quebrado por bipes eletrônicos.</p>
-<p>Nas estações de recarga, dezenas de robôs AMRs acenderam seus anéis de LED.</p>
-<p>Eles brilhavam em um azul pulsante, prontos para a jornada de trabalho.</p>
-<p>Em uma coreografia perfeitamente ritmada, os robôs iniciaram a movimentação.</p>
-<p>Desacoplaram-se das tomadas magnéticas e povoaram as avenidas do galpão.</p>
-<p>Cruzavam-se em ângulos retos e desviavam uns dos outros por milímetros.</p>
-<p>Parecia um balé mecânico regido por uma harmonia secreta de silício.</p>
-<p>De repente, uma pesada caixa de parafusos caiu de uma prateleira alta.</p>
-<p>O impacto metálico ecoou no Setor B, no meio do corredor de passagem.</p>
-<p>Um AGV (Automated Guided Vehicle) antigo da frota de transição aproximou-se.</p>
-<p>Ele parou imediatamente, emitindo um bipe estridente de alarme no local.</p>
-<p>Sua câmera básica detectou o obstáculo, mas o robô não sabia o que fazer.</p>
-<p>Em dois minutos, uma fila gigantesca de AGVs começou a se formar ali.</p>
-<p>Os robôs estavam travados, apitando em coro no corredor principal.</p>
-<p>A logística daquele setor estava completamente paralisada.</p>
-<p>Bianchi invadiu a área de expedição com as bochechas vermelhas de raiva.</p>
-<p>Ele berrava no rádio com os operadores do chão de fábrica:</p>
-<p>"Tirem essa caixa do chão! A produtividade do setor caiu vinte por cento!</p>
-<p>Eu quero esse corredor limpo ou vou cortar o bônus de todo mundo!"</p>
-<p>O robô AMR 08 aproximou-se da fila de AGVs travados e congestionados.</p>
-<p>Seu sensor LiDAR giratório escaneou rapidamente a caixa e os robôs parados.</p>
-<p>No tablet de Alex, o console de telemetria registrou a mudança de rota.</p>
-<p>O algoritmo de mapeamento dinâmico recalculou a malha local do espaço.</p>
-<p>Sem hesitar, o AMR 08 girou sobre o próprio eixo traseiro.</p>
-<p>Ele desviou da fila e pegou um corredor alternativo estreito no Setor C.</p>
-<p>Contornou o bloqueio de forma suave e silenciosa, seguindo a entrega.</p>
-<p>Alex observava a cena do alto do mezanino e deu um sorriso de canto.</p>
-<p>---</p>
+<p class="narrative-p">O relógio de ponto marcou exatamente seis horas da manhã.</p>
+<p class="narrative-p">O plantão de Alex moderno havia terminado oficialmente em Curitiba.</p>
+<p class="narrative-p">Em vez de ir embora, ele subiu a escada até o mezanino de observação.</p>
+<p class="narrative-p">Ele queria presenciar o que chamavam de "O Despertar do Enxame".</p>
+<p class="narrative-p">As primeiras luzes do amanhecer começavam a cortar as janelas altas.</p>
+<p class="narrative-p">Nas docas de carga, o silêncio foi quebrado por bipes eletrônicos.</p>
+<p class="narrative-p">Nas estações de recarga, dezenas de robôs AMRs acenderam seus anéis de LED.</p>
+<p class="narrative-p">Eles brilhavam em um azul pulsante, prontos para a jornada de trabalho.</p>
+<p class="narrative-p">Em uma coreografia perfeitamente ritmada, os robôs iniciaram a movimentação.</p>
+<p class="narrative-p">Desacoplaram-se das tomadas magnéticas e povoaram as avenidas do galpão.</p>
+<p class="narrative-p">Cruzavam-se em ângulos retos e desviavam uns dos outros por milímetros.</p>
+<p class="narrative-p">Parecia um balé mecânico regido por uma harmonia secreta de silício.</p>
+<p class="narrative-p">De repente, uma pesada caixa de parafusos caiu de uma prateleira alta.</p>
+<p class="narrative-p">O impacto metálico ecoou no Setor B, no meio do corredor de passagem.</p>
+<p class="narrative-p">Um AGV (Automated Guided Vehicle) antigo da frota de transição aproximou-se.</p>
+<p class="narrative-p">Ele parou imediatamente, emitindo um bipe estridente de alarme no local.</p>
+<p class="narrative-p">Sua câmera básica detectou o obstáculo, mas o robô não sabia o que fazer.</p>
+<p class="narrative-p">Em dois minutos, uma fila gigantesca de AGVs começou a se formar ali.</p>
+<p class="narrative-p">Os robôs estavam travados, apitando em coro no corredor principal.</p>
+<p class="narrative-p">A logística daquele setor estava completamente paralisada.</p>
+<p class="narrative-p">Bianchi invadiu a área de expedição com as bochechas vermelhas de raiva.</p>
+<p class="narrative-p">Ele berrava no rádio com os operadores do chão de fábrica:</p>
+<p class="narrative-p">"Tirem essa caixa do chão! A produtividade do setor caiu vinte por cento!</p>
+<p class="narrative-p">Eu quero esse corredor limpo ou vou cortar o bônus de todo mundo!"</p>
+<p class="narrative-p">O robô AMR 08 aproximou-se da fila de AGVs travados e congestionados.</p>
+<p class="narrative-p">Seu sensor LiDAR giratório escaneou rapidamente a caixa e os robôs parados.</p>
+<p class="narrative-p">No tablet de Alex, o console de telemetria registrou a mudança de rota.</p>
+<p class="narrative-p">O algoritmo de mapeamento dinâmico recalculou a malha local do espaço.</p>
+<p class="narrative-p">Sem hesitar, o AMR 08 girou sobre o próprio eixo traseiro.</p>
+<p class="narrative-p">Ele desviou da fila e pegou um corredor alternativo estreito no Setor C.</p>
+<p class="narrative-p">Contornou o bloqueio de forma suave e silenciosa, seguindo a entrega.</p>
+<p class="narrative-p">Alex observava a cena do alto do mezanino e deu um sorriso de canto.</p>
+<p class="narrative-p">Para compreender os fundamentos matemáticos que permitiam ao AMR tomar aquela decisão por conta própria, Alex decidiu ler as anotações sobre navegação do diário.</p>
+<p class="narrative-p">---</p>
 <h3>[Conceito Chave] O Mapeamento Dinâmico contra a Rigidez Trilho</h3>
-<p>Os antigos AGVs eram como trens invisíveis no piso da fábrica.</p>
-<p>Eles dependiam estritamente de trilhos físicos, como fitas magnéticas.</p>
-<p>Se uma caixa caísse sobre a fita de navegação, o AGV congelava no lugar.</p>
-<p>Ele não tinha inteligência ou capacidade de raciocínio de rota.</p>
-<p>Os modernos AMRs que operam no galpão são autônomos e flexíveis.</p>
-<p>Eles possuem um mapa mental tridimensional constantemente atualizado.</p>
-<p>Quando um obstáculo surge, os sensores detectam a barreira física.</p>
-<p>O algoritmo recalcula a rota em milissegundos, desviando por conta própria.</p>
-<p>Um formigueiro opera sem uma formiga chefe comandando no rádio.</p>
-<p>Cada inseto segue regras locais simples de desvio e transporte.</p>
-<p>Somando milhares dessas ações locais, surge o comportamento de enxame.</p>
-<p>Os AMRs funcionam assim: biologia convertida em código de controle físico.</p>
-<p>---</p>
+<p class="narrative-p">Os antigos AGVs eram como trens invisíveis no piso da fábrica.</p>
+<p class="narrative-p">Eles dependiam estritamente de trilhos físicos, como fitas magnéticas.</p>
+<p class="narrative-p">Se uma caixa caísse sobre a fita de navegação, o AGV congelava no lugar.</p>
+<p class="narrative-p">Ele não tinha inteligência ou capacidade de raciocínio de rota.</p>
+<p class="narrative-p">Os modernos AMRs que operam no galpão são autônomos e flexíveis.</p>
+<p class="narrative-p">Eles possuem um mapa mental tridimensional constantemente atualizado.</p>
+<p class="narrative-p">Quando um obstáculo surge, os sensores detectam a barreira física.</p>
+<p class="narrative-p">O algoritmo recalcula a rota em milissegundos, desviando por conta própria.</p>
+<p class="narrative-p">Um formigueiro opera sem uma formiga chefe comandando no rádio.</p>
+<p class="narrative-p">Cada inseto segue regras locais simples de desvio e transporte.</p>
+<p class="narrative-p">Somando milhares dessas ações locais, surge o comportamento de enxame.</p>
+<p class="narrative-p">Os AMRs funcionan assim: biologia convertida em código de controle físico.</p>
+<p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>Navegação Dinâmica (AMR)</strong>: Robôs autônomos recalculam rotas dinamicamente usando mapas internos para desviar de barreiras imprevistas.</li>
 <li><strong>Sistemas de Trilho (AGV)</strong>: Dispositivos de guia rígidos param diante de qualquer obstrução física no caminho guiado.</li>
 <h3>🎮 Desafio prático</h3>
-<p><strong>A Simulação do Desvio</strong></p>
-<p>Desenhe uma malha de grade 5x5 com um obstáculo na posição central. Trace a rota mais curta do canto inferior esquerdo ao canto superior direito desviando do obstáculo.</p>
+<p class="narrative-p"><strong>A Simulação do Desvio</strong></p>
+<p class="narrative-p">Desenhe uma malha de grade 5x5 com um obstáculo na posição central. Trace a rota mais curta do canto inferior esquerdo ao canto superior direito desviando do obstáculo.</p>
 <h3>✨ Conexão com o próximo capítulo</h3>
-<p>O mapeamento dinâmico dos AMRs impede travamentos nas docas do armazém. No próximo capítulo, abriremos o diário para compreender a tecnologia por trás dos sensores ópticos e desvendar o funcionamento do LiDAR e do algoritmo SLAM que servem como os olhos virtuais do robô autônomo.</p>
+<p class="narrative-p">O mapeamento dinâmico dos AMRs impede travamentos nas docas do armazém. No próximo capítulo, abriremos o diário para compreender a tecnologia por trás dos sensores ópticos e desvendar o funcionamento do LiDAR e do algoritmo SLAM que servem como os olhos virtuais do robô autônomo.</p>
         </div>
         
 
         <div id="cap8" class="chapter-section">
             
             <h1 class="chapter-title">Capítulo 8: O Cérebro do Robô</h1>
-<p>Na bancada do laboratório de manutenção técnica, o robô AMR 12 repousava sem as tampas protetoras.</p>
-<p>Alex moderno apontava a lanterna clínica para a cúpula preta do para-choque.</p>
-<p>Dentro da carcaça circular, um espelho girava silenciosamente a dez rotações por segundo.</p>
-<p>Era o sensor LiDAR, os olhos eletrônicos de dezoito mil euros do robô autônomo.</p>
-<p>"É como o sensor de estacionamento do carro do seu pai," pensou Alex.</p>
-<p>"Só que turbinado com feixes de laser infravermelho e operando na velocidade da luz."</p>
-<p>Seus olhos ardiam devido às longas horas de plantão da madrugada.</p>
-<p>Para calibrar o sensor após a troca da correia, ele editou o arquivo de transformadas físicas (TF).</p>
-<p>Cansado, ele digitou um valor incorreto na matriz de transformação de coordenadas espaciais.</p>
-<p>Em vez de 0.05 metros, ele inseriu um deslocamento de translação de 0.15 metros no eixo X.</p>
-<p>Uma diferença de apenas dez centímetros nos parâmetros do arquivo de configuração do robô.</p>
-<p>Mas no mundo físico da mecatrônica, dez centímetros significavam uma colisão iminente.</p>
-<p>Alex iniciou o nó de navegação e acionou o joystick para mover a máquina no laboratório.</p>
-<p>O robô arrancou silenciosamente. Ao fazer a curva, o LiDAR varreu as paredes.</p>
-<p>Mas devido ao erro de transformada, o computador calculou que a parede estava mais longe.</p>
-<p><em>CRASH!</em></p>
-<p>O AMR 12 colidiu de lado contra a prateleira de aço da manutenção com força.</p>
-<p>A cúpula plástica do LiDAR trincou no impacto físico direto.</p>
-<p>Um sinal sonoro de colisão e travamento de emergência começou a apitar de forma irritante.</p>
-<p>Bianchi invadiu a sala segurando o tablet corporativo de monitoramento técnico.</p>
-<p>"Que diabos aconteceu aqui? O painel central indicou colisão física na oficina!</p>
-<p>Esse robô custa dezoito mil euros e você bateu contra a prateleira de aço!"</p>
-<p>"Fiz uma calibração na transformada do LiDAR," respondeu Alex, com as mãos trêmulas.</p>
-<p>"Acho que houve um erro de digitação na matriz de transformada espacial de base."</p>
-<p>"Não quero saber de matrizes de configuração de hardware," gritou Bianchi irritado.</p>
-<p>"Temos uma auditoria de produtividade técnica do galpão em dez minutos.</p>
-<p>Se esse robô não estiver rodando no enxame, eu cancelo seu contrato de estágio.</p>
-<p>Você tem exatamente dez minutos para corrigir essa falha ou está fora."</p>
-<p>A porta bateu e o silêncio tenso retornou acompanhado do bipe de erro do robô.</p>
-<p>O nervosismo tomou conta, mas Alex lembrou-se das regras fundamentais do diário técnico.</p>
-<p>"Calma," pensou. "A física do sensor e o hardware continuam sendo os mesmos."</p>
-<p>---</p>
+<p class="narrative-p">Na bancada do laboratório de manutenção técnica, o robô AMR 12 repousava sem as tampas protetoras.</p>
+<p class="narrative-p">Alex moderno apontava a lanterna clínica para a cúpula preta do para-choque.</p>
+<p class="narrative-p">Dentro da carcaça circular, um espelho girava silenciosamente a dez rotações por segundo.</p>
+<p class="narrative-p">Era o sensor LiDAR, os olhos eletrônicos de dezoito mil euros do robô autônomo.</p>
+<p class="narrative-p">"É como o sensor de estacionamento do carro do seu pai," pensou Alex.</p>
+<p class="narrative-p">"Só que turbinado com feixes de laser infravermelho e operando na velocidade da luz."</p>
+<p class="narrative-p">Seus olhos ardiam devido às longas horas de plantão da madrugada.</p>
+<p class="narrative-p">Para calibrar o sensor após a troca da correia, ele editou o arquivo de transformadas físicas (TF).</p>
+<p class="narrative-p">Cansado, ele digitou um valor incorreto na matriz de transformação de coordenadas espaciais.</p>
+<p class="narrative-p">Em vez de 0.05 metros, ele inseriu um deslocamento de translação de 0.15 metros no eixo X.</p>
+<p class="narrative-p">Uma diferença de apenas dez centímetros nos parâmetros do arquivo de configuração do robô.</p>
+<p class="narrative-p">Mas no mundo físico da mecatrônica, dez centímetros significavam uma colisão iminente.</p>
+<p class="narrative-p">Alex iniciou o nó de navegação e acionou o joystick para mover a máquina no laboratório.</p>
+<p class="narrative-p">O robô arrancou silenciosamente. Ao fazer a curva, o LiDAR varreu as paredes.</p>
+<p class="narrative-p">Mas devido ao erro de transformada, o computador calculou que a parede estava mais longe.</p>
+<p class="narrative-p"><em>CRASH!</em></p>
+<p class="narrative-p">O AMR 12 colidiu de lado contra a prateleira de aço da manutenção com força.</p>
+<p class="narrative-p">A cúpula plástica do LiDAR trincou no impacto físico direto.</p>
+<p class="narrative-p">Um sinal sonoro de colisão e travamento de emergência começou a apitar de forma irritante.</p>
+<p class="narrative-p">Bianchi invadiu a sala segurando o tablet corporativo de monitoramento técnico.</p>
+<p class="narrative-p">"Que diabos aconteceu aqui? O painel central indicou colisão física na oficina!</p>
+<p class="narrative-p">Esse robô custa dezoito mil euros e você bateu contra a prateleira de aço!"</p>
+<p class="narrative-p">"Fiz uma calibração na transformada do LiDAR," respondeu Alex, com as mãos trêmulas.</p>
+<p class="narrative-p">"Acho que houve um erro de digitação na matriz de transformada espacial de base."</p>
+<p class="narrative-p">"Não quero saber de matrizes de configuração de hardware," gritou Bianchi irritado.</p>
+<p class="narrative-p">"Temos uma auditoria de produtividade técnica do galpão em dez minutos.</p>
+<p class="narrative-p">Se esse robô não estiver rodando no enxame, eu cancelo seu contrato de estágio.</p>
+<p class="narrative-p">Você tem exatamente dez minutos para corrigir essa falha ou está fora."</p>
+<p class="narrative-p">A porta bateu e o silêncio tenso retornou acompanhado do bipe de erro do robô.</p>
+<p class="narrative-p">O nervosismo tomou conta, mas Alex lembrou-se das regras fundamentais do diário técnico.</p>
+<p class="narrative-p">Para reverter a colisão, ele precisava traduzir os feixes do laser em dados matemáticos puros.</p>
+<p class="narrative-p">---</p>
 <h3>[Desafio Prático] O Cálculo da Distância por Tempo de Voo</h3>
-<p>O LiDAR funciona disparando pulsos de laser de luz infravermelha pelo espaço.</p>
-<p>O sinal viaja pelo ar, atinge o obstáculo físico e retorna ao receptor óptico do sensor.</p>
-<p>A luz viaja na velocidade da luz (c \approx 3 \times 10^8 \text{ m/s}).</p>
-<p>O microcontrolador mede o tempo total de ida e volta (t) com precisão de picossegundos.</p>
-<p>A distância linear (d) até o obstáculo físico é calculada pela equação fundamental:</p>
-<p>d = \frac{c \cdot t}{2}</p>
-<p>O sensor calculava a distância correta, mas a transformada interna adicionava o erro na malha.</p>
-<p>Alex encontrou o parâmetro incorreto no terminal do sistema operacional de robôs:</p>
-<p>`static_transform_publisher 0.15 0 0 0 0 0 base_link laser_frame`</p>
-<p>Ele corrigiu o valor do eixo X para `0.05`, salvou o arquivo e reiniciou os processos.</p>
-<p>O filtro de fusão de dados foi recarregado, combinando a odometria e o laser do LiDAR.</p>
-<p>O erro do mapa encolheu no tablet e o robô voltou a operar de forma centralizada.</p>
-<p>---</p>
+<p class="narrative-p">O LiDAR funciona disparando pulsos de laser de luz infravermelha pelo espaço.</p>
+<p class="narrative-p">O sinal viaja pelo ar, atinge o obstáculo físico e retorna ao receptor óptico do sensor.</p>
+<p class="narrative-p">A luz viaja na velocidade da luz (c \approx 3 \times 10^8 \text{ m/s}).</p>
+<p class="narrative-p">O microcontrolador mede o tempo total de ida e volta (t) com precisão de picossegundos.</p>
+<p class="narrative-p">A distância linear (d) até o obstáculo físico é calculada pela equação fundamental:</p>
+<p class="narrative-p">d = \frac{c \cdot t}{2}</p>
+<p class="narrative-p">O sensor calculava a distância correta, mas a transformada interna adicionava o erro na malha.</p>
+<p class="narrative-p">Alex encontrou o parâmetro incorreto no terminal do sistema operacional de robôs:</p>
+<p class="narrative-p">`static_transform_publisher 0.15 0 0 0 0 0 base_link laser_frame`</p>
+<p class="narrative-p">Ele corrigiu o valor do eixo X para `0.05`, salvou o arquivo e reiniciou os processos.</p>
+<p class="narrative-p">O filtro de fusão de dados foi recarregado, combinando a odometria e o laser do LiDAR.</p>
+<p class="narrative-p">O erro do mapa encolheu no tablet e o robô voltou a operar de forma centralizada.</p>
+<p class="narrative-p">---</p>
 <h3>A Fusão de Dados e o Filtro de Kalman</h3>
-<p>Para navegar sem desvios, os AMRs modernos utilizam o algoritmo do Filtro de Kalman.</p>
-<p>Ele realiza uma estimativa estatística recursiva dividida em etapas de predição e atualização.</p>
-<p>O algoritmo combina dados imperfeitos de múltiplos sensores para definir a coordenada real.</p>
-<p>O código a seguir demonstra a essência matemática dessa fusão de dados em C++:</p>
+<p class="narrative-p">Para navegar sem desvios, os AMRs modernos utilizam o algoritmo do Filtro de Kalman.</p>
+<p class="narrative-p">Ele realiza uma estimativa estatística recursiva dividida em etapas de predição e atualização.</p>
+<p class="narrative-p">O algoritmo combina dados imperfeitos de múltiplos sensores para definir a coordenada real.</p>
+<p class="narrative-p">O código a seguir demonstra a essência matemática dessa fusão de dados em C++:</p>
 <pre><code>#include &lt;iostream&gt;
-<p>struct FiltroKalman {</p>
-<p>double posicao = 0.0;      // Posição estimada (estado)</p>
-<p>double incerteza = 1.0;    // Incerteza da estimativa (covariância)</p>
-<p>double ruido_processo = 0.1; // Ruído de movimento (odometria)</p>
-<p>double ruido_medicao = 0.2;  // Ruído do sensor (LiDAR)</p>
-<p>void predizer(double movimento) {</p>
-<p>posicao += movimento;</p>
-<p>incerteza += ruido_processo;</p>
-<p>}</p>
-<p>void atualizar(double medicao_sensor) {</p>
-<p>double ganho = incerteza / (incerteza + ruido_medicao);</p>
-<p>posicao = posicao + ganho * (medicao_sensor - posicao);</p>
-<p>incerteza = (1.0 - ganho) * incerteza;</p>
-<p>}</p>
+<p class="narrative-p">struct FiltroKalman {</p>
+<p class="narrative-p">double posicao = 0.0;      // Posição estimada (estado)</p>
+<p class="narrative-p">double incerteza = 1.0;    // Incerteza da estimativa (covariância)</p>
+<p class="narrative-p">double ruido_processo = 0.1; // Ruído de movimento (odometria)</p>
+<p class="narrative-p">double ruido_medicao = 0.2;  // Ruído do sensor (LiDAR)</p>
+<p class="narrative-p">void predizer(double movimento) {</p>
+<p class="narrative-p">posicao += movimento;</p>
+<p class="narrative-p">incerteza += ruido_processo;</p>
+<p class="narrative-p">}</p>
+<p class="narrative-p">void atualizar(double medicao_sensor) {</p>
+<p class="narrative-p">double ganho = incerteza / (incerteza + ruido_medicao);</p>
+<p class="narrative-p">posicao = posicao + ganho * (medicao_sensor - posicao);</p>
+<p class="narrative-p">incerteza = (1.0 - ganho) * incerteza;</p>
+<p class="narrative-p">}</p>
 };</code></pre>
-<p>Alex salvou o código corrigido e o robô voltou ao trabalho antes da auditoria de Bianchi.</p>
-<p>Ele provou que a engenharia de controle exige dominar a modelagem matemática contínua.</p>
-<p>Estava pronto para entender como integrar tudo no sistema operacional de robôs.</p>
-<p>---</p>
+<p class="narrative-p">Alex salvou o código corrigido e o robô voltou ao trabalho antes da auditoria de Bianchi.</p>
+<p class="narrative-p">Ele provou que a engenharia de controle exige dominar a modelagem matemática contínua.</p>
+<p class="narrative-p">Estava pronto para entender como integrar tudo no sistema operacional de robôs.</p>
+<p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>Time of Flight (ToF)</strong>: O cálculo de distância do sensor a laser baseia-se na velocidade da luz e no tempo de retorno do feixe refletido.</li>
 <li><strong>Filtro de Kalman</strong>: Algoritmo recursivo que faz a fusão probabilística de sensores com ruído para obter coordenadas precisas.</li>
 <h3>🎮 Desafio prático</h3>
-<p><strong>Desvio de Obstáculos no Tinkercad</strong></p>
-<p>Monte um circuito de teste virtual usando um Arduino Uno e um sensor ultrassônico. Programe o Arduino para acionar um sinal de aviso caso a leitura de distância seja menor que 10 cm.</p>
+<p class="narrative-p"><strong>Desvio de Obstáculos no Tinkercad</strong></p>
+<p class="narrative-p">Monte um circuito de teste virtual usando um Arduino Uno e um sensor ultrassônico. Programe o Arduino para acionar um sinal de aviso caso a leitura de distância seja menor que 10 cm.</p>
 <li>[Tinkercad Circuits](https://www.tinkercad.com/)</li>
 <h3>✨ Conexão com o próximo capítulo</h3>
-<p>Controlar o LiDAR e o Filtro de Kalman resolve a estimativa de posição do robô. No próximo capítulo, entenderemos como gerenciar a comunicação e a troca de dados entre todos os sensores e atuadores do AMR utilizando a pilha de middleware moderna do ROS 2.</p>
+<p class="narrative-p">Controlar o LiDAR e o Filtro de Kalman resolve a estimativa de posição do robô. No próximo capítulo, entenderemos como gerenciar a comunicação e a troca de dados entre todos os sensores e atuadores do AMR utilizando a pilha de middleware moderna do ROS 2.</p>
         </div>
         
 
         <div id="cap9" class="chapter-section">
             
             <h1 class="chapter-title">Capítulo 9: A Pilha de Código Moderna</h1>
-<p>Com a chave Allen, Alex moderno apertou o último parafuso da tampa lateral do AMR 12.</p>
-<p>O torque metálico indicou que o invólucro de proteção do robô estava lacrado.</p>
-<p>Ele abriu a conexão ssh em seu tablet de diagnóstico para checar os processos internos.</p>
-<p>Uma cascata de identificadores se desenrolou no console preto do Linux embutido.</p>
-<p>O robô gerenciava simultaneamente tarefas escritas em linguagens diferentes.</p>
-<p>Como o silício unificava esses mundos sem travar ou entrar em colapso técnico?</p>
+<p class="narrative-p">Com a chave Allen, Alex moderno apertou o último parafuso da tampa lateral do AMR 12.</p>
+<p class="narrative-p">O torque metálico indicou que o invólucro de proteção do robô estava lacrado.</p>
+<p class="narrative-p">Ele abriu a conexão ssh em seu tablet de diagnóstico para checar os processos internos.</p>
+<p class="narrative-p">Uma cascata de identificadores se desenrolou no console preto do Linux embutido.</p>
+<p class="narrative-p">O robô gerenciava simultaneamente tarefas escritas em linguagens diferentes.</p>
+<p class="narrative-p">Como o silício unificava esses mundos sem travar ou entrar em colapso técnico?</p>
+<p class="narrative-p">Para resolver esse mistério estrutural, Alex leu sobre a cooperação entre linguagens de controle nas anotações do diário.</p>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Na mecatrônica de alta performance, não existe uma única linguagem salvadora,” dizia o diário.<br/>“Nós dividimos o trabalho do robô seguindo a lógica do corpo humano.<br/>Separamos entre os músculos de ação reflexa rápida e a mente de planejamento lento.”</div>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Para os reflexos e músculos da máquina, nós usamos C++.<br/>Ele roda direto no metal do chip, calculando o Filtro de Kalman em microssegundos.<br/>Se o LiDAR detectar um obstáculo próximo, o código em C++ freia as rodas na hora.”</div>
-<p>Para a estratégia de rota e a inteligência de negócios, a equipe utilizava o Python.</p>
-<p>Python é uma linguagem interpretada, mais lenta, mas excelente para regras complexas.</p>
-<p>Ela conecta o robô à nuvem do armazém e gerencia a prioridade de entrega do palete.</p>
-<p>---</p>
+<p class="narrative-p">Para a estratégia de rota e a inteligência de negócios, a equipe utilizava o Python.</p>
+<p class="narrative-p">Python é uma linguagem interpretada, mais lenta, mas excelente para regras complexas.</p>
+<p class="narrative-p">Ela conecta o robô à nuvem do armazém e gerencia a prioridade de entrega do palete.</p>
+<p class="narrative-p">---</p>
 <h3>[Conceito Chave] O Maestro da Orquestra: ROS 2</h3>
-<p>Para fazer o sistema em C++ e a mente em Python cooperarem, usa-se o ROS 2.</p>
-<p>O Robot Operating System funciona como um middleware de comunicação de dados.</p>
-<p>Ele conecta programas independentes que rodam de forma concorrente, chamados Nós.</p>
-<p>Imagine um canal de rádio corporativo operando em tópicos de publicação e assinatura.</p>
-<p>O nó do sensor LiDAR publica as distâncias físicas em um canal chamado `/scan`.</p>
-<p>O nó de processamento assina esse canal, trata o ruído e publica a posição real em `/odom`.</p>
-<p>O nó estratégico assina `/odom` e decide os comandos de movimentação das rodas.</p>
-<p>Os nós funcionam de maneira autônoma, trocando mensagens estruturadas pela rede local.</p>
-<p>Abaixo, o modelo de código demonstra a criação desse nó em Python:</p>
+<p class="narrative-p">Para fazer o sistema em C++ e a mente em Python cooperarem, usa-se o ROS 2.</p>
+<p class="narrative-p">O Robot Operating System funciona como um middleware de comunicação de dados.</p>
+<p class="narrative-p">Ele conecta programas independentes que rodam de forma concorrente, chamados Nós.</p>
+<p class="narrative-p">Imagine um canal de rádio corporativo operando em tópicos de publicação e assinatura.</p>
+<p class="narrative-p">O nó do sensor LiDAR publica as distâncias físicas em um canal chamado `/scan`.</p>
+<p class="narrative-p">O nó de processamento assina esse canal, trata o ruído e publica a posição real em `/odom`.</p>
+<p class="narrative-p">O nó estratégico assina `/odom` e decide os comandos de movimentação das rodas.</p>
+<p class="narrative-p">Os nós funcionam de maneira autônoma, trocando mensagens estruturadas pela rede local.</p>
+<p class="narrative-p">Abaixo, o modelo de código demonstra a criação desse nó em Python:</p>
 <pre><code>import rclpy
-<p>from rclpy.node import Node</p>
-<p>from geometry_msgs.msg import Twist</p>
-<p>class PublicadorVelocidade(Node):</p>
-<p>def __init__(self):</p>
-<p>super().__init__('publicador_cmd_vel')</p>
-<p>self.publicador = self.create_publisher(Twist, 'cmd_vel', 10)</p>
-<p>self.timer = self.create_timer(0.5, self.enviar_comando)</p>
-<p>def enviar_comando(self):</p>
-<p>msg = Twist()</p>
-<p>msg.linear.x = 0.5  # Velocidade linear</p>
-<p>msg.angular.z = 0.1 # Rotação angular</p>
+<p class="narrative-p">from rclpy.node import Node</p>
+<p class="narrative-p">from geometry_msgs.msg import Twist</p>
+<p class="narrative-p">class PublicadorVelocidade(Node):</p>
+<p class="narrative-p">def __init__(self):</p>
+<p class="narrative-p">super().__init__('publicador_cmd_vel')</p>
+<p class="narrative-p">self.publicador = self.create_publisher(Twist, 'cmd_vel', 10)</p>
+<p class="narrative-p">self.timer = self.create_timer(0.5, self.enviar_comando)</p>
+<p class="narrative-p">def enviar_comando(self):</p>
+<p class="narrative-p">msg = Twist()</p>
+<p class="narrative-p">msg.linear.x = 0.5  # Velocidade linear</p>
+<p class="narrative-p">msg.angular.z = 0.1 # Rotação angular</p>
 self.publicador.publish(msg)</code></pre>
-<p>E o receptor de reflexo rápido, compilado em C++, recebe os comandos e atua nos motores:</p>
+<p class="narrative-p">E o receptor de reflexo rápido, compilado em C++, recebe os comandos e atua nos motores:</p>
 <pre><code>#include "rclcpp/rclcpp.hpp"
-<p>#include "geometry_msgs/msg/twist.hpp"</p>
-<p>class ReceptorVelocidade : public rclcpp::Node {</p>
-<p>public:</p>
-<p>ReceptorVelocidade() : Node("receptor_cmd_vel") {</p>
-<p>assinatura_ = this-&gt;create_subscription&lt;geometry_msgs::msg::Twist&gt;(</p>
-<p>"cmd_vel", 10, std::bind(&ReceptorVelocidade::callback_velocidade, this, std::placeholders::_1));</p>
-<p>}</p>
-<p>private:</p>
-<p>void callback_velocidade(const geometry_msgs::msg::Twist::SharedPtr msg) const {</p>
-<p>double vel = msg-&gt;linear.x;</p>
-<p>// Atuação física no driver do motor</p>
-<p>}</p>
-<p>rclcpp::Subscription&lt;geometry_msgs::msg::Twist&gt;::SharedPtr assinatura_;</p>
+<p class="narrative-p">#include "geometry_msgs/msg/twist.hpp"</p>
+<p class="narrative-p">class ReceptorVelocidade : public rclcpp::Node {</p>
+<p class="narrative-p">public:</p>
+<p class="narrative-p">ReceptorVelocidade() : Node("receptor_cmd_vel") {</p>
+<p class="narrative-p">assinatura_ = this-&gt;create_subscription&lt;geometry_msgs::msg::Twist&gt;(</p>
+<p class="narrative-p">"cmd_vel", 10, std::bind(&ReceptorVelocidade::callback_velocidade, this, std::placeholders::_1));</p>
+<p class="narrative-p">}</p>
+<p class="narrative-p">private:</p>
+<p class="narrative-p">void callback_velocidade(const geometry_msgs::msg::Twist::SharedPtr msg) const {</p>
+<p class="narrative-p">double vel = msg-&gt;linear.x;</p>
+<p class="narrative-p">// Atuação física no driver do motor</p>
+<p class="narrative-p">}</p>
+<p class="narrative-p">rclcpp::Subscription&lt;geometry_msgs::msg::Twist&gt;::SharedPtr assinatura_;</p>
 };</code></pre>
-<p>Alex observou os logs provando a perfeita comunicação concorrente dos dois nós.</p>
-<p>Ele aprendeu como a arquitetura do robô se organizava em processos paralelos.</p>
-<p>Agora, precisava aplicar essa troca de dados para resolver o empilhamento das caixas.</p>
-<p>---</p>
+<p class="narrative-p">Alex observou os logs provando a perfeita comunicação concorrente dos dois nós.</p>
+<p class="narrative-p">Ele aprendeu como a arquitetura do robô se organizava em processos paralelos.</p>
+<p class="narrative-p">Agora, precisava aplicar essa troca de dados para resolver o empilhamento das caixas.</p>
+<p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>Middleware (ROS 2)</strong>: Um framework de software que gerencia a troca de mensagens em tópicos entre processos independentes chamados nós.</li>
 <li><strong>Divisão C++/Python</strong>: C++ cuida de reflexos e controle de hardware rápido, enquanto Python planeja caminhos e lógicas complexas.</li>
 <h3>🎮 Desafio prático</h3>
-<p><strong>A Criação do Tópico</strong></p>
-<p>Desenhe o diagrama de fluxo de dados mostrando o caminho da mensagem desde o sensor LiDAR físico até a atuação na roda, indicando os nós e nomes dos tópicos intermediários.</p>
+<p class="narrative-p"><strong>A Criação do Tópico</strong></p>
+<p class="narrative-p">Desenhe o diagrama de fluxo de dados mostrando o caminho da mensagem desde o sensor LiDAR físico até a atuação na roda, indicando os nós e nomes dos tópicos intermediários.</p>
 <h3>✨ Conexão com o próximo capítulo</h3>
-<p>A comunicação de mensagens unifica a percepção e a atuação do robô no espaço físico. No próximo capítulo, utilizaremos essa infraestrutura de comunicação para aplicar a equação clássica de alocação de carga e otimizar a arrumação dos paletes no galpão.</p>
+<p class="narrative-p">A comunicação de mensagens unifica a percepção e a atuação do robô no espaço físico. No próximo capítulo, utilizaremos essa infraestrutura de comunicação para aplicar a equação clássica de alocação de carga e otimizar a arrumação dos paletes no galpão.</p>
         </div>
         
 
         <div id="cap10" class="chapter-section">
             
             <h1 class="chapter-title">Capítulo 10: A Equação do Almoxarifado</h1>
-<p>Alex moderno observou o robô AMR 12 desacelerar suavemente no Setor B.</p>
-<p>Em cima do compartimento de carga da máquina, repousavam três caixas de papelão.</p>
-<p>Eram embalagens de tamanhos diferentes contendo rolamentos, eixos e sensores.</p>
-<p>O robô precisava decidir em quais nichos vazios colocaria cada volume.</p>
-<p>A decisão devia ser tomada em frações de segundo para otimizar o espaço livre.</p>
-<p>Para entender essa lógica de controle, Alex abriu o diário de seu mentor.</p>
+<p class="narrative-p">Alex moderno observou o robô AMR 12 desacelerar suavemente no Setor B.</p>
+<p class="narrative-p">Em cima do compartimento de carga da máquina, repousavam três caixas de papelão.</p>
+<p class="narrative-p">Eram embalagens de tamanhos diferentes contendo rolamentos, eixos e sensores.</p>
+<p class="narrative-p">O robô precisava decidir em quais nichos vazios colocaria cada volume.</p>
+<p class="narrative-p">A decisão devia ser tomada em frações de segundo para otimizar o espaço livre.</p>
+<p class="narrative-p">Para entender essa lógica de controle, Alex abriu o diário de seu mentor.</p>
+<p class="narrative-p">Para acelerar a triagem e evitar o travamento dos microprocessadores, o diário apresentava o limite combinatório.</p>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Se você tentar calcular todas as combinações de empilhamento de caixas, a matemática explode.<br/>O número de combinações possíveis cresce de forma fatorial com novos itens.<br/>O computador mais potente do mundo levaria séculos processando o cálculo.<br/>Chamamos isso de problema NP-difícil; o tempo de cálculo é o inimigo real.”</div>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Para resolver isso sem travar a CPU, nós usamos Heurísticas.<br/>Heurísticas são atalhos lógicos práticos baseados no bom senso matemático.<br/>Elas oferecem respostas excelentes em frações de microssegundo.”</div>
-<p>A lógica do algoritmo baseia-se em uma analogia comum de arrumação de bagagem.</p>
+<p class="narrative-p">A lógica do algoritmo baseia-se em uma analogia comum de arrumação de bagagem.</p>
 <h3>[Conceito Chave] A Heurística First-Fit Decreasing (FFD)</h3>
-<p>Ao arrumar uma mala de viagem, você não joga itens aleatoriamente pelo espaço.</p>
-<p>A regra clássica manda ordenar os volumes por tamanho, do maior para o menor.</p>
-<p>Acomodamos as peças maiores primeiro no fundo para preencher o volume principal.</p>
-<p>Os itens menores e flexíveis (como meias) ficam por último para ocupar as frestas.</p>
-<p>O algoritmo do AMR ordenou as três caixas recebidas em sua malha lógica.</p>
-<p>Colocou a maior de rolamentos no fundo e a menor de sensores no vão restante.</p>
-<p>Ele calculou a eficiência volumétrica por álgebra linear em tempo real:</p>
+<p class="narrative-p">Ao arrumar uma mala de viagem, você não joga itens aleatoriamente pelo espaço.</p>
+<p class="narrative-p">A regra clássica manda ordenar os volumes por tamanho, do maior para o menor.</p>
+<p class="narrative-p">Acomodamos as peças maiores primeiro no fundo para preencher o volume principal.</p>
+<p class="narrative-p">Os itens menores e flexíveis (como meias) ficam por último para ocupar as frestas.</p>
+<p class="narrative-p">O algoritmo do AMR ordenou as três caixas recebidas em sua malha lógica.</p>
+<p class="narrative-p">Colocou a maior de rolamentos no fundo e a menor de sensores no vão restante.</p>
+<p class="narrative-p">Ele calculou a eficiência volumétrica por álgebra linear em tempo real:</p>
 <pre><code># Algoritmo First-Fit Decreasing (FFD) Simplificado
-<p>def otimizar_alocacao(itens, capacidade_nicho=100):</p>
-<p>itens_ordenados = sorted(itens, reverse=True)</p>
-<p>nichos = [capacidade_nicho]</p>
-<p>alocacao = []</p>
-<p>for item in itens_ordenados:</p>
-<p>alocado = False</p>
-<p>for i in range(len(nichos)):</p>
-<p>if nichos[i] &gt;= item:</p>
-<p>nichos[i] -= item</p>
-<p>alocacao.append((item, f"Nicho {i+1}"))</p>
-<p>alocado = True</p>
-<p>break</p>
-<p>if not alocado:</p>
-<p>nichos.append(capacidade_nicho - item)</p>
-<p>alocacao.append((item, f"Nicho {len(nichos)}"))</p>
+<p class="narrative-p">def otimizar_alocacao(itens, capacidade_nicho=100):</p>
+<p class="narrative-p">itens_ordenados = sorted(itens, reverse=True)</p>
+<p class="narrative-p">nichos = [capacidade_nicho]</p>
+<p class="narrative-p">alocacao = []</p>
+<p class="narrative-p">for item in itens_ordenados:</p>
+<p class="narrative-p">alocado = False</p>
+<p class="narrative-p">for i in range(len(nichos)):</p>
+<p class="narrative-p">if nichos[i] &gt;= item:</p>
+<p class="narrative-p">nichos[i] -= item</p>
+<p class="narrative-p">alocacao.append((item, f"Nicho {i+1}"))</p>
+<p class="narrative-p">alocado = True</p>
+<p class="narrative-p">break</p>
+<p class="narrative-p">if not alocado:</p>
+<p class="narrative-p">nichos.append(capacidade_nicho - item)</p>
+<p class="narrative-p">alocacao.append((item, f"Nicho {len(nichos)}"))</p>
 return alocacao, nichos</code></pre>
-<p>O robô alocou os itens em milissegundos sem congelar em cálculos infinitos.</p>
-<p>A engenharia mecatrônica física estava toda ali, rodando sob seus olhos.</p>
-<p>Mas Alex começou a refletir sobre o impacto social daquela eficiência mecânica.</p>
-<p>---</p>
+<p class="narrative-p">O robô alocou os itens em milissegundos sem congelar em cálculos infinitos.</p>
+<p class="narrative-p">A engenharia mecatrônica física estava toda ali, rodando sob seus olhos.</p>
+<p class="narrative-p">Mas Alex começou a refletir sobre o impacto social daquela eficiência mecânica.</p>
+<p class="narrative-p">---</p>
 <h3>A Riqueza Oculta sob as Prateleiras de Aço</h3>
-<p>Toda aquela matemática brilhante servia para enriquecer fundos de investimento.</p>
-<p>Bianchi e os investidores da Faria Lima viam o galpão como vetor de juros.</p>
-<p>Mas para os trabalhadores reais do local, a automação gerava apenas mais pressa.</p>
-<p>Os entregadores de aplicativo corriam de moto sob a neblina e perigo constantes.</p>
-<p>Havia um muro invisível de desigualdade que a mecatrônica não resolvia sozinha.</p>
-<p>E era sobre essa fronteira social que a Parte IV do diário começaria a falar.</p>
-<p>---</p>
+<p class="narrative-p">Toda aquela matemática brilhante servia para enriquecer fundos de investimento.</p>
+<p class="narrative-p">Bianchi e os investidores da Faria Lima viam o galpão como vetor de juros.</p>
+<p class="narrative-p">Mas para os trabalhadores reais do local, a automação gerava apenas mais pressa.</p>
+<p class="narrative-p">Os entregadores de aplicativo corriam de moto sob a neblina e perigo constantes.</p>
+<p class="narrative-p">Havia um muro invisível de desigualdade que a mecatrônica não resolvia sozinha.</p>
+<p class="narrative-p">E era sobre essa fronteira social que a Parte IV do diário começaria a falar.</p>
+<p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>Problemas NP-Difíceis</strong>: Questões cujo número de combinações cresce de forma fatorial, tornando inviável o cálculo perfeito em tempo real.</li>
 <li><strong>Heurística FFD</strong>: Algoritmo de primeiro encaixe decrescente que ordena itens do maior para o menor para otimizar a alocação de espaço.</li>
 <h3>🎮 Desafio prático</h3>
-<p><strong>O Algoritmo de Encaixe</strong></p>
-<p>Escreva o teste manual do algoritmo FFD para acomodar caixas de tamanhos [50, 20, 30, 40, 10] em nichos com capacidade máxima de 60 unidades cada.</p>
+<p class="narrative-p"><strong>O Algoritmo de Encaixe</strong></p>
+<p class="narrative-p">Escreva o teste manual do algoritmo FFD para acomodar caixas de tamanhos [50, 20, 30, 40, 10] em nichos com capacidade máxima de 60 unidades cada.</p>
 <h3>✨ Conexão com o próximo capítulo</h3>
-<p>A eficiência das heurísticas maximiza os lucros das grandes corporações logísticas. No próximo capítulo, entraremos na Parte IV do livro para investigar a "Elite do Atraso", debatendo os limites sociais da tecnologia e o impacto da automação no mercado de trabalho brasileiro.</p>
+<p class="narrative-p">A eficiência das heurísticas maximiza os lucros das grandes corporações logísticas. No próximo capítulo, entraremos na Parte IV do livro para investigar a "Elite do Atraso", debatendo os limites sociais da tecnologia e o impacto da automação no mercado de trabalho brasileiro.</p>
         </div>
         
 
         <div id="cap11" class="chapter-section">
             
             <h1 class="chapter-title">Capítulo 11: A Elite do Atraso</h1>
-<p>Alex moderno virou a página do caderno sob a claridade fraca da manhã.</p>
-<p>A caligrafia de Alex Senior mudava de tom naquela seção do diário.</p>
-<p>Não havia diagramas de registradores ou blocos de código em Assembly.</p>
-<p>As páginas haviam sido preenchidas com tinta preta forte e traços rápidos.</p>
-<p>O título parecia um manifesto político desenhado em letras garrafais:</p>
-<p><em>"O Muro dos Juros: Por que o Brasil prefere o passado ao futuro"</em>.</p>
+<p class="narrative-p">Alex moderno virou a página do caderno sob a claridade fraca da manhã.</p>
+<p class="narrative-p">A caligrafia de Alex Senior mudava de tom naquela seção do diário.</p>
+<p class="narrative-p">Não havia diagramas de registradores ou blocos de código em Assembly.</p>
+<p class="narrative-p">As páginas haviam sido preenchidas com tinta preta forte e traços rápidos.</p>
+<p class="narrative-p">O título parecia um manifesto político desenhado em letras garrafais:</p>
+<p class="narrative-p"><em>"O Muro dos Juros: Por que o Brasil prefere o passado ao futuro"</em>.</p>
+<p class="narrative-p">Para refletir sobre os entraves da soberania nacional, Alex leu os desabafos sobre o mercado financeiro brasileiro.</p>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Voltar para o Brasil depois de Milão foi um choque de realidade,” desabafava o texto.<br/>“Eu achava que, mostrando o ganho de produtividade de matrizes e sensores,<br/>as indústrias brasileiras correriam para digitalizar suas operações físicas.”</div>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Eu estava errado. O maior entrave no Brasil não era técnico, mas financeiro.<br/>Para o jovem estudante, a economia parece um assunto abstrato de jornal de TV.<br/>Mas a taxa básica de juros decide diretamente a física do chão de fábrica.”</div>
-<p>O diário explicava o cálculo feito pelos diretores financeiros como Bianchi.</p>
+<p class="narrative-p">O diário explicava o cálculo feito pelos diretores financeiros como Bianchi.</p>
 <h3>[Conceito Chave] A Equação da Inércia Financeira (Taxa Selic)</h3>
-<p>Um robô AMR importado da Alemanha custa dezoito mil euros em valores brutos.</p>
-<p>Isso equivale a mais de cento e dez mil reais por máquina, fora impostos.</p>
-<p>Adquirir a máquina envolve riscos de integração, manutenção e treinamento complexo.</p>
-<p>No entanto, se a taxa básica de juros (Selic) estiver arbitrada em dois dígitos, o cálculo muda.</p>
-<p>O investidor pode pegar esse dinheiro e aplicar em títulos públicos do Tesouro Direto.</p>
-<p>Sem riscos de hardware ou de engenharia, ele obtém rentabilidade garantida por puro rentismo.</p>
-<p>Compensa mais pagar salários mínimos baixos para que operadores empurrem paletes manuais.</p>
-<p>A elite prefere o trabalho precarizado sob a névoa do que arriscar investindo em tecnologia.</p>
-<p>Os juros altos agem como uma barreira invisível de aço que bloqueia o avanço da engenharia nacional.</p>
-<p>---</p>
+<p class="narrative-p">Um robô AMR importado da Alemanha custa dezoito mil euros em valores brutos.</p>
+<p class="narrative-p">Isso equivale a mais de cento e dez mil reais por máquina, fora impostos.</p>
+<p class="narrative-p">Adquirir a máquina envolve riscos de integração, manutenção e treinamento complexo.</p>
+<p class="narrative-p">No entanto, se a taxa básica de juros (Selic) estiver arbitrada em dois dígitos, o cálculo muda.</p>
+<p class="narrative-p">O investidor pode pegar esse dinheiro e aplicar em títulos públicos do Tesouro Direto.</p>
+<p class="narrative-p">Sem riscos de hardware ou de engenharia, ele obtém rentabilidade garantida por puro rentismo.</p>
+<p class="narrative-p">Compensa mais pagar salários mínimos baixos para que operadores empurrem paletes manuais.</p>
+<p class="narrative-p">A elite prefere o trabalho precarizado sob a névoa do que arriscar investindo em tecnologia.</p>
+<p class="narrative-p">Os juros altos agem como uma barreira invisível de aço que bloqueia o avanço da engenharia nacional.</p>
+<p class="narrative-p">---</p>
 <h3>A Névoa de Curitiba e a Rebelião pelo Código</h3>
-<p>A poeira vermelha de 1986 se dissolveu no ar, substituída pelo feixe verde do LiDAR em 2026.</p>
-<p>Alex moderno caminhou até o parapeito de vidro do mezanino, olhando a expedição.</p>
-<p>Lá fora, sob a neblina fria da manhã, entregadores organizavam suas mochilas de carga.</p>
-<p>Do lado de dentro da muralha, robôs de dezoito mil euros flutuavam no piso perfeito.</p>
-<p>A elite que lucrava na bolsa mantinha taxas de juros que impediam o desenvolvimento real.</p>
-<p>A automação de ponta servia para extrair suor humano com precisão matemática pura.</p>
-<p>O monopólio do crédito estava concentrado em poucos sobrenomes que ditavam as regras de mercado.</p>
-<p>"Mas o sistema não é perfeito," murmurou Alex para si mesmo, pensativo.</p>
-<p>"A mesma matemática usada para controlar entregas pode ser usada para descentralizar o fluxo."</p>
-<p>Ele virou a página, buscando entender as tecnologias descentralizadas de transferência instantânea.</p>
-<p>---</p>
+<p class="narrative-p">A ilusão de alta rentabilidade estática de 2001 e o desdém dos industriais nacionais se desvaneceram no ar frio, dando lugar ao vapor da respiração dos entregadores de moto sob a névoa úmida curitibana de 2026.</p>
+<p class="narrative-p">Alex moderno caminhou até o parapeito de vidro do mezanino, olhando a expedição.</p>
+<p class="narrative-p">Lá fora, sob a neblina fria da manhã, entregadores organizavam suas mochilas de carga.</p>
+<p class="narrative-p">Do lado de dentro da moralha, robôs de dezoito mil euros flutuavam no piso perfeito.</p>
+<p class="narrative-p">A elite que lucrava na bolsa mantinha taxas de juros que impediam o desenvolvimento real.</p>
+<p class="narrative-p">A automação de ponta servia para extrair suor humano com precisão matemática pura.</p>
+<p class="narrative-p">O monopólio do crédito estava concentrado em poucos sobrenomes que ditavam as regras de mercado.</p>
+<p class="narrative-p">"But o sistema não é perfeito," murmurou Alex para si mesmo, pensativo.</p>
+<p class="narrative-p">"A mesma matemática usada para controlar entregas pode ser usada para descentralizar o fluxo."</p>
+<p class="narrative-p">Ele virou a página, buscando entender as tecnologias descentralizadas de transferência instantânea.</p>
+<p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>Impacto dos Juros (Selic)</strong>: Taxas de juros altas desestimulam o investimento real em tecnologia e automação de hardware em favor da especulação financeira.</li>
 <li><strong>Precarização Tecnológica</strong>: A inércia financeira do rentismo favorece o trabalho humano de baixo custo em detrimento do desenvolvimento mecatrônico.</li>
 <h3>🎮 Desafio prático</h3>
-<p><strong>O Cálculo do Rentismo</strong></p>
-<p>Compare o rendimento garantido de R 100.000 aplicados a uma taxa Selic de 10,5% ao ano contra os custos e riscos estimados de implantar um sistema automatizado básico de esteiras.</p>
+<p class="narrative-p"><strong>O Cálculo do Rentismo</strong></p>
+<p class="narrative-p">Compare o rendimento garantido de R 100.000 aplicados a uma taxa Selic de 10,5% ao ano contra os custos e riscos estimados de implantar um sistema automatizado básico de esteiras.</p>
 <h3>✨ Conexão com o próximo capítulo</h3>
-<p>O controle centralizado dos juros e do crédito blinda o sistema bancário tradicional. No próximo capítulo, desvendaremos as redes distribuídas de transferência de dados e a arquitetura computacional instantânea que desafiou essa barreira física.</p>
+<p class="narrative-p">O controle centralizado dos juros e do crédito blinda o sistema bancário tradicional. No próximo capítulo, desvendaremos as redes distribuídas de transferência de dados e a arquitetura computacional instantânea que desafiou essa barreira física.</p>
         </div>
         
 
         <div id="cap12" class="chapter-section">
             
             <h1 class="chapter-title">Capítulo 12: A Engenharia do Pix e do Bloco</h1>
-<p>Alex moderno abriu a página seguinte do diário técnico de seu mentor.</p>
-<p>Os esquemas de hardware haviam retornado com força total nas anotações.</p>
-<p>Havia diagramas de redes em malha de alta conectividade e fórmulas algébricas modulares.</p>
-<p>O título, sublinhado com caneta vermelha, indicava o tema central:</p>
-<p><em>"A Queda do Pedágio Bancário: Sistemas Distribuídos e a Engenharia do Dinheiro Instantâneo"</em>.</p>
-<p>Alex soltou um riso contido ao ler a introdução histórica de Alex Senior em 2001.</p>
-<p>Para a sua geração em 2026, pagar o almoço digitando uma chave parecia natural.</p>
-<p>Mas anos atrás, bancos tradicionais cobravam pedágios caros de DOC e TED.</p>
-<p>Eram tarifas absurdas por operações eletrônicas lentas e limitadas ao horário comercial.</p>
-<p>O código de segurança escrito por desenvolvedores do Banco Central implodiu essa barreira.</p>
-<p>---</p>
+<p class="narrative-p">Alex moderno abriu a página seguinte do diário técnico de seu mentor.</p>
+<p class="narrative-p">Os esquemas de hardware haviam retornado com força total nas anotações.</p>
+<p class="narrative-p">Havia diagramas de redes em malha de alta conectividade e fórmulas algébricas modulares.</p>
+<p class="narrative-p">O título, sublinhado com caneta vermelha, indicava o tema central:</p>
+<p class="narrative-p"><em>"A Queda do Pedágio Bancário: Sistemas Distribuídos e a Engenharia do Dinheiro Instantâneo"</em>.</p>
+<p class="narrative-p">Alex soltou um riso contido ao ler a introdução histórica de Alex Senior em 2001.</p>
+<p class="narrative-p">Para a sua geração em 2026, pagar o almoço digitando uma chave parecia natural.</p>
+<p class="narrative-p">Mas anos atrás, bancos tradicionais cobravam pedágios caros de DOC e TED.</p>
+<p class="narrative-p">Eram tarifas absurdas por operações eletrônicas lentas e limitadas ao horário comercial.</p>
+<p class="narrative-p">Para transpor essa barreira monetária e entender os algoritmos que quebravam o pedágio, Alex mergulhou na matemática das chaves.</p>
+<p class="narrative-p">O código de segurança escrito por desenvolvedores do Banco Central implodiu essa barreira.</p>
+<p class="narrative-p">---</p>
 <h3>[Conceito Chave] A Criptografia Assimétrica de Chaves</h3>
-<p>O dinheiro moderno é uma abstração digital gravada em tabelas de bancos de dados.</p>
-<p>Para mover registros entre contas com segurança militar, usa-se a criptografia assimétrica.</p>
-<p>Pense em uma caixa de correio metálica com uma fresta e uma porta trancada por cadeado.</p>
-<p>A fresta de entrada é a sua <strong>Chave Pública</strong>; qualquer um a conhece e insere cartas ali.</p>
-<p>Contudo, só você possui a chave física do cadeado para abrir a caixa e ler as cartas.</p>
-<p>Esta chave física é a sua <strong>Chave Privada</strong>, que deve ser guardada em absoluto segredo.</p>
-<p>No Pix, a assinatura da transação usa a sua chave privada para garantir a autenticidade.</p>
-<p>Abaixo, a simulação em Python demonstra a geração dessa assinatura digital única de dados:</p>
+<p class="narrative-p">O dinheiro moderno é uma abstração digital gravada em tabelas de bancos de dados.</p>
+<p class="narrative-p">Para mover registros entre contas com segurança militar, usa-se a criptografia assimétrica.</p>
+<p class="narrative-p">Pense em uma caixa de correio metálica com uma fresta e uma porta trancada por cadeado.</p>
+<p class="narrative-p">A fresta de entrada é a sua <strong>Chave Pública</strong>; qualquer um a conhece e insere cartas ali.</p>
+<p class="narrative-p">Contudo, só você possui a chave física do cadeado para abrir a caixa e ler as cartas.</p>
+<p class="narrative-p">Esta chave física é a sua <strong>Chave Privada</strong>, que deve ser guardada em absoluto segredo.</p>
+<p class="narrative-p">No Pix, a assinatura da transação usa a sua chave privada para garantir a autenticidade.</p>
+<p class="narrative-p">Abaixo, a simulação em Python demonstra a geração dessa assinatura digital única de dados:</p>
 <pre><code>import hashlib
-<p>import json</p>
-<p>def gerar_hash_transacao(pagador, recebedor, valor, chave_privada):</p>
-<p>dados = {</p>
-<p>"pagador": pagador,</p>
-<p>"recebedor": recebedor,</p>
-<p>"valor": valor,</p>
-<p>"chave_privada_simulada": chave_privada</p>
-<p>}</p>
-<p>string_dados = json.dumps(dados, sort_keys=True).encode('utf-8')</p>
-<p>return hashlib.sha256(string_dados).hexdigest()</p>
+<p class="narrative-p">import json</p>
+<p class="narrative-p">def gerar_hash_transacao(pagador, recebedor, valor, chave_privada):</p>
+<p class="narrative-p">dados = {</p>
+<p class="narrative-p">"pagador": pagador,</p>
+<p class="narrative-p">"recebedor": recebedor,</p>
+<p class="narrative-p">"valor": valor,</p>
+<p class="narrative-p">"chave_privada_simulada": chave_privada</p>
+<p class="narrative-p">}</p>
+<p class="narrative-p">string_dados = json.dumps(dados, sort_keys=True).encode('utf-8')</p>
+<p class="narrative-p">return hashlib.sha256(string_dados).hexdigest()</p>
 hash_original = gerar_hash_transacao("Alex", "UTFPR", 150.00, "chave_secreta_123")</code></pre>
-<p>Se o invasor alterar o valor no caminho da rede, a assinatura digital será invalidada.</p>
-<p>---</p>
+<p class="narrative-p">Se o invasor alterar o valor no caminho da rede, a assinatura digital será invalidada.</p>
+<p class="narrative-p">---</p>
 <h3>A Geopolítica do Código: O Nexus e a Quebra do Swift</h3>
-<p>A poeira vermelha de 1986 se dissolveu no ar, substituída pelo feixe verde do LiDAR em 2026.</p>
-<p>Alex moderno fechou o console de testes no tablet de manutenção e olhou as carretas.</p>
-<p>Ele relembrou as notas do diário sobre o cenário macroeconômico internacional.</p>
-<p>O Swift sempre funcionou como o pedágio financeiro das superpotências ocidentais.</p>
-<p>Para contornar esse controle de crédito global, novas tecnologias surgiram em 2026:</p>
+<p class="narrative-p">O som estridente das discussões telefônicas de 2001 sobre custos cambiais de importação dissolveu-se, dando lugar ao ronco sutil e elétrico dos motores de indução das carretas no CD em 2026.</p>
+<p class="narrative-p">Alex moderno fechou o console de testes no tablet de manutenção e olhou as carretas.</p>
+<p class="narrative-p">Ele relembrou as notas do diário sobre o cenário macroeconômico internacional.</p>
+<p class="narrative-p">O Swift sempre funcionou como o pedágio financeiro das superpotências ocidentais.</p>
+<p class="narrative-p">Para contornar esse controle de crédito global, novas tecnologias surgiram em 2026:</p>
 <li><strong>O Projeto Nexus</strong>: Integração de pagamentos instantâneos mundiais sem bancos intermediários.</li>
-<li><strong>O BRICS Pay</strong>: Plataforma descentralizada em blockchain para contornar oSwift ocidental.</li>
-<p>A engenharia financeira descentralizada estava quebrando o monopólio tradicional.</p>
-<p>Alex desligou o tablet de monitoramento de processos de rede e fechou a mochila.</p>
-<p>Estava pronto para ler o último capítulo e compreender o manifesto final de Alex Senior.</p>
-<p>---</p>
+<li><strong>O BRICS Pay</strong>: Plataforma descentralizada em blockchain para contornar o Swift ocidental.</li>
+<p class="narrative-p">A engenharia financeira descentralizada estava quebrando o monopólio tradicional.</p>
+<p class="narrative-p">Alex desligou o tablet de monitoramento de processos de rede e fechou a mochila.</p>
+<p class="narrative-p">Estava pronto para ler o último capítulo e compreender o manifesto final de Alex Senior.</p>
+<p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>Chaves Assimétricas</strong>: O par de chaves (pública e privada) permite criptografar mensagens que apenas o destinatário correto consegue ler e autenticar.</li>
 <li><strong>Protocolos de Consenso</strong>: Sistemas distribuídos garantem a sincronia de dados em tempo real sem duplicar transações ou gerar conflitos de rede.</li>
 <h3>🎮 Desafio prático</h3>
-<p><strong>A Assinatura Digital</strong></p>
-<p>Rode o código Python acima alterando o valor do saldo da transação e verifique como a cadeia de caracteres Hash de saída muda de forma catastrófica a cada digitação.</p>
+<p class="narrative-p"><strong>A Assinatura Digital</strong></p>
+<p class="narrative-p">Rode o código Python acima alterando o valor do saldo da transação e verifique como a cadeia de caracteres Hash de saída muda de forma catastrófica a cada digitação.</p>
 <h3>✨ Conexão com o próximo capítulo</h3>
-<p>A descentralização das transações e dados remove a blindagem do capital rentista tradicional. No próximo e último capítulo, uniremos todas as peças de nossa jornada na "Rebeldia da Mecatrônica" para consolidar o manifesto de emancipação do jovem engenheiro técnico.</p>
+<p class="narrative-p">A descentralização das transações e dados remove a blindagem do capital rentista tradicional. No próximo e último capítulo, uniremos todas as peças de nossa jornada na "Rebeldia da Mecatrônica" para consolidar o manifesto de emancipação do jovem engenheiro técnico.</p>
         </div>
         
 
         <div id="cap13" class="chapter-section">
             
             <h1 class="chapter-title">Capítulo 13: A Rebeldia da Mecatrônica</h1>
-<p>A luz dourada do sol rompeu a névoa curitibana e inundou o mezanino.</p>
-<p>As sombras dos robôs AMRs projetavam-se sobre o piso cinza nivelado.</p>
-<p>Alex moderno virou a última folha do diário de seu mentor.</p>
-<p>A caligrafia de Alex Senior ocupava a página final com letras firmes.</p>
-<p>O título, simples e definitivo, encerrava a obra de décadas:</p>
-<p><em>"A Rebeldia da Mecatrônica: Um Manifesto para os que constroem"</em>.</p>
+<p class="narrative-p">A luz dourada do sol rompeu a névoa curitibana e inundou o mezanino.</p>
+<p class="narrative-p">As sombras dos robôs AMRs projetavam-se sobre o piso cinza nivelado.</p>
+<p class="narrative-p">Alex moderno virou a última folha do diário de seu mentor.</p>
+<p class="narrative-p">A caligrafia de Alex Senior ocupava a página final com letras firmes.</p>
+<p class="narrative-p">O título, simples e definitivo, encerrava a obra de décadas:</p>
+<p class="narrative-p"><em>"A Rebeldia da Mecatrônica: Um Manifesto para os que constroem"</em>.</p>
+<p class="narrative-p">Para fechar o diário e consolidar a jornada de aprendizado, Alex leu as últimas linhas do manifesto.</p>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Se você chegou até o fim destas páginas, compreendeu a engenharia real.<br/>Ela é muito mais do que física de semicondutores ou equações térmicas.<br/>Estudar tecnologia não é apenas um caminho para obter crachás e salários.”</div>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“É, acima de tudo, um ato de rebeldia política e social.<br/>Nós vivemos em um país historicamente sequestrado pelo ganho rentista.<br/>Onde a elite prefere a segurança dos juros altos ao investimento real.”</div>
-<p>Quando um jovem decide passar noites programando malhas de controle PID, ele resiste.</p>
-<p>Ele desafia a engrenagem do atraso que submete pessoas a tarefas brutas e indignas.</p>
-<p>O código de máquina e a robótica são ferramentas reais de emancipação social.</p>
-<p>O futuro não nascerá das planilhas de juros da Faria Lima.</p>
-<p>O progresso nasce da persistência técnica dos que recusam a mediocridade.</p>
-<p>"Mantenha os transistores ativos. O controle físico pertence aos que programam."</p>
-<p>Alex fechou o caderno preto com um som abafado no mezanino.</p>
-<p>Ele guardou o diário na mochila ao lado do velho chip Z80A.</p>
-<p>Suas pernas metálicas refletiam a luz brilhante da manhã de Curitiba.</p>
-<p>---</p>
+<p class="narrative-p">Quando um jovem decide passar noites programando malhas de controle PID, ele resiste.</p>
+<p class="narrative-p">Ele desafia a engrenagem do atraso que submete pessoas a tarefas brutas e indignas.</p>
+<p class="narrative-p">O código de máquina e a robótica são ferramentas reais de emancipação social.</p>
+<p class="narrative-p">O futuro não nascerá das planilhas de juros da Faria Lima.</p>
+<p class="narrative-p">O progresso nasce da persistência técnica dos que recusam a mediocridade.</p>
+<p class="narrative-p">"Mantenha os transistores ativos. O controle físico pertence aos que programam."</p>
+<p class="narrative-p">Alex fechou o caderno preto com um som abafado no mezanino.</p>
+<p class="narrative-p">Ele guardou o diário na mochila ao lado do velho chip Z80A.</p>
+<p class="narrative-p">Suas pernas metálicas refletiam a luz brilhante da manhã de Curitiba.</p>
+<p class="narrative-p">---</p>
 <h3>A Conexão das Eras e o Caminho do Aço</h3>
-<p>Alex sentiu o peso e o propósito de toda a jornada técnica de seu mentor.</p>
-<p>O barro de 1986, o frio de 2001 e a inteligência de enxame de 2026 estavam unidos.</p>
-<p>Era o mesmo fio de inteligência e teimosia nacional cruzando as décadas.</p>
-<p>Ele olhou para a frota de robôs deslizando suavemente pelas prateleiras.</p>
-<p>Ele não era apenas um trocador de sensores de máquinas importadas.</p>
-<p>Naquela tarde, ele voltaria aos laboratórios universitários para criar.</p>
-<p>Ele programaria a próxima geração de robôs móveis com ROS 2 nacional.</p>
-<p>O futuro tecnológico do país não precisava mais ser importado de fora.</p>
-<p>Caminhou firme em direção à escada metálica, deixando o balé mecânico das docas.</p>
-<p>---</p>
+<p class="narrative-p">As anotações do diário em caneta azul desbotada de 1986 pareceram fundir-se com a luz solar de Curitiba, unindo em definitivo o garoto do barro de Cascavel e o engenheiro de 2026.</p>
+<p class="narrative-p">Alex sentiu o peso e o propósito de toda a jornada técnica de seu mentor.</p>
+<p class="narrative-p">O barro de 1986, o frio de 2001 e a inteligência de enxame de 2026 estavam unidos.</p>
+<p class="narrative-p">Era o mesmo fio de inteligência e teimosia nacional cruzando as décadas.</p>
+<p class="narrative-p">Ele olhou para a frota de robôs deslizando suavemente pelas prateleiras.</p>
+<p class="narrative-p">Ele não era apenas um trocador de sensores de máquinas importadas.</p>
+<p class="narrative-p">Naquela tarde, ele voltaria aos laboratórios universitários para criar.</p>
+<p class="narrative-p">Ele programaria a próxima geração de robôs móveis com ROS 2 nacional.</p>
+<p class="narrative-p">O futuro tecnológico do país não precisava mais ser importado de fora.</p>
+<p class="narrative-p">Caminhou firme em direção à escada metálica, deixando o balé mecânico das docas.</p>
+<p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>Propósito da Engenharia</strong>: A automação deve servir para emancipar o trabalhador humano de tarefas brutas, e não para precarizar a vida social.</li>
 <li><strong>Inovação Soberana</strong>: O desenvolvimento de tecnologia de baixo nível é a chave para superar a dependência econômica do rentismo.</li>
 <h3>🎮 Desafio prático</h3>
-<p><strong>O Seu Manifesto Técnico</strong></p>
-<p>Escreva um parágrafo definindo qual problema real do seu bairro ou universidade você pretende solucionar utilizando os conhecimentos de programação e automação.</p>
+<p class="narrative-p"><strong>O Seu Manifesto Técnico</strong></p>
+<p class="narrative-p">Escreva um parágrafo definindo qual problema real do seu bairro ou universidade você pretende solucionar utilizando os conhecimentos de programação e automação.</p>
 <h3>✨ Conexão com o próximo capítulo</h3>
-<p>Chegamos ao fim da jornada teórica e narrativa de <em>A Rebeldia da Mecatrônica</em>. Mantenha as mentes curiosas, os registradores limpos e os compiladores rodando. O futuro da automação e da soberania técnica nacional agora está em suas mãos.</p>
+<p class="narrative-p">Chegamos ao fim da jornada teórica e narrativa de <em>A Rebeldia da Mecatrônica</em>. Mantenha as mentes curiosas, os registradores limpos e os compiladores rodando. O futuro da automação e da soberania técnica nacional agora está em suas mãos.</p>
         </div>
         
     </div>

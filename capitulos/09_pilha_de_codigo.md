@@ -8,6 +8,8 @@ Uma cascata de identificadores se desenrolou no console preto do Linux embutido.
 O robô gerenciava simultaneamente tarefas escritas em linguagens diferentes.
 Como o silício unificava esses mundos sem travar ou entrar em colapso técnico?
 
+Para resolver esse mistério estrutural, Alex leu sobre a cooperação entre linguagens de controle nas anotações do diário.
+
 > “Na mecatrônica de alta performance, não existe uma única linguagem salvadora,” dizia o diário.
 > “Nós dividimos o trabalho do robô seguindo a lógica do corpo humano.
 > Separamos entre os músculos de ação reflexa rápida e a mente de planejamento lento.”

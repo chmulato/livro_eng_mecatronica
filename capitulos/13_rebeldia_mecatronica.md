@@ -8,6 +8,8 @@ A caligrafia de Alex Senior ocupava a página final com letras firmes.
 O título, simples e definitivo, encerrava a obra de décadas:
 *"A Rebeldia da Mecatrônica: Um Manifesto para os que constroem"*.
 
+Para fechar o diário e consolidar a jornada de aprendizado, Alex leu as últimas linhas do manifesto.
+
 > “Se você chegou até o fim destas páginas, compreendeu a engenharia real.
 > Ela é muito mais do que física de semicondutores ou equações térmicas.
 > Estudar tecnologia não é apenas um caminho para obter crachás e salários.”
@@ -31,6 +33,8 @@ Suas pernas metálicas refletiam a luz brilhante da manhã de Curitiba.
 ---
 
 ### A Conexão das Eras e o Caminho do Aço
+
+As anotações do diário em caneta azul desbotada de 1986 pareceram fundir-se com a luz solar de Curitiba, unindo em definitivo o garoto do barro de Cascavel e o engenheiro de 2026.
 
 Alex sentiu o peso e o propósito de toda a jornada técnica de seu mentor.
 O barro de 1986, o frio de 2001 e a inteligência de enxame de 2026 estavam unidos.
