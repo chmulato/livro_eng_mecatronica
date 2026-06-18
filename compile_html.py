@@ -161,6 +161,26 @@ def main():
             align-items: center;
         }
 
+        .header-download-btn {
+            background-color: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: background 0.2s;
+            margin-right: 8px;
+        }
+
+        .header-download-btn:hover {
+            background-color: #f97316;
+        }
+
         /* Menu de Navegação Drawer (Slide-in) */
         .nav-drawer {
             position: fixed;
@@ -426,7 +446,10 @@ def main():
 
     <div class="mobile-header">
         <span class="header-title">A Rebeldia da Mecatrônica</span>
-        <button class="menu-button" id="menuBtn">☰</button>
+        <div style="display: flex; align-items: center;">
+            <a href="romance_instrutivo.pdf" class="header-download-btn" download>📥 PDF</a>
+            <button class="menu-button" id="menuBtn">☰</button>
+        </div>
     </div>
 
     <div class="overlay" id="overlay"></div>
