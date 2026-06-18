@@ -268,6 +268,31 @@ def main():
         .cover-subtitle {
             font-size: 1rem;
             color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Botão CTA para Download do PDF */
+        .download-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(217, 93, 20, 0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .download-cta-btn:hover {
+            background-color: #f97316;
+            box-shadow: 0 6px 20px rgba(217, 93, 20, 0.6);
+            transform: translateY(-2px);
         }
 
         /* Dedicatória */
@@ -276,7 +301,7 @@ def main():
             font-size: 1rem;
             color: var(--text-muted);
             text-align: center;
-            margin: 3rem auto;
+            margin: 2rem auto;
             line-height: 1.6;
             padding: 0 10px;
         }
@@ -451,12 +476,14 @@ def main():
     html_middle = """
         </ul>
     </div>
-
+ 
     <div class="content-container">
         <div id="cover" class="cover-section">
             <img src="capa.png" alt="Capa: A Rebeldia da Mecatrônica" class="cover-image" onerror="this.style.display='none'">
             <h1 class="cover-title">A Rebeldia da Mecatrônica</h1>
             <p class="cover-subtitle">Romance Instrutivo de Tecnologia e Sociedade</p>
+            
+            <a href="romance_instrutivo.pdf" class="download-cta-btn" download>📥 Baixar Livro em PDF (Leitura Offline)</a>
             
             <div class="dedication">
                 Dedicado à minha família, cujo apoio silencioso e inabalável estruturou
