@@ -339,38 +339,41 @@ def main():
     story.append(Spacer(1, 10))
     
     toc_data = [
-        ["Capítulo 1: A Estrada de Chão (1986)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "1"],
-        ["Capítulo 2: A Anatomia do Z80 (8-bits)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "3"],
-        ["Capítulo 3: A Lógica do Bit (Binário/Hexa)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "5"],
-        ["Capítulo 4: A Saudação de Três Dedos na Itália", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "7"],
-        ["Capítulo 5: Sistemas Operacionais Raiz (MS-DOS)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "9"],
-        ["Capítulo 6: A Matemática do Espaço (Matrizes 3D)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "11"],
-        ["Capítulo 7: As Formigas Elétricas (CD 2026)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "13"],
-        ["Capítulo 8: O Cérebro do Robô (LiDAR e SLAM)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "15"],
-        ["Capítulo 9: A Pilha de Código Moderna (ROS 2)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "18"],
-        ["Capítulo 10: A Equação do Almoxarifado", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "21"],
-        ["Capítulo 11: A Elite do Atraso (Crítica Social)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "24"],
-        ["Capítulo 12: A Engenharia do Pix e do Bloco", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "27"],
-        ["Capítulo 13: A Rebeldia da Mecatrônica (Manifesto)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "30"]
+        ["Capítulo 0: A Centopeia de Silício (Prólogo)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "1"],
+        ["Capítulo 1: A Estrada de Chão (1986)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "2"],
+        ["Capítulo 2: A Anatomia do Z80 (8-bits)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "4"],
+        ["Capítulo 3: A Lógica do Bit (Binário/Hexa)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "6"],
+        ["Capítulo 4: A Saudação de Três Dedos na Itália", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "8"],
+        ["Capítulo 5: Sistemas Operacionais Raiz (MS-DOS)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "10"],
+        ["Capítulo 6: A Matemática do Espaço (Matrizes 3D)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "12"],
+        ["Capítulo 7: As Formigas Elétricas (CD 2026)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "14"],
+        ["Capítulo 8: O Cérebro do Robô (LiDAR e SLAM)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "16"],
+        ["Capítulo 9: A Pilha de Código Moderna (ROS 2)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "19"],
+        ["Capítulo 10: A Equação do Almoxarifado", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "22"],
+        ["Capítulo 11: A Elite do Atraso (Estudo de Caso)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "25"],
+        ["Capítulo 12: A Engenharia do Pix e do Bloco", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "28"],
+        ["Capítulo 13: A Rebeldia da Mecatrônica (Manifesto)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "31"],
+        ["Apêndice A: Glossário de Engenharia", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "34"],
+        ["Apêndice B: Guia do Jovem Mecatrônico", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "36"]
     ]
     
     t_toc = Table(toc_data, colWidths=[260, 100, 20])
     t_toc.setStyle(TableStyle([
         ('FONTNAME', (0,0), (-1,-1), FONT_NAME),
         ('FONTSIZE', (0,0), (-1,-1), 8.5),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 5),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 4),
         ('TEXTCOLOR', (0,0), (-1,-1), colors.HexColor("#2a2b2d")),
         ('ALIGN', (2,0), (2,-1), 'RIGHT'),
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
     ]))
     story.append(t_toc)
     story.append(PageBreak())
-
+ 
     # 4. Ler capítulos
     capitulos = sorted([f for f in os.listdir(CAPITULOS_DIR) if f.endswith('.md')])
-    for idx, cap in enumerate(capitulos, start=1):
+    for idx, cap in enumerate(capitulos):
         cap_path = os.path.join(CAPITULOS_DIR, cap)
-        print(f"Processando {cap} (Capítulo {idx})...")
+        print(f"Processando {cap}...")
         story.extend(parse_markdown_to_story(cap_path, idx, styles))
         story.append(PageBreak())
         
