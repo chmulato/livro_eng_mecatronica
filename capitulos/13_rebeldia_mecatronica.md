@@ -27,7 +27,11 @@ O progresso nasce da persistência técnica dos que recusam a mediocridade.
 "Mantenha os transistores ativos. O controle físico pertence aos que programam."
 
 Alex fechou o caderno preto com um som abafado no mezanino.
-Ele guardou o diário na mochila ao lado do velho chip Z80A.
+Nas últimas páginas de anotações soltas, quase como um rascunho de bastidores, Alex Senior havia deixado uma pequena fábula sobre o ato de escrever aquele diário técnico:
+
+> *“Alguns me dirão que mergulhar fundo nos registradores de 8 bits é como tentar explicar um eclipse para quem só quer ver a lua brilhar. Outros dirão que este diário salta entre décadas como um osciloscópio mal calibrado, ou que as matrizes 3D e os custos financeiros parecem transformadores em sobrecarga, pesados demais para jovens aprendizes. Talvez Bianchi, com seu jeito de alarme de incêndio barulhento, devesse vir com um botão de modo silencioso. Mas a verdade é que escrever engenharia é como montar circuitos sem serigrafia: às vezes exige esforço, mas cada pequeno LED que acendemos no caminho ilumina o labirinto inteiro. Que as próximas gerações tragam mais vozes jovens para este laboratório de papel e deixem suas próprias marcas no metal.”*
+
+Alex sorriu. A autoironia elegante do mentor tornava a densidade do diário ainda mais humana. Ele guardou o caderno na mochila ao lado do velho chip Z80A.
 Suas pernas metálicas refletiam a luz brilhante da manhã de Curitiba.
 
 ---
