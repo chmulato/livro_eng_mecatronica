@@ -1,0 +1,8 @@
+# Ignore compiled output binaries if you don't want them in git history, 
+# but since the user requested publishing the book we include them or 
+# let them be added directly. We will only ignore python cache and basic files.
+__pycache__/
+*.pyc
+*.pyo
+.agents/
+.gemini/
