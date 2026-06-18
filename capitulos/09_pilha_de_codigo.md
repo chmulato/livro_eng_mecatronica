@@ -5,7 +5,7 @@ O torque metálico indicou que o invólucro de proteção do robô estava lacrad
 Ele abriu a conexão ssh em seu tablet de diagnóstico para checar os processos internos.
 
 Uma cascata de identificadores se desenrolou no console preto do Linux embutido.
-O robô gerenciava simultaneamente tarefas escritas em linguagens diferentes.
+O robô gerenciava simultaneamente tarefas escritas in linguagens diferentes.
 Como o silício unificava esses mundos sem travar ou entrar em colapso técnico?
 
 Para resolver esse mistério estrutural, Alex leu sobre a cooperação entre linguagens de controle nas anotações do diário.
@@ -83,13 +83,25 @@ Agora, precisava aplicar essa troca de dados para resolver o empilhamento das ca
 
 ---
 
+### ⚡ Simplificando a Tecnologia
+* **O que é o ROS 2 em 30 segundos**: Em vez de escrever um único programa gigante que cuida de tudo no robô e corre o risco de travar por inteiro se der erro, você cria mini-programas independentes (Nós). Eles funcionam como vizinhos de condomínio conversando em tópicos de rádio: o nó do laser publica a leitura e o nó do motor ouve e gira a roda.
+* **O que isso significa no mundo real**: Em robôs de grande porte, se a câmera de reconhecimento facial der erro e travar o nó de Python, o nó em C++ que monitora as barreiras físicas do LiDAR no rádio continuará rodando de forma independente, evitando acidentes e colisões na parede.
+
+---
+
 ### 🧠 O que você aprendeu aqui
 - **Middleware (ROS 2)**: Um framework de software que gerencia a troca de mensagens em tópicos entre processos independentes chamados nós.
 - **Divisão C++/Python**: C++ cuida de reflexos e controle de hardware rápido, enquanto Python planeja caminhos e lógicas complexas.
 
 ### 🎮 Desafio prático
-**A Criação do Tópico**  
+
+**Nível 1 (Iniciante): A Criação do Tópico**  
 Desenhe o diagrama de fluxo de dados mostrando o caminho da mensagem desde o sensor LiDAR físico até a atuação na roda, indicando os nós e nomes dos tópicos intermediários.
+
+**Nível 2 (Avançado): O Nó de Escuta em C++**  
+Complete a implementação da função `callback_velocidade` no código C++ acima. Crie uma variável para receber a velocidade angular da curva (`msg->angular.z`) e adicione uma linha de log `RCLCPP_INFO` para exibir esse parâmetro de rotação.
+
+---
 
 ### ✨ Conexão com o próximo capítulo
 A comunicação de mensagens unifica a percepção e a atuação do robô no espaço físico. No próximo capítulo, utilizaremos essa infraestrutura de comunicação para aplicar a equação clássica de alocação de carga e otimizar a arrumação dos paletes no galpão.

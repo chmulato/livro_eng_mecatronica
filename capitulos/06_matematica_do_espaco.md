@@ -42,7 +42,7 @@ Volume geométrico bruto é diferente do volume utilizável pela cinemática da 
 
 ### O Quebra-Cabeças de Três Eixos: O Bin Packing Problem em 2026
 
-O frio cortante do inverno italiano de 2001 e o barulho de seus transelevadores de carga se dissiparam sob a névoa úmida, abrindo espaço para a claridade cinza do amanhecer de Curitiba em 2026.
+O frio cortante do inverno italiano de 2001 e o barulho de seus transelevadores de carga se dissiparam sob a névoa umidade, abrindo espaço para a claridade cinza do amanhecer de Curitiba em 2026.
 
 Alex moderno abriu o terminal de testes em seu tablet de manutenção em Curitiba.
 Ele observou os robôs AMRs movendo cargas pesadas de forma autônoma pelas docas.
@@ -76,13 +76,25 @@ Ele recolheu o diário amarelado e guardou o chip Z80A de forma segura na mochil
 
 ---
 
+### ⚡ Simplificando a Tecnologia
+* **O que é a Matriz Booleana de Ocupação em 30 segundos**: Pense no jogo Tetris ou em blocos de Minecraft. A matriz booleana divide o espaço físico em pequenos cubinhos imaginários. Se o cubinho está ocupado com matéria, vale 1; se está vazio, vale 0. O processador só precisa fazer somas rápidas desses cubinhos para saber onde a carga cabe.
+* **O que isso significa no mundo real**: Em um armazém inteligente, se o robô tentar colocar uma caixa em um local onde a matriz booleana já indica 1, o software bloqueia a pinça física e evita acidentes caros.
+
+---
+
 ### 🧠 O que você aprendeu aqui
 - **Vetores Espaciais**: Posições físicas tridimensionais são descritas por coordenadas lineares de eixos ortogonais $[x, y, z]$.
 - **Algoritmo de Colisão**: A verificação geométrica impede a alocação de volumes coincidentes no mesmo espaço de hardware.
 
 ### 🎮 Desafio prático
-**A Otimização de Caixas**  
-Implemente o cálculo manual da eficiência volumétrica ($Efe$) para um palete de volume 1m³ contendo exatamente 4 caixas retangulares de dimensões 40x50x30 cm.
+
+**Nível 1 (Iniciante): A Otimização de Caixas**  
+Implemente o cálculo manual da eficiência volumétrica ($Efe$) para um palete de volume total de 1m³ contendo exatamente 4 caixas retangulares de dimensões 40x50x30 cm.
+
+**Nível 2 (Avançado): O Código de Colisão**  
+Modifique a função em Python `verificar_colisao` apresentada no capítulo para incluir uma margem de segurança física de `0.05` metros (5 cm) em todos os lados de cada caixa a fim de evitar que vibrações dos robôs façam as cargas se tocarem.
+
+---
 
 ### ✨ Conexão com o próximo capítulo
 Com a matemática do espaço consolidada na mente, Alex precisará lidar com robôs em movimento constante. No próximo capítulo, entraremos na Parte III do livro para compreender as "Formigas Elétricas": a dinâmica operacional do CD moderno de Curitiba em 2026 e o controle de robôs autônomos simultâneos.

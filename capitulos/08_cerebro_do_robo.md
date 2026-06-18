@@ -99,14 +99,26 @@ Estava pronto para entender como integrar tudo no sistema operacional de robôs.
 
 ---
 
+### ⚡ Simplificando a Tecnologia
+* **O que é o Filtro de Kalman em 30 segundos**: Pense em tentar estimar a velocidade de um carro num velocímetro instável e que treme muito (a odometria) combinando com a leitura de placas na pista sob chuva (o sensor LiDAR). O Filtro de Kalman calcula qual informação tem a menor margem de erro a cada milissegundo e faz uma média ponderada inteligente das duas, nos entregando a velocidade real com precisão matemática.
+* **O que isso significa no mundo real**: Sem essa correção constante de incerteza baseada na estatística do filtro, a patinação das rodas no chão liso ou a poeira bloqueando o laser fariam o robô autônomo desviar gradativamente e colidir contra as prateleiras em poucos metros.
+
+---
+
 ### 🧠 O que você aprendeu aqui
 - **Time of Flight (ToF)**: O cálculo de distância do sensor a laser baseia-se na velocidade da luz e no tempo de retorno do feixe refletido.
 - **Filtro de Kalman**: Algoritmo recursivo que faz a fusão probabilística de sensores com ruído para obter coordenadas precisas.
 
 ### 🎮 Desafio prático
-**Desvio de Obstáculos no Tinkercad**  
+
+**Nível 1 (Iniciante): Desvio de Obstáculos no Tinkercad**  
 Monte um circuito de teste virtual usando um Arduino Uno e um sensor ultrassônico. Programe o Arduino para acionar um sinal de aviso caso a leitura de distância seja menor que 10 cm.
 * [Tinkercad Circuits](https://www.tinkercad.com/)
+
+**Nível 2 (Avançado): A Incerteza do Sensor**  
+Altere os parâmetros do Filtro de Kalman simulado no código C++ acima. Aumente o `ruido_medicao` do sensor LiDAR para `2.0` e descreva como a estimativa final da variável `posicao` reage às atualizações em relação à odometria estável.
+
+---
 
 ### ✨ Conexão com o próximo capítulo
 Controlar o LiDAR e o Filtro de Kalman resolve a estimativa de posição do robô. No próximo capítulo, entenderemos como gerenciar a comunicação e a troca de dados entre todos os sensores e atuadores do AMR utilizando a pilha de middleware moderna do ROS 2.

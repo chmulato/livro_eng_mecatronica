@@ -94,13 +94,25 @@ Alex se ajeitou no posto de monitoramento, pronto para avançar para a lógica n
 
 ---
 
+### ⚡ Simplificando a Tecnologia
+* **O que são Registradores em 30 segundos**: Pense neles como a área de transferência (Ctrl+C) do seu sistema operacional. São dados rápidos guardados na mesa de trabalho do processador para uso instantâneo, sumindo assim que uma nova cópia é feita por cima.
+* **O que isso significa no mundo real**: Em um robô, você não diz "vire à esquerda". O software calcula o ângulo, converte em um número binário e joga esse byte em um registrador que está fisicamente ligado ao controle do motor.
+
+---
+
 ### 🧠 O que você aprendeu aqui
 - **Registradores**: São gavetas internas de memória ultrarrápida do processador. No Z80, operam com dados de 8 bits (números de 0 a 255).
 - **Instruções de Controle**: `LD` carrega e move informações, enquanto `IN` e `OUT` fazem a interface física direta com os periféricos externos.
 
 ### 🎮 Desafio prático
-**O Desenho do Fluxo dos Bits**  
+
+**Nível 1 (Iniciante): O Desenho do Fluxo dos Bits**  
 Desenhe a gaveta do Acumulador A e a gaveta auxiliar B. Indique graficamente para onde o dado flui ao executar sequencialmente as instruções `LD A, 5` e `LD B, A`.
+
+**Nível 2 (Avançado): O Loop de Som**  
+Utilizando o código em Assembly do Z80 apresentado no final deste capítulo, explique o que aconteceria com a frequência do som emitido pelo alto-falante se a instrução de atraso de tempo (delay loop) fosse inserida entre a leitura do teclado e o comando `OUT`.
+
+---
 
 ### ✨ Conexão com o próximo capítulo
 Agora que conhecemos os compartimentos onde o Z80 manipula os bytes, precisamos desvendar como esses números se estruturam por dentro. No próximo capítulo, vamos decifrar a lógica binária e hexadecimal, aprendendo a ler e traduzir as combinações numéricas básicas que governam as decisões lógicas das máquinas.
