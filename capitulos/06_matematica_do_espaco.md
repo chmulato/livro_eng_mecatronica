@@ -14,6 +14,8 @@ Era necessário converter os paletes físicos em representações lógicas na CP
 
 Para estruturar a movimentação tridimensional, o diário trazia a formulação das matrizes espaciais.
 
+Alex Senior sabia que, para quem olhava de fora, aquelas matrizes 3D empilhadas nas páginas podiam parecer caixas mal rotuladas num galpão abandonado. Um estudante curioso, ao abrir a porta desse labirinto de coordenadas e vetores tridimensionais, correria o risco de se perder sem um mapa simples. "Talvez devêssemos colocar algumas placas de entrada fácil antes de exigir que dominem toda a álgebra linear", riu ele para si mesmo. Mas a verdade é que a matemática do espaço é como construir um mapa de Minecraft: você só precisa aprender a definir onde cada bloco começa e termina para dominar a física do jogo.
+
 > “O mundo físico parece contínuo e caótico,” registrava o diário técnico.
 > “But para controlá-lo de forma digital, precisamos mapeá-lo como um tabuleiro tridimensional.
 > As imensas prateleiras de aço não passam de uma grande Matriz Tridimensional de dados.”

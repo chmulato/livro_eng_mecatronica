@@ -8,6 +8,8 @@ No topo, o cabeçalho em itálico trazia a ambientação:
 *"Milão, Itália – Inverno de 2001. O dia em que o gigante de aço congelou"*.
 O silêncio do CD de Curitiba parecia ecoar o galpão italiano de 25 anos atrás.
 
+Alex sorriu ao perceber como a história de seu mentor pulava de década em década. O diário às vezes parecia um osciloscópio mal calibrado: o traço de sinal saltava entre épocas como se o tempo fosse apenas mais um fio solto no circuito da narrativa. "Talvez seja hora de ajustar o ganho do canal vertical," pensou ele, "antes que o leitor sinta labirintite temporal tentando rastrear esse clock." Mas, no fundo, a eletrônica real era assim mesmo, feita de transições abruptas e sincronização de pulsos.
+
 > “O frio de Milão em janeiro cortava a pele,” dizia o diário.
 > “Eu estava manobrando empilhadeiras elétricas rápidas no armazém automatizado.
 > Havia motores trifásicos, correntes pesadas e o estalo de relés de potência constante.”

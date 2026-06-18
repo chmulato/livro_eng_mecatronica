@@ -10,6 +10,8 @@ O título parecia um estudo de caso prático desenhado em letras garrafais:
 
 Para refletir sobre os entraves do desenvolvimento, Alex leu as análises de custo e rentabilidade industrial.
 
+Ao encarar aqueles parágrafos sem linhas de código ou diagramas de chips, Alex moderno sentiu que o diário vinha carregado como um transformador sob forte sobrecarga de tensão macroeconômica. Sem um estabilizador didático ou dados frios para suavizar o sinal, um leitor novato poderia queimar os fusíveis tentando processar termos como rentismo e Selic de uma só vez. Ele respirou fundo, ajustando sua própria percepção matemática para entender como a economia física impõe limites tão rígidos à engenharia de controle quanto a gravidade ou a fricção dos rolamentos.
+
 > “Voltar para o Brasil depois de Milão foi um choque de realidade macroeconômica,” detalhava o texto.
 > “Eu achava que, comprovando os ganhos de produtividade de matrizes e sensores,
 > as indústrias brasileiras investiriam em massa na modernização de seus galpões físicos.”

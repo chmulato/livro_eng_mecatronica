@@ -21,6 +21,8 @@ Para os investidores, os robôs eram vetores de otimização pura.
 Para Alex, de 25 anos, graduando de Engenharia no plantão da madrugada, eram formigas de aço presas em cobranças.
 "O silêncio do robô é o suor do programador," murmurou ele, sentindo o peso.
 
+Alex pensou em como a tecnologia moderna nos bombardeia com termos assustadores antes mesmo de podermos entender por que amamos criar coisas. Ele se lembrou de uma piada que ouviu no centro acadêmico: as pessoas entram na engenharia querendo construir foguetes, mas nos primeiros dias de aula são soterradas por tabelas de limites e derivadas sem ver um único parafuso. Começar um livro técnico direto com sensores LiDAR e robôs de dezoito mil euros sem explicar o encanto por trás do silício parecia exatamente isso — uma sobrecarga de hardware para uma mente que só queria aprender a dar ordens à luz.
+
 Um alerta amarelo de inconsistência de inventário piscou na tela.
 Setor G, prateleira 42.
 Um ponto cego físico, fora da malha de navegação ativa dos robôs autônomos.
