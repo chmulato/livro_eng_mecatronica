@@ -354,13 +354,14 @@ def main():
         ["Capítulo 13: A Rebeldia da Mecatrônica (Manifesto)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "30"]
     ]
     
-    t_toc = Table(toc_data, colWidths=[200, 160, 20])
+    t_toc = Table(toc_data, colWidths=[260, 100, 20])
     t_toc.setStyle(TableStyle([
         ('FONTNAME', (0,0), (-1,-1), FONT_NAME),
         ('FONTSIZE', (0,0), (-1,-1), 8.5),
         ('BOTTOMPADDING', (0,0), (-1,-1), 5),
         ('TEXTCOLOR', (0,0), (-1,-1), colors.HexColor("#2a2b2d")),
         ('ALIGN', (2,0), (2,-1), 'RIGHT'),
+        ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
     ]))
     story.append(t_toc)
     story.append(PageBreak())
