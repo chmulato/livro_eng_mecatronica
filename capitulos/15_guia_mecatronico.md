@@ -2,6 +2,10 @@
 
 Se a jornada de Alex despertou em você a vontade de construir e dar ordem física às máquinas por meio do código, aqui está o seu guia prático de sobrevivência técnica:
 
+Aprender mecatrônica é como montar um robô de LEGO: você começa com peças soltas, mas logo percebe que tudo se encaixa. Alex desejou que alguém tivesse lhe dito isso aos 15 anos: a engenharia não exige genialidade, exige curiosidade persistente.
+
+---
+
 ### 1. O Kit Básico de Entrada (Baixo Custo)
 Não é preciso gastar dezoito mil euros para criar seu primeiro robô autônomo. Você pode começar com componentes baratos comprados pela internet:
 - **Arduino Uno ou ESP32**: O cérebro microcontrolado do seu projeto (o ESP32 possui Wi-Fi e Bluetooth integrados).

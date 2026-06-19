@@ -52,6 +52,8 @@ A inércia financeira do investimento passivo afeta a criação de novos emprego
 A automação local acaba limitada pela dependência tecnológica externa de equipamentos e peças.
 O monopólio do crédito dificulta o surgimento de startups de tecnologia e engenheiros autônomos.
 
+A economia parecia um grande transformador: a energia gerada no chão de fábrica subia pelos cabos, mas só iluminava os andares mais altos do prédio. Alex fechou o diário por um instante. Era estranho pensar que tanta matemática elegante terminava presa em planilhas que nunca tocavam o chão de concreto.
+
 "Mas o sistema não é perfeito," murmurou Alex para si mesmo, pensativo.
 "A mesma matemática usada para controlar entregas pode ser usada para descentralizar o fluxo."
 Ele virou a página, buscando entender as tecnologias descentralizadas de transferência instantânea.
