@@ -222,8 +222,20 @@ def parse_markdown_to_story(file_path, cap_index, styles):
                         diary_lines = []
                     eq = line_str.strip('$').strip()
                     formatted_eq = convert_latex_to_html(eq)
-                    story.append(Paragraph(formatted_eq, styles['EquationStyle']))
-                    story.append(Spacer(1, 6))
+                    p_eq = Paragraph(f"<b>{formatted_eq}</b>", styles['EquationStyle'])
+                    t_eq = Table([[p_eq]], colWidths=[A5[0] - 2 * MARGIN])
+                    t_eq.setStyle(TableStyle([
+                        ('BACKGROUND', (0,0), (-1,-1), colors.HexColor("#132e1c")), # Fundo lousa verde
+                        ('ALIGN', (0,0), (-1,-1), 'CENTER'),
+                        ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
+                        ('TOPPADDING', (0,0), (-1,-1), 12),
+                        ('BOTTOMPADDING', (0,0), (-1,-1), 12),
+                        ('LEFTPADDING', (0,0), (-1,-1), 12),
+                        ('RIGHTPADDING', (0,0), (-1,-1), 12),
+                        ('BOX', (0,0), (-1,-1), 3.5, colors.HexColor("#4a2f13")), # Moldura de madeira
+                    ]))
+                    story.append(t_eq)
+                    story.append(Spacer(1, 10))
                     continue
                 
                 is_diary_line = line_str.startswith('*“') or line_str.startswith('“') or line_str.startswith('>') or (diary_lines and not line_str.startswith('#'))
@@ -485,13 +497,13 @@ def main():
 
     styles.add(ParagraphStyle(
         name='EquationStyle',
-        parent=styles['NormalStyle'],
-        alignment=1,         # Centralizado
-        fontName=FONT_NAME,
+        fontName=FONT_MONO,
         fontSize=12,
         leading=14.5,
-        spaceBefore=6,
-        spaceAfter=6
+        textColor=colors.HexColor("#fffae0"), # Amarelo giz
+        alignment=1,                         # Centralizado
+        spaceBefore=0,
+        spaceAfter=0
     ))
 
     styles.add(ParagraphStyle(
