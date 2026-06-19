@@ -4,7 +4,7 @@ from PIL import Image as PILImage
 from reportlab.lib.pagesizes import A5
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, Image
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, Image, Flowable
 from reportlab.lib.units import inch
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
@@ -259,14 +259,101 @@ def create_pdf_register_diagram(styles):
     ]))
     return container
 
+chapter_pages = {}
+
+class PageTracker(Flowable):
+    def __init__(self, key):
+        Flowable.__init__(self)
+        self.key = key
+        self.width = 0
+        self.height = 0
+        
+    def draw(self):
+        chapter_pages[self.key] = self.canv._pageNumber
+
+def build_story(styles, page_map=None):
+    story = []
+
+    # 1. Página de Capa
+    if os.path.exists(COVER_IMAGE):
+        print("Inserindo capa...")
+        img = PILImage.open(COVER_IMAGE)
+        orig_w, orig_h = img.size
+        aspect = orig_h / orig_w
+        
+        max_w = A5[0] - 2 * MARGIN
+        max_h = A5[1] - 2 * MARGIN - 60
+        
+        if max_w * aspect <= max_h:
+            img_w = max_w
+            img_h = max_w * aspect
+        else:
+            img_h = max_h
+            img_w = max_h / aspect
+            
+        story.append(Spacer(1, 15))
+        story.append(Image(COVER_IMAGE, width=img_w, height=img_h))
+        story.append(PageBreak())
+
+    # 2. Página de Dedicatória
+    print("Inserindo dedicatória...")
+    story.append(Spacer(1, 100))
+    dedicatoria_text = (
+        "<i>Dedicado à minha família, cujo apoio silencioso e inabalável estruturou "
+        "o caminho para que este projeto de vida ganhasse o mundo.<br/><br/>"
+        "E a todos os jovens engenheiros e mentes inquietas que, diante de estradas de barro "
+        "ou algoritmos complexos, escolhem o caminho da persistência técnica e do "
+        "despertar lúdico como ferramentas reais de emancipação.</i>"
+    )
+    story.append(Paragraph(dedicatoria_text, styles['DedicationStyle']))
+    story.append(PageBreak())
+
+    # 3. Página de Índice
+    print("Inserindo sumário...")
+    story.append(Paragraph("Sumário", styles['BookTitleStyle']))
+    story.append(Spacer(1, 10))
+    
+    toc_data = []
+    capitulos_files = sorted([f for f in os.listdir(CAPITULOS_DIR) if f.endswith('.md')])
+    
+    for idx, cap in enumerate(capitulos_files):
+        cap_path = os.path.join(CAPITULOS_DIR, cap)
+        with open(cap_path, 'r', encoding='utf-8') as f:
+            first_line = f.readline().strip().lstrip('#').strip()
+        
+        if page_map and cap in page_map:
+            pg = str(page_map[cap] - 3)
+        else:
+            pg = ""
+            
+        toc_data.append([first_line, ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", pg])
+    
+    t_toc = Table(toc_data, colWidths=[240, 115, 25])
+    t_toc.setStyle(TableStyle([
+        ('FONTNAME', (0,0), (-1,-1), FONT_NAME),
+        ('FONTSIZE', (0,0), (-1,-1), 8.5),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 3),
+        ('TOPPADDING', (0,0), (-1,-1), 3),
+        ('TEXTCOLOR', (0,0), (-1,-1), colors.HexColor("#2a2b2d")),
+        ('ALIGN', (0,0), (0,-1), 'LEFT'),
+        ('ALIGN', (1,0), (1,-1), 'CENTER'),
+        ('ALIGN', (2,0), (2,-1), 'RIGHT'),
+        ('VALIGN', (0,0), (-1,-1), 'BOTTOM'),
+    ]))
+    story.append(t_toc)
+    story.append(PageBreak())
+ 
+    # 4. Ler capítulos
+    for idx, cap in enumerate(capitulos_files):
+        cap_path = os.path.join(CAPITULOS_DIR, cap)
+        story.append(PageTracker(cap))
+        story.extend(parse_markdown_to_story(cap_path, idx, styles))
+        story.append(PageBreak())
+        
+    return story
+
 def main():
     print("Iniciando compilação do livro em A5 com fonte Verdana...")
-    doc = SimpleDocTemplate(
-        OUTPUT_PDF,
-        pagesize=A5,
-        rightMargin=MARGIN, leftMargin=MARGIN,
-        topMargin=MARGIN + 0.2 * inch, bottomMargin=MARGIN
-    )
     
     styles = getSampleStyleSheet()
     
@@ -365,83 +452,28 @@ def main():
         textColor=colors.HexColor("#e2f3e8")
     ))
 
-    story = []
-
-    # 1. Página de Capa
-    if os.path.exists(COVER_IMAGE):
-        print("Inserindo capa...")
-        img = PILImage.open(COVER_IMAGE)
-        orig_w, orig_h = img.size
-        aspect = orig_h / orig_w
-        
-        max_w = A5[0] - 2 * MARGIN
-        max_h = A5[1] - 2 * MARGIN - 60
-        
-        if max_w * aspect <= max_h:
-            img_w = max_w
-            img_h = max_w * aspect
-        else:
-            img_h = max_h
-            img_w = max_h / aspect
-            
-        story.append(Spacer(1, 15))
-        story.append(Image(COVER_IMAGE, width=img_w, height=img_h))
-        story.append(PageBreak())
-
-    # 2. Página de Dedicatória
-    print("Inserindo dedicatória...")
-    story.append(Spacer(1, 100))
-    dedicatoria_text = (
-        "<i>Dedicado à minha família, cujo apoio silencioso e inabalável estruturou "
-        "o caminho para que este projeto de vida ganhasse o mundo.<br/><br/>"
-        "E a todos os jovens engenheiros e mentes inquietas que, diante de estradas de barro "
-        "ou algoritmos complexos, escolhem o caminho da persistência técnica e do "
-        "despertar lúdico como ferramentas reais de emancipação.</i>"
+    # --- Passo 1: Primeira compilação para descobrir as páginas ---
+    print("Passo 1: Detectando número das páginas dos capítulos...")
+    doc_temp = SimpleDocTemplate(
+        OUTPUT_PDF,
+        pagesize=A5,
+        rightMargin=MARGIN, leftMargin=MARGIN,
+        topMargin=MARGIN + 0.2 * inch, bottomMargin=MARGIN
     )
-    story.append(Paragraph(dedicatoria_text, styles['DedicationStyle']))
-    story.append(PageBreak())
-
-    # 3. Página de Índice
-    print("Inserindo sumário...")
-    story.append(Paragraph("Sumário", styles['BookTitleStyle']))
-    story.append(Spacer(1, 10))
+    story_temp = build_story(styles, page_map=None)
+    doc_temp.build(story_temp, canvasmaker=NumberedCanvas)
     
-    toc_data = []
-    page_numbers = ["1", "2", "3", "5", "7", "9", "11", "13", "15", "17", "20", "23", "26", "29", "32", "35", "37"]
-    capitulos_files = sorted([f for f in os.listdir(CAPITULOS_DIR) if f.endswith('.md')])
+    # --- Passo 2: Segunda compilação com o Sumário preenchido corretamente ---
+    print("Passo 2: Gerando versão final do PDF com Sumário atualizado...")
+    doc_final = SimpleDocTemplate(
+        OUTPUT_PDF,
+        pagesize=A5,
+        rightMargin=MARGIN, leftMargin=MARGIN,
+        topMargin=MARGIN + 0.2 * inch, bottomMargin=MARGIN
+    )
+    story_final = build_story(styles, page_map=chapter_pages)
+    doc_final.build(story_final, canvasmaker=NumberedCanvas)
     
-    for idx, cap in enumerate(capitulos_files):
-        cap_path = os.path.join(CAPITULOS_DIR, cap)
-        with open(cap_path, 'r', encoding='utf-8') as f:
-            first_line = f.readline().strip().lstrip('#').strip()
-        pg = page_numbers[idx] if idx < len(page_numbers) else ""
-        toc_data.append([first_line, ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", pg])
-    
-    t_toc = Table(toc_data, colWidths=[240, 115, 25])
-    t_toc.setStyle(TableStyle([
-        ('FONTNAME', (0,0), (-1,-1), FONT_NAME),
-        ('FONTSIZE', (0,0), (-1,-1), 8.5),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 3),
-        ('TOPPADDING', (0,0), (-1,-1), 3),
-        ('TEXTCOLOR', (0,0), (-1,-1), colors.HexColor("#2a2b2d")),
-        ('ALIGN', (0,0), (0,-1), 'LEFT'),
-        ('ALIGN', (1,0), (1,-1), 'CENTER'),
-        ('ALIGN', (2,0), (2,-1), 'RIGHT'),
-        ('VALIGN', (0,0), (-1,-1), 'BOTTOM'),
-    ]))
-    story.append(t_toc)
-    story.append(PageBreak())
- 
-    # 4. Ler capítulos
-    capitulos = sorted([f for f in os.listdir(CAPITULOS_DIR) if f.endswith('.md')])
-    for idx, cap in enumerate(capitulos):
-        cap_path = os.path.join(CAPITULOS_DIR, cap)
-        print(f"Processando {cap}...")
-        story.extend(parse_markdown_to_story(cap_path, idx, styles))
-        story.append(PageBreak())
-        
-    print("Gerando arquivo PDF com fonte Verdana 12...")
-    doc.build(story, canvasmaker=NumberedCanvas)
     print(f"Livro compilado com sucesso em: {OUTPUT_PDF}")
 
 if __name__ == "__main__":
