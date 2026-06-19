@@ -339,33 +339,36 @@ def main():
     story.append(Spacer(1, 10))
     
     toc_data = [
-        ["Capítulo 0: A Centopeia de Silício (Prólogo)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "1"],
-        ["Como Estudar Este Livro", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "2"],
-        ["Capítulo 1: A Estrada de Chão (1986)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "3"],
-        ["Capítulo 2: A Anatomia do Z80 (8-bits)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "5"],
-        ["Capítulo 3: A Lógica do Bit (Binário/Hexa)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "7"],
-        ["Capítulo 4: A Saudação de Três Dedos na Itália", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "9"],
-        ["Capítulo 5: Sistemas Operacionais Raiz (MS-DOS)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "11"],
-        ["Capítulo 6: A Matemática do Espaço (Matrizes 3D)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "13"],
-        ["Capítulo 7: As Formigas Elétricas (CD 2026)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "15"],
-        ["Capítulo 8: O Cérebro do Robô (LiDAR e SLAM)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "17"],
-        ["Capítulo 9: A Pilha de Código Moderna (ROS 2)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "20"],
-        ["Capítulo 10: A Equação do Almoxarifado", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "23"],
-        ["Capítulo 11: A Elite do Atraso (Estudo de Caso)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "26"],
-        ["Capítulo 12: A Engenharia do Pix e do Bloco", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "29"],
-        ["Capítulo 13: A Rebeldia da Mecatrônica (Manifesto)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "32"],
-        ["Apêndice A: Glossário de Engenharia", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "35"],
-        ["Apêndice B: Guia do Jovem Mecatrônico", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "37"]
+        ["Capítulo 0: A Centopeia de Silício (Prólogo)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "1"],
+        ["Como Estudar Este Livro", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "2"],
+        ["Capítulo 1: A Estrada de Chão (1986)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "3"],
+        ["Capítulo 2: A Anatomia do Z80 (8-bits)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "5"],
+        ["Capítulo 3: A Lógica do Bit (Binário/Hexa)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "7"],
+        ["Capítulo 4: A Saudação de Três Dedos na Itália", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "9"],
+        ["Capítulo 5: Sistemas Operacionais Raiz (MS-DOS)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "11"],
+        ["Capítulo 6: A Matemática do Espaço (Matrizes 3D)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "13"],
+        ["Capítulo 7: As Formigas Elétricas (CD 2026)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "15"],
+        ["Capítulo 8: O Cérebro do Robô (LiDAR e SLAM)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "17"],
+        ["Capítulo 9: A Pilha de Código Moderna (ROS 2)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "20"],
+        ["Capítulo 10: A Equação do Almoxarifado", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "23"],
+        ["Capítulo 11: A Elite do Atraso (Estudo de Caso)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "26"],
+        ["Capítulo 12: A Engenharia do Pix e do Bloco", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "29"],
+        ["Capítulo 13: A Rebeldia da Mecatrônica (Manifesto)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "32"],
+        ["Apêndice A: Glossário de Engenharia", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "35"],
+        ["Apêndice B: Guia do Jovem Mecatrônico", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "37"]
     ]
     
-    t_toc = Table(toc_data, colWidths=[260, 100, 20])
+    t_toc = Table(toc_data, colWidths=[240, 115, 25])
     t_toc.setStyle(TableStyle([
         ('FONTNAME', (0,0), (-1,-1), FONT_NAME),
         ('FONTSIZE', (0,0), (-1,-1), 8.5),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 4),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 3),
+        ('TOPPADDING', (0,0), (-1,-1), 3),
         ('TEXTCOLOR', (0,0), (-1,-1), colors.HexColor("#2a2b2d")),
+        ('ALIGN', (0,0), (0,-1), 'LEFT'),
+        ('ALIGN', (1,0), (1,-1), 'CENTER'),
         ('ALIGN', (2,0), (2,-1), 'RIGHT'),
-        ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
+        ('VALIGN', (0,0), (-1,-1), 'BOTTOM'),
     ]))
     story.append(t_toc)
     story.append(PageBreak())
