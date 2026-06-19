@@ -326,19 +326,20 @@ def build_story(styles, page_map=None):
         else:
             pg = ""
             
-        toc_data.append([first_line, ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", pg])
+        p_title = Paragraph(first_line, styles['TOCStyle'])
+        toc_data.append([p_title, pg])
     
-    t_toc = Table(toc_data, colWidths=[240, 115, 25])
+    t_toc = Table(toc_data, colWidths=[295, 38])
     t_toc.setStyle(TableStyle([
         ('FONTNAME', (0,0), (-1,-1), FONT_NAME),
-        ('FONTSIZE', (0,0), (-1,-1), 8.5),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 3),
-        ('TOPPADDING', (0,0), (-1,-1), 3),
+        ('FONTSIZE', (0,0), (-1,-1), 9.5),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 6),
+        ('TOPPADDING', (0,0), (-1,-1), 6),
         ('TEXTCOLOR', (0,0), (-1,-1), colors.HexColor("#2a2b2d")),
         ('ALIGN', (0,0), (0,-1), 'LEFT'),
-        ('ALIGN', (1,0), (1,-1), 'CENTER'),
-        ('ALIGN', (2,0), (2,-1), 'RIGHT'),
-        ('VALIGN', (0,0), (-1,-1), 'BOTTOM'),
+        ('ALIGN', (1,0), (1,-1), 'RIGHT'),
+        ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
+        ('LINEBELOW', (0,0), (-1,-1), 0.5, colors.HexColor("#eeeeee")),
     ]))
     story.append(t_toc)
     story.append(PageBreak())
@@ -450,6 +451,15 @@ def main():
         fontSize=7.5,
         leading=9.5,
         textColor=colors.HexColor("#e2f3e8")
+    ))
+    
+    styles.add(ParagraphStyle(
+        name='TOCStyle',
+        parent=styles['Normal'],
+        fontName=FONT_NAME,
+        fontSize=9.5,
+        leading=12,
+        textColor=colors.HexColor("#2a2b2d")
     ))
 
     # --- Passo 1: Primeira compilação para descobrir as páginas ---
