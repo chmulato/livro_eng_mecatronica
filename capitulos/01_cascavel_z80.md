@@ -55,6 +55,9 @@ Ele aproximou a lanterna e leu o relato que unia o barro do Paraná à tecnologi
 
 Alex sentiu um arrepio na nuca. Era o diário de Alex Senior, seu mentor.
 A pressa de Curitiba e a pressão corporativa de Bianchi desapareceram.
+
+Por um instante, o galpão parecia segurar a respiração junto com Alex, como se até o concreto soubesse que aquele chip guardava uma história.
+
 Seus dedos abriram a primeira página do manuscrito, e o passado se fez presente.
 
 ---
