@@ -6,6 +6,13 @@ Este documento registra o estado atual do projeto, a arquitetura do compilador, 
 
 ## 📈 1. Resumo das Últimas Alterações Realizadas
 
+### 🟢 Correção e Alinhamento Dinâmico dos Quadros Verdes (PDF)
+* **Problema:** Tags de quebra de linha `<br/>` expostas textualmente nos quadros verdes do PDF e diagramas de texto/código sofrendo quebra automática indesejada (*word wrapping*), descaracterizando e desalinhando os diagramas ASCII (como no mapa mental do Capítulo 15). Caracteres Unicode (setas e conectores) exibidos como quadrados devido a limitações de fonte do ReportLab.
+* **Solução:** O script [compile_book.py](file:///d:/onedrive/outros/workspace_book/compile_book.py) agora:
+  1. Registra e utiliza a fonte TrueType do sistema Windows `Courier New` (`cour.ttf`) para o estilo de código `CodeStyle`, garantindo suporte completo aos caracteres Unicode.
+  2. Executa a substituição/escape especial do HTML linha por linha *antes* de unir com `<br/>`, impedindo o escape indevido da tag de quebra.
+  3. Calcula o tamanho da fonte (`fontSize` e `leading`) de cada bloco dinamicamente baseado na linha mais longa, impedindo quebras de linha automáticas e mantendo os diagramas perfeitamente alinhados na página A5.
+
 ### 🖼️ Ajuste de Escalonamento e Proporção de Imagens (PDF)
 * **Problema:** As imagens quadradas (`1024x1024` px) da capa e dos capítulos estavam sendo deformadas/esticadas no PDF devido a proporções fixadas estaticamente no código (`2:3` na capa e `16:9` nos capítulos).
 * **Solução:** O script [compile_book.py](file:///d:/onedrive/outros/workspace_book/compile_book.py) agora usa a biblioteca `Pillow` (`PIL.Image`) para carregar a imagem em tempo de execução, calcular seu aspect ratio real (`altura / largura`) e aplicar o escalonamento proporcional dentro de limites de segurança de largura e altura da página A5, evitando qualquer distorção visual.

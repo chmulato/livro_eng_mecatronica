@@ -33,6 +33,7 @@ FONT_NAME = "Verdana"
 FONT_BOLD = "Verdana-Bold"
 FONT_ITALIC = "Verdana-Italic"
 FONT_BI = "Verdana-BoldItalic"
+FONT_MONO = "CourierNew"
 
 try:
     pdfmetrics.registerFont(TTFont(FONT_NAME, 'C:\\Windows\\Fonts\\verdana.ttf'))
@@ -46,6 +47,13 @@ except Exception as e:
     FONT_BOLD = "Helvetica-Bold"
     FONT_ITALIC = "Helvetica-Oblique"
     FONT_BI = "Helvetica-BoldOblique"
+
+try:
+    pdfmetrics.registerFont(TTFont(FONT_MONO, 'C:\\Windows\\Fonts\\cour.ttf'))
+    print("Fonte Courier New registrada com sucesso.")
+except Exception as e:
+    print(f"Aviso: Não foi possível carregar a fonte Courier New ({e}). Usando Courier como fallback.")
+    FONT_MONO = "Courier"
 
 class NumberedCanvas(canvas.Canvas):
     def __init__(self, *args, **kwargs):
@@ -118,11 +126,37 @@ def parse_markdown_to_story(file_path, cap_index, styles):
                 story.append(Spacer(1, 10))
                 continue
                 
-            if code_lines and code_lines[0] in ['python', 'cpp', 'assembly', 'c++', 'asm']:
+            if code_lines and code_lines[0].strip() in ['python', 'cpp', 'assembly', 'c++', 'asm', 'basic', 'mermaid', 'diagram', 'html', 'css', 'javascript', 'js']:
                 code_lines = code_lines[1:]
-            code_text = "<br/>".join(code_lines).replace(" ", "&nbsp;").replace("<", "&lt;").replace(">", "&gt;")
+                
+            escaped_lines = []
+            for line in code_lines:
+                escaped_line = line.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace(" ", "&nbsp;")
+                escaped_lines.append(escaped_line)
+            code_text = "<br/>".join(escaped_lines)
             
-            p_code = Paragraph(code_text, styles['CodeStyle'])
+            # Calcular o tamanho de fonte dinamicamente para que a linha mais longa caiba no quadro
+            max_line_len = max(len(line) for line in code_lines) if code_lines else 0
+            available_width = A5[0] - 2 * MARGIN - 24  # Largura útil aproximada de 309 pontos
+            
+            if max_line_len > 0:
+                # Na fonte Courier/Courier New, a largura aproximada do caractere é 0.6 da altura (fontSize)
+                calculated_font_size = min(7.5, available_width / (max_line_len * 0.6))
+                calculated_font_size = max(4.5, calculated_font_size)
+            else:
+                calculated_font_size = 7.5
+                
+            calculated_leading = calculated_font_size + 2.0
+            
+            unique_style_name = f"CodeStyle_{cap_index}_{abs(hash(block))}"
+            p_style = ParagraphStyle(
+                name=unique_style_name,
+                parent=styles['CodeStyle'],
+                fontSize=calculated_font_size,
+                leading=calculated_leading
+            )
+            
+            p_code = Paragraph(code_text, p_style)
             t = Table([[p_code]], colWidths=[A5[0] - 2 * MARGIN])
             t.setStyle(TableStyle([
                 ('BACKGROUND', (0,0), (-1,-1), colors.HexColor("#132e1c")), # Fundo lousa verde
@@ -447,7 +481,7 @@ def main():
     
     styles.add(ParagraphStyle(
         name='CodeStyle',
-        fontName='Courier',
+        fontName=FONT_MONO,
         fontSize=7.5,
         leading=9.5,
         textColor=colors.HexColor("#e2f3e8")
