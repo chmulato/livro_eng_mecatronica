@@ -6,6 +6,13 @@ Este documento registra o estado atual do projeto, a arquitetura do compilador, 
 
 ## 📈 1. Resumo das Últimas Alterações Realizadas
 
+### 🧮 Renderização Avançada de Fórmulas Matemáticas (PDF)
+* **Problema:** Fórmulas escritas em notação LaTeX (como `$c \approx 3 \times 10^8 \text{ m/s}$` e `$$d = \frac{c \cdot t}{2}$$`) estavam sendo impressas em texto cru no PDF, pois o ReportLab não possui renderizador de fórmulas nativo.
+* **Solução:** O script [compile_book.py](file:///d:/onedrive/outros/workspace_book/compile_book.py) agora:
+  1. Detecta e intercepta fórmulas LaTeX inline (`$...$`) e em bloco (`$$...$$`).
+  2. Traduz a simbologia LaTeX para marcação HTML nativa aceita pelo ReportLab (ex: `\approx` vira `≈`, `\times` vira `×`, superscripts viram `<sup>`, frações simples como `\frac{A}{B}` viram `(A) / B` e variáveis isoladas são automaticamente italicizadas com `<i>`).
+  3. Adiciona o estilo `EquationStyle` para centralizar equações em bloco (`$$`), tornando a apresentação matemática limpa, legível e profissional.
+
 ### 🟢 Correção e Alinhamento Dinâmico dos Quadros Verdes (PDF)
 * **Problema:** Tags de quebra de linha `<br/>` expostas textualmente nos quadros verdes do PDF e diagramas de texto/código sofrendo quebra automática indesejada (*word wrapping*), descaracterizando e desalinhando os diagramas ASCII (como no mapa mental do Capítulo 15). Caracteres Unicode (setas e conectores) exibidos como quadrados devido a limitações de fonte do ReportLab.
 * **Solução:** O script [compile_book.py](file:///d:/onedrive/outros/workspace_book/compile_book.py) agora:

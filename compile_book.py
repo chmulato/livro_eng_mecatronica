@@ -98,11 +98,46 @@ class NumberedCanvas(canvas.Canvas):
 
         self.restoreState()
 
+def convert_latex_to_html(math_text):
+    # Converte fórmulas LaTeX simples para tags HTML compatíveis com o ReportLab
+    math_text = math_text.replace(r'\approx', '≈')
+    math_text = math_text.replace(r'\times', '×')
+    math_text = math_text.replace(r'\cdot', '·')
+    
+    # Substituir \vec{x} por x
+    math_text = re.sub(r'\\vec\{(.*?)\}', r'\1', math_text)
+    # Fallback apenas para segurança
+    math_text = math_text.replace(r'\vec', '')
+    
+    math_text = math_text.replace(r'\text{ m/s}', ' m/s')
+    math_text = math_text.replace(r'\text{m/s}', ' m/s')
+    math_text = math_text.replace(r'\text', '')
+    
+    # Frações: \frac{num}{den} -> (num) / den
+    math_text = re.sub(r'\\frac\{(.*?)\}\{(.*?)\}', r'(\1) / \2', math_text)
+    
+    # Sobrescritos: 10^8 ou 10^{8} -> 10<sup>8</sup>
+    math_text = re.sub(r'\^\{(.*?)\}', r'<sup>\1</sup>', math_text)
+    math_text = re.sub(r'\^(.)', r'<sup>\1</sup>', math_text)
+    
+    # Italicizar variáveis individuais e termos específicos como PC e Efe
+    def italicize_vars(m):
+        var = m.group(0)
+        if var.lower() in ['m', 's', 'sec']: # Unidades
+            return var
+        return f"<i>{var}</i>"
+        
+    math_text = re.sub(r'\b(PC|Efe|[a-zA-BD-Z])\b', italicize_vars, math_text)
+    return math_text
+
 def format_text(text):
     # Formatação de negrito e itálico adaptado para as tags <b> e <i> interpretadas pelo ReportLab
     text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text)
     text = re.sub(r'\*(.*?)\*', r'<i>\1</i>', text)
     text = text.replace("“", '"').replace("”", '"').replace('*"', '"').replace('"*', '"')
+    
+    # Renderizar matemática inline: $(.*?)$
+    text = re.sub(r'\$(.*?)\$', lambda m: convert_latex_to_html(m.group(1)), text)
     return text
 
 def parse_markdown_to_story(file_path, cap_index, styles):
@@ -178,6 +213,16 @@ def parse_markdown_to_story(file_path, cap_index, styles):
                     if diary_lines:
                         story.append(create_discovery_box(diary_lines, styles))
                         diary_lines = []
+                    story.append(Spacer(1, 6))
+                    continue
+                
+                if line_str.startswith('$$') and line_str.endswith('$$'):
+                    if diary_lines:
+                        story.append(create_discovery_box(diary_lines, styles))
+                        diary_lines = []
+                    eq = line_str.strip('$').strip()
+                    formatted_eq = convert_latex_to_html(eq)
+                    story.append(Paragraph(formatted_eq, styles['EquationStyle']))
                     story.append(Spacer(1, 6))
                     continue
                 
@@ -436,6 +481,17 @@ def main():
         leading=14.5,        # Leading condensado e compacto para otimizar espaço de leitura
         textColor=colors.HexColor("#2a2b2d"),
         spaceAfter=4
+    ))
+
+    styles.add(ParagraphStyle(
+        name='EquationStyle',
+        parent=styles['NormalStyle'],
+        alignment=1,         # Centralizado
+        fontName=FONT_NAME,
+        fontSize=12,
+        leading=14.5,
+        spaceBefore=6,
+        spaceAfter=6
     ))
 
     styles.add(ParagraphStyle(
