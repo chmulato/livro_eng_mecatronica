@@ -10,10 +10,12 @@ Para entender essa lógica de controle, Alex abriu o diário de seu mentor.
 
 Para acelerar a triagem e evitar o travamento dos microprocessadores, o diário apresentava o limite combinatório.
 
-> “Se você tentar calcular todas as combinações de empilhamento de caixas, a matemática explode.
-> O número de combinações possíveis cresce de forma fatorial com novos itens.
-> O computador mais potente do mundo levaria séculos processando o cálculo.
-> Chamamos isso de problema NP-difícil; o tempo de cálculo é o inimigo real.”
+Se você tentar calcular todas as combinações de empilhamento de caixas, a matemática explode.
+O número de combinações possíveis cresce de forma fatorial com novos itens.
+O computador mais potente do mundo levaria séculos processando o cálculo.
+Chamamos isso de problema NP-difícil; o tempo de cálculo é o inimigo real.
+
+Calcular todas as combinações era como tentar organizar um armário enquanto alguém jogava roupas infinitas pela porta.
 
 > “Para resolver isso sem travar a CPU, nós usamos Heurísticas.
 > Heurísticas são atalhos lógicos práticos baseados no bom senso matemático.

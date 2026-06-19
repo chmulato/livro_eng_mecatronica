@@ -32,6 +32,8 @@ O sistema gerenciava a ocupação das prateleiras usando matrizes de bits.
 Se um bloco do espaço estivesse ocupado por carga, seu valor na matriz era um (`1`).
 Se o espaço estivesse livre e desocupado, o valor binário correspondente era zero (`0`).
 
+A matriz tridimensional era como um condomínio de caixas, onde cada apartamento podia estar ocupado ou vazio. O robô era o síndico mais rígido do mundo. Alex respirou fundo. Era curioso como a matemática, tão fria no papel, ganhava cheiro de metal e poeira no galpão real.
+
 Para alocar um novo palete de dimensões $L \times C \times A$, o sistema validava o volume.
 Multiplicava-se logicamente a submatriz tridimensional das coordenadas desejadas.
 Se qualquer bit retornasse um (`1`), o movimento era abortado para evitar colisão física.

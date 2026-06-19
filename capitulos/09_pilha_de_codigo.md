@@ -30,6 +30,8 @@ Para fazer o sistema em C++ e a mente em Python cooperarem, usa-se o ROS 2.
 O Robot Operating System funciona como um middleware de comunicação de dados.
 Ele conecta programas independentes que rodam de forma concorrente, chamados Nós.
 
+O ROS 2 era um maestro invisível regendo uma orquestra de programas que nunca se viam, mas tocavam juntos.
+
 Imagine um canal de rádio corporativo operando em tópicos de publicação e assinatura.
 O nó do sensor LiDAR publica as distâncias físicas em um canal chamado `/scan`.
 O nó de processamento assina esse canal, trata o ruído e publica a posição real em `/odom`.

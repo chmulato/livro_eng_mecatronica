@@ -476,6 +476,7 @@
 <p class="narrative-p">Lá dentro, sob papéis de formulário contínuo, estava um chip preto e longo.</p>
 <p class="narrative-p">Tinha quarenta pernas metálicas salientes como as de uma centopeia de silício.</p>
 <p class="narrative-p">Limpou o plástico com o polegar. A gravação revelou: <em>Z80A</em>.</p>
+<p class="narrative-p">O chip parecia uma centopeia adormecida, esperando que alguém lhe soprasse vida. Alex imaginou que cada perna metálica era uma porta para um mundo microscópico onde elétrons corriam como formigas apressadas. Por um instante, o galpão deixou de ser galpão. Era só silêncio, poeira e a promessa de que até as máquinas esquecidas têm histórias para contar.</p>
 <p class="narrative-p">Abaixo do chip, estava um caderno de capa preta dura e bordas gastas.</p>
 <p class="narrative-p">Ao pegá-lo, uma folha avulsa caiu com uma anotação em caneta azul desbotada.</p>
 <p class="narrative-p">Para Alex, ver aquela letra em meio ao silêncio do galpão foi como encontrar um farol no escuro.</p>
@@ -595,6 +596,7 @@
 <p class="narrative-p">A gaveta <strong>A</strong> é a mais importante e chama-se <strong>Acumulador</strong>.</p>
 <p class="narrative-p">Se você quer somar dois números, deve colocar o primeiro em A e o segundo em B.</p>
 <p class="narrative-p">Ao comandar a soma, o resultado final substitui o valor anterior que estava na gaveta A.</p>
+<p class="narrative-p">O Z80 era como um escriturário hiperativo que só conseguia trabalhar se tudo estivesse milimetricamente organizado. Se alguém bagunçasse suas gavetas, ele surtava como um bibliotecário diante de livros fora da ordem. Alex fechou os olhos por um segundo. Era curioso pensar que toda a lógica fria do robô moderno dependia de um escriturário imaginário dentro de um chip de 1976.</p>
 <p class="narrative-p">Alex moderno sorriu, comparando aquela lógica física com seu código cotidiano em Python:</p>
 <pre><code>acumulador = 10
 <p class="narrative-p">auxiliar = 5</p>
@@ -685,6 +687,7 @@ JP LEITURA     ; Pula de volta para o início (Loop)</code></pre>
 <p class="narrative-p">O princípio do sensor moderno era o mesmo grid quadriculado desenhado por seu mentor.</p>
 <p class="narrative-p">Dentro do encoder, um pequeno disco plástico transparente cheio de ranhuras pretas girava.</p>
 <p class="narrative-p">Um feixe de luz infravermelha atravessava o disco durante a rotação física.</p>
+<p class="narrative-p">O disco do encoder parecia um vitral giratório, onde cada ranhura decidia se a luz entrava ou não. Era como se o robô lesse um livro escrito em clarões e sombras. Alex sorriu ao perceber que, no fundo, até os sensores mais modernos eram apenas lanternas tentando entender o mundo.</p>
 <p class="narrative-p">A luz passando pela área transparente gerava corrente elétrica: bit um (`1`).</p>
 <p class="narrative-p">Quando a ranhura escura bloqueava a luz, a corrente elétrica cessava: bit zero (`0`).</p>
 <p class="narrative-p">O sensor gerava uma sequência de bits em alta velocidade para calcular a velocidade.</p>
@@ -730,6 +733,7 @@ JP LEITURA     ; Pula de volta para o início (Loop)</code></pre>
 <p class="narrative-p">Ao pressionar Ctrl, Alt e Del simultaneamente, a placa envia um sinal elétrico.</p>
 <p class="narrative-p">Esse sinal é uma Interrupção Não-Mascarável (NMI) direto ao pino do chip.</p>
 <p class="narrative-p">O Z80A é obrigado a parar imediatamente o que está fazendo, sem exceção.</p>
+<p class="narrative-p">O NMI era o equivalente eletrônico de alguém puxar o freio de mão de um trem em movimento. Nada elegante, mas sempre eficaz. Alex imaginou o chip suspirando aliviado ao reiniciar, como quem finalmente consegue respirar depois de um soluço interminável.</p>
 <p class="narrative-p">As gavetas de registradores congestionadas na memória RAM são totalmente limpas.</p>
 <p class="narrative-p">Os ponteiros de instrução voltam para o endereço de início (zero) da ROM.</p>
 <p class="narrative-p">O chip lê as primeiras instruções da BIOS, forçando o reboot completo do sistema.</p>
@@ -777,6 +781,8 @@ JP LEITURA     ; Pula de volta para o início (Loop)</code></pre>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Para resolver isso, os projetistas de hardware criaram as Interrupções (IRQ).<br/>Pense em um engenheiro focado lendo um manual técnico denso na sua mesa.<br/>De repente, o telefone ao lado toca. Isso é uma interrupção física externa.”</div>
 <p class="narrative-p">O engenheiro não ignora o barulho do telefone; ele precisa agir.</p>
 <p class="narrative-p">Ele marca a linha e a página onde parou a leitura com um lápis.</p>
+<p class="narrative-p">No tempo da CPU, esse "lápis" é a ação de salvar o Program Counter (PC) no Stack.</p>
+<p class="narrative-p">O processador era um leitor compulsivo interrompido por telefonemas urgentes. Cada IRQ era um toque insistente dizendo: ‘Atende! É importante!’. Alex riu sozinho ao ler isso no diário. No fundo, até o robô mais caro do galpão sofria com interrupções como qualquer estudante tentando estudar em casa.</p>
 <p class="narrative-p">No processador, esse "lápis" é a ação de salvar o Program Counter (PC) no Stack.</p>
 <p class="narrative-p">O engenheiro atende a chamada de emergência e resolve o problema do cliente.</p>
 <p class="narrative-p">Essa ação é o equivalente à Rotina de Serviço de Interrupção (ISR) de software.</p>
@@ -837,6 +843,7 @@ JP LEITURA     ; Pula de volta para o início (Loop)</code></pre>
 <p class="narrative-p">O sistema gerenciava a ocupação das prateleiras usando matrizes de bits.</p>
 <p class="narrative-p">Se um bloco do espaço estivesse ocupado por carga, seu valor na matriz era um (`1`).</p>
 <p class="narrative-p">Se o espaço estivesse livre e desocupado, o valor binário correspondente era zero (`0`).</p>
+<p class="narrative-p">A matriz tridimensional era como um condomínio de caixas, onde cada apartamento podia estar ocupado ou vazio. O robô era o síndico mais rígido do mundo. Alex respirou fundo. Era curioso como a matemática, tão fria no papel, ganhava cheiro de metal e poeira no galpão real.</p>
 <p class="narrative-p">Para alocar um novo palete de dimensões L \times C \times A, o sistema validava o volume.</p>
 <p class="narrative-p">Multiplicava-se logicamente a submatriz tridimensional das coordenadas desejadas.</p>
 <p class="narrative-p">Se qualquer bit retornasse um (`1`), o movimento era abortado para evitar colisão física.</p>
@@ -929,6 +936,7 @@ return False # Espaço livre</code></pre>
 <p class="narrative-p">Eles dependiam estritamente de trilhos físicos, como fitas magnéticas.</p>
 <p class="narrative-p">Se uma caixa caísse sobre a fita de navegação, o AGV congelava no lugar.</p>
 <p class="narrative-p">Ele não tinha inteligência ou capacidade de raciocínio de rota.</p>
+<p class="narrative-p">Os AGVs eram trens obedientes. Os AMRs, por outro lado, eram formigas adolescentes: teimosas, curiosas e sempre achando um caminho novo.</p>
 <p class="narrative-p">Os modernos AMRs que operam no galpão são autônomos e flexíveis.</p>
 <p class="narrative-p">Eles possuem um mapa mental tridimensional constantemente atualizado.</p>
 <p class="narrative-p">Quando um obstáculo surge, os sensores detectam a barreira física.</p>
@@ -967,6 +975,7 @@ return False # Espaço livre</code></pre>
 <p class="narrative-p">Alex iniciou o nó de navegação e acionou o joystick para mover a máquina no laboratório.</p>
 <p class="narrative-p">O robô arrancou silenciosamente. Ao fazer a curva, o LiDAR varreu as paredes.</p>
 <p class="narrative-p">Mas devido ao erro de transformada, o computador calculou que a parede estava mais longe.</p>
+<p class="narrative-p">Um erro de dez centímetros era como usar óculos com grau errado: o mundo parecia no lugar, até que você tropeçava na primeira quina. Alex passou a mão no rosto. Às vezes, a engenharia parecia um jogo de equilíbrio entre números perfeitos e mãos trêmulas.</p>
 <p class="narrative-p"><em>CRASH!</em></p>
 <p class="narrative-p">O AMR 12 colidiu de lado contra a prateleira de aço da manutenção com força.</p>
 <p class="narrative-p">A cúpula plástica do LiDAR trincou no impacto físico direto.</p>
@@ -1062,6 +1071,7 @@ return False # Espaço livre</code></pre>
 <p class="narrative-p">Para fazer o sistema em C++ e a mente em Python cooperarem, usa-se o ROS 2.</p>
 <p class="narrative-p">O Robot Operating System funciona como um middleware de comunicação de dados.</p>
 <p class="narrative-p">Ele conecta programas independentes que rodam de forma concorrente, chamados Nós.</p>
+<p class="narrative-p">O ROS 2 era um maestro invisível regendo uma orquestra de programas que nunca se viam, mas tocavam juntos.</p>
 <p class="narrative-p">Imagine um canal de rádio corporativo operando em tópicos de publicação e assinatura.</p>
 <p class="narrative-p">O nó do sensor LiDAR publica as distâncias físicas em um canal chamado `/scan`.</p>
 <p class="narrative-p">O nó de processamento assina esse canal, trata o ruído e publica a posição real em `/odom`.</p>
@@ -1129,7 +1139,11 @@ self.publicador.publish(msg)</code></pre>
 <p class="narrative-p">A decisão devia ser tomada em frações de segundo para otimizar o espaço livre.</p>
 <p class="narrative-p">Para entender essa lógica de controle, Alex abriu o diário de seu mentor.</p>
 <p class="narrative-p">Para acelerar a triagem e evitar o travamento dos microprocessadores, o diário apresentava o limite combinatório.</p>
-<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Se você tentar calcular todas as combinações de empilhamento de caixas, a matemática explode.<br/>O número de combinações possíveis cresce de forma fatorial com novos itens.<br/>O computador mais potente do mundo levaria séculos processando o cálculo.<br/>Chamamos isso de problema NP-difícil; o tempo de cálculo é o inimigo real.”</div>
+<p class="narrative-p">Se você tentar calcular todas as combinações de empilhamento de caixas, a matemática explode.</p>
+<p class="narrative-p">O número de combinações possíveis cresce de forma fatorial com novos itens.</p>
+<p class="narrative-p">O computador mais potente do mundo levaria séculos processando o cálculo.</p>
+<p class="narrative-p">Chamamos isso de problema NP-difícil; o tempo de cálculo é o inimigo real.</p>
+<p class="narrative-p">Calcular todas as combinações era como tentar organizar um armário enquanto alguém jogava roupas infinitas pela porta.</p>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Para resolver isso sem travar a CPU, nós usamos Heurísticas.<br/>Heurísticas são atalhos lógicos práticos baseados no bom senso matemático.<br/>Elas oferecem respostas excelentes em frações de microssegundo.”</div>
 <p class="narrative-p">A lógica do algoritmo baseia-se em uma analogia comum de arrumação de bagagem.</p>
 <h3>[Conceito Chave] A Heurística First-Fit Decreasing (FFD)</h3>
@@ -1193,6 +1207,7 @@ return alocacao, nichos</code></pre>
 <p class="narrative-p">Ao encarar aqueles parágrafos sem linhas de código ou diagramas de chips, Alex moderno sentiu que o diário vinha carregado como um transformador sob forte sobrecarga de tensão macroeconômica. Sem um estabilizador didático ou dados frios para suavizar o sinal, um leitor novato poderia queimar os fusíveis tentando processar termos como rentismo e Selic de uma só vez. Ele respirou fundo, ajustando sua própria percepção matemática para entender como a economia física impõe limites tão rígidos à engenharia de controle quanto a gravidade ou a fricção dos rolamentos.</p>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Voltar para o Brasil depois de Milão foi um choque de realidade macroeconômica,” detalhava o texto.<br/>“Eu achava que, comprovando os ganhos de produtividade de matrizes e sensores,<br/>as indústrias brasileiras investiriam em massa na modernização de seus galpões físicos.”</div>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“Eu estava errado. O maior entrave no Brasil não era técnico, mas de custo de oportunidade.<br/>Para o jovem estudante, os juros parecem um assunto puramente abstrato.<br/>Mas a taxa básica de juros (Selic) dita o retorno sobre investimento (ROI) de cada robô no chão de fábrica.”</div>
+<p class="narrative-p">A Selic era um ímã gigante puxando o dinheiro para longe das oficinas e laboratórios. Quanto mais forte o ímã, mais difícil era convencer o capital a sujar as mãos de graxa.</p>
 <p class="narrative-p">O diário explicava o cálculo comparativo de viabilidade técnica feito pelas empresas.</p>
 <h3>[Conceito Chave] O Custo de Oportunidade Industrial (Selic vs ROI)</h3>
 <p class="narrative-p">Um robô AMR importado custa cerca de dezoito mil euros em valores brutos.</p>
@@ -1250,6 +1265,7 @@ return alocacao, nichos</code></pre>
 <p class="narrative-p">A fresta de entrada é a sua <strong>Chave Pública</strong>; qualquer um a conhece e insere cartas ali.</p>
 <p class="narrative-p">Contudo, só você possui a chave física do cadeado para abrir a caixa e ler as cartas.</p>
 <p class="narrative-p">Esta chave física é a sua <strong>Chave Privada</strong>, que deve ser guardada em absoluto segredo.</p>
+<p class="narrative-p">A chave pública era a porta da frente. A chave privada, a gaveta secreta onde você escondia o chocolate.</p>
 <p class="narrative-p">No Pix, a assinatura da transação usa a sua chave privada para garantir a autenticidade.</p>
 <p class="narrative-p">Abaixo, a simulação em Python demonstra a geração dessa assinatura digital única de dados:</p>
 <pre><code>import hashlib
@@ -1304,6 +1320,7 @@ hash_original = gerar_hash_transacao("Alex", "UTFPR", 150.00, "chave_secreta_123
 <p class="narrative-p">Quando um jovem decide passar noites programando malhas de controle PID, ele resiste.</p>
 <p class="narrative-p">Ele desafia a engrenagem do atraso que submete pessoas a tarefas brutas e indignas.</p>
 <p class="narrative-p">O código de máquina e a robótica são ferramentas reais de emancipação social.</p>
+<p class="narrative-p">Programar era como acender pequenas fogueiras no escuro. Cada linha de código iluminava um pedaço do caminho que o país insistia em manter apagado.</p>
 <p class="narrative-p">O futuro não nascerá das planilhas de juros da Faria Lima.</p>
 <p class="narrative-p">O progresso nasce da persistência técnica dos que recusam a mediocridade.</p>
 <p class="narrative-p">"Mantenha os transistores ativos. O controle físico pertence aos que programam."</p>

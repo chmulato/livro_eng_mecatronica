@@ -43,6 +43,8 @@ Lá dentro, sob papéis de formulário contínuo, estava um chip preto e longo.
 Tinha quarenta pernas metálicas salientes como as de uma centopeia de silício.
 Limpou o plástico com o polegar. A gravação revelou: *Z80A*.
 
+O chip parecia uma centopeia adormecida, esperando que alguém lhe soprasse vida. Alex imaginou que cada perna metálica era uma porta para um mundo microscópico onde elétrons corriam como formigas apressadas. Por um instante, o galpão deixou de ser galpão. Era só silêncio, poeira e a promessa de que até as máquinas esquecidas têm histórias para contar.
+
 Abaixo do chip, estava um caderno de capa preta dura e bordas gastas.
 Ao pegá-lo, uma folha avulsa caiu com uma anotação em caneta azul desbotada.
 Para Alex, ver aquela letra em meio ao silêncio do galpão foi como encontrar um farol no escuro.

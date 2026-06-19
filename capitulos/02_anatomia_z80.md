@@ -43,6 +43,8 @@ A gaveta **A** é a mais importante e chama-se **Acumulador**.
 Se você quer somar dois números, deve colocar o primeiro em A e o segundo em B.
 Ao comandar a soma, o resultado final substitui o valor anterior que estava na gaveta A.
 
+O Z80 era como um escriturário hiperativo que só conseguia trabalhar se tudo estivesse milimetricamente organizado. Se alguém bagunçasse suas gavetas, ele surtava como um bibliotecário diante de livros fora da ordem. Alex fechou os olhos por um segundo. Era curioso pensar que toda a lógica fria do robô moderno dependia de um escriturário imaginário dentro de um chip de 1976.
+
 Alex moderno sorriu, comparando aquela lógica física com seu código cotidiano em Python:
 ```python
 acumulador = 10

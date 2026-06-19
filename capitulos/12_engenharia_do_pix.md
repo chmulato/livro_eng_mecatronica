@@ -28,6 +28,8 @@ A fresta de entrada é a sua **Chave Pública**; qualquer um a conhece e insere 
 Contudo, só você possui a chave física do cadeado para abrir a caixa e ler as cartas.
 Esta chave física é a sua **Chave Privada**, que deve ser guardada em absoluto segredo.
 
+A chave pública era a porta da frente. A chave privada, a gaveta secreta onde você escondia o chocolate.
+
 No Pix, a assinatura da transação usa a sua chave privada para garantir a autenticidade.
 Abaixo, a simulação em Python demonstra a geração dessa assinatura digital única de dados:
 

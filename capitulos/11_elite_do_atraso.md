@@ -20,6 +20,8 @@ Ao encarar aqueles parágrafos sem linhas de código ou diagramas de chips, Alex
 > Para o jovem estudante, os juros parecem um assunto puramente abstrato.
 > Mas a taxa básica de juros (Selic) dita o retorno sobre investimento (ROI) de cada robô no chão de fábrica.”
 
+A Selic era um ímã gigante puxando o dinheiro para longe das oficinas e laboratórios. Quanto mais forte o ímã, mais difícil era convencer o capital a sujar as mãos de graxa.
+
 O diário explicava o cálculo comparativo de viabilidade técnica feito pelas empresas.
 
 ### [Conceito Chave] O Custo de Oportunidade Industrial (Selic vs ROI)

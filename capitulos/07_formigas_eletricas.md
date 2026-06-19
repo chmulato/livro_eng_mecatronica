@@ -51,6 +51,8 @@ Eles dependiam estritamente de trilhos físicos, como fitas magnéticas.
 Se uma caixa caísse sobre a fita de navegação, o AGV congelava no lugar.
 Ele não tinha inteligência ou capacidade de raciocínio de rota.
 
+Os AGVs eram trens obedientes. Os AMRs, por outro lado, eram formigas adolescentes: teimosas, curiosas e sempre achando um caminho novo.
+
 Os modernos AMRs que operam no galpão são autônomos e flexíveis.
 Eles possuem um mapa mental tridimensional constantemente atualizado.
 Quando um obstáculo surge, os sensores detectam a barreira física.

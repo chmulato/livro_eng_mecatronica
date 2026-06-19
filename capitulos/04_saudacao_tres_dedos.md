@@ -38,6 +38,8 @@ Ao pressionar Ctrl, Alt e Del simultaneamente, a placa envia um sinal elétrico.
 Esse sinal é uma Interrupção Não-Mascarável (NMI) direto ao pino do chip.
 O Z80A é obrigado a parar imediatamente o que está fazendo, sem exceção.
 
+O NMI era o equivalente eletrônico de alguém puxar o freio de mão de um trem em movimento. Nada elegante, mas sempre eficaz. Alex imaginou o chip suspirando aliviado ao reiniciar, como quem finalmente consegue respirar depois de um soluço interminável.
+
 As gavetas de registradores congestionadas na memória RAM são totalmente limpas.
 Os ponteiros de instrução voltam para o endereço de início (zero) da ROM.
 O chip lê as primeiras instruções da BIOS, forçando o reboot completo do sistema.

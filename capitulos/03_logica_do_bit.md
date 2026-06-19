@@ -56,6 +56,8 @@ O princípio do sensor moderno era o mesmo grid quadriculado desenhado por seu m
 Dentro do encoder, um pequeno disco plástico transparente cheio de ranhuras pretas girava.
 Um feixe de luz infravermelha atravessava o disco durante a rotação física.
 
+O disco do encoder parecia um vitral giratório, onde cada ranhura decidia se a luz entrava ou não. Era como se o robô lesse um livro escrito em clarões e sombras. Alex sorriu ao perceber que, no fundo, até os sensores mais modernos eram apenas lanternas tentando entender o mundo.
+
 A luz passando pela área transparente gerava corrente elétrica: bit um (`1`).
 Quando a ranhura escura bloqueava a luz, a corrente elétrica cessava: bit zero (`0`).
 O sensor gerava uma sequência de bits em alta velocidade para calcular a velocidade.

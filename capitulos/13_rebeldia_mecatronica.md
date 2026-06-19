@@ -22,6 +22,8 @@ Quando um jovem decide passar noites programando malhas de controle PID, ele res
 Ele desafia a engrenagem do atraso que submete pessoas a tarefas brutas e indignas.
 O código de máquina e a robótica são ferramentas reais de emancipação social.
 
+Programar era como acender pequenas fogueiras no escuro. Cada linha de código iluminava um pedaço do caminho que o país insistia em manter apagado.
+
 O futuro não nascerá das planilhas de juros da Faria Lima.
 O progresso nasce da persistência técnica dos que recusam a mediocridade.
 "Mantenha os transistores ativos. O controle físico pertence aos que programam."

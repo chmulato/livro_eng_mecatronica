@@ -20,6 +20,10 @@ Para desvendar como a CPU equilibrava tantas tarefas físicas em tempo real, Ale
 
 O engenheiro não ignora o barulho do telefone; ele precisa agir.
 Ele marca a linha e a página onde parou a leitura com um lápis.
+No tempo da CPU, esse "lápis" é a ação de salvar o Program Counter ($PC$) no Stack.
+
+O processador era um leitor compulsivo interrompido por telefonemas urgentes. Cada IRQ era um toque insistente dizendo: ‘Atende! É importante!’. Alex riu sozinho ao ler isso no diário. No fundo, até o robô mais caro do galpão sofria com interrupções como qualquer estudante tentando estudar em casa.
+
 No processador, esse "lápis" é a ação de salvar o Program Counter ($PC$) no Stack.
 
 O engenheiro atende a chamada de emergência e resolve o problema do cliente.

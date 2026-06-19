@@ -20,6 +20,8 @@ Alex iniciou o nó de navegação e acionou o joystick para mover a máquina no 
 O robô arrancou silenciosamente. Ao fazer a curva, o LiDAR varreu as paredes.
 Mas devido ao erro de transformada, o computador calculou que a parede estava mais longe.
 
+Um erro de dez centímetros era como usar óculos com grau errado: o mundo parecia no lugar, até que você tropeçava na primeira quina. Alex passou a mão no rosto. Às vezes, a engenharia parecia um jogo de equilíbrio entre números perfeitos e mãos trêmulas.
+
 *CRASH!*
 
 O AMR 12 colidiu de lado contra a prateleira de aço da manutenção com força.
