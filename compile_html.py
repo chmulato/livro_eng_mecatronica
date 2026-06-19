@@ -553,7 +553,30 @@ def main():
             
         clean_title = first_line.split(':')[-1].strip() if ':' in first_line else first_line
         
-        menu_items.append(f'            <li><a href="#cap{idx}">Cap. {idx}: {clean_title}</a></li>')
+        # Determinar Slug, Label e nome de imagem com base no tipo de título
+        if "Capítulo" in first_line:
+            match = re.search(r'Capítulo\s+(\d+)', first_line)
+            num = int(match.group(1)) if match else idx
+            slug = f"cap{num}"
+            label = f"Cap. {num}: {clean_title}"
+            img_name = f"cap{num}.png"
+        elif "Apêndice" in first_line:
+            match = re.search(r'Apêndice\s+([A-Z])', first_line)
+            letra = match.group(1) if match else "A"
+            slug = f"apendice-{letra.lower()}"
+            label = f"Apêndice {letra}: {clean_title}"
+            img_name = None
+        else:
+            if "Estudar" in first_line:
+                slug = "como-estudar"
+            elif "Prólogo" in first_line:
+                slug = "prologo"
+            else:
+                slug = cap.replace('.md', '').replace('00_', '').replace('_', '-')
+            label = first_line
+            img_name = None
+        
+        menu_items.append(f'            <li><a href="#{slug}">{label}</a></li>')
         
         with open(cap_path, 'r', encoding='utf-8') as f:
             body = f.read()
@@ -561,9 +584,8 @@ def main():
         formatted_body = format_markdown_to_html(body)
         
         img_html = ""
-        img_name = f"cap{idx-1}.png"
-        if os.path.exists(os.path.join(WORKSPACE_DIR, "imagens", img_name)):
-            img_html = f'<img src="imagens/{img_name}" alt="Ilustração do Capítulo {idx}" class="chapter-image">'
+        if img_name and os.path.exists(os.path.join(WORKSPACE_DIR, "imagens", img_name)):
+            img_html = f'<img src="imagens/{img_name}" alt="Ilustração do Capítulo {slug.replace("cap", "")}" class="chapter-image">'
             if "</h1>" in formatted_body:
                 parts = formatted_body.split("</h1>", 1)
                 formatted_body = parts[0] + "</h1>\n" + img_html + parts[1]
@@ -571,7 +593,7 @@ def main():
                 formatted_body = img_html + formatted_body
             
         chapter_html = f"""
-        <div id="cap{idx}" class="chapter-section">
+        <div id="{slug}" class="chapter-section">
             {formatted_body}
         </div>
         """
