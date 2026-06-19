@@ -1295,20 +1295,179 @@ hash_original = gerar_hash_transacao("Alex", "UTFPR", 150.00, "chave_secreta_123
 
         <div id="apendice-a" class="chapter-section">
             <h1 class="chapter-title">Apêndice A: Glossário de Engenharia e Automação</h1>
-<p class="narrative-p">Para ajudar na navegação pelos conceitos apresentados no diário e no CD, aqui está um glossário com explicações visuais e analógicas dos principais termos mecatrônicos:</p>
-<h3>1. Hardware e Eletrônica Básica</h3>
-<li><strong>Z80</strong>: Microprocessador de 8 bits lançado em 1976. Ele executa instruções lógicas sequenciais básicas de leitura e escrita e governou computadores antigos como o TK90X e o MSX.</li>
-<p class="narrative-p"><em> <strong>Registradores</strong>: Pequenos compartimentos internos de armazenamento temporário ultrarrápido dentro do chip. No Z80, guardam números inteiros de 8 bits (de 0 a 255). (</em>Metáfora: A gaveta secreta onde o chip guarda números que não pode esquecer de jeito nenhum.*)</p>
-<li><strong>Ponte H</strong>: Circuito eletrônico chaveado que permite a microcontroladores controlar o sentido de rotação e a velocidade de motores elétricos de corrente contínua (CC).</li>
-<li><strong>PWM (Modulação por Largura de Pulso)</strong>: Técnica que simula tensões analógicas variando a largura de pulso de um sinal digital (ligado/desligado) em alta velocidade. Usada para alterar o brilho de LEDs e velocidades de motores.</li>
-<h3>2. Robótica Móvel e Algoritmos</h3>
-<li><strong>LiDAR (Light Detection and Ranging)</strong>: Sensor óptico de distância. Funciona disparando feixes de laser infravermelho e calculando o tempo necessário para a luz refletir e retornar (Time of Flight).</li>
-<li><strong>SLAM (Simultaneous Localization and Mapping)</strong>: Algoritmo que permite a um veículo autônomo construir o mapa de um ambiente desconhecido e, ao mesmo tempo, estimar sua própria posição física dentro dele.</li>
-<li><strong>Filtro de Kalman</strong>: Algoritmo recursivo que funde dados ruidosos de sensores (ex: LiDAR e odometria) para obter estimativas de posição com o menor erro estatístico possível.</li>
-<p class="narrative-p"><em> <strong>Odometria</strong>: Estimativa da distância percorrida pelo veículo calculada com base na rotação das rodas monitorada por sensores (encoders). Sujeita a desvios por derrapagem. (</em>Metáfora: O jeito do robô medir passos, como um pedômetro elétrico.*)</p>
-<h3>3. Sistemas e Redes</h3>
-<li><strong>ROS 2 (Robot Operating System)</strong>: Framework de software de código aberto (middleware) que gerencia a troca de mensagens em tópicos e serviços entre diferentes programas (Nós) de um robô.</li>
-<li><strong>Nós (Nodes)</strong>: Processos de software independentes e cooperativos dentro do ROS 2. Exemplo: um nó lê o sensor do laser e outro decide a velocidade do motor.</li>
+<p class="narrative-p">Bem-vindo ao <strong>Manual de Campo Mecatrônico</strong>. Este glossário não é apenas uma lista alfabética de definições: é uma ferramenta prática de campo projetada para conectar o hardware clássico de 1986 à robótica moderna de 2026.</p>
+<p class="narrative-p">---</p>
+<h3>🛠️ Como Usar Este Guia</h3>
+<p class="narrative-p">Cada termo está estruturado em três níveis de profundidade:</p>
+<p class="narrative-p">1. <strong>Definição Direta:</strong> O conceito técnico traduzido de forma clara e sem rodeios.</p>
+<p class="narrative-p">2. <strong>Metáfora & Analogia:</strong> A ligação literária com as ilustrações e histórias do livro.</p>
+<p class="narrative-p">3. <strong>Caso de Uso Prático:</strong> Como e onde o conceito é aplicado no galpão de Curitiba ou na crise logística de Milão.</p>
+<p class="narrative-p">#### 🏷️ Símbolos de Identificação Rápida</p>
+<li>⚙️ <strong>Hardware / Eletrônica:</strong> Peças, circuitos e chips físicos.</li>
+<li>🧠 <strong>Software / Fluxo:</strong> Algoritmos, código e lógica de controle.</li>
+<li>🤖 <strong>Robótica Aplicada:</strong> A fusão de lógica e movimento mecânico.</li>
+<li>🧮 <strong>Matemática do Espaço:</strong> Fórmulas, matrizes e álgebra linear.</li>
+<p class="narrative-p">---</p>
+<h2>📂 Grupos Temáticos de Referência</h2>
+<li><strong>[Sistemas e CPU]</strong> Z80, Registrador, Program Counter, Stack, IRQ, NMI, Vetor de Reset.</li>
+<li><strong>[Controle e Atuadores]</strong> Ponte H, PWM, Encoder Óptico.</li>
+<li><strong>[Navegação e Percepção]</strong> LiDAR, Odometria, SLAM, Filtro de Kalman.</li>
+<li><strong>[Lógica e Otimização]</strong> Matriz Booleana, 3D Bin Packing, ROS 2, Nós.</li>
+<p class="narrative-p">---</p>
+<h2>📖 Dicionário de Campo</h2>
+<h3>1. Z80 (⚙️ Hardware)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 1, Cap. 2, Cap. 4</li>
+<li><strong>Definição:</strong> Microprocessador de 8 bits lançado em 1976. Executa instruções lógicas sequenciais básicas.</li>
+<li><strong>Analogia:</strong> O cérebro primitivo e obstinado do escriturário de olheiras profundas.</li>
+<li><strong>Exemplo Prático:</strong> O processador principal que governou computadores antigos como o TK90X e o circuito de monitoramento mecânico de Milão.</li>
+<li><strong>Termos Relacionados:</strong> Registrador, Program Counter.</li>
+<p class="narrative-p">---</p>
+<h3>2. Registrador / Register (⚙️ Hardware)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 2, Cap. 5</li>
+<li><strong>Definição:</strong> Pequeno compartimento de armazenamento temporário ultrarrápido integrado diretamente no interior da CPU.</li>
+<li><strong>Analogia:</strong> As gavetas de mesa do escriturário da CPU, que guardam apenas um número de cada vez.</li>
+<li><strong>Exemplo Prático:</strong> O Acumulador (Reg A) que armazena dados de 8 bits (de 0 a 255) em tempo real durante operações lógicas.</li>
+<li><strong>Termos Relacionados:</strong> Z80, Program Counter.</li>
+<li><strong>Micro-código:</strong></li>
+<pre><code>  LD A, 10      ; Carrega o número decimal 10 no registrador Acumulador (Reg A)</code></pre>
+<p class="narrative-p">---</p>
+<h3>3. Program Counter / PC (🧠 Software)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 2, Cap. 5</li>
+<li><strong>Definição:</strong> Registrador especial da CPU que aponta para o endereço da próxima instrução a ser executada no fluxo de memória.</li>
+<li><strong>Analogia:</strong> A setinha indicadora ou régua física que guia os olhos do escriturário no manual de instruções do chip.</li>
+<li><strong>Exemplo Prático:</strong> Durante um RESET físico, o PC é forçado a pular instantaneamente de volta para o endereço inicial `0000h`.</li>
+<li><strong>Termos Relacionados:</strong> Z80, Stack, Vetor de Reset.</li>
+<p class="narrative-p">---</p>
+<h3>4. Stack / Pilha de Memória (🧠 Software)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 5</li>
+<li><strong>Definição:</strong> Região da RAM que armazena dados de forma sequencial utilizando a lógica LIFO (Last-In, First-Out).</li>
+<li><strong>Analogia:</strong> Uma pilha de pratos onde você só adiciona (PUSH) ou remove (POP) o prato posicionado no topo.</li>
+<li><strong>Exemplo Prático:</strong> Onde a CPU salva o Program Counter (PC) quando uma interrupção de hardware suspende a rotina de execução.</li>
+<li><strong>Termos Relacionados:</strong> Program Counter, IRQ.</li>
+<li><strong>Micro-diagrama:</strong></li>
+<pre><code>Inserir dado (PUSH) / Retirar dado (POP)
+                 │   ▲
+                 ▼   │
+        Topo ──&gt; [ PC Salvo (ex: 0x0042) ]
+                 [ Registrador A antigo  ]
+                 [ Endereço de Retorno   ]</code></pre>
+<p class="narrative-p">---</p>
+<h3>5. Interrupção / IRQ (🧠 Software / ⚙️ Hardware)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 5</li>
+<li><strong>Definição:</strong> Sinal elétrico enviado por um dispositivo de hardware externo que força a CPU a parar temporariamente sua execução.</li>
+<li><strong>Analogia:</strong> O telefone vermelho tocando na mesa do escriturário de forma insistente, demandando atenção prioritária.</li>
+<li><strong>Exemplo Prático:</strong> O sinal gerado pelo sensor de presença no teclado IBM que interrompe a CPU para ler a tecla pressionada.</li>
+<li><strong>Termos Relacionados:</strong> Stack, NMI, Program Counter.</li>
+<p class="narrative-p">---</p>
+<h3>6. NMI / Interrupção Não-Mascarável (⚙️ Hardware)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 5</li>
+<li><strong>Definição:</strong> Um tipo especial de interrupção física de hardware de prioridade absoluta que a CPU não pode ignorar ou desativar.</li>
+<li><strong>Analogia:</strong> Um alarme físico de incêndio que obriga o escriturário a sair correndo imediatamente, sem chance de ignorar.</li>
+<li><strong>Exemplo Prático:</strong> O sinal do botão de parada de emergência do galpão de Milão que interrompeu o transelevador em 2001.</li>
+<li><strong>Termos Relacionados:</strong> Interrupção (IRQ).</li>
+<p class="narrative-p">---</p>
+<h3>7. Vetor de Reset (💡 Conceito)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 5</li>
+<li><strong>Definição:</strong> O endereço de memória fixado no hardware para onde a CPU aponta logo após ser alimentada com energia ou reiniciada.</li>
+<li><strong>Analogia:</strong> O endereço da primeira instrução do manual do escriturário toda vez que ele acorda ou liga.</li>
+<li><strong>Exemplo Prático:</strong> O hexadecimal `0000h` no Z80 ou a linha de código em `FFFF:0000h` nos processadores modernos baseados em x86.</li>
+<li><strong>Termos Relacionados:</strong> Program Counter.</li>
+<p class="narrative-p">---</p>
+<h3>8. Ponte H (🔌 Eletrônica / ⚙️ Hardware)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 8</li>
+<li><strong>Definição:</strong> Circuito chaveado que permite a microcontroladores inverter a polaridade aplicada a motores de corrente contínua.</li>
+<li><strong>Analogia:</strong> Um trilho ferroviário com desvios articulados que alteram o sentido em que o trem (a corrente) corre.</li>
+<li><strong>Exemplo Prático:</strong> O circuito integrado responsável por comandar o sentido de rotação dos motores nos transelevadores de Milão.</li>
+<li><strong>Termos Relacionados:</strong> PWM.</li>
+<li><strong>Micro-diagrama:</strong></li>
+<pre><code>[ + Vcc (Alimentação) ]
+            /                 \
+       Chave 1               Chave 2
+          ├───[ Motor CC ]────┤
+       Chave 3               Chave 4
+            \                 /
+            [ Terra (GND) ]</code></pre>
+<p class="narrative-p">---</p>
+<h3>9. PWM / Modulação por Largura de Pulso (🔌 Eletrônica)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 8</li>
+<li><strong>Definição:</strong> Técnica que varia a potência de saída variando a proporção de tempo que um sinal elétrico digital passa ligado.</li>
+<li><strong>Analogia:</strong> Acender e apagar o interruptor de luz tão rápido que a lâmpada parece estar no estado de "meia luz" estável.</li>
+<li><strong>Exemplo Prático:</strong> O controle eletrônico preciso da velocidade das rodas motrizes do robô AMR no galpão de Curitiba.</li>
+<li><strong>Termos Relacionados:</strong> Ponte H.</li>
+<li><strong>Micro-diagrama:</strong></li>
+<pre><code>Duty Cycle 25%: [───]___________[───]___________ (Velocidade Baixa)
+  Duty Cycle 75%: [─────────]_____[─────────]_____ (Velocidade Alta)</code></pre>
+<p class="narrative-p">---</p>
+<h3>10. LiDAR (🤖 Robótica Aplicada)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 6, Cap. 7, Cap. 8</li>
+<li><strong>Definição:</strong> Sensor óptico rotativo de distância baseado no tempo de ida e volta (Time of Flight) de feixes de laser infravermelho.</li>
+<li><strong>Analogia:</strong> Uma lanterna laser ultrarrápida que calcula distâncias "gritando" pulsos de luz e cronometrando o eco do reflexo.</li>
+<li><strong>Exemplo Prático:</strong> O scanner laser no topo do AMR 12 que faz a varredura do corredor B para detectar paletes estacionados.</li>
+<li><strong>Termos Relacionados:</strong> SLAM.</li>
+<p class="narrative-p">---</p>
+<h3>11. Encoder Óptico (⚙️ Hardware)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 7, Cap. 8</li>
+<li><strong>Definição:</strong> Sensor óptico acoplado ao eixo de motores que mede velocidade angular contando fendas físicas em um disco giratório.</li>
+<li><strong>Analogia:</strong> Um disco quadriculado que gira sob um sensor de luz, contando os pequenos "passos de formiga" das rodas.</li>
+<li><strong>Exemplo Prático:</strong> O sensor físico nas rodas do AMR que decide se ele avança com precisão milimétrica ou bate na prateleira.</li>
+<li><strong>Termos Relacionados:</strong> Odometria.</li>
+<p class="narrative-p">---</p>
+<h3>12. Odometria (🧮 Matemática do Espaço / 🤖 Robótica)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 7, Cap. 8</li>
+<li><strong>Definição:</strong> A estimativa da distância percorrida pelo veículo calculada integrando no tempo os giros medidos nas rodas.</li>
+<li><strong>Analogia:</strong> O ato de estimar a distância caminhada contando passos com um pedômetro no pé do robô.</li>
+<li><strong>Exemplo Prático:</strong> O cálculo de posicionamento do robô AMR que acumula pequenos erros causados por derrapagens no piso liso.</li>
+<li><strong>Termos Relacionados:</strong> Encoder Óptico, Filtro de Kalman.</li>
+<p class="narrative-p">---</p>
+<h3>13. SLAM / Localização e Mapeamento Simultâneos (🤖 Robótica)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 7</li>
+<li><strong>Definição:</strong> Algoritmo de mapeamento que constrói de forma dinâmica o mapa do ambiente enquanto estima a posição do veículo.</li>
+<li><strong>Analogia:</strong> Andar de olhos vendados tateando as paredes e desenhando o mapa do quarto na mente à medida que caminha.</li>
+<li><strong>Exemplo Prático:</strong> A inteligência do AMR que atualiza o mapa operacional das docas de Curitiba para evitar colisões.</li>
+<li><strong>Termos Relacionados:</strong> LiDAR, Odometria.</li>
+<p class="narrative-p">---</p>
+<h3>14. Filtro de Kalman (🧮 Matemática do Espaço)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 7</li>
+<li><strong>Definição:</strong> Algoritmo estatístico recursivo que funde medições dinâmicas de sensores ruidosos para estimar o estado ideal.</li>
+<li><strong>Analogia:</strong> Um navegador prudente que combina uma bússola imprecisa e o número de passos do tripulante para calcular o rumo exato.</li>
+<li><strong>Exemplo Prático:</strong> O software que integra os dados do LiDAR com a odometria ruidosa das rodas para manter o robô na rota.</li>
+<li><strong>Termos Relacionados:</strong> Odometria, SLAM.</li>
+<p class="narrative-p">---</p>
+<h3>15. Matriz Booleana de Ocupação (🧮 Matemática do Espaço)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 6</li>
+<li><strong>Definição:</strong> Grade de bits onde o valor 1 indica células tridimensionais ocupadas por objetos físicos e 0 representa espaço livre.</li>
+<li><strong>Analogia:</strong> Um condomínio de caixas virtuais empilhadas onde cada apartamento pode estar ocupado por carga ou vazio.</li>
+<li><strong>Exemplo Prático:</strong> O mapa tridimensional do Corredor B no tablet de Alex que previne sobreposição de caixas pesadas de baterias.</li>
+<li><strong>Termos Relacionados:</strong> 3D Bin Packing.</li>
+<li><strong>Micro-diagrama:</strong></li>
+<pre><code>Camada Z = 0 (Nível do Solo)
+  [0][1][0][0]  &lt;── 1 indica ocupado por outro palete
+  [0][1][1][0]  &lt;── Carga atual ocupando mais de uma célula</code></pre>
+<p class="narrative-p">---</p>
+<h3>16. 3D Bin Packing (🧮 Matemática do Espaço)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 6</li>
+<li><strong>Definição:</strong> Algoritmo combinatório focado em organizar de forma ótima caixas tridimensionais de tamanhos variados em contêineres.</li>
+<li><strong>Analogia:</strong> A arte mecânica de empilhar perfeitamente malas e mochilas no porta-malas de um carro de viagem.</li>
+<li><strong>Exemplo Prático:</strong> O algoritmo First Fit que resolveu o empilhamento das autopeças da Fiat na crise de estocagem de Milão.</li>
+<li><strong>Termos Relacionados:</strong> Matriz Booleana de Ocupação.</li>
+<li><strong>Micro-código:</strong></li>
+<pre><code>  # Heurística First Fit simples
+  if verificar_colisao(pos_nova, dim_nova, pos_existentes, dim_existentes):
+      procurar_proximo_nicho()</code></pre>
+<p class="narrative-p">---</p>
+<h3>17. ROS 2 / Robot Operating System (🧠 Software)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 5, Cap. 8</li>
+<li><strong>Definição:</strong> Middleware estruturado para gerenciar a troca distribuída de tópicos de comunicação e serviços em sistemas robóticos.</li>
+<li><strong>Analogia:</strong> A rede de tubulações e rádios que liga os diferentes operadores de uma grande fábrica conectada.</li>
+<li><strong>Exemplo Prático:</strong> O software central do robô AMR que recebe dados LiDAR e envia comandos de movimento para as rodas.</li>
+<li><strong>Termos Relacionados:</strong> Nós (Nodes).</li>
+<p class="narrative-p">---</p>
+<h3>18. Nós / Nodes (🧠 Software)</h3>
+<li><strong>Capítulos Relacionados:</strong> Cap. 5, Cap. 8</li>
+<li><strong>Definição:</strong> Processos independentes especializados que processam dados de sensores e comandam atuadores na rede ROS 2.</li>
+<li><strong>Analogia:</strong> Diferentes operários especializados em uma equipe: um mede com laser, outro decide a rota, outro dirige as rodas.</li>
+<li><strong>Exemplo Prático:</strong> O nó de navegação do AMR comunicando-se em milissegundos com o nó de controle de velocidade das rodas.</li>
+<li><strong>Termos Relacionados:</strong> ROS 2.</li>
         </div>
         
 
