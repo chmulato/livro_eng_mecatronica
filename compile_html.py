@@ -6,87 +6,109 @@ CAPITULOS_DIR = os.path.join(WORKSPACE_DIR, "capitulos")
 OUTPUT_HTML = os.path.join(WORKSPACE_DIR, "docs", "index.html")
 
 def format_markdown_to_html(content):
-    # Formata negrito e itálico básico
-    content = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', content)
-    content = re.sub(r'\*(.*?)\*', r'<em>\1</em>', content)
+    # Processar dividindo o conteúdo em blocos de código e blocos comuns
+    blocks = re.split(r'(```[\s\S]*?```)', content)
+    formatted_blocks = []
     
-    # Processar equações LaTeX inline simples
-    content = content.replace("$$", "").replace("$", "")
-    
-    # Processar blocos de código
-    def code_repl(match):
-        code = match.group(1).strip()
-        lines = code.split('\n')
-        if lines and lines[0] in ['python', 'cpp', 'assembly', 'c++', 'asm']:
-            lines = lines[1:]
-        clean_code = '\n'.join(lines)
-        clean_code = clean_code.replace('<', '&lt;').replace('>', '&gt;')
-        return f'<pre><code>{clean_code}</code></pre>'
-    
-    content = re.sub(r'```([\s\S]*?)```', code_repl, content)
-    
-    lines = content.split('\n')
-    formatted_lines = []
     in_diary = False
     diary_buffer = []
-    
-    for line in lines:
-        line_str = line.strip()
-        if not line_str:
-            if in_diary:
-                formatted_lines.append(f'<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>{"<br/>".join(diary_buffer)}</div>')
-                in_diary = False
-                diary_buffer = []
-            continue
-            
-        is_diary = line_str.startswith('*“') or line_str.startswith('“') or line_str.startswith('>') or in_diary
-        
-        if line_str.startswith('# '):
-            if in_diary:
-                formatted_lines.append(f'<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>{"<br/>".join(diary_buffer)}</div>')
-                in_diary = False
-                diary_buffer = []
-            formatted_lines.append(f'<h1 class="chapter-title">{line_str[2:]}</h1>')
-        elif line_str.startswith('## '):
-            if in_diary:
-                formatted_lines.append(f'<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>{"<br/>".join(diary_buffer)}</div>')
-                in_diary = False
-                diary_buffer = []
-            formatted_lines.append(f'<h2>{line_str[3:]}</h2>')
-        elif line_str.startswith('### '):
-            if in_diary:
-                formatted_lines.append(f'<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>{"<br/>".join(diary_buffer)}</div>')
-                in_diary = False
-                diary_buffer = []
-            formatted_lines.append(f'<h3>{line_str[4:]}</h3>')
-            
-        elif line_str.startswith('* ') or line_str.startswith('- '):
-            if in_diary:
-                formatted_lines.append(f'<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>{"<br/>".join(diary_buffer)}</div>')
-                in_diary = False
-                diary_buffer = []
-            formatted_lines.append(f'<li>{line_str[2:]}</li>')
-            
-        elif line_str.startswith('*“') or line_str.startswith('“') or line_str.startswith('>'):
-            in_diary = True
-            diary_buffer.append(line_str.lstrip('>').strip())
-            
-        elif in_diary:
-            diary_buffer.append(line_str)
-            
-        else:
-            if line_str.startswith('<pre>') or line_str.endswith('</pre>'):
-                formatted_lines.append(line_str)
+
+    for block in blocks:
+        if block.startswith('```'):
+            code = block.strip('`').strip()
+            lines = code.split('\n')
+            if lines and lines[0].strip() in ['python', 'cpp', 'assembly', 'c++', 'asm', 'diagram']:
+                block_type = lines[0].strip()
+                lines = lines[1:]
             else:
-                # Se for um parágrafo de texto normal, adicionamos uma classe para estilizá-lo
-                # com as diretrizes do modo narrativo (ritmo literário, legibilidade).
-                # Para diferenciar tecnicismo e prosa, aplicamos narrative-p por padrão.
-                formatted_lines.append(f'<p class="narrative-p">{line_str}</p>')
+                block_type = ''
+            
+            clean_code = '\n'.join(lines)
+            clean_code = clean_code.replace('<', '&lt;').replace('>', '&gt;')
+            
+            if block_type == 'diagram':
+                diagram_html = """
+<div class="register-diagram">
+  <div class="diagram-title">Gavetas do Processador (Registradores)</div>
+  <div class="diagram-grid">
+    <div class="register-card active">
+      <span class="reg-name">Reg A</span>
+      <span class="reg-desc">Acumulador</span>
+    </div>
+    <div class="register-card">
+      <span class="reg-name">Reg B</span>
+      <span class="reg-desc">Auxiliar</span>
+    </div>
+    <div class="register-card">
+      <span class="reg-name">Reg C</span>
+      <span class="reg-desc">Geral</span>
+    </div>
+    <div class="register-card">
+      <span class="reg-name">Reg D</span>
+      <span class="reg-desc">Geral</span>
+    </div>
+  </div>
+</div>
+"""
+                formatted_blocks.append(diagram_html)
+            else:
+                formatted_blocks.append(f'<pre><code>{clean_code}</code></pre>')
+        else:
+            # Bloco de texto comum
+            block = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', block)
+            block = re.sub(r'\*(.*?)\*', r'<em>\1</em>', block)
+            block = block.replace("$$", "").replace("$", "")
+            
+            lines = block.split('\n')
+            for line in lines:
+                line_str = line.strip()
+                if not line_str:
+                    if in_diary:
+                        formatted_blocks.append(f'<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>{"<br/>".join(diary_buffer)}</div>')
+                        in_diary = False
+                        diary_buffer = []
+                    continue
                 
-    if in_diary:
-        formatted_lines.append(f'<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>{"<br/>".join(diary_buffer)}</div>')
-        
-    return '\n'.join(formatted_lines)
+                is_diary = line_str.startswith('*“') or line_str.startswith('“') or line_str.startswith('>') or in_diary
+                
+                if line_str.startswith('# '):
+                    if in_diary:
+                        formatted_blocks.append(f'<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>{"<br/>".join(diary_buffer)}</div>')
+                        in_diary = False
+                        diary_buffer = []
+                    formatted_blocks.append(f'<h1 class="chapter-title">{line_str[2:]}</h1>')
+                elif line_str.startswith('## '):
+                    if in_diary:
+                        formatted_blocks.append(f'<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>{"<br/>".join(diary_buffer)}</div>')
+                        in_diary = False
+                        diary_buffer = []
+                    formatted_blocks.append(f'<h2>{line_str[3:]}</h2>')
+                elif line_str.startswith('### '):
+                    if in_diary:
+                        formatted_blocks.append(f'<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>{"<br/>".join(diary_buffer)}</div>')
+                        in_diary = False
+                        diary_buffer = []
+                    formatted_blocks.append(f'<h3>{line_str[4:]}</h3>')
+                elif line_str.startswith('* ') or line_str.startswith('- '):
+                    if in_diary:
+                        formatted_blocks.append(f'<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>{"<br/>".join(diary_buffer)}</div>')
+                        in_diary = False
+                        diary_buffer = []
+                    formatted_blocks.append(f'<li>{line_str[2:]}</li>')
+                elif line_str.startswith('*“') or line_str.startswith('“') or line_str.startswith('>'):
+                    in_diary = True
+                    diary_buffer.append(line_str.lstrip('>').strip())
+                elif in_diary:
+                    diary_buffer.append(line_str)
+                else:
+                    formatted_blocks.append(f'<p class="narrative-p">{line_str}</p>')
+            
+            if in_diary:
+                formatted_blocks.append(f'<div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>{"<br/>".join(diary_buffer)}</div>')
+                in_diary = False
+                diary_buffer = []
+                
+    return '\n'.join(formatted_blocks)
 
 def main():
     print("Iniciando compilação do livro em formato HTML Mobile-First...")
@@ -415,21 +437,21 @@ def main():
             padding-bottom: 2px;
         }
 
-        /* Blocos de Código Responsivos */
+        /* Blocos de Código Responsivos - Lousa Verde */
         pre {
-            background-color: #090d16;
-            border: 1px solid var(--border-color);
+            background-color: #132e1c;
+            border: 6px solid #4a2f13; /* Moldura de madeira */
             padding: 1.1rem;
-            border-radius: 8px;
+            border-radius: 4px;
             overflow-x: auto;
             margin: 1.8rem 0;
-            box-shadow: inset 0 2px 8px rgba(0,0,0,0.6);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4), inset 0 0 15px rgba(0,0,0,0.6);
         }
 
         code {
             font-family: 'Fira Code', monospace;
-            font-size: 0.8rem;
-            color: #38bdf8;
+            font-size: 0.82rem;
+            color: #e2f3e8; /* Texto de giz esverdeado */
         }
 
         /* Imagens dos Capítulos */
@@ -439,6 +461,62 @@ def main():
             border-radius: 8px;
             margin-bottom: 1.8rem;
             border: 1px solid var(--border-color);
+        }
+
+        /* Diagramas de registradores - Lousa Verde */
+        .register-diagram {
+            background-color: #163623;
+            border: 6px solid #4a2f13; /* Moldura de madeira */
+            border-radius: 4px;
+            padding: 1.2rem;
+            margin: 1.8rem 0;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4), inset 0 0 20px rgba(0,0,0,0.6);
+            font-family: 'Verdana', sans-serif;
+        }
+        .diagram-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #fffae0; /* Giz amarelo claro */
+            letter-spacing: 1.5px;
+            margin-bottom: 1.2rem;
+            text-align: center;
+            border-bottom: 2px dashed rgba(255,250,224,0.3);
+            padding-bottom: 0.6rem;
+        }
+        .diagram-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .register-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px dashed rgba(255, 255, 255, 0.3); /* Tracejado giz */
+            border-radius: 4px;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .register-card.active {
+            border: 2px solid #fffae0; /* Giz amarelo contínuo */
+            box-shadow: 0 0 10px rgba(255, 250, 224, 0.2);
+        }
+        .reg-name {
+            display: block;
+            font-family: 'Fira Code', monospace;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+        .register-card.active .reg-name {
+            color: #fffae0;
+        }
+        .reg-desc {
+            display: block;
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.7);
         }
     </style>
 </head>
@@ -482,13 +560,17 @@ def main():
         formatted_body = format_markdown_to_html(body)
         
         img_html = ""
-        img_name = f"cap{idx}.png"
+        img_name = f"cap{idx-1}.png"
         if os.path.exists(os.path.join(WORKSPACE_DIR, "imagens", img_name)):
             img_html = f'<img src="imagens/{img_name}" alt="Ilustração do Capítulo {idx}" class="chapter-image">'
+            if "</h1>" in formatted_body:
+                parts = formatted_body.split("</h1>", 1)
+                formatted_body = parts[0] + "</h1>\n" + img_html + parts[1]
+            else:
+                formatted_body = img_html + formatted_body
             
         chapter_html = f"""
         <div id="cap{idx}" class="chapter-section">
-            {img_html}
             {formatted_body}
         </div>
         """

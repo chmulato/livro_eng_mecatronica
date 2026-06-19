@@ -99,14 +99,9 @@ def format_text(text):
 def parse_markdown_to_story(file_path, cap_index, styles):
     story = []
     
-    # Inserir imagem de abertura
     image_name = f"cap{cap_index}.png"
     image_path = os.path.join(IMAGENS_DIR, image_name)
-    if os.path.exists(image_path):
-        img_w = A5[0] - 2 * MARGIN
-        img_h = img_w * 9 / 16
-        story.append(Image(image_path, width=img_w, height=img_h))
-        story.append(Spacer(1, 15))
+    image_inserted = False
 
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -116,6 +111,12 @@ def parse_markdown_to_story(file_path, cap_index, styles):
     for block in blocks:
         if block.startswith('```'):
             code_lines = block.strip('`').strip().split('\n')
+            block_type = code_lines[0].strip() if code_lines else ''
+            if block_type == 'diagram':
+                story.append(create_pdf_register_diagram(styles))
+                story.append(Spacer(1, 10))
+                continue
+                
             if code_lines and code_lines[0] in ['python', 'cpp', 'assembly', 'c++', 'asm']:
                 code_lines = code_lines[1:]
             code_text = "<br/>".join(code_lines).replace(" ", "&nbsp;").replace("<", "&lt;").replace(">", "&gt;")
@@ -123,12 +124,12 @@ def parse_markdown_to_story(file_path, cap_index, styles):
             p_code = Paragraph(code_text, styles['CodeStyle'])
             t = Table([[p_code]], colWidths=[A5[0] - 2 * MARGIN])
             t.setStyle(TableStyle([
-                ('BACKGROUND', (0,0), (-1,-1), colors.HexColor("#2a2b2e")),
+                ('BACKGROUND', (0,0), (-1,-1), colors.HexColor("#132e1c")), # Fundo lousa verde
                 ('TOPPADDING', (0,0), (-1,-1), 8),
                 ('BOTTOMPADDING', (0,0), (-1,-1), 8),
                 ('LEFTPADDING', (0,0), (-1,-1), 8),
                 ('RIGHTPADDING', (0,0), (-1,-1), 8),
-                ('BOX', (0,0), (-1,-1), 0.5, colors.HexColor("#4a4b4e")),
+                ('BOX', (0,0), (-1,-1), 4, colors.HexColor("#4a2f13")), # Moldura de madeira
             ]))
             story.append(t)
             story.append(Spacer(1, 10))
@@ -155,6 +156,13 @@ def parse_markdown_to_story(file_path, cap_index, styles):
                     if line_str.startswith('# '):
                         story.append(Paragraph(line_str[2:], styles['BookTitleStyle']))
                         story.append(Spacer(1, 10))
+                        # Inserir imagem logo após o título principal do capítulo
+                        if os.path.exists(image_path) and not image_inserted:
+                            img_w = A5[0] - 2 * MARGIN
+                            img_h = img_w * 9 / 16
+                            story.append(Image(image_path, width=img_w, height=img_h))
+                            story.append(Spacer(1, 15))
+                            image_inserted = True
                     elif line_str.startswith('## '):
                         story.append(Paragraph(line_str[3:], styles['SectionHeaderStyle']))
                         story.append(Spacer(1, 8))
@@ -202,6 +210,41 @@ def create_discovery_box(lines, styles):
         ('BOX', (0,0), (-1,-1), 0.2, colors.HexColor("#e6dcd3")),
     ]))
     return t
+
+def create_pdf_register_diagram(styles):
+    p_title = Paragraph("<font size='9' color='#fffae0'><b>GAVETAS DO PROCESSADOR (REGISTRADORES)</b></font>", styles['NormalStyle'])
+    
+    cell_a = Paragraph("<font color='#fffae0'><b>Reg A</b></font><br/><font size='8' color='#e2f3e8'>Acumulador</font>", styles['NormalStyle'])
+    cell_b = Paragraph("<font color='#ffffff'><b>Reg B</b></font><br/><font size='8' color='#e2f3e8'>Auxiliar</font>", styles['NormalStyle'])
+    cell_c = Paragraph("<font color='#ffffff'><b>Reg C</b></font><br/><font size='8' color='#e2f3e8'>Geral</font>", styles['NormalStyle'])
+    cell_d = Paragraph("<font color='#ffffff'><b>Reg D</b></font><br/><font size='8' color='#e2f3e8'>Geral</font>", styles['NormalStyle'])
+    
+    t_cards = Table([[cell_a, cell_b], [cell_c, cell_d]], colWidths=[(A5[0] - 2 * MARGIN - 40) / 2] * 2)
+    t_cards.setStyle(TableStyle([
+        ('BACKGROUND', (0,0), (-1,-1), colors.HexColor("#163623")),
+        ('ALIGN', (0,0), (-1,-1), 'CENTER'),
+        ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
+        ('BOX', (0,0), (0,0), 1.5, colors.HexColor("#fffae0")), # Destaque em giz amarelo
+        ('BOX', (1,0), (1,0), 0.5, colors.HexColor("#ffffff")), # Giz branco
+        ('BOX', (0,1), (0,1), 0.5, colors.HexColor("#ffffff")),
+        ('BOX', (1,1), (1,1), 0.5, colors.HexColor("#ffffff")),
+        ('TOPPADDING', (0,0), (-1,-1), 8),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 8),
+        ('LEFTPADDING', (0,0), (-1,-1), 8),
+        ('RIGHTPADDING', (0,0), (-1,-1), 8),
+    ]))
+    
+    container = Table([[p_title], [t_cards]], colWidths=[A5[0] - 2 * MARGIN])
+    container.setStyle(TableStyle([
+        ('BACKGROUND', (0,0), (-1,-1), colors.HexColor("#132e1c")),
+        ('ALIGN', (0,0), (-1,-1), 'CENTER'),
+        ('BOX', (0,0), (-1,-1), 4, colors.HexColor("#4a2f13")), # Moldura de madeira escura
+        ('TOPPADDING', (0,0), (-1,-1), 8),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 8),
+        ('LEFTPADDING', (0,0), (-1,-1), 8),
+        ('RIGHTPADDING', (0,0), (-1,-1), 8),
+    ]))
+    return container
 
 def main():
     print("Iniciando compilação do livro em A5 com fonte Verdana...")
@@ -306,7 +349,7 @@ def main():
         fontName='Courier',
         fontSize=7.5,
         leading=9.5,
-        textColor=colors.HexColor("#e0e0e0")
+        textColor=colors.HexColor("#e2f3e8")
     ))
 
     story = []
@@ -338,25 +381,16 @@ def main():
     story.append(Paragraph("Sumário", styles['BookTitleStyle']))
     story.append(Spacer(1, 10))
     
-    toc_data = [
-        ["Capítulo 0: A Centopeia de Silício (Prólogo)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "1"],
-        ["Como Estudar Este Livro", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "2"],
-        ["Capítulo 1: A Estrada de Chão (1986)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "3"],
-        ["Capítulo 2: A Anatomia do Z80 (8-bits)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "5"],
-        ["Capítulo 3: A Lógica do Bit (Binário/Hexa)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "7"],
-        ["Capítulo 4: A Saudação de Três Dedos na Itália", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "9"],
-        ["Capítulo 5: Sistemas Operacionais Raiz (MS-DOS)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "11"],
-        ["Capítulo 6: A Matemática do Espaço (Matrizes 3D)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "13"],
-        ["Capítulo 7: As Formigas Elétricas (CD 2026)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "15"],
-        ["Capítulo 8: O Cérebro do Robô (LiDAR e SLAM)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "17"],
-        ["Capítulo 9: A Pilha de Código Moderna (ROS 2)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "20"],
-        ["Capítulo 10: A Equação do Almoxarifado", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "23"],
-        ["Capítulo 11: A Elite do Atraso (Estudo de Caso)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "26"],
-        ["Capítulo 12: A Engenharia do Pix e do Bloco", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "29"],
-        ["Capítulo 13: A Rebeldia da Mecatrônica (Manifesto)", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "32"],
-        ["Apêndice A: Glossário de Engenharia", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "35"],
-        ["Apêndice B: Guia do Jovem Mecatrônico", ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "37"]
-    ]
+    toc_data = []
+    page_numbers = ["1", "2", "3", "5", "7", "9", "11", "13", "15", "17", "20", "23", "26", "29", "32", "35", "37"]
+    capitulos_files = sorted([f for f in os.listdir(CAPITULOS_DIR) if f.endswith('.md')])
+    
+    for idx, cap in enumerate(capitulos_files):
+        cap_path = os.path.join(CAPITULOS_DIR, cap)
+        with open(cap_path, 'r', encoding='utf-8') as f:
+            first_line = f.readline().strip().lstrip('#').strip()
+        pg = page_numbers[idx] if idx < len(page_numbers) else ""
+        toc_data.append([first_line, ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", pg])
     
     t_toc = Table(toc_data, colWidths=[240, 115, 25])
     t_toc.setStyle(TableStyle([
