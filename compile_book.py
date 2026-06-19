@@ -1,5 +1,6 @@
 import os
 import re
+from PIL import Image as PILImage
 from reportlab.lib.pagesizes import A5
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -158,8 +159,20 @@ def parse_markdown_to_story(file_path, cap_index, styles):
                         story.append(Spacer(1, 10))
                         # Inserir imagem logo após o título principal do capítulo
                         if os.path.exists(image_path) and not image_inserted:
-                            img_w = A5[0] - 2 * MARGIN
-                            img_h = img_w * 9 / 16
+                            img = PILImage.open(image_path)
+                            orig_w, orig_h = img.size
+                            aspect = orig_h / orig_w
+                            
+                            max_w = A5[0] - 2 * MARGIN
+                            max_h = 240  # Limite máximo de altura para não empurrar muito o texto
+                            
+                            if max_w * aspect <= max_h:
+                                img_w = max_w
+                                img_h = max_w * aspect
+                            else:
+                                img_h = max_h
+                                img_w = max_h / aspect
+                                
                             story.append(Image(image_path, width=img_w, height=img_h))
                             story.append(Spacer(1, 15))
                             image_inserted = True
@@ -357,8 +370,20 @@ def main():
     # 1. Página de Capa
     if os.path.exists(COVER_IMAGE):
         print("Inserindo capa...")
-        img_w = 300
-        img_h = 450
+        img = PILImage.open(COVER_IMAGE)
+        orig_w, orig_h = img.size
+        aspect = orig_h / orig_w
+        
+        max_w = A5[0] - 2 * MARGIN
+        max_h = A5[1] - 2 * MARGIN - 60
+        
+        if max_w * aspect <= max_h:
+            img_w = max_w
+            img_h = max_w * aspect
+        else:
+            img_h = max_h
+            img_w = max_h / aspect
+            
         story.append(Spacer(1, 15))
         story.append(Image(COVER_IMAGE, width=img_w, height=img_h))
         story.append(PageBreak())
