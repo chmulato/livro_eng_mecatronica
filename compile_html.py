@@ -119,6 +119,7 @@ def main():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>A Rebeldia da Mecatrônica - Romance Instrutivo</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -653,6 +654,19 @@ def main():
     # Gravar o arquivo final
     with open(OUTPUT_HTML, 'w', encoding='utf-8') as f:
         f.write(html_start + html_menu + html_middle + html_chapters_joined + html_end)
+
+    # Copiar as imagens da pasta imagens/ raiz para docs/imagens/ para evitar erro 404
+    import shutil
+    docs_imagens_dir = os.path.join(WORKSPACE_DIR, "docs", "imagens")
+    os.makedirs(docs_imagens_dir, exist_ok=True)
+    imagens_dir = os.path.join(WORKSPACE_DIR, "imagens")
+    if os.path.exists(imagens_dir):
+        for item in os.listdir(imagens_dir):
+            s_file = os.path.join(imagens_dir, item)
+            d_file = os.path.join(docs_imagens_dir, item)
+            if os.path.isfile(s_file):
+                shutil.copy2(s_file, d_file)
+                print(f"Copiada imagem: {item} para docs/imagens/")
         
     print(f"Livro em formato HTML Mobile-First compilado com sucesso em: {OUTPUT_HTML}")
 
