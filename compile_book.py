@@ -143,7 +143,17 @@ def format_text(text):
 def parse_markdown_to_story(file_path, cap_index, styles):
     story = []
     
-    image_name = f"cap{cap_index}.png"
+    # Descobrir o número real do capítulo a partir do título para carregar a imagem correta
+    with open(file_path, 'r', encoding='utf-8') as f:
+        first_line = f.readline().strip().lstrip('#').strip()
+    
+    if "Capítulo" in first_line:
+        match = re.search(r'Capítulo\s+(\d+)', first_line)
+        num = int(match.group(1)) if match else cap_index
+        image_name = f"cap{num}.png"
+    else:
+        image_name = f"cap{cap_index}.png"
+        
     image_path = os.path.join(IMAGENS_DIR, image_name)
     image_inserted = False
     is_first_p_of_section = True
