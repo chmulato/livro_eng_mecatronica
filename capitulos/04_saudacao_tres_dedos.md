@@ -4,7 +4,7 @@ Alex moderno ajeitou o casaco pesado, sentindo o ar congelante da madrugada do g
 
 No topo da página, o cabeçalho em itálico trazia a nova ambientação:
 *"Milão, Itália – Inverno de 2001. O dia em que o gigante de aço congelou"*.
-O silêncio úmido de Curitiba parecia ecoar o vazio gélido do galpão italiano de duas décadas atrás.
+Em Milão, a sombra venceu. O silêncio úmido de Curitiba parecia ecoar o vazio gélido do galpão italiano de duas décadas atrás.
 
 ---
 
@@ -112,4 +112,4 @@ A saudação de três dedos salvara o armazém de Milão in 2001. Agora, no sil�
 
 ---
 ### ✨ Pergunta-gancho para o próximo capítulo
-Milão havia ensinado a Alex Senior a respeitar a memória interna de seus programas. Curitiba ensinaria Alex moderno a respeitar as prioridades de tarefas elétricas concorrentes do sistema operacional. O que acontece quando os sensores e atuadores tentam gritar ao mesmo tempo pelo tempo da CPU? É esse o jogo de controle e filas que desvendaremos a seguir.
+Reiniciar uma máquina e apagar suas falhas elétricas é fácil. Mas como reiniciar uma vida, ou reordenar as interrupções que a realidade nos impõe a cada segundo? Alex moderno fecharia o tablet sentindo que o próximo código exigiria mais do que apenas apertar botões. O que acontece quando o sistema se recusa a silenciar? É isso que veremos a seguir.

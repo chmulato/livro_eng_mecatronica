@@ -2,7 +2,7 @@
 
 Se no capítulo anterior vimos o que acontece quando a memória falha, agora veremos como o hardware reage quando o mundo físico exige atenção imediata.
 
-A madrugada avançava sob o vento frio de Curitiba, que uivava do lado de fora e fazia as telhas metálicas do galpão vibrarem levemente. O som contínuo e grave dos climatizadores industriais preenchia o ambiente, misturado ao cheiro persistente de óleo lubrificante e poeira de aço. Alex moderno ajeitou-se em sua cadeira no posto de monitoramento, observando o brilho azul pulsante dos AMRs que deslizavam silenciosamente pelo piso. Com os dedos frios, ele virou a página do caderno técnico, revelando um diagrama de circuito detalhado, desenhado a bico de pena com um capricho quase cirúrgico.
+Alex moderno encarava a tela azul como quem encara um espelho sob a madrugada que avançava em Curitiba. O vento frio uivava do lado de fora e fazia as telhas metálicas do galpão vibrarem levemente. O som contínuo e grave dos climatizadores industriais preenchia o ambiente, misturado ao cheiro persistente de óleo lubrificante e poeira de aço. Ele se ajeitou no posto de monitoramento, observando o brilho azul pulsante dos AMRs que deslizavam silenciosamente pelo piso. Com os dedos frios, ele virou a página do caderno técnico, revelando um diagrama de circuito detalhado, desenhado a bico de pena com um capricho quase cirúrgico.
 
 O título, escrito em letras garrafais, alertava:
 *"Interrupções (IRQ): O botão de pânico do hardware e a ilusão do multitarefa"*.

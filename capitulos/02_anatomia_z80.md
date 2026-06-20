@@ -133,4 +133,4 @@ Utilizando o código em Assembly do Z80 apresentado no final deste capítulo, ex
 ---
 
 ### ✨ Pergunta-gancho para o próximo capítulo
-Se o Z80 só entende eletricidade e impulsos binários de zeros e uns... como ele consegue traduzir esses números em imagens tridimensionais, sons complexos e movimento físico real? É isso que Alex vai descobrir a seguir.
+Alex finalmente entendia como mover dados nas gavetas secretas do chip. Mas ainda não sabia como dar forma ao que via, nem como desenhar o próprio destino na tela. Como fazer a eletricidade virar visão? É isso que Alex vai descobrir a seguir.

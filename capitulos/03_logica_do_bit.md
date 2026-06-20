@@ -1,6 +1,6 @@
 # Capítulo 3: A Lógica do Bit
 
-A chuva finalmente desabou sobre o telhado de zinco da escola técnica. O som ensurdecedor da água batendo na chapa de metal isolava a sala de aula do resto do mundo em 1986. Alex Senior sentia os dedos úmidos e o estômago contraído de puro nervosismo. Diante dele, sob a luz trêmula da sala, o cursor vermelho piscava na tela de tubo do TK90X, silencioso e implacável. Sem internet para tirar dúvidas, sem fóruns de programação ou celular no bolso para pesquisar, ele estava sozinho com sua própria persistência e um livreto fino traduzido de forma confusa. O medo de falhar na frente de todos os alunos pesava em seus ombros.
+A chuva batia no vidro como pixels caindo do céu, desabando sobre o telhado de zinco da escola técnica. O som ensurdecedor da água batendo na chapa de metal isolava a sala de aula do resto do mundo em 1986. Alex Senior sentia os dedos úmidos e o estômago contraído de puro nervosismo. Diante dele, sob a luz trêmula da sala, o cursor vermelho piscava na tela de tubo do TK90X, silencioso e implacável. Sem internet para tirar dúvidas, sem fóruns de programação ou celular no bolso para pesquisar, ele estava sozinho com sua própria persistência e um livreto fino traduzido de forma confusa. O medo de falhar na frente de todos os alunos pesava em seus ombros.
 
 Ele queria criar um jogo de ação espacial com uma nave desviando de asteroides — não apenas para demonstrar o poder do computador, mas para provar a si mesmo e aos colegas céticos que aquela caixinha cinza com chicletes de borracha podia criar mundos inteiros. Ele queria hackear o impossível, transformar ideias abstratas em pixels brilhantes na tela e fazer as pessoas sonharem com as estrelas ali mesmo, no meio do barro de Cascavel.
 
@@ -93,4 +93,4 @@ Alex finalmente entendia os bits. Agora precisava enfrentar o inimigo que derrub
 ---
 
 ### ✨ Pergunta-gancho para o próximo capítulo
-Se a lógica dos bits governa a nossa percepção e movimentação física mais simples, o que acontece quando essa estrutura de memória transborda e excede seus limites rígidos de armazenamento? É esse o mistério eletrônico e o caos de Milão que Alex investigará a seguir.
+Tudo na engenharia do silício era, no fim, uma partitura silenciosa de luz e sombra. E às vezes, a sombra vencia. O que acontece quando os reservatórios de luz esgotam seu espaço e tudo congela no escuro? É esse o mistério elétrico que Alex investigará a seguir.
