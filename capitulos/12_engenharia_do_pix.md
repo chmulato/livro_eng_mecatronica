@@ -1,8 +1,6 @@
 # Capítulo 12: A Engenharia do Pix e do Bloco
 
-Alex moderno abriu a página seguinte do diário técnico de seu mentor.
-Os esquemas de hardware haviam retornado com força total nas anotações.
-Havia diagramas de redes em malha de alta conectividade e fórmulas algébricas modulares.
+O pedágio bancário tradicional começou a ruir nas linhas do diário. Alex moderno abriu a página seguinte do caderno técnico de seu mentor, onde os esquemas de hardware haviam retornado com força total nas anotações, exibindo diagramas de redes em malha de alta conectividade e fórmulas algébricas modulares.
 
 O título, sublinhado com caneta vermelha, indicava o tema central:
 *"A Queda do Pedágio Bancário: Sistemas Distribuídos e a Engenharia do Dinheiro Instantâneo"*.
@@ -80,5 +78,5 @@ Estava pronto para ler o último capítulo e compreender o manifesto final de Al
 **A Assinatura Digital**  
 Rode o código Python acima alterando o valor do saldo da transação e verifique como a cadeia de caracteres Hash de saída muda de forma catastrófica a cada digitação.
 
-### ✨ Conexão com o próximo capítulo
-A descentralização das transações e dados remove a blindagem do capital rentista tradicional. No próximo e último capítulo, uniremos todas as peças de nossa jornada na "Rebeldia da Mecatrônica" para consolidar o manifesto de emancipação do jovem engenheiro técnico.
+### ✨ Pergunta-gancho para o próximo capítulo
+A quebra do pedágio e a circulação instantânea de dados financeiros pavimentavam um novo caminho tecnológico. Mas o que acontece quando unimos todos os pedaços de nossa jornada no silêncio do galpão de Curitiba? Qual o manifesto final e as lições herdadas da rebeldia da mecatrônica para a nossa geração de criadores? É essa a conclusão e a nossa chamada de resistência que uniremos a seguir.

@@ -1,8 +1,6 @@
 # Capítulo 10: A Equação do Almoxarifado
 
-Alex moderno observou o robô AMR 12 desacelerar suavemente no Setor B.
-Em cima do compartimento de carga da máquina, repousavam três caixas de papelão.
-Eram embalagens de tamanhos diferentes contendo rolamentos, eixos e sensores.
+As caixas aguardavam a decisão de encaixe na doca de Curitiba. Alex moderno observou o robô AMR 12 desacelerar suavemente no Setor B. Em cima do compartimento de carga da máquina, repousavam três caixas de papelão de tamanhos diferentes contendo rolamentos, eixos e sensores.
 
 O robô precisava decidir em quais nichos vazios colocaria cada volume.
 A decisão devia ser tomada em frações de segundo para otimizar o espaço livre.
@@ -81,5 +79,5 @@ E era sobre essa fronteira social que a Parte IV do diário começaria a falar.
 **O Algoritmo de Encaixe**  
 Escreva o teste manual do algoritmo FFD para acomodar caixas de tamanhos [50, 20, 30, 40, 10] em nichos com capacidade máxima de 60 unidades cada.
 
-### ✨ Conexão com o próximo capítulo
-A eficiência das heurísticas maximiza os lucros das grandes corporações logísticas. No próximo capítulo, entraremos na Parte IV do livro para investigar a "Elite do Atraso", debatendo os limites sociais da tecnologia e o impacto da automação no mercado de trabalho brasileiro.
+### ✨ Pergunta-gancho para o próximo capítulo
+A otimização das caixas preenchia as prateleiras do galpão logístico de forma eficiente. Mas o que acontece quando a barreira para o avanço da tecnologia não é um limite de hardware, mas o custo financeiro imposto pela própria economia? Como a taxa básica de juros e a rentabilidade passiva afetam a mecatrônica real e travam os engenheiros nacionais? É esse o choque de realidade que Alex investigará a seguir.

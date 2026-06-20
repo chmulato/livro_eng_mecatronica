@@ -1,8 +1,6 @@
 # Capítulo 9: A Pilha de Código Moderna
 
-Com a chave Allen, Alex moderno apertou o último parafuso da tampa lateral do AMR 12.
-O torque metálico indicou que o invólucro de proteção do robô estava lacrado.
-Ele abriu a conexão ssh em seu tablet de diagnóstico para checar os processos internos.
+A orquestra de silício aguardava sob o chassi de metal do robô. Com a chave Allen, Alex moderno apertou o último parafuso da tampa lateral do AMR 12, indicando que o invólucro de proteção da máquina estava lacrado. Ele abriu a conexão ssh em seu tablet de diagnóstico para checar os processos internos.
 
 Uma cascata de identificadores se desenrolou no console preto do Linux embutido.
 O robô gerenciava simultaneamente tarefas escritas in linguagens diferentes.
@@ -105,5 +103,5 @@ Complete a implementação da função `callback_velocidade` no código C++ acim
 
 ---
 
-### ✨ Conexão com o próximo capítulo
-A comunicação de mensagens unifica a percepção e a atuação do robô no espaço físico. No próximo capítulo, utilizaremos essa infraestrutura de comunicação para aplicar a equação clássica de alocação de carga e otimizar a arrumação dos paletes no galpão.
+### ✨ Pergunta-gancho para o próximo capítulo
+A orquestra do ROS 2 tocava em harmonia concorrente, unindo sensores e motores. Mas o que acontece quando o robô precisa usar toda essa comunicação para decidir onde colocar as caixas no galpão sem congelar a CPU em cálculos infinitos? Como resolver a arrumação de forma rápida e mecatrônica? É isso que Alex verá a seguir.

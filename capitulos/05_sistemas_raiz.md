@@ -77,5 +77,5 @@ Escreva um pequeno pseudo-código demonstrando o funcionamento de um loop princi
 
 ---
 
-### ✨ Conexão com o próximo capítulo
-Controlar as interrupções permite ao robô reagir ao mundo elétrico. Mas como esse escriturário sabe como se mover no espaço físico tridimensional? No próximo capítulo, sairemos da lógica puramente binária e entraremos na matemática do espaço, desvendando as matrizes 3D que orientam os robôs e as empilhadeiras na logística moderna.
+### ✨ Pergunta-gancho para o próximo capítulo
+Controlar as interrupções elétricas é vital para manter o cérebro do robô estável. Mas o que acontece quando esse escriturário precisa se mover por um mundo de três dimensões reais e as gavetas de dados não cabem no espaço físico? No próximo capítulo, Alex descobrirá que, para governar o movimento, a matemática precisa ganhar cheiro de aço e poeira.

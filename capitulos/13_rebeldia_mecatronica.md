@@ -1,6 +1,6 @@
 # Capítulo 13: A Rebeldia da Mecatrônica
 
-A luz dourada do final de tarde rompeu a névoa curitibana, projetando longas sombras geométricas dos robôs AMRs sobre o piso de concreto nivelado a laser. O galpão industrial, geralmente preenchido por um zumbido eletrônico impessoal, parecia silencioso naquele instante. Alex moderno estava sentado na borda do mezanino de metal, com as pernas balançando no espaço livre. Em suas mãos repousava o diário de capa preta de seu mentor.
+As fogueiras do código estavam prontas para ser acesas no mezanino. A luz dourada do final de tarde rompeu a névoa curitibana, projetando longas sombras geométricas dos robôs AMRs sobre o piso de concreto nivelado a laser. O galpão industrial, geralmente preenchido por um zumbido eletrônico impessoal, parecia silencioso naquele instante. Alex moderno estava sentado na borda do mezanino de metal, com as pernas balançando no espaço livre. Em suas mãos repousava o diário de capa preta de seu mentor.
 
 Ele virou a última página física. Ali, colada com uma fita adesiva antiga e amarelada pelo tempo, estava uma folha dobrada que ele nunca tinha percebido antes. A caligrafia de Alex Senior, firme mas com o peso dos anos, trazia uma dedicatória direta:
 

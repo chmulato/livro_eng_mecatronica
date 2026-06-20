@@ -1,8 +1,6 @@
 # Capítulo 11: A Elite do Atraso
 
-Alex moderno virou a página do caderno sob a claridade fraca da manhã.
-A caligrafia de Alex Senior mudava de tom naquela seção do diário.
-Não havia diagramas de registradores ou blocos de código em Assembly.
+O transformador sob sobrecarga econômica parecia zumbir na mente de Alex moderno enquanto ele virava a página do caderno sob a claridade fraca da manhã. A caligrafia de Alex Senior mudava de tom naquela seção do diário, abandonando os diagramas de registradores ou blocos de código em Assembly.
 
 As páginas haviam sido preenchidas com tinta preta forte e traços rápidos.
 O título parecia um estudo de caso prático desenhado em letras garrafais:
@@ -68,5 +66,5 @@ Ele virou a página, buscando entender as tecnologias descentralizadas de transf
 **O Cálculo do Rentismo**  
 Compare o rendimento garantido de R$ 100.000 aplicados a uma taxa Selic de 10,5% ao ano contra os custos e riscos estimados de implantar um sistema automatizado básico de esteiras.
 
-### ✨ Conexão com o próximo capítulo
-O controle centralizado dos juros e do crédito blinda o sistema bancário tradicional. No próximo capítulo, desvendaremos as redes distribuídas de transferência de dados e a arquitetura computacional instantânea que desafiou essa barreira física.
+### ✨ Pergunta-gancho para o próximo capítulo
+O controle dos juros blinda a inércia do capital tradicional. Mas como quebrar esse pedágio e permitir a circulação instantânea e soberana de dados financeiros por redes descentralizadas sem depender dos intermediários do Swift? Qual a criptografia que protege a assinatura digital de cada transação de ataque elétrico? É esse o mistério das redes descentralizadas e do Pix que Alex investigará a seguir.

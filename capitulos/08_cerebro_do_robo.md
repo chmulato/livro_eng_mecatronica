@@ -1,8 +1,6 @@
 # Capítulo 8: O Cérebro do Robô
 
-Na bancada do laboratório de manutenção técnica, o robô AMR 12 repousava sem as tampas protetoras.
-Alex moderno apontava a lanterna clínica para a cúpula preta do para-choque.
-Dentro da carcaça circular, um espelho girava silenciosamente a dez rotações por segundo.
+Os feixes de laser infravermelho riscavam a névoa fria no laboratório de manutenção técnica, onde o robô AMR 12 repousava sem as tampas protetoras. Alex moderno apontava a lanterna clínica para a cúpula preta do para-choque. Dentro da carcaça circular, um espelho girava silenciosamente a dez rotações por segundo.
 
 Era o sensor LiDAR, os olhos eletrônicos de dezoito mil euros do robô autônomo.
 "É como o sensor de estacionamento do carro do seu pai," pensou Alex.
@@ -122,5 +120,5 @@ Altere os parâmetros do Filtro de Kalman simulado no código C++ acima. Aumente
 
 ---
 
-### ✨ Conexão com o próximo capítulo
-Controlar o LiDAR e o Filtro de Kalman resolve a estimativa de posição do robô. No próximo capítulo, entenderemos como gerenciar a comunicação e a troca de dados entre todos os sensores e atuadores do AMR utilizando a pilha de middleware moderna do ROS 2.
+### ✨ Pergunta-gancho para o próximo capítulo
+Controlar o LiDAR e as coordenadas espaciais resolve a estimativa de posição do robô no espaço físico. Mas como gerenciar a orquestra inteira de sensores e motores trocando mensagens sem colidir ou entrar em colapso lógico? Como unificar C++ e Python sob um mesmo maestro invisível? É isso que Alex investigará a seguir.

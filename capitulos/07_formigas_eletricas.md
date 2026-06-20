@@ -1,9 +1,6 @@
 # Capítulo 7: As Formigas Elétricas
 
-O relógio de ponto marcou exatamente seis horas da manhã.
-O plantão de Alex moderno havia terminado oficialmente em Curitiba.
-Em vez de ir embora, ele subiu a escada até o mezanino de observação.
-Ele queria presenciar o que chamavam de "O Despertar do Enxame".
+O enxame de silício começou a se mover sob a fria claridade da manhã. O relógio de ponto marcou exatamente seis horas, indicando que o plantão de Alex moderno havia terminado oficialmente em Curitiba. Em vez de ir embora, ele subiu a escada até o mezanino de observação, ansioso por presenciar "O Despertar do Enxame".
 
 As primeiras luzes do amanhecer começavam a cortar as janelas altas.
 Nas docas de carga, o silêncio foi quebrado por bipes eletrônicos.
@@ -73,5 +70,5 @@ Os AMRs funcionan assim: biologia convertida em código de controle físico.
 **A Simulação do Desvio**  
 Desenhe uma malha de grade 5x5 com um obstáculo na posição central. Trace a rota mais curta do canto inferior esquerdo ao canto superior direito desviando do obstáculo.
 
-### ✨ Conexão com o próximo capítulo
-O mapeamento dinâmico dos AMRs impede travamentos nas docas do armazém. No próximo capítulo, abriremos o diário para compreender a tecnologia por trás dos sensores ópticos e desvendar o funcionamento do LiDAR e do algoritmo SLAM que servem como os olhos virtuais do robô autônomo.
+### ✨ Pergunta-gancho para o próximo capítulo
+As formigas eletrônicas sabiam contornar os vãos do galpão, mas como fazer o próprio robô enxergar os contornos do mundo ao seu redor sem depender de fitas de navegação? Qual sensor seria capaz de medir a velocidade da luz para evitar colisões catastróficas sob a névoa? É esse o cérebro óptico e o mistério do laser que Alex investigará a seguir.

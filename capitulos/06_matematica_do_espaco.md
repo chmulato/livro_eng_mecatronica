@@ -1,6 +1,6 @@
 # Capítulo 6: A Matemática do Espaço
 
-O aquecedor barulhento da pequena sala de controle estalava incessantemente, travando uma luta inglória contra o frio cortante do inverno de Milão em 2001. Ao lado do terminal antigo de fósforo verde, uma xícara de café já esfriara por completo, com uma película escura formada na superfície. Alex Senior respirava fundo, observando o vapor suave de seu hálito se misturar ao cheiro de papel úmido e mofo das plantas baixas industriais espalhadas sobre a mesa de fórmica cinza. Ao longe, através da janela dupla de vidro, ouvia-se o eco metálico e grave dos transelevadores deslizando pelos trilhos de aço do armazém silencioso.
+O aquecedor barulhento da pequena sala de controle estalava incessantemente, travando uma luta inglória contra o frio cortante do inverno de Milão em 2001. A matemática ali ganhava cheiro de metal e poeira. Ao lado do terminal antigo de fósforo verde, uma xícara de café já esfriara por completo, com uma película escura formada na superfície. Alex Senior respirava fundo, observando o vapor suave de seu hálito se misturar ao cheiro de papel úmido e mofo das plantas baixas industriais espalhadas sobre a mesa de fórmica cinza. Ao longe, através da janela dupla de vidro, ouvia-se o eco metálico e grave dos transelevadores deslizando pelos trilhos de aço do armazém silencioso.
 
 O galpão de armazenamento estava à beira do colapso. Noventa por cento da capacidade nominal física do espaço já havia sido tomada por caixas e paletes. Para piorar a situação, a diretoria italiana acabara de assinar um contrato de distribuição emergencial e exigia estocar mais dez por cento de carga sem expandir um único metro quadrado de estrutura física. A mensagem do supervisor Moretti fora curta e direta: se o sistema não encontrasse espaço para os novos lotes nas próximas vinte e quatro horas, a linha de montagem da Fiat pararia por falta de insumos, e a demissão de Alex Senior seria a primeira a ser assinada.
 
@@ -79,5 +79,5 @@ Modifique a função em Python `verificar_colisao` apresentada no capítulo para
 
 ---
 
-### ✨ Conexão com o próximo capítulo
-Com a matemática do espaço consolidada na mente, Alex precisará lidar com robôs em movimento constante. No próximo capítulo, entraremos na Parte III do livro para compreender as "Formigas Elétricas": a dinâmica operacional do CD moderno de Curitiba em 2026 e o controle de robôs autônomos simultâneos.
+### ✨ Pergunta-gancho para o próximo capítulo
+A matemática do espaço havia trancado a inércia dos transelevadores rígidos. Mas e quando o espaço começa a se mover sozinho, e o silêncio é quebrado pelo despertar de dezenas de robôs autônomos que dançam de forma independente pelas avenidas de aço? Como coordenar essa inteligência sem que nenhuma formiga trave o enxame? É isso que Alex verá a seguir.
