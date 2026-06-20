@@ -628,23 +628,53 @@ LEITURA:
     OUT (254), A   ; Envia o mesmo valor para a porta de som
     JP LEITURA     ; Pula de volta para o início (Loop)</code></pre>
 <p class="narrative-p">A poeira vermelha da estrada de Cascavel e os robôs de última geração dividiam os mesmos princípios básicos. A leitura do caderno fornecia a base que faltava à engenharia puramente abstrata da faculdade.</p>
-<p class="narrative-p">O escriturário elétrico do Z80 tinha lhe mostrado as gavetas e como elas se conectavam ao mundo lá fora. Agora, no silêncio da madrugada de Curitiba, Alex precisava aprender a linguagem secreta que preenchia cada uma delas.</p>
+<p class="narrative-p">O escriturário elétrico do Z80 tinha lhe mostrado as gavetas e como elas se conectavam ao mundo lá fora. Alex percebeu que entender o Z80 não era nostalgia — era recuperar o controle sobre a própria engenharia. No silêncio da madrugada de Curitiba, ele sentiu que começava a emergir daquele sentimento incômodo de ser apenas um impostor trocando peças. Agora, restava aprender a linguagem secreta que preenchia cada uma daquelas gavetas elétricas.</p>
 <p class="narrative-p">---</p>
 <h3>⚡ Simplificando a Tecnologia</h3>
 <li><strong>O que são Registradores em 30 segundos</strong>: Pense neles como a área de transferência (Ctrl+C) do seu sistema operacional. São dados rápidos guardados na mesa de trabalho do processador para uso instantâneo, sumindo assim que uma nova cópia é feita por cima.</li>
 <li><strong>O que isso significa no mundo real</strong>: Em um robô, você não diz "vire à esquerda". O software calcula o ângulo, converte em um número binário e joga esse byte em um registrador que está fisicamente ligado ao controle do motor.</li>
 <p class="narrative-p">---</p>
+<h3>📦 Resumo Rápido do Z80 (Mapa Mental de 20 segundos)</h3>
+<li><strong>Registradores (gavetas)</strong>: A, B, C, D, E, H, L</li>
+<li><strong>Tamanho</strong>: 8 bits (números inteiros de 0 a 255)</li>
+<li><strong>Instruções essenciais</strong>:</li>
+<li>`LD` &rarr; carrega e move informações (copia de uma gaveta para outra)</li>
+<li>`ADD` &rarr; soma dois valores</li>
+<li>`IN` &rarr; lê informações do mundo externo (sensores, chaves)</li>
+<li>`OUT` &rarr; envia comandos para o mundo externo (motores, LEDs, alto-falantes)</li>
+<li><strong>Ciclo típico</strong>:</li>
+<p class="narrative-p">1. Carrega os valores (sensores ou constantes)</p>
+<p class="narrative-p">2. Manipula os dados nas gavetas</p>
+<p class="narrative-p">3. Soma, compara ou decide</p>
+<p class="narrative-p">4. Envia o resultado para o hardware de atuação</p>
+<p class="narrative-p">---</p>
+<h3>🔍 Exemplo Completo: Como o Z80 soma 7 + 3</h3>
+<pre><code>LD A, 7      ; coloca o valor 7 no Acumulador A
+LD B, 3      ; coloca o valor 3 na gaveta B
+ADD A, B     ; soma B ao valor de A (A = A + B)
+OUT (254), A ; joga o resultado (10) para a porta de hardware 254</code></pre>
+<p class="narrative-p"><strong>O que acontece fisicamente</strong>:</p>
+<p class="narrative-p">1. O escriturário elétrico coloca o valor "7" na gaveta principal A.</p>
+<p class="narrative-p">2. Coloca o valor "3" na gaveta de suporte B.</p>
+<p class="narrative-p">3. Faz a soma física e grava o resultado acumulado ("10") na própria gaveta A.</p>
+<p class="narrative-p">4. Envia o conteúdo da gaveta A para a porta física 254, que pode ser o controle de velocidade de uma esteira ou a frequência de um som.</p>
+<p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>Registradores</strong>: São gavetas internas de memória ultrarrápida do processador. No Z80, operam com dados de 8 bits (números de 0 a 255).</li>
 <li><strong>Instruções de Controle</strong>: `LD` carrega e move informações, enquanto `IN` e `OUT` fazem a interface física direta com os periféricos externos.</li>
-<h3>🎮 Desafio prático</h3>
-<p class="narrative-p"><strong>Nível 1 (Iniciante): O Desenho do Fluxo dos Bits</strong></p>
-<p class="narrative-p">Desenhe a gaveta do Acumulador A e a gaveta auxiliar B. Indique graficamente para onde o dado flui ao executar sequencialmente as instruções `LD A, 5` e `LD B, A`.</p>
-<p class="narrative-p"><strong>Nível 2 (Avançado): O Loop de Som</strong></p>
+<h3>🎮 Desafio prático e guiado</h3>
+<p class="narrative-p"><strong>Nível 1 (Iniciante): Seu Primeiro Programa em Assembly</strong></p>
+<p class="narrative-p">Escreva a sequência de instruções em Assembly do Z80 para realizar a seguinte lógica passo a passo:</p>
+<p class="narrative-p">1. Coloque o valor 12 na gaveta A.</p>
+<p class="narrative-p">2. Copie esse valor para a gaveta B.</p>
+<p class="narrative-p">3. Some A + B.</p>
+<p class="narrative-p">4. Envia o resultado somado para a porta física 254.</p>
+<p class="narrative-p">5. Explique resumidamente o que aconteceu em cada etapa no papel.</p>
+<p class="narrative-p"><strong>Nível 2 (Avançado): O Loop de Som e a Frequência</strong></p>
 <p class="narrative-p">Utilizando o código em Assembly do Z80 apresentado no final deste capítulo, explique o que aconteceria com a frequência do som emitido pelo alto-falante se a instrução de atraso de tempo (delay loop) fosse inserida entre a leitura do teclado e o comando `OUT`.</p>
 <p class="narrative-p">---</p>
-<h3>✨ Conexão com o próximo capítulo</h3>
-<p class="narrative-p">Agora que conhecemos os compartimentos onde o Z80 manipula os bytes, precisamos desvendar como esses números se estruturam por dentro. No próximo capítulo, vamos decifrar a lógica binária e hexadecimal, aprendendo a ler e traduzir as combinações numéricas básicas que governam as decisões lógicas das máquinas.</p>
+<h3>✨ Pergunta-gancho para o próximo capítulo</h3>
+<p class="narrative-p">Se o Z80 só entende eletricidade e impulsos binários de zeros e uns... como ele consegue traduzir esses números em imagens tridimensionais, sons complexos e movimento físico real? É isso que Alex vai descobrir a seguir.</p>
         </div>
         
 

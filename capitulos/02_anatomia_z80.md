@@ -72,7 +72,7 @@ LEITURA:
 
 A poeira vermelha da estrada de Cascavel e os robôs de última geração dividiam os mesmos princípios básicos. A leitura do caderno fornecia a base que faltava à engenharia puramente abstrata da faculdade.
 
-O escriturário elétrico do Z80 tinha lhe mostrado as gavetas e como elas se conectavam ao mundo lá fora. Agora, no silêncio da madrugada de Curitiba, Alex precisava aprender a linguagem secreta que preenchia cada uma delas.
+O escriturário elétrico do Z80 tinha lhe mostrado as gavetas e como elas se conectavam ao mundo lá fora. Alex percebeu que entender o Z80 não era nostalgia — era recuperar o controle sobre a própria engenharia. No silêncio da madrugada de Curitiba, ele sentiu que começava a emergir daquele sentimento incômodo de ser apenas um impostor trocando peças. Agora, restava aprender a linguagem secreta que preenchia cada uma daquelas gavetas elétricas.
 
 ---
 
@@ -82,19 +82,55 @@ O escriturário elétrico do Z80 tinha lhe mostrado as gavetas e como elas se co
 
 ---
 
+### 📦 Resumo Rápido do Z80 (Mapa Mental de 20 segundos)
+* **Registradores (gavetas)**: A, B, C, D, E, H, L
+* **Tamanho**: 8 bits (números inteiros de 0 a 255)
+* **Instruções essenciais**:
+  * `LD` &rarr; carrega e move informações (copia de uma gaveta para outra)
+  * `ADD` &rarr; soma dois valores
+  * `IN` &rarr; lê informações do mundo externo (sensores, chaves)
+  * `OUT` &rarr; envia comandos para o mundo externo (motores, LEDs, alto-falantes)
+* **Ciclo típico**:
+  1. Carrega os valores (sensores ou constantes)
+  2. Manipula os dados nas gavetas
+  3. Soma, compara ou decide
+  4. Envia o resultado para o hardware de atuação
+
+---
+
+### 🔍 Exemplo Completo: Como o Z80 soma 7 + 3
+```assembly
+LD A, 7      ; coloca o valor 7 no Acumulador A
+LD B, 3      ; coloca o valor 3 na gaveta B
+ADD A, B     ; soma B ao valor de A (A = A + B)
+OUT (254), A ; joga o resultado (10) para a porta de hardware 254
+```
+**O que acontece fisicamente**:
+1. O escriturário elétrico coloca o valor "7" na gaveta principal A.
+2. Coloca o valor "3" na gaveta de suporte B.
+3. Faz a soma física e grava o resultado acumulado ("10") na própria gaveta A.
+4. Envia o conteúdo da gaveta A para a porta física 254, que pode ser o controle de velocidade de uma esteira ou a frequência de um som.
+
+---
+
 ### 🧠 O que você aprendeu aqui
 - **Registradores**: São gavetas internas de memória ultrarrápida do processador. No Z80, operam com dados de 8 bits (números de 0 a 255).
 - **Instruções de Controle**: `LD` carrega e move informações, enquanto `IN` e `OUT` fazem a interface física direta com os periféricos externos.
 
-### 🎮 Desafio prático
+### 🎮 Desafio prático e guiado
 
-**Nível 1 (Iniciante): O Desenho do Fluxo dos Bits**  
-Desenhe a gaveta do Acumulador A e a gaveta auxiliar B. Indique graficamente para onde o dado flui ao executar sequencialmente as instruções `LD A, 5` e `LD B, A`.
+**Nível 1 (Iniciante): Seu Primeiro Programa em Assembly**  
+Escreva a sequência de instruções em Assembly do Z80 para realizar a seguinte lógica passo a passo:
+1. Coloque o valor 12 na gaveta A.
+2. Copie esse valor para a gaveta B.
+3. Some A + B.
+4. Envia o resultado somado para a porta física 254.
+5. Explique resumidamente o que aconteceu em cada etapa no papel.
 
-**Nível 2 (Avançado): O Loop de Som**  
+**Nível 2 (Avançado): O Loop de Som e a Frequência**  
 Utilizando o código em Assembly do Z80 apresentado no final deste capítulo, explique o que aconteceria com a frequência do som emitido pelo alto-falante se a instrução de atraso de tempo (delay loop) fosse inserida entre a leitura do teclado e o comando `OUT`.
 
 ---
 
-### ✨ Conexão com o próximo capítulo
-Agora que conhecemos os compartimentos onde o Z80 manipula os bytes, precisamos desvendar como esses números se estruturam por dentro. No próximo capítulo, vamos decifrar a lógica binária e hexadecimal, aprendendo a ler e traduzir as combinações numéricas básicas que governam as decisões lógicas das máquinas.
+### ✨ Pergunta-gancho para o próximo capítulo
+Se o Z80 só entende eletricidade e impulsos binários de zeros e uns... como ele consegue traduzir esses números em imagens tridimensionais, sons complexos e movimento físico real? É isso que Alex vai descobrir a seguir.
