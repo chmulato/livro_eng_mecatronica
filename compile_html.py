@@ -778,9 +778,25 @@ def main():
         overlay.addEventListener('click', toggleMenu);
 
         links.forEach(link => {
-            link.addEventListener('click', () => {
-                drawer.classList.remove('open');
-                overlay.classList.remove('show');
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    drawer.classList.remove('open');
+                    overlay.classList.remove('show');
+                    
+                    const offset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    history.pushState(null, null, targetId);
+                }
             });
         });
 
