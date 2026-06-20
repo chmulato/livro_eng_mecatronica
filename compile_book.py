@@ -146,6 +146,7 @@ def parse_markdown_to_story(file_path, cap_index, styles):
     image_name = f"cap{cap_index}.png"
     image_path = os.path.join(IMAGENS_DIR, image_name)
     image_inserted = False
+    is_first_p_of_section = True
 
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -154,6 +155,7 @@ def parse_markdown_to_story(file_path, cap_index, styles):
     
     for block in blocks:
         if block.startswith('```'):
+            is_first_p_of_section = True
             code_lines = block.strip('`').strip().split('\n')
             block_type = code_lines[0].strip() if code_lines else ''
             if block_type == 'diagram':
@@ -213,6 +215,7 @@ def parse_markdown_to_story(file_path, cap_index, styles):
                     if diary_lines:
                         story.append(create_discovery_box(diary_lines, styles))
                         diary_lines = []
+                        is_first_p_of_section = True
                     story.append(Spacer(1, 6))
                     continue
                 
@@ -236,6 +239,7 @@ def parse_markdown_to_story(file_path, cap_index, styles):
                     ]))
                     story.append(t_eq)
                     story.append(Spacer(1, 10))
+                    is_first_p_of_section = True
                     continue
                 
                 is_diary_line = line_str.startswith('*“') or line_str.startswith('“') or line_str.startswith('>') or (diary_lines and not line_str.startswith('#'))
@@ -244,6 +248,8 @@ def parse_markdown_to_story(file_path, cap_index, styles):
                     if diary_lines:
                         story.append(create_discovery_box(diary_lines, styles))
                         diary_lines = []
+                    
+                    is_first_p_of_section = True
                     
                     if line_str.startswith('# '):
                         story.append(Paragraph(line_str[2:], styles['BookTitleStyle']))
@@ -267,6 +273,7 @@ def parse_markdown_to_story(file_path, cap_index, styles):
                             story.append(Image(image_path, width=img_w, height=img_h))
                             story.append(Spacer(1, 15))
                             image_inserted = True
+                            is_first_p_of_section = True
                     elif line_str.startswith('## '):
                         story.append(Paragraph(line_str[3:], styles['SectionHeaderStyle']))
                         story.append(Spacer(1, 8))
@@ -280,6 +287,7 @@ def parse_markdown_to_story(file_path, cap_index, styles):
                         diary_lines = []
                     formatted_line = format_text(line_str[2:])
                     story.append(Paragraph(f"• {formatted_line}", styles['ListItemStyle']))
+                    is_first_p_of_section = True
                 
                 elif is_diary_line:
                     clean_line = line_str.lstrip('>').strip()
@@ -290,11 +298,18 @@ def parse_markdown_to_story(file_path, cap_index, styles):
                         story.append(create_discovery_box(diary_lines, styles))
                         diary_lines = []
                     formatted_line = format_text(line_str)
-                    story.append(Paragraph(formatted_line, styles['NarrativeStyle']))
+                    
+                    if is_first_p_of_section:
+                        story.append(Paragraph(formatted_line, styles['NarrativeFirstStyle']))
+                        is_first_p_of_section = False
+                    else:
+                        story.append(Paragraph(formatted_line, styles['NarrativeStyle']))
+                        
                     story.append(Spacer(1, 6))
             
             if diary_lines:
                 story.append(create_discovery_box(diary_lines, styles))
+                is_first_p_of_section = True
                 
     return story
 
@@ -514,6 +529,17 @@ def main():
         leading=15.5,        # Espaçamento ligeiramente maior para o ritmo narrativo
         textColor=colors.HexColor("#1a1b1d"),
         firstLineIndent=12,  # Indentação clássica de parágrafo literário
+        spaceAfter=5
+    ))
+
+    styles.add(ParagraphStyle(
+        name='NarrativeFirstStyle',
+        parent=styles['Normal'],
+        fontName=FONT_NAME,
+        fontSize=12,
+        leading=15.5,
+        textColor=colors.HexColor("#1a1b1d"),
+        firstLineIndent=0,   # Sem recuo para o primeiro parágrafo
         spaceAfter=5
     ))
 
