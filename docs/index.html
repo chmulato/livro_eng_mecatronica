@@ -749,6 +749,14 @@ OUT (254), A ; joga o resultado (10) para a porta de hardware 254</code></pre>
 <p class="narrative-p">No topo da página, o cabeçalho em itálico trazia a nova ambientação:</p>
 <p class="narrative-p"><em>"Milão, Itália – Inverno de 2001. O dia em que o gigante de aço congelou"</em>.</p>
 <p class="narrative-p">O silêncio úmido de Curitiba parecia ecoar o vazio gélido do galpão italiano de duas décadas atrás.</p>
+<p class="narrative-p">---</p>
+<h3>🗺️ O que você vai aprender neste capítulo</h3>
+<li>O que é uma <strong>Interrupção Não-Mascarável (NMI)</strong></li>
+<li>Por que <strong>Ctrl+Alt+Del</strong> é um gesto elétrico, não mágico</li>
+<li>Como sistemas industriais travam por <strong>memory leak</strong> (vazamento de memória)</li>
+<li>Como o mesmo erro humano conecta 2001 e 2026</li>
+<li>Como reiniciar um sistema é, às vezes, engenharia pura</li>
+<p class="narrative-p">---</p>
 <p class="narrative-p">Alex sorriu sozinho, pensando em como a história de seu mentor pulava de década em década nas páginas daquele diário. Parecia um osciloscópio mal calibrado, onde o sinal elétrico saltava entre épocas sem pedir licença. Ele brincou mentalmente que precisaria ajustar o ganho do canal vertical de sua própria atenção para não sofrer um curto-circuito tentando rastrear a alternância daqueles clocks. No fundo, a eletrônica real era assim: feita de transições abruptas, ruídos de fundo e sincronização rigorosa de pulsos.</p>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“O frio de Milão em janeiro cortava a pele,” dizia o diário.<br/>“Eu estava manobrando empilhadeiras elétricas rápidas no armazém automatizado.<br/>Havia motores trifásicos, correntes pesadas e o estalo de relés de potência constante.”</div>
 <div class="discovery-box"><span class="box-tag">[Diário de Bordo]</span><br/>“De repente, o estrondo metálico de toneladas de carga parando abruptamente ecoou pelas vigas de aço do galpão. O zumbido constante das esteiras silenciou, substituído pelo estalo seco de freios de emergência e pelo cheiro forte de ozônio gerado pelo atrito elétrico. Os gigantescos transelevadores travaram no ar, balançando no vazio. No painel de controle, a tela de fósforo verde piscou e congelou em um brilho fosco e estático. O silêncio que se seguiu pesou como chumbo, quebrado segundos depois pelos gritos histéricos do supervisor Moretti no rádio portátil.”</div>
@@ -758,6 +766,19 @@ OUT (254), A ; joga o resultado (10) para a porta de hardware 254</code></pre>
 <p class="narrative-p">---</p>
 <h3>O Reboot Físico e a Interrupção de Hardware</h3>
 <p class="narrative-p">Ao pressionar Ctrl, Alt e Del simultaneamente, a placa envia um sinal elétrico. Esse sinal é uma Interrupção Não-Mascarável (NMI) direto ao pino do chip. O Z80A é obrigado a parar imediatamente o que está fazendo, sem exceção.</p>
+<pre><code>CPU executando instruções comuns de controle
+                     │
+                     ▼
+             [NMI disparado]
+    (Ctrl + Alt + Del envia sinal no pino físico)
+                     │
+                     ▼
+        A CPU interrompe tudo na hora
+        (limpa as gavetas de registradores)
+                     │
+                     ▼
+      Zera o ponteiro e recomeça da ROM
+         (Endereço físico 0000h)</code></pre>
 <p class="narrative-p">O NMI era o equivalente elétrico de alguém acionar o freio de emergência de um trem de carga em alta velocidade. O pino de interrupção recebia um pulso elétrico direto que forçava um 'tranco' interno imediato nas portas lógicas do chip. Sem chances de argumentação por parte do software, tudo silenciava abruptamente na CPU para que o hardware pudesse recomeçar do zero absoluto. Alex imaginou a centopeia de silício suspirando aliviada ao ser resetada, limpando de suas gavetas metálicas o entulho de dados acumulados que a faziam travar.</p>
 <p class="narrative-p">As gavetas de registradores congestionadas na memória RAM são totalmente limpas. Os ponteiros de instrução voltam para o endereço de início (zero) da ROM. O chip lê as primeiras instruções da BIOS, forçando o reboot completo do sistema.</p>
 <p class="narrative-p">A tela do terminal piscou e exibiu o cursor ativo após o bipe de inicialização. O MS-DOS antigo recarregou o banco de dados e as esteiras começaram a roncar de novo. O gigante de aço acordou de seu transe e Moretti parou de gritar.</p>
@@ -767,19 +788,35 @@ OUT (254), A ; joga o resultado (10) para a porta de hardware 254</code></pre>
 <p class="narrative-p">Alex moderno olhou para a telemetria do robô autônomo AMR. No diário, a anotação técnica detalhava a causa física daquele travamento. O sistema rodava sob o MS-DOS com apenas 640 KB de memória convencional útil.</p>
 <p class="narrative-p">Cada palete ou caixa movimentada no galpão exigia que o software alocasse dinamicamente um bloco de memória RAM para rastrear sua posição. Se o programador esquecesse de liberar explicitamente esse endereço de memória após a caixa ser entregue, aquele espaço ficava indisponível para o sistema.</p>
 <p class="narrative-p">Era o vazamento de memória (<em>Memory Leak</em>). Funcionava exatamente como um furo invisível em um tanque de água: no começo, algumas gotas perdidas não fazem falta, mas com o passar das horas o reservatório seca por completo. Sem memória livre, o processador simplesmente não tinha onde apoiar seus dados de trabalho e congelava.</p>
+<p class="narrative-p">Em C++, o erro clássico de vazamento de memória ocorre assim na prática:</p>
+<pre><code>while (true) {
+    Coordenada* posicao = new Coordenada(); // Aloca dados
+    // erro: esquecemos de dar "delete posicao;" para liberar a RAM
+}</code></pre>
+<p class="narrative-p">Esse é o tipo de erro de código invisível que derrubou Milão em 2001 e que continua paralisando robôs autônomos modernos em 2026 se a pilha estourar.</p>
 <p class="narrative-p">Hoje, em 2026, operando com gigabytes de memória RAM, Alex enfrentava exatamente o mesmo fantasma elétrico. Sentiu uma onda de frustração ao se lembrar da noite anterior, quando o robô AMR 08 começou a andar em círculos erráticos no meio do Setor C, ignorando os comandos de rede até congelar completamente sob o olhar enfurecido de Bianchi, que já ameaçava cortar verbas de manutenção. As câmeras estéreo do robô geravam nuvens de pontos tridimensionais gigantescas que acumulavam lixo na pilha de memória, vazando bytes silenciosamente até exaurir o sistema. O déjà-vu com o diário de seu mentor era assustador: o hardware mudara, mas a falha humana continuava idêntica.</p>
 <p class="narrative-p">Ele havia passado o início do plantão usando ferramentas modernas de diagnóstico em C++, como o <em>Valgrind</em>, caçando vazamentos ocultos como quem busca goteiras sob o teto. A essência do problema era a mesma que Alex Senior resolvera na Itália.</p>
-<p class="narrative-p">A saudação de três dedos salvara o armazém de Milão em 2001. Agora, no silêncio da madrugada de Curitiba, Alex precisava descobrir qual gesto ou linha de código salvaria sua própria infraestrutura em 2026. Ele passou os dedos sobre o diário, pronto para o próximo passo.</p>
+<p class="narrative-p">A saudação de três dedos salvara o armazém de Milão in 2001. Agora, no silêncio da madrugada de Curitiba, Alex precisava descobrir qual gesto ou linha de código salvaria sua própria infraestrutura em 2026. Ele passou os dedos sobre o diário, pronto para o próximo passo.</p>
+<p class="narrative-p">---</p>
+<h3>📦 Resumo Rápido do Capítulo (Mapa Mental)</h3>
+<li><strong>NMI (Interrupção Não-Mascarável)</strong>: Sinal prioritário físico de hardware que interrompe a execução imediata da CPU para reiniciar.</li>
+<li><strong>Ctrl+Alt+Del</strong>: O atalho mecânico que une três chaves para fechar o circuito elétrico que aciona o pino de reset/NMI no hardware.</li>
+<li><strong>Memory Leak</strong>: O acúmulo lento de lixo na memória RAM gerado por programas que alocam dados e esquecem de desalocá-los.</li>
+<li><strong>Queda do Sistema</strong>: Sem RAM livre para gravar temporariamente variáveis de controle, o processador congela de forma irrecuperável.</li>
+<li><strong>Lição</strong>: A capacidade física das memórias aumentou exponencialmente, mas a negligência com o controle de ponteiros em C++ continua a mesma.</li>
 <p class="narrative-p">---</p>
 <h3>🧠 O que você aprendeu aqui</h3>
 <li><strong>Interrupções (NMI)</strong>: Ctrl+Alt+Del aciona um pino físico do processador, forçando um reinício do hardware acima de qualquer instrução de software.</li>
 <li><strong>Memory Leak</strong>: Vazamento de memória ocorre quando dados são alocados no sistema mas não são limpos depois, esgotando a memória convencional útil como um furo lento em um reservatório.</li>
-<h3>🎮 Desafio prático</h3>
-<p class="narrative-p"><strong>O Monitoramento de Memória</strong></p>
-<p class="narrative-p">Escreva um pequeno pseudo-código demonstrando o erro lógico clássico de alocar espaço na memória em um loop infinito sem liberar o ponteiro correspondente.</p>
+<h3>🎮 Desafio prático e guiado</h3>
+<p class="narrative-p"><strong>Desafio Guiado: Caçando Vazamentos de Memória</strong></p>
+<p class="narrative-p">1. Escreva um pseudo-código demonstrando o erro lógico clássico de criar variáveis dinâmicas em loop sem desalocá-las.</p>
+<p class="narrative-p">2. Identifique e escreva qual instrução de limpeza (`delete` ou `free`) resolveria o vazamento.</p>
+<p class="narrative-p">3. Se cada iteração do loop consome 128 bytes de RAM e o microcontrolador antigo possui apenas 64 KB de memória disponível, calcule quantas repetições seriam necessárias para travar o sistema completamente por estouro de pilha.</p>
+<p class="narrative-p">4. Explique por que, mesmo em computadores modernos com gigabytes de memória, um vazamento contínuo em serviços de rede que rodam por meses acabará travando a máquina.</p>
 <p class="narrative-p">---</p>
-<h3>✨ Conexão com o próximo capítulo</h3>
-<p class="narrative-p">Limpar a memória RAM é vital, mas o que acontece quando precisamos conversar diretamente com a máquina em arquivos de configuração? No próximo capítulo, mergulharemos nos conceitos do sistema operacional de disco MS-DOS e entenderemos como organizar diretórios e ler arquivos de hardware usando linhas de comando primitivas.</p>
+<h3>✨ Pergunta-gancho para o próximo capítulo</h3>
+<p class="narrative-p">Milão havia ensinado a Alex Senior a respeitar a memória interna de seus programas. Curitiba ensinaria Alex moderno a respeitar as prioridades de tarefas elétricas concorrentes do sistema operacional. O que acontece quando os sensores e atuadores tentam gritar ao mesmo tempo pelo tempo da CPU? É esse o jogo de controle e filas que desvendaremos a seguir.</p>
         </div>
         
 
