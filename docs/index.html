@@ -241,8 +241,41 @@
 
         /* Capítulos e Seções */
         .chapter-section {
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
             scroll-margin-top: 80px;
+        }
+
+        .next-chapter-container {
+            display: flex;
+            justify-content: center;
+            margin: 4.5rem 0 2rem 0;
+            padding-top: 2.5rem;
+            border-top: 1px dashed var(--border-color);
+        }
+        
+        .next-chapter-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--primary);
+            text-decoration: none;
+            padding: 0.8rem 1.6rem;
+            border-radius: 10px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .next-chapter-link:hover {
+            border-color: var(--primary);
+            background-color: var(--primary-glow);
+            color: #ffffff;
+            transform: translateY(2px);
+            box-shadow: 0 6px 15px rgba(217, 93, 20, 0.2);
         }
 
         .chapter-title {
@@ -510,10 +543,20 @@
     
         <div id="como-estudar" class="chapter-section">
             
+            
+            <div class="next-chapter-container">
+                <a href="#prologo" class="next-chapter-link">Ir para o próximo capítulo: Prólogo: A Centopeia de Silício ⬇️</a>
+            </div>
+            
         </div>
         
 
         <div id="prologo" class="chapter-section">
+            
+            
+            <div class="next-chapter-container">
+                <a href="#cap1" class="next-chapter-link">Ir para o próximo capítulo: Cap. 1: O Menino e a Caixa Preta ⬇️</a>
+            </div>
             
         </div>
         
@@ -526,6 +569,11 @@
 <p class="narrative-p">10 PRINT "Ola Mundo!"</p>
 <p class="narrative-p">20 GOTO 10</p>
 <p class="narrative-p">```</p>
+            
+            <div class="next-chapter-container">
+                <a href="#cap2" class="next-chapter-link">Ir para o próximo capítulo: Cap. 2: A Anatomia do Z80 ⬇️</a>
+            </div>
+            
         </div>
         
 
@@ -588,6 +636,11 @@ OUT (254), A ; joga o resultado (10) para a porta de hardware 254</code></pre>
 <p class="narrative-p">ADD A, B     ; soma B ao valor de A (A = A + B)</p>
 <p class="narrative-p">OUT (254), A ; joga o resultado (10) para a porta de hardware 254</p>
 <p class="narrative-p">```</p>
+            
+            <div class="next-chapter-container">
+                <a href="#cap3" class="next-chapter-link">Ir para o próximo capítulo: Cap. 3: A Lógica do Bit ⬇️</a>
+            </div>
+            
         </div>
         
 
@@ -604,6 +657,11 @@ OUT (254), A ; joga o resultado (10) para a porta de hardware 254</code></pre>
 <p class="narrative-p">1010    →      A      →    10</p>
 <p class="narrative-p">1111    →      F      →    15</p>
 <p class="narrative-p">```</p>
+            
+            <div class="next-chapter-container">
+                <a href="#cap4" class="next-chapter-link">Ir para o próximo capítulo: Cap. 4: A Saudação de Três Dedos no Magazzino ⬇️</a>
+            </div>
+            
         </div>
         
 
@@ -646,6 +704,11 @@ OUT (254), A ; joga o resultado (10) para a porta de hardware 254</code></pre>
 <p class="narrative-p">// erro: esquecemos de dar "delete posicao;" para liberar a RAM</p>
 <p class="narrative-p">}</p>
 <p class="narrative-p">```</p>
+            
+            <div class="next-chapter-container">
+                <a href="#cap5" class="next-chapter-link">Ir para o próximo capítulo: Cap. 5: Sistemas Operacionais Raiz ⬇️</a>
+            </div>
+            
         </div>
         
 
@@ -663,6 +726,11 @@ PC → endereço da ISR (Rotina de Serviço de Interrupção)</code></pre>
 <p class="narrative-p">Stack topo → 0x0042</p>
 <p class="narrative-p">PC → endereço da ISR (Rotina de Serviço de Interrupção)</p>
 <p class="narrative-p">```</p>
+            
+            <div class="next-chapter-container">
+                <a href="#cap6" class="next-chapter-link">Ir para o próximo capítulo: Cap. 6: A Matemática do Espaço ⬇️</a>
+            </div>
+            
         </div>
         
 
@@ -703,11 +771,21 @@ def verificar_colisao(pos_nova, dim_nova, pos_existentes, dim_existentes):
 <p class="narrative-p">return True # Colisão detectada!</p>
 <p class="narrative-p">return False # Espaço livre</p>
 <p class="narrative-p">```</p>
+            
+            <div class="next-chapter-container">
+                <a href="#cap7" class="next-chapter-link">Ir para o próximo capítulo: Cap. 7: As Formigas Elétricas ⬇️</a>
+            </div>
+            
         </div>
         
 
         <div id="cap7" class="chapter-section">
             <img src="imagens/cap7.png" alt="Ilustração do Capítulo 7" class="chapter-image">
+            
+            <div class="next-chapter-container">
+                <a href="#cap8" class="next-chapter-link">Ir para o próximo capítulo: Cap. 8: O Cérebro do Robô ⬇️</a>
+            </div>
+            
         </div>
         
 
@@ -749,6 +827,11 @@ struct FiltroKalman {
 <p class="narrative-p">}</p>
 <p class="narrative-p">};</p>
 <p class="narrative-p">```</p>
+            
+            <div class="next-chapter-container">
+                <a href="#cap9" class="next-chapter-link">Ir para o próximo capítulo: Cap. 9: A Pilha de Código Moderna ⬇️</a>
+            </div>
+            
         </div>
         
 
@@ -816,6 +899,11 @@ private:
 <p class="narrative-p">rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr assinatura_;</p>
 <p class="narrative-p">};</p>
 <p class="narrative-p">```</p>
+            
+            <div class="next-chapter-container">
+                <a href="#cap10" class="next-chapter-link">Ir para o próximo capítulo: Cap. 10: A Equação do Almoxarifado ⬇️</a>
+            </div>
+            
         </div>
         
 
@@ -858,11 +946,21 @@ def otimizar_alocacao(itens, capacidade_nicho=100):
 <p class="narrative-p">alocacao.append((item, f"Nicho {len(nichos)}"))</p>
 <p class="narrative-p">return alocacao, nichos</p>
 <p class="narrative-p">```</p>
+            
+            <div class="next-chapter-container">
+                <a href="#cap11" class="next-chapter-link">Ir para o próximo capítulo: Cap. 11: A Elite do Atraso ⬇️</a>
+            </div>
+            
         </div>
         
 
         <div id="cap11" class="chapter-section">
             <img src="imagens/cap11.png" alt="Ilustração do Capítulo 11" class="chapter-image">
+            
+            <div class="next-chapter-container">
+                <a href="#cap12" class="next-chapter-link">Ir para o próximo capítulo: Cap. 12: A Engenharia do Pix e do Bloco ⬇️</a>
+            </div>
+            
         </div>
         
 
@@ -895,11 +993,21 @@ hash_original = gerar_hash_transacao("Alex", "UTFPR", 150.00, "chave_secreta_123
 <p class="narrative-p">return hashlib.sha256(string_dados).hexdigest()</p>
 <p class="narrative-p">hash_original = gerar_hash_transacao("Alex", "UTFPR", 150.00, "chave_secreta_123")</p>
 <p class="narrative-p">```</p>
+            
+            <div class="next-chapter-container">
+                <a href="#cap13" class="next-chapter-link">Ir para o próximo capítulo: Cap. 13: A Rebeldia da Mecatrônica ⬇️</a>
+            </div>
+            
         </div>
         
 
         <div id="cap13" class="chapter-section">
             <img src="imagens/cap13.png" alt="Ilustração do Capítulo 13" class="chapter-image">
+            
+            <div class="next-chapter-container">
+                <a href="#apendice-a" class="next-chapter-link">Ir para o próximo capítulo: Apêndice A: Glossário de Engenharia e Automação ⬇️</a>
+            </div>
+            
         </div>
         
 
@@ -960,6 +1068,11 @@ hash_original = gerar_hash_transacao("Alex", "UTFPR", 150.00, "chave_secreta_123
 <p class="narrative-p">if verificar_colisao(pos_nova, dim_nova, pos_existentes, dim_existentes):</p>
 <p class="narrative-p">procurar_proximo_nicho()</p>
 <p class="narrative-p">```</p>
+            
+            <div class="next-chapter-container">
+                <a href="#apendice-b" class="next-chapter-link">Ir para o próximo capítulo: Apêndice B: Guia do Jovem Mecatrônico ⬇️</a>
+            </div>
+            
         </div>
         
 
@@ -1180,6 +1293,11 @@ graph TD
 <p class="narrative-p">else:</p>
 <p class="narrative-p">print("[SUCESSO] Espaço livre de colisões.")</p>
 <p class="narrative-p">```</p>
+            
+            <div class="next-chapter-container">
+                <a href="#apendice-c" class="next-chapter-link">Ir para o próximo capítulo: Apêndice C: Galeria de Arte e Prompts de Inteligência Artificial ⬇️</a>
+            </div>
+            
         </div>
         
 
@@ -1240,6 +1358,7 @@ graph TD
 <p class="narrative-p">```</p>
 <p class="narrative-p">A proud young engineer standing on a high steel mezzanine inside a modern warehouse, looking through a large glass window at a bright, sunny Curitiba skyline. The engineer is holding a small retro Z80A chip in their hand, catching the golden sun rays. Rebellious and hopeful atmosphere, cinematic.</p>
 <p class="narrative-p">```</p>
+            
         </div>
         
     </div>

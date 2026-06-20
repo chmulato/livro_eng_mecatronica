@@ -380,8 +380,41 @@ def main():
 
         /* Capítulos e Seções */
         .chapter-section {
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
             scroll-margin-top: 80px;
+        }
+
+        .next-chapter-container {
+            display: flex;
+            justify-content: center;
+            margin: 4.5rem 0 2rem 0;
+            padding-top: 2.5rem;
+            border-top: 1px dashed var(--border-color);
+        }
+        
+        .next-chapter-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--primary);
+            text-decoration: none;
+            padding: 0.8rem 1.6rem;
+            border-radius: 10px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .next-chapter-link:hover {
+            border-color: var(--primary);
+            background-color: var(--primary-glow);
+            color: #ffffff;
+            transform: translateY(2px);
+            box-shadow: 0 6px 15px rgba(217, 93, 20, 0.2);
         }
 
         .chapter-title {
@@ -611,33 +644,31 @@ def main():
             <li><a href="#cover" class="active">Capa & Dedicatória</a></li>
 """
     
-    # 2. Ler os capítulos para criar o menu na barra lateral
+    # 2. Ler os capítulos para criar o menu na barra lateral e mapear slugs antecipadamente
     capitulos = sorted([f for f in os.listdir(CAPITULOS_DIR) if f.endswith('.md')])
     
+    chapter_slugs = []
+    chapter_labels = []
     menu_items = []
-    chapters_content = []
     
     for idx, cap in enumerate(capitulos, start=1):
         cap_path = os.path.join(CAPITULOS_DIR, cap)
-        
         with open(cap_path, 'r', encoding='utf-8') as f:
             first_line = f.readline().strip().lstrip('#').strip()
             
         clean_title = first_line.split(':')[-1].strip() if ':' in first_line else first_line
         
-        # Determinar Slug, Label e nome de imagem com base no tipo de título
+        # Determinar Slug e Label com base no tipo de título
         if "Capítulo" in first_line:
             match = re.search(r'Capítulo\s+(\d+)', first_line)
             num = int(match.group(1)) if match else idx
             slug = f"cap{num}"
             label = f"Cap. {num}: {clean_title}"
-            img_name = f"cap{num}.png"
         elif "Apêndice" in first_line:
             match = re.search(r'Apêndice\s+([A-Z])', first_line)
             letra = match.group(1) if match else "A"
             slug = f"apendice-{letra.lower()}"
             label = f"Apêndice {letra}: {clean_title}"
-            img_name = None
         else:
             if "Estudar" in first_line:
                 slug = "como-estudar"
@@ -646,10 +677,27 @@ def main():
             else:
                 slug = cap.replace('.md', '').replace('00_', '').replace('_', '-')
             label = first_line
-            img_name = None
-        
+            
+        chapter_slugs.append(slug)
+        chapter_labels.append(label)
         menu_items.append(f'            <li><a href="#{slug}">{label}</a></li>')
         
+    chapters_content = []
+    
+    for idx, cap in enumerate(capitulos):
+        slug = chapter_slugs[idx]
+        label = chapter_labels[idx]
+        cap_path = os.path.join(CAPITULOS_DIR, cap)
+        
+        # Descobrir se há imagem
+        img_name = None
+        with open(cap_path, 'r', encoding='utf-8') as f:
+            first_line = f.readline().strip().lstrip('#').strip()
+        if "Capítulo" in first_line:
+            match = re.search(r'Capítulo\s+(\d+)', first_line)
+            num = int(match.group(1)) if match else (idx + 1)
+            img_name = f"cap{num}.png"
+            
         with open(cap_path, 'r', encoding='utf-8') as f:
             body = f.read()
             
@@ -663,10 +711,22 @@ def main():
                 formatted_body = parts[0] + "</h1>\n" + img_html + parts[1]
             else:
                 formatted_body = img_html + formatted_body
+                
+        # Gerar link para o próximo capítulo para fluxo linear contínuo agradável
+        next_link_html = ""
+        if idx < len(chapter_slugs) - 1:
+            next_slug = chapter_slugs[idx + 1]
+            next_label = chapter_labels[idx + 1]
+            next_link_html = f"""
+            <div class="next-chapter-container">
+                <a href="#{next_slug}" class="next-chapter-link">Ir para o próximo capítulo: {next_label} ⬇️</a>
+            </div>
+            """
             
         chapter_html = f"""
         <div id="{slug}" class="chapter-section">
             {formatted_body}
+            {next_link_html}
         </div>
         """
         chapters_content.append(chapter_html)
