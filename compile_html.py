@@ -53,6 +53,7 @@ def format_markdown_to_html(content):
                 formatted_blocks.append(diagram_html)
             else:
                 formatted_blocks.append(f'<pre><code>{clean_code}</code></pre>')
+        else:
             # Processar bloco de equações centralizado ($$) antes do inline ($)
             def convert_latex_to_html_local(math_text):
                 math_text = math_text.replace(r'\approx', '≈')
