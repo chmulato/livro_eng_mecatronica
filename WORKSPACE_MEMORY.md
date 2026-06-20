@@ -6,50 +6,37 @@ Este documento registra o estado atual do projeto, a arquitetura do compilador, 
 
 ## 📈 1. Resumo das Últimas Alterações Realizadas
 
-### 🧮 Renderização Avançada de Fórmulas Matemáticas (PDF)
-* **Problema:** Fórmulas escritas em notação LaTeX (como `$c \approx 3 \times 10^8 \text{ m/s}$` e `$$d = \frac{c \cdot t}{2}$$`) estavam sendo impressas em texto cru no PDF, pois o ReportLab não possui renderizador de fórmulas nativo.
-* **Solução:** O script [compile_book.py](file:///d:/onedrive/outros/workspace_book/compile_book.py) agora:
-  1. Detecta e intercepta fórmulas LaTeX inline (`$...$`) e em bloco (`$$...$$`).
-  2. Traduz a simbologia LaTeX para marcação HTML nativa aceita pelo ReportLab (ex: `\approx` vira `≈`, `\times` vira `×`, superscripts viram `<sup>`, frações simples como `\frac{A}{B}` viram `(A) / B` e variáveis isoladas são automaticamente italicizadas com `<i>`).
-  3. Adiciona o estilo `EquationStyle` para centralizar equações em bloco (`$$`), tornando a apresentação matemática limpa, legível e profissional.
+### 🖼️ Geração e Inserção Completa de Ilustrações (HTML & PDF)
+*   **Melhoria:** Criação de ilustrações para todos os capítulos restantes do livro (`cap4.png` a `cap13.png`), mantendo consistência absoluta com os prompts estipulados no guia visual (`prompts_ilustracoes.md`).
+*   **Estilo Visual:** Design de arte conceitual Tech-Noir Industrial com tons frios de azul cobalto e poeira industrial contrastando com pontos de energia quentes em laranja e amarelo neon.
 
-### 🟢 Correção e Alinhamento Dinâmico dos Quadros Verdes (PDF)
-* **Problema:** Tags de quebra de linha `<br/>` expostas textualmente nos quadros verdes do PDF e diagramas de texto/código sofrendo quebra automática indesejada (*word wrapping*), descaracterizando e desalinhando os diagramas ASCII (como no mapa mental do Capítulo 15). Caracteres Unicode (setas e conectores) exibidos como quadrados devido a limitações de fonte do ReportLab.
-* **Solução:** O script [compile_book.py](file:///d:/onedrive/outros/workspace_book/compile_book.py) agora:
-  1. Registra e utiliza a fonte TrueType do sistema Windows `Courier New` (`cour.ttf`) para o estilo de código `CodeStyle`, garantindo suporte completo aos caracteres Unicode.
-  2. Executa a substituição/escape especial do HTML linha por linha *antes* de unir com `<br/>`, impedindo o escape indevido da tag de quebra.
-  3. Calcula o tamanho da fonte (`fontSize` e `leading`) de cada bloco dinamicamente baseado na linha mais longa, impedindo quebras de linha automáticas e mantendo os diagramas perfeitamente alinhados na página A5.
+### 🌉 Ajuste de Transições e Fórmulas Matemáticas no HTML
+*   **Melhoria:** Adaptação da lógica de renderização matemática baseada em LaTeX simples também no arquivo `compile_html.py` (antes restrita apenas ao PDF). As equações em bloco (`$$`) e termos matemáticos inline (`$`) agora são renderizados com tags HTML compatíveis, exibindo símbolos de forma adequada e limpa no navegador.
+*   **Estilização Lousa Verde:** A folha de estilos CSS do HTML agora recria a estética de lousas verdes escolares com molduras de madeira de 5px, sombras projetadas e fontes de giz mono-espaçadas para equações e códigos.
 
-### 🖼️ Ajuste de Escalonamento e Proporção de Imagens (PDF)
-* **Problema:** As imagens quadradas (`1024x1024` px) da capa e dos capítulos estavam sendo deformadas/esticadas no PDF devido a proporções fixadas estaticamente no código (`2:3` na capa e `16:9` nos capítulos).
-* **Solução:** O script [compile_book.py](file:///d:/onedrive/outros/workspace_book/compile_book.py) agora usa a biblioteca `Pillow` (`PIL.Image`) para carregar a imagem em tempo de execução, calcular seu aspect ratio real (`altura / largura`) e aplicar o escalonamento proporcional dentro de limites de segurança de largura e altura da página A5, evitando qualquer distorção visual.
+### 📄 Regras de Formatação e Recuo de Parágrafos (Padrão Editorial)
+*   **Melhoria:** Correção de incongruências gráficas na indentação de romances.
+    *   **PDF:** Criação do estilo `NarrativeFirstStyle` (com recuo `0`) aplicado automaticamente ao primeiro parágrafo de cada capítulo ou seção após cabeçalhos (`h1`, `h2`, `h3`), imagens, lousas e listagens. Parágrafos subsequentes mantêm o recuo literário padrão de `12pt`.
+    *   **HTML:** Implementação de seletores de CSS avançados de irmão adjacente (`h2 + .narrative-p`, `pre + .narrative-p`) para remover o recuo do primeiro parágrafo de texto e manter `text-indent: 18px` nos seguintes.
 
-### 🧭 Correção na Navegação do Menu Lateral (HTML)
-* **Problema:** O menu do [index.html](file:///d:/onedrive/outros/workspace_book/docs/index.html) gerava links genéricos (`#cap1`, `#cap2`...) sequencialmente sem considerar se o arquivo era uma introdução, um capítulo numerado ou um apêndice. Isso desalinhava o menu com a numeração real interna do livro.
-* **Solução:** O script [compile_html.py](file:///d:/onedrive/outros/workspace_book/compile_html.py) agora analisa dinamicamente os títulos. Ele mapeia slugs amigáveis (`#como-estudar`, `#prologo`), capítulos reais (`#cap1` a `#cap13`) e apêndices (`#apendice-a`, `#apendice-b`), alinhando o menu do drawer lateral com as imagens e os IDs dos elementos.
+### ⏱️ Transições Suaves e Navegação Otimizada (HTML)
+*   **Melhoria:** Adição de `scroll-behavior: smooth` e `scroll-padding-top: 80px` nas folhas de estilo globais do HTML compilado, permitindo navegação fluida pelos tópicos do menu lateral (Drawer) sem sobrepor títulos por baixo da barra fixa superior.
 
-### 📄 Sumário Dinâmico e Alinhado (Compilação em Duas Passadas no PDF)
-* **Problema:** O sumário do PDF tinha números de página estáticos (`page_numbers`). Alterações de texto ou de tamanho de imagem quebravam o sumário de forma silenciosa.
-* **Solução:** Implementação de um sistema de duas passadas utilizando a classe de fluxo invisível `PageTracker` (derivada de `Flowable`). O script roda o `doc.build()` uma primeira vez para capturar a página real onde cada capítulo começa e, na segunda passada, constrói o sumário final 100% atualizado e alinhado com o rodapé.
-
-### ✍️ Refinamento de Conteúdo nos Capítulos & Apêndices
-* **Capítulo 5:** Melhorada a explicação conceitual de IRQ/NMI e inserido diagrama ASCII da Stack. A narrativa do alarme real foi expandida para espelhar a dinâmica do Program Counter ($PC$) sendo salvo na pilha.
-* **Capítulo 6:** Inserido diagrama de colisão booleana ASCII na camada $Z=0$, explicação de Bin Packing/First Fit e enriquecida a tensão do prazo de 24h em Milão e a proximidade física do robô AMR 12.
-* **Capítulo 13:** Escrito por completo. Resolve todos os arcos: o arco narrativo de Alex moderno e de Alex Senior (com a carta oculta final de dedicatória), o arco técnico (ligando o Z80A ao AMR 12 em uma linha evolutiva contínua), e o arco social (engenharia prática brasileira contra o rentismo de mercado).
-* **Apêndice A (Glossário):** Transformado em "Manual de Campo", contendo ícones temáticos, tags de referência cruzada, equações, analogias e micro-diagramas lógicos (Stack, Ponte H, PWM, Matriz Booleana).
-* **Apêndice B (Guia Mecatrônico):** Expandido com trilhas de estudo estruturadas (do básico ao ROS 2), laboratórios detalhados com códigos práticos em Python e C++ (PWM, Encoders, Colisão, etc.), conselhos emocionais de faculdade e dicas para montar portfólio de carreira.
+### 🎨 Inclusão do Apêndice C: Galeria de Arte e Prompts de IA
+*   **Melhoria:** Criação do arquivo [16_galeria_arte.md](file:///d:/onedrive/outros/workspace_book/capitulos/16_galeria_arte.md) para atuar como o **Apêndice C**. Este documento atua de forma lúdica revelando as descrições em português e os prompts em inglês que originaram a identidade visual e ilustrações do livro, alinhado à filosofia didática de "abrir a caixa preta".
 
 ---
 
 ## 🛠️ 2. Arquitetura e Estrutura do Projeto
 
-* `/capitulos/`: Contém os arquivos fontes em Markdown (`.md`) ordenados alfabética e numericamente.
-* `/imagens/`: Contém as ilustrações do livro (`capa.png` e `cap1.png` a `cap3.png`).
-* `/docs/`: Destino de saída compilado. O GitHub Pages aponta para este diretório.
-  * `/docs/index.html`: Versão de página única Mobile-First responsiva.
-  * `/docs/romance_instrutivo.pdf`: Versão diagramada A5.
-* [compile_book.py](file:///d:/onedrive/outros/workspace_book/compile_book.py): Compilador PDF baseado em Python e ReportLab.
-* [compile_html.py](file:///d:/onedrive/outros/workspace_book/compile_html.py): Compilador HTML que converte Markdown em HTML responsivo.
+*   `/capitulos/`: Contém os arquivos fontes em Markdown (`.md`) ordenados alfabética e numericamente.
+*   `/imagens/`: Contém as ilustrações do livro (`capa.png` e `cap1.png` a `cap13.png`).
+*   `/docs/`: Destino de saída compilado. O GitHub Pages aponta para este diretório.
+    *   `/docs/imagens/`: Cópia espelhada dos assets visuais para consumo do arquivo HTML.
+    *   `/docs/index.html`: Versão de página única Mobile-First responsiva.
+    *   `/docs/romance_instrutivo.pdf`: Versão diagramada A5.
+*   [compile_book.py](file:///d:/onedrive/outros/workspace_book/compile_book.py): Compilador PDF baseado em Python e ReportLab.
+*   [compile_html.py](file:///d:/onedrive/outros/workspace_book/compile_html.py): Compilador HTML que converte Markdown em HTML responsivo.
 
 ---
 
@@ -80,7 +67,8 @@ git push
 
 ## 📝 4. Diretrizes Editoriais e de Estilo para Futuras IAs
 
-1. **Tom de Voz:** Conversacional, prático, motivador e instigante. A matemática e a computação de baixo nível devem ser tratadas como "ferramentas de controle do mundo real" para solucionar problemas práticos, nunca como decoreba acadêmica teórica.
-2. **Uso de Imagens no PDF:** Nunca force dimensões estáticas esticadas nas imagens. Sempre use o cálculo dinâmico com Pillow para preservar a proporção de aspecto nativa.
-3. **Cálculo de Páginas:** Sempre compile em duas passadas para garantir que o sumário dinâmico reflita a página real dos capítulos.
-4. **Fiel ao Continuum Tecnológico:** Mantenha sempre a analogia que cruza as eras do Z80 (baixo nível físico/eletricidade) e dos robôs autônomos modernos controlados por ROS 2 e SLAM. A tecnologia deve ser explicada como o mesmo fenômeno em escalas diferentes.
+1.  **Tom de Voz:** Conversacional, prático, motivador e instigante. A matemática e a computação de baixo nível devem ser tratadas como "ferramentas de controle do mundo real" para solucionar problemas práticos, nunca como decoreba acadêmica teórica.
+2.  **Uso de Imagens no PDF:** Nunca force dimensões estáticas esticadas nas imagens. Sempre use o cálculo dinâmico com Pillow para preservar a proporção de aspecto nativa.
+3.  **Cálculo de Páginas:** Sempre compile em duas passadas para garantir que o sumário dinâmico reflita a página real dos capítulos.
+4.  **Recuo de Romance:** Mantenha sempre a regra de recuo nulo para o parágrafo inicial que sucede qualquer cabeçalho ou caixa especial de código e recuo padrão para os subsequentes.
+5.  **Fiel ao Continuum Tecnológico:** Mantenha sempre a analogia que cruza as eras do Z80 (baixo nível físico/eletricidade) e dos robôs autônomos modernos controlados por ROS 2 e SLAM. A tecnologia deve ser explicada como o mesmo fenômeno em escalas diferentes.
