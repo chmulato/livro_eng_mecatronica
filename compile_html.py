@@ -53,11 +53,35 @@ def format_markdown_to_html(content):
                 formatted_blocks.append(diagram_html)
             else:
                 formatted_blocks.append(f'<pre><code>{clean_code}</code></pre>')
-        else:
-            # Bloco de texto comum
+            # Processar bloco de equações centralizado ($$) antes do inline ($)
+            def convert_latex_to_html_local(math_text):
+                math_text = math_text.replace(r'\approx', '≈')
+                math_text = math_text.replace(r'\times', '×')
+                math_text = math_text.replace(r'\cdot', '·')
+                math_text = re.sub(r'\\vec\{(.*?)\}', r'\1', math_text)
+                math_text = math_text.replace(r'\vec', '')
+                math_text = math_text.replace(r'\text{ m/s}', ' m/s')
+                math_text = math_text.replace(r'\text{m/s}', ' m/s')
+                math_text = math_text.replace(r'\text', '')
+                math_text = re.sub(r'\\frac\{(.*?)\}\{(.*?)\}', r'(\1) / \2', math_text)
+                math_text = re.sub(r'\^\{(.*?)\}', r'<sup>\1</sup>', math_text)
+                math_text = re.sub(r'\^(.)', r'<sup>\1</sup>', math_text)
+                def italicize_vars(m):
+                    var = m.group(0)
+                    if var.lower() in ['m', 's', 'sec']:
+                        return var
+                    return f"<i>{var}</i>"
+                math_text = re.sub(r'\b(PC|Efe|[a-zA-BD-Z])\b', italicize_vars, math_text)
+                return math_text
+
             block = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', block)
             block = re.sub(r'\*(.*?)\*', r'<em>\1</em>', block)
-            block = block.replace("$$", "").replace("$", "")
+            
+            # Converter equações em bloco: $$equation$$ -> <div class="html-equation">equation</div>
+            block = re.sub(r'\$\$(.*?)\$\$', lambda m: f'<div class="html-equation">{convert_latex_to_html_local(m.group(1))}</div>', block)
+            # Converter equações inline: $equation$ -> <span class="html-math">equation</span>
+            block = re.sub(r'\$(.*?)\$', lambda m: f'<span class="html-math">{convert_latex_to_html_local(m.group(1))}</span>', block)
+            
             
             lines = block.split('\n')
             for line in lines:
@@ -453,6 +477,32 @@ def main():
             font-family: 'Fira Code', monospace;
             font-size: 0.82rem;
             color: #e2f3e8; /* Texto de giz esverdeado */
+        }
+
+        /* Equações e Expressões Matemáticas no HTML */
+        .html-equation {
+            background-color: #132e1c;
+            border: 5px solid #4a2f13; /* Moldura de madeira */
+            border-radius: 4px;
+            padding: 1rem;
+            text-align: center;
+            margin: 1.8rem auto;
+            color: #fffae0; /* Texto cor de giz */
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4), inset 0 0 15px rgba(0,0,0,0.6);
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        .html-math {
+            font-family: 'Fira Code', monospace;
+            color: #fffae0;
+            background-color: #1a3c26;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.88rem;
+            border: 1px dashed rgba(255, 250, 224, 0.3);
         }
 
         /* Imagens dos Capítulos */
