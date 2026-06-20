@@ -79,4 +79,4 @@ Estava pronto para ler o último capítulo e compreender o manifesto final de Al
 Rode o código Python acima alterando o valor do saldo da transação e verifique como a cadeia de caracteres Hash de saída muda de forma catastrófica a cada digitação.
 
 ### ✨ Pergunta-gancho para o próximo capítulo
-A quebra do pedágio e a circulação instantânea de dados financeiros pavimentavam um novo caminho tecnológico. Mas o que acontece quando unimos todos os pedaços de nossa jornada no silêncio do galpão de Curitiba? Qual o manifesto final e as lições herdadas da rebeldia da mecatrônica para a nossa geração de criadores? É essa a conclusão e a nossa chamada de resistência que uniremos a seguir.
+A quebra do pedágio e a circulação instantânea de dados financeiros pavimentavam um novo caminho tecnológico. Mas o que acontece quando unimos todos os pedaços de nossa jornada no silêncio do galpão de Curitiba? Qual o manifesto final que acenderá as últimas fogueiras da resistência? É essa a conclusão e a nossa chamada de criação que buscaremos sob a luz dourada do entardecer.

@@ -1,6 +1,6 @@
 # Apêndice A: Glossário de Engenharia e Automação
 
-Bem-vindo ao **Manual de Campo Mecatrônico**. Este glossário não é apenas uma lista alfabética de definições: é uma ferramenta prática de campo projetada para conectar o hardware clássico de 1986 à robótica moderna de 2026. 
+A caixa preta está aberta. Bem-vindo ao seu **Manual de Campo Mecatrônico**. Este glossário não é apenas uma lista alfabética de definições: é uma ferramenta prática de campo projetada para conectar o hardware clássico de 1986 à robótica moderna de 2026. 
 
 ---
 

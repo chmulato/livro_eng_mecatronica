@@ -51,4 +51,4 @@ Escreva a sua própria primeira página de diário técnico. Identifique um prob
 ### ✨ Chamado Final
 *Chegamos ao fim da jornada de A Rebeldia da Mecatrônica. Mantenha os registradores limpos, os compiladores ativos e a mente inconformada.*
 
-**Agora é a sua vez de abrir a caixa preta.**
+**Agora é a sua vez de abrir a caixa preta e carregar o seu próprio manual de campo.**
