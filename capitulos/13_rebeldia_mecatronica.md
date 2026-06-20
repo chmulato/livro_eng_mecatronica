@@ -37,6 +37,23 @@ Alex moderno caminhou em direção à saída do galpão sob a luz do anoitecer. 
 
 ---
 
+### O Legado da Lousa Verde
+
+Anos mais tarde, o laboratório de desenvolvimento do galpão continuava a abrigar a velha lousa verde onde os primeiros esquemas de interrupção e registradores foram desenhados com giz. Novos engenheiros e estagiários passavam pelas bancadas, agora repletas de kits de desenvolvimento modernos, processadores multinúcleo e sistemas de visão computacional baseados em inteligência artificial. No entanto, no canto da lousa, preservada sob uma camada de verniz transparente, permanecia a fórmula clássica do Filtro de Kalman e o diagrama de conexões do velho chip Z80.
+
+Alex, agora um engenheiro sênior orientando a nova geração, costumava parar diante da lousa quando os sistemas pareciam complexos demais ou as simulações falhavam. Thiago, liderando a pesquisa de desenvolvimento de robótica móvel, costumava lembrar seus orientandos de que o maior erro de um engenheiro moderno é confiar cegamente na abstração sem compreender o pulso elétrico que a sustenta.
+
+O livro didático que eles escreveram a partir daquelas anotações do diário de Alex Senior tornou-se o manual padrão de treinamento da equipe. Não apenas por explicar as equações de controle ou os registradores de estado, mas por ensinar que a engenharia de controle e automação é, em sua essência, a arte de domar o caos físico com a precisão do pensamento lógico.
+
+Na última página daquele manual de campo, que passou de mão em mão por gerações de novos técnicos, havia uma inscrição que resumia toda a jornada da mecatrônica rebelde:
+
+> *"O silício é apenas areia organizada. O metal é apenas rocha refinada. O que lhes dá vida não é a corrente elétrica que os atravessa, mas a audácia humana de projetar ordem onde a natureza deixou o acaso."*
+
+E nas telas dos terminais do galpão, o cursor continuava a piscar, verde e persistente, aguardando a próxima linha de comando que mudaria o mundo real.
+
+---
+
+
 ### 🧠 O que você aprendeu aqui
 - **A Engenharia como Continuum**: A tecnologia de hardware e software é uma evolução histórica contínua de lógica e teimosia humana, ligando 1986 a 2026.
 - **A Essência da Mecatrônica**: Bits são a matéria-prima da civilização digital. Todo engenheiro é um tradutor físico entre a luz de um sensor e o movimento de uma máquina.
