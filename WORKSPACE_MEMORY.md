@@ -72,3 +72,20 @@ git push
 3.  **Cálculo de Páginas:** Sempre compile em duas passadas para garantir que o sumário dinâmico reflita a página real dos capítulos.
 4.  **Recuo de Romance:** Mantenha sempre a regra de recuo nulo para o parágrafo inicial que sucede qualquer cabeçalho ou caixa especial de código e recuo padrão para os subsequentes.
 5.  **Fiel ao Continuum Tecnológico:** Mantenha sempre a analogia que cruza as eras do Z80 (baixo nível físico/eletricidade) e dos robôs autônomos modernos controlados por ROS 2 e SLAM. A tecnologia deve ser explicada como o mesmo fenômeno em escalas diferentes.
+
+---
+
+## 🔮 5. Perspectivas e Diretrizes para Evoluções Didáticas Futuras
+
+Para edições ou desdobramentos futuros, as seguintes melhorias didáticas são recomendadas para enriquecer a experiência de aprendizado do leitor:
+
+1.  **Laboratórios Interativos Virtuais (Simulação Web):**
+    *   *Objetivo:* Embutir simuladores ou pequenos compiladores interativos baseados em Javascript/WebAssembly (Wasm) diretamente na página web (`docs/index.html`).
+    *   *Sugestão:* Permitir que o leitor manipule e teste portas lógicas básicas (Capítulo 3) ou escreva pequenos blocos de Z80 Assembly e veja o estado dos registradores mudando visualmente na própria lousa digital do livro.
+2.  **Notas de Bordo com Mapeamento Conceitual Visual:**
+    *   *Objetivo:* Facilitar a visualização da árvore de dependências conceituais.
+    *   *Sugestão:* Adicionar pequenos diagramas de fluxos (ASCII ou SVG leve) que mapeiam visualmente os tópicos do Manual de Campo que estão ativos ou são fundamentais para o trecho da narrativa em leitura.
+3.  **Exercícios de Engenharia Crítica e Geopolítica:**
+    *   *Objetivo:* Estimular discussões extracurriculares sobre o papel social da engenharia técnica.
+    *   *Sugestão:* Criar um apêndice extra com debates estruturados ou desafios sobre soberania tecnológica, investimento de capital em desenvolvimento nacional vs. rentismo financeiro (conectando as tensões dos Capítulos 11 e 13).
+
