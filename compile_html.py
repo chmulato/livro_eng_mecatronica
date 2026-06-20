@@ -378,66 +378,10 @@ def main():
             padding: 0 10px;
         }
 
-        /* Capítulos e Seções em Formato de Livro (Paginação) */
-        .chapter-section, .cover-section {
-            display: none;
-        }
-
-        .chapter-section.active-page, .cover-section.active-page {
-            display: block;
-            animation: pageFadeIn 0.35s ease-out;
-        }
-
-        @keyframes pageFadeIn {
-            from { opacity: 0; transform: translateY(12px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
+        /* Capítulos e Seções */
         .chapter-section {
-            margin-bottom: 2rem;
-        }
-
-        .page-navigation-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 3.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .nav-page-btn {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            color: var(--text-color);
-            padding: 0.6rem 1.2rem;
-            border-radius: 8px;
-            font-family: 'Outfit', sans-serif;
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .nav-page-btn:hover:not(:disabled) {
-            background-color: var(--primary);
-            border-color: var(--primary);
-            transform: translateY(-1px);
-        }
-
-        .nav-page-btn:disabled {
-            opacity: 0.35;
-            cursor: not-allowed;
-        }
-
-        .page-progress-text {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-family: 'Outfit', sans-serif;
-            font-weight: 500;
+            margin-bottom: 4rem;
+            scroll-margin-top: 80px;
         }
 
         .chapter-title {
@@ -754,12 +698,6 @@ def main():
     html_chapters_joined = "\n".join(chapters_content)
     
     html_end = """
-        <!-- Rodapé de Navegação do Livro -->
-        <div class="page-navigation-footer">
-            <button id="prevPageBtn" class="nav-page-btn">⬅️ Anterior</button>
-            <span id="pageProgressIndicator" class="page-progress-text">Carregando...</span>
-            <button id="nextPageBtn" class="nav-page-btn">Próximo ➡️</button>
-        </div>
     </div>
 
     <script>
@@ -768,14 +706,7 @@ def main():
         const drawer = document.getElementById('drawer');
         const overlay = document.getElementById('overlay');
         const links = document.querySelectorAll('.nav-drawer a');
-        
-        // Selecionar apenas seções válidas: a capa e os capítulos
-        const sections = document.querySelectorAll('.content-container > .cover-section, .content-container > .chapter-section');
-        const prevPageBtn = document.getElementById('prevPageBtn');
-        const nextPageBtn = document.getElementById('nextPageBtn');
-        const pageProgressIndicator = document.getElementById('pageProgressIndicator');
-
-        const sectionsArray = Array.from(sections);
+        const sections = document.querySelectorAll('.content-container > div, .content-container > .chapter-section');
 
         function toggleMenu() {
             drawer.classList.toggle('open');
@@ -786,91 +717,28 @@ def main():
         overlay.addEventListener('click', toggleMenu);
 
         links.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href').replace('#', '');
-                showChapter(targetId);
+            link.addEventListener('click', () => {
                 drawer.classList.remove('open');
                 overlay.classList.remove('show');
             });
         });
 
-        function showChapter(targetId) {
-            if (!targetId) targetId = 'cover';
-            
-            let activeSection = document.getElementById(targetId);
-            if (!activeSection) targetId = 'cover';
-            
-            // Ocultar todas as seções e mostrar apenas a ativa
-            sections.forEach(sec => {
-                sec.classList.remove('active-page');
+        // Active Link Selection on Scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 120) {
+                    current = section.getAttribute('id');
+                }
             });
-            
-            activeSection = document.getElementById(targetId);
-            activeSection.classList.add('active-page');
-            
-            // Atualizar classes 'active' no menu lateral
+
             links.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === `#${targetId}`) {
+                if (link.getAttribute('href') === `#${current}`) {
                     link.classList.add('active');
                 }
             });
-            
-            // Atualizar botões de anterior / próximo e o progresso
-            updateNavButtons(targetId);
-            
-            // Rolagem instantânea para o topo da página ao trocar de capítulo
-            window.scrollTo({ top: 0, behavior: 'instant' });
-            
-            // Atualizar hash na barra de endereços de forma amigável
-            if (window.location.hash !== '#' + targetId) {
-                history.pushState(null, null, '#' + targetId);
-            }
-        }
-
-        function updateNavButtons(targetId) {
-            const currentIndex = sectionsArray.findIndex(sec => sec.id === targetId);
-            if (currentIndex === -1) return;
-            
-            // Botão Anterior
-            if (currentIndex > 0) {
-                prevPageBtn.disabled = false;
-                prevPageBtn.onclick = () => showChapter(sectionsArray[currentIndex - 1].id);
-            } else {
-                prevPageBtn.disabled = true;
-                prevPageBtn.onclick = null;
-            }
-            
-            // Botão Próximo
-            if (currentIndex < sectionsArray.length - 1) {
-                nextPageBtn.disabled = false;
-                nextPageBtn.onclick = () => showChapter(sectionsArray[currentIndex + 1].id);
-            } else {
-                nextPageBtn.disabled = true;
-                nextPageBtn.onclick = null;
-            }
-            
-            // Indicador de Progresso (Capa é considerada índice 0)
-            if (currentIndex === 0) {
-                pageProgressIndicator.textContent = "Início";
-            } else {
-                // Total de capítulos reais
-                const totalChapters = sectionsArray.length - 1;
-                pageProgressIndicator.textContent = `Página ${currentIndex} de ${totalChapters}`;
-            }
-        }
-
-        // Carregar capítulo correto no carregamento inicial da página com base no hash
-        window.addEventListener('load', () => {
-            const hash = window.location.hash.replace('#', '');
-            showChapter(hash || 'cover');
-        });
-
-        // Suporte a botões Voltar / Avançar do navegador
-        window.addEventListener('popstate', () => {
-            const hash = window.location.hash.replace('#', '');
-            showChapter(hash || 'cover');
         });
     </script>
 </body>
