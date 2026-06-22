@@ -6,6 +6,11 @@ Este documento registra o estado atual do projeto, a arquitetura do compilador, 
 
 ## 📈 1. Resumo das Últimas Alterações Realizadas
 
+### 🎓 Aprimoramento Didático e Narrativo dos Capítulos Finais (11, 12 e 13)
+*   **Capítulo 11 ("A Elite do Atraso"):** Reescrevemos o capítulo focando na engenharia de fluxo cotidiano do jovem leitor (sistemas dinâmicos, *bus bunching*, gargalos na catraca e o Problema do Caixeiro Viajante - TSP). Adicionamos a caixa de destaque **💡 A Regra do Custo de Oportunidade** para ilustrar matematicamente a decisão econômica entre investimentos industriais reais (ROI da tecnologia) vs. rentismo passivo (taxa Selic).
+*   **Capítulo 12 ("A Engenharia do Pix e do Bloco"):** Implementamos uma abertura narrativa tensa com o travamento físico de um robô AMR devido a um erro de *timeout* e consistência distribuída. Explicamos a criptografia assimétrica (chave pública/privada) como uma caixa de correio com fresta e cadeado, os blocos da Blockchain como paletes lacrados invioláveis por hash, e desenvolvemos um script Python prático que simula a integridade encadeada e o efeito avalanche do hash SHA-256. Adicionamos um desafio físico de medição de latência (`ping`).
+*   **Capítulo 13 ("A Rebeldia da Mecatrônica"):** Concluímos o romance com uma cena reflexiva ao entardecer sob a névoa de Curitiba. Amarramos o *continuum tecnológico* unindo o antigo Z80 e o AMR moderno como o mesmo fenômeno em escalas diferentes. Preservamos na lousa verde do galpão o **Manifesto do Silício** (três regras fundamentais sobre soberania, recusa de caixas-pretas proprietárias e persistência teimosa na física). Inserimos o desafio final maker estimulando o leitor a abrir e mapear a engenharia de um dispositivo doméstico comum para iniciar seu próprio manual de campo.
+
 ### 🖼️ Geração e Inserção Completa de Ilustrações (HTML & PDF)
 *   **Melhoria:** Criação de ilustrações para todos os capítulos restantes do livro (`cap4.png` a `cap13.png`), mantendo consistência absoluta com os prompts estipulados no guia visual (`prompts_ilustracoes.md`).
 *   **Estilo Visual:** Design de arte conceitual Tech-Noir Industrial com tons frios de azul cobalto e poeira industrial contrastando com pontos de energia quentes em laranja e amarelo neon.
@@ -24,6 +29,9 @@ Este documento registra o estado atual do projeto, a arquitetura do compilador, 
 
 ### 🎨 Inclusão do Apêndice C: Galeria de Arte e Prompts de IA
 *   **Melhoria:** Criação do arquivo [16_galeria_arte.md](file:///d:/onedrive/outros/workspace_book/capitulos/16_galeria_arte.md) para atuar como o **Apêndice C**. Este documento atua de forma lúdica revelando as descrições em português e os prompts em inglês que originaram a identidade visual e ilustrações do livro, alinhado à filosofia didática de "abrir a caixa preta".
+
+### 🌐 Sincronização e Publicação
+*   **Melhoria:** Compilação bem-sucedida das saídas finais (PDF e HTML) e envio das atualizações para o branch `master` no repositório remoto do GitHub.
 
 ---
 
