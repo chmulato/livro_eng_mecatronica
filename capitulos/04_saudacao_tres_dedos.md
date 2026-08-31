@@ -154,12 +154,14 @@ Para ver um vazamento de memória acontecendo diante dos seus olhos sem precisar
 
 ### 🎮 Desafios práticos e guiados
 
-**Desafio Guiado: Caçando Vazamentos de Memória**  
-1. Escreva um pseudo-código demonstrando o erro lógico clássico de criar variáveis dinâmicas em loop sem desalocá-las.
-2. Identifique e escreva qual instrução de limpeza (`delete` ou `free`) resolveria o vazamento.
-3. Se cada iteração do loop consome 128 bytes de RAM e o microcontrolador antigo possui apenas 64 KB de memória disponível, calcule quantas repetições seriam necessárias para travar o sistema completamente por estouro de pilha.
-4. Explique por que, mesmo em computadores modernos com gigabytes de memória, um vazamento contínuo em serviços de rede que rodam por meses acabará travando a máquina.
-5. **Desafio Visual e Analógico**: Em seu caderno técnico de estudos, desenhe uma caixa d'água com um pequeno furo na base e uma torneira no topo. Desenhe o nível da água descendo progressivamente a cada minuto até secar completamente. Escreva abaixo do desenho: *"Isto representa um vazamento de memória (Memory Leak) – o espaço de trabalho da CPU se esgotando gota a gota até o travamento físico do sistema."*
+**Nível 1 (Iniciante): A Caixa d'Água**  
+Em seu caderno técnico, desenhe uma caixa d'água com um pequeno furo na base e uma torneira no topo. Desenhe o nível da água descendo a cada minuto até secar. Escreva abaixo: *"Isto representa um vazamento de memória (Memory Leak) — o espaço de trabalho da CPU se esgotando gota a gota."*  
+Se cada iteração de um loop consome 128 bytes e o microcontrolador tem 64 KB de RAM, calcule quantas voltas bastam para secar o tanque.
+
+**Nível 2 (Avançado): Caçando o Vazamento**  
+1. Escreva um pseudo-código com o erro clássico: criar variáveis dinâmicas em loop sem desalocá-las.
+2. Indique a instrução de limpeza (`delete` ou `free`) que fecharia o furo.
+3. Explique por que, mesmo com gigabytes de RAM, um vazamento em um serviço que roda por meses acaba travando a máquina — o mesmo silêncio que congelou o magazzino.
 
 ---
 

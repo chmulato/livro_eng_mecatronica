@@ -72,8 +72,12 @@ Se o Z80 era um escriturário elétrico, o sistema operacional era o maestro —
 - **Pilha (Stack) e Ponteiros**: O registrador de execução Program Counter ($PC$) é salvo no Stack antes do salto para a sub-rotina de interrupção (ISR).
 
 ### 🎮 Desafio prático
-**O Algoritmo de Prioridade**  
-Escreva um pequeno pseudo-código demonstrando o funcionamento de um loop principal que é interrompido por um sinal externo crítico de botão de emergência.
+
+**Nível 1 (Iniciante): O Botão de Emergência**  
+Desenhe no caderno o fluxo de um ciclo simples: *loop principal → sinal de emergência → rotina de interrupção → retorno*. Marque com uma seta o instante em que a CPU abandona o que estava fazendo.
+
+**Nível 2 (Avançado): A Pilha do PC**  
+Escreva um pseudo-código em que o loop principal é interrompido por um botão de emergência. Mostre explicitamente: (1) o salvamento do Program Counter na pilha, (2) o salto para a ISR e (3) a restauração do PC ao retornar. Sem essa gaveta temporária, o escriturário elétrico não saberia onde tinha parado.
 
 ---
 

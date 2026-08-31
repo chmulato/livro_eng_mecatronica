@@ -76,8 +76,12 @@ E era sobre essa fronteira social que a Parte IV do diário começaria a falar.
 - **Heurística FFD**: Algoritmo de primeiro encaixe decrescente que ordena itens do maior para o menor para otimizar a alocação de espaço.
 
 ### 🎮 Desafio prático
-**O Algoritmo de Encaixe**  
-Escreva o teste manual do algoritmo FFD para acomodar caixas de tamanhos [50, 20, 30, 40, 10] em nichos com capacidade máxima de 60 unidades cada.
+
+**Nível 1 (Iniciante): O Algoritmo de Encaixe**  
+Teste manualmente o algoritmo FFD para acomodar caixas de tamanhos `[50, 20, 30, 40, 10]` em nichos com capacidade máxima de 60 unidades cada. Anote quantos nichos foram usados e quanto espaço sobrou.
+
+**Nível 2 (Avançado): First Fit contra FFD**  
+Repita o encaixe **sem ordenar** (First Fit puro) com a sequência `[10, 50, 20, 40, 30]` nos mesmos nichos de 60. Compare o desperdício de espaço com o FFD do Nível 1. A ordem muda o galpão.
 
 ### ✨ Pergunta-gancho para o próximo capítulo
 A otimização das caixas preenchia as prateleiras do galpão logístico de forma eficiente. Mas o que acontece quando a barreira para o avanço da tecnologia não é um limite de hardware, mas o custo financeiro imposto pela própria economia? Como a taxa básica de juros e a rentabilidade passiva afetam a mecatrônica real e travam os engenheiros nacionais? É esse o choque de realidade que Alex investigará a seguir.

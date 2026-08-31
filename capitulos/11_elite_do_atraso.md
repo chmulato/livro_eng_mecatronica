@@ -130,10 +130,11 @@ Tempo Parado Acumulado (segundos)
 
 ### 🎮 Desafios práticos e conceituais
 
-**Desafio: Modelando o Custo do Atraso**
-1. Um projeto de automação mecatrônica de esteiras em uma distribuidora local tem CAPEX de R$ 50.000 e estima-se que gerará uma economia de R$ 6.000 ao ano em manutenção e eficiência operacional (ROI real). Se a taxa básica de juros (Selic) está em 12% ao ano, calcule a diferença de rendimento entre aplicar os R$ 50.000 em títulos públicos livres de risco contra o retorno do projeto real de esteiras no primeiro ano.
-2. Explique brevemente qual decisão um investidor racional tomaria diante desse cálculo de custo de oportunidade e qual o impacto disso para o desenvolvimento da engenharia local no bairro.
-3. Desenhe no seu caderno técnico um mapa com 4 pontos de entrega interligados. Calcule o número total de rotas fechadas possíveis que visitam todos os pontos e voltam para a base. Como a introdução de um ponto de gargalo (como uma ponte em obras) altera a escolha da rota ótima?
+**Nível 1 (Iniciante): Selic versus ROI**  
+Um projeto de automação de esteiras tem CAPEX de R$ 50.000 e economiza R$ 6.000 ao ano (ROI real). Se a Selic está em 12% ao ano, calcule a diferença de rendimento no primeiro ano entre deixar os R$ 50.000 em títulos públicos e investir no projeto. Em duas frases, diga que decisão um investidor racional tomaria e o que isso faz com a engenharia do bairro.
+
+**Nível 2 (Avançado): O Caixeiro de Quatro Pontos**  
+Desenhe um mapa com 4 pontos de entrega interligados. Calcule o número total de rotas fechadas que visitam todos os pontos e voltam à base. Depois introduza um gargalo (uma ponte em obras) e explique como isso altera a rota ótima — o mesmo pensamento sistêmico que destrava um galpão.
 
 ---
 

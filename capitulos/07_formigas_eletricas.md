@@ -58,7 +58,7 @@ O algoritmo recalcula a rota em milissegundos, desviando por conta própria.
 Um formigueiro opera sem uma formiga chefe comandando no rádio.
 Cada inseto segue regras locais simples de desvio e transporte.
 Somando milhares dessas ações locais, surge o comportamento de enxame.
-Os AMRs funcionan assim: biologia convertida em código de controle físico.
+Os AMRs funcionam assim: biologia convertida em código de controle físico.
 
 ---
 
@@ -67,8 +67,12 @@ Os AMRs funcionan assim: biologia convertida em código de controle físico.
 - **Sistemas de Trilho (AGV)**: Dispositivos de guia rígidos param diante de qualquer obstrução física no caminho guiado.
 
 ### 🎮 Desafio prático
-**A Simulação do Desvio**  
-Desenhe uma malha de grade 5x5 com um obstáculo na posição central. Trace a rota mais curta do canto inferior esquerdo ao canto superior direito desviando do obstáculo.
+
+**Nível 1 (Iniciante): A Simulação do Desvio**  
+Desenhe uma malha de grade 5×5 com um obstáculo na posição central. Trace a rota mais curta do canto inferior esquerdo ao canto superior direito, desviando do obstáculo.
+
+**Nível 2 (Avançado): AGV versus AMR**  
+Na mesma malha, imagine que o obstáculo caiu em cima da fita magnética do AGV. Em cinco linhas, explique por que o AGV congela e o AMR desvia. Depois acrescente um segundo obstáculo e redesenhe a rota do AMR.
 
 ### ✨ Pergunta-gancho para o próximo capítulo
 As formigas eletrônicas sabiam contornar os vãos do galpão, mas como fazer o próprio robô enxergar os contornos do mundo ao seu redor sem depender de fitas de navegação? Qual sensor seria capaz de medir a velocidade da luz para evitar colisões catastróficas sob a névoa? É esse o cérebro óptico e o mistério do laser que Alex investigará a seguir.

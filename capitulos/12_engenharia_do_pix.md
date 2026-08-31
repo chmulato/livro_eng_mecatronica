@@ -130,11 +130,12 @@ Para enxergar a latência invisível que governa as redes e o controle de robôs
 
 ### 🎮 Desafios práticos e conceituais
 
-**Desafio: Quebrando a Cadeia**
-1. Rode o código Python acima em sua máquina ou utilize um interpretador online.
-2. Crie um terceiro bloco (`bloco_tres`) que aponte para o hash do `bloco_dois`.
-3. Altere o texto da transação do `bloco_genesis` de `"Alex pagou 10 moedas"` para `"Alex pagou 100 moedas"`.
-4. Recalcule o hash do bloco gênesis e observe o que acontece com a conexão lógica dele com os blocos seguintes. O que essa quebra de hash representa na arquitetura de segurança da blockchain?
+**Nível 1 (Iniciante): Encadeando um Bloco**  
+Rode o código Python do capítulo (no computador ou num interpretador online). Crie um terceiro bloco (`bloco_tres`) que aponte para o hash do `bloco_dois`. Confirme que a cadeia continua íntegra.
+
+**Nível 2 (Avançado): Quebrando a Cadeia e a Latência**  
+Altere a transação do `bloco_genesis` de `"Alex pagou 10 moedas"` para `"Alex pagou 100 moedas"`. Recalcule o hash e descreva o que acontece com os blocos seguintes.  
+Depois meça a latência da sua rede com `ping google.com`. Se um robô se move a 2 m/s e o Wi-Fi do galpão sobe para 150 ms, calcule quantos centímetros ele percorre às cegas antes do comando de parada.
 
 ---
 

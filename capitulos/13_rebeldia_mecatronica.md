@@ -84,10 +84,12 @@ Alex moderno, agora um engenheiro sênior, caminhou em direção à saída do ga
 ---
 
 ### 🎮 Desafio Prático Final: O Projeto da Rebeldia
-Chegou o momento de você iniciar o seu próprio manual de campo. 
-1. **Identifique a Caixa-Preta**: Escolha um objeto eletrônico ou mecânico comum no seu dia a dia (um mouse antigo, uma fechadura eletrônica, um controle remoto ou um sensor de presença).
-2. **Desenhe o Sistema**: Abra o dispositivo (com segurança), examine seus componentes internos e tente desenhar no seu caderno o fluxo de sinal: por onde a energia entra, onde a informação é processada e qual o elemento atuador de saída.
-3. **Escreva a Primeira Página**: Anote a data, as especificações do que descobriu e comece a registrar suas próprias ideias de modificação ou melhorias técnicas.
+
+**Nível 1 (Iniciante): Abra a Caixa-Preta**  
+Escolha um objeto eletrônico ou mecânico do dia a dia (mouse antigo, fechadura eletrônica, controle remoto ou sensor de presença). Com segurança, abra o dispositivo e desenhe no caderno o fluxo de sinal: onde a energia entra, onde a informação é processada e qual é o atuador de saída.
+
+**Nível 2 (Avançado): A Primeira Página do Manual**  
+Anote a data, as especificações do que descobriu e proponha uma modificação concreta — um sensor a mais, um firmware mais claro, um reparo em vez de descarte. Essa página é o início do seu próprio diário de campo.
 
 ---
 

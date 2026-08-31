@@ -95,13 +95,24 @@ Ali, no silêncio do Setor G, Alex percebeu que não estava apenas lendo um diá
 - **Resiliência e Precisão**: A programação raiz lidava com mídias instáveis (como fitas K7) onde pequenas variações físicas invalidavam todo o processo.
 
 ### 🎮 Desafio prático
-**O Desafio do Código Primitivo**  
-Acesse o emulador online e teste o funcionamento lógico de um loop contínuo digitando a instrução clássica de exibição.
+
+**Nível 1 (Iniciante): O Loop do Código Primitivo**  
+Acesse o emulador online e rode o loop clássico de exibição. Observe a tela se encher linha por linha — o Z80 está executando a mesma instrução, de novo e de novo, sem sistema operacional no meio do caminho.
 * [Simulador Online do ZX Spectrum](https://jsspeccy.zxdemo.org/)
 ```basic
 10 PRINT "Ola Mundo!"
 20 GOTO 10
 ```
+
+**Nível 2 (Avançado): A Fita que Falha**  
+No mesmo emulador, altere o programa para imprimir um contador:
+```basic
+10 LET n=0
+20 PRINT "Alex "; n
+30 LET n=n+1
+40 GOTO 20
+```
+Depois explique, em cinco linhas no caderno, por que um desalinhamento de 1 mm no cabeçote da fita K7 invalidaria o `LOAD ""`. É o mesmo tipo de falha física que hoje aparece como ruído no encoder de um AMR.
 
 ### ✨ Conexão com o próximo capítulo
 Agora que Alex resgatou o diário físico, ele precisa compreender as engrenagens ocultas sob o plástico do Z80A. No próximo capítulo, desvendaremos a anatomia interna do processador e aprenderemos a lidar com as pequenas gavetas de dados conhecidas como registradores.

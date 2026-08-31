@@ -84,11 +84,13 @@ Alex finalmente entendia os bits. Agora precisava enfrentar o inimigo que derrub
 
 ### 🎮 Desafio prático e guiado
 
-**Desafio Guiado: Do Pixel ao Sensor**  
-1. Desenhe uma grade de 8x8 em um papel quadriculado e monte o desenho de um invasor espacial simples.
-2. Converta cada linha preenchida para sua sequência binária correspondente (onde quadradinho pintado é `1` e em branco é `0`).
-3. Converta cada linha binária em seu número decimal equivalente.
-4. Agora imagine que cada uma dessas linhas representa um "disco de encoder": onde está `1` a luz infravermelha passa, e onde está `0` ela é interrompida. Explique como o circuito do robô usaria essa alternância de bits para descobrir que a roda está se movendo de fato.
+**Nível 1 (Iniciante): O Sprite no Caderno**  
+1. Desenhe uma grade de 8×8 em um papel quadriculado e monte o desenho de um invasor espacial simples.
+2. Converta cada linha preenchida para sua sequência binária (quadradinho pintado é `1`, em branco é `0`).
+3. Converta cada linha binária no número decimal equivalente.
+
+**Nível 2 (Avançado): Do Pixel ao Encoder**  
+Pegue os oito números do Nível 1 e converta cada um também para hexadecimal. Depois imagine que cada linha é um “disco de encoder”: onde está `1` a luz infravermelha passa, e onde está `0` ela é interrompida. Explique como o circuito do robô usaria essa alternância de bits para descobrir que a roda está se movendo de fato.
 
 ---
 
